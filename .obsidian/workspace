@@ -1,0 +1,177 @@
+{
+  "main": {
+    "id": "0edf86ea15721e59",
+    "type": "split",
+    "children": [
+      {
+        "id": "9cde9d7d6ad102e7",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "ML-Journey/Fast.ai/Lesson 1.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "4aad2a65ccc2b41e",
+    "type": "split",
+    "children": [
+      {
+        "id": "6d22427fd7feaa43",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "63a751964fa32143",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "a0d98fac0ce56a86",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "634503ca251e7c51",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 203
+  },
+  "right": {
+    "id": "27f91139c8b17a17",
+    "type": "split",
+    "children": [
+      {
+        "id": "f234b7f7e6ccc090",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d602acc23181271c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "ML-Journey/Fast.ai/Lesson 1.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "31068eb848e73c88",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "ML-Journey/Fast.ai/Lesson 1.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2053810faf7a5d42",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "529dcc99472fa2fe",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "ML-Journey/Fast.ai/Lesson 1.md"
+              }
+            }
+          },
+          {
+            "id": "a07afc508c5e7766",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "77b5ab8ea8743747",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          },
+          {
+            "id": "50708c712ad0ea4a",
+            "type": "leaf",
+            "state": {
+              "type": "BC-matrix",
+              "state": {}
+            }
+          },
+          {
+            "id": "4f1f2022ab0334a3",
+            "type": "leaf",
+            "state": {
+              "type": "BC-tree",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 206.5,
+    "collapsed": true
+  },
+  "active": "9cde9d7d6ad102e7",
+  "lastOpenFiles": [
+    "00 Kanban Board.md",
+    "School/CP214 Discrete Structures for Comp-Sci/Predicate Logic.pdf",
+    "School/CP214 Discrete Structures for Comp-Sci/01 Predicate Logic.md",
+    "scrap.excalidraw.md",
+    "School/CP214 Discrete Structures for Comp-Sci/01.1 Propositional Logic.excalidraw.md",
+    "School/CP214 Discrete Structures for Comp-Sci/02 Sets, Functions, and Relations.md",
+    "School/CP214 Discrete Structures for Comp-Sci/Sets, Functions, and Relations.pdf",
+    "Pasted Image 20221006081347_261.png",
+    "Pasted Image 20221006081045_139.png",
+    "Drawing 2022-10-05 16.18.34.excalidraw.md"
+  ]
+}

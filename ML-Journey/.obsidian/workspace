@@ -1,0 +1,144 @@
+{
+  "main": {
+    "id": "8d6830fcd89a7d87",
+    "type": "split",
+    "children": [
+      {
+        "id": "28bb1c00df848acc",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Linear Algebra/01 Vectors/02 Basis.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e68ea7305902a436",
+    "type": "split",
+    "children": [
+      {
+        "id": "b5caac7d742df91e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c3cd9e36861ea4b8",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "9a136ac551f3345f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "6de3fb04fd524b22",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 176
+  },
+  "right": {
+    "id": "b3af5c09d430b5e3",
+    "type": "split",
+    "children": [
+      {
+        "id": "5e565278681130c4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "088e92ba6464b71b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Linear Algebra/01 Vectors/02 Basis.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "59df7da882048488",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Linear Algebra/01 Vectors/02 Basis.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e56bf20a9cfd920a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "53130a7b58b07fec",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Linear Algebra/01 Vectors/02 Basis.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "28bb1c00df848acc",
+  "lastOpenFiles": [
+    "Linear Algebra/01 Vectors/01 Opperations with Vectors.md",
+    "Linear Algebra/01 Vectors/01 Vectors.md",
+    "Linear Algebra/01 Vectors/02 Basis.md",
+    "Linear Algebra/01 Vectors/01.2Vector Dot Product Practice.excalidraw.md",
+    "Linear Algebra/01 Vectors/01.1 Vector Addition Practice.excalidraw.md",
+    "Linear Algebra/Solving Linear Systems.excalidraw.md",
+    "Statistics/Statistics.md",
+    "Untitled.md",
+    "Statistics/1.1 What is Statistics/Definitions/Parameter.md",
+    "Statistics/1.1 What is Statistics/1.1 What is Statistics.md"
+  ]
+}

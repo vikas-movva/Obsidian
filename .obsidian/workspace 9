@@ -1,0 +1,160 @@
+{
+  "main": {
+    "id": "78af35a470b08225",
+    "type": "split",
+    "children": [
+      {
+        "id": "c3ebefe4eb8bfe4e",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "ML-Journey/Linear Algebra/Matrices/Matrices.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1628b51b40cfe19d",
+    "type": "split",
+    "children": [
+      {
+        "id": "775a448a56cce489",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "29836639a8d16ebb",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "374ce8785bd43907",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b3f108a2d7162944",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "edf56c981750b8c6",
+    "type": "split",
+    "children": [
+      {
+        "id": "ee062cb6b155e18c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a17b130d000bcef2",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "adce6498ac6ab94b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "ML-Journey/Linear Algebra/Matrices/Matrices.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "a7f05f68db64afb8",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "ML-Journey/Linear Algebra/Matrices/Matrices.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "8bb9367d59dcecb4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "eeac78ff1b7b8a0a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "ML-Journey/Linear Algebra/Matrices/Matrices.md"
+              }
+            }
+          },
+          {
+            "id": "43dd90e2849377d6",
+            "type": "leaf",
+            "state": {
+              "type": "BC-matrix",
+              "state": {}
+            }
+          },
+          {
+            "id": "b841f49c2a76e4cb",
+            "type": "leaf",
+            "state": {
+              "type": "BC-tree",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "c3ebefe4eb8bfe4e",
+  "lastOpenFiles": [
+    "School/CP202 Website Design/Week 1/Lecture 1.md",
+    "Calender/2022-09-17.md"
+  ]
+}

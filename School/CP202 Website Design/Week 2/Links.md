@@ -1,0 +1,38 @@
+- Writing Links
+	- Structure - Hyperlinks - `<a href="http://www.example.com#section_2" target="_blank">example text</a>`
+		- `<a>` - anchor tag
+		- ==href== - attribute where you but the hyperlink
+		- `"http://www.example.com"` - the hyperlink
+		- `#section_2` - link to html element with id `section_2`
+		- `target` - where to open the linked document
+		- `"_blank"` - open in new tab
+		- `example text` - optional, the text shown on the web page, just hyperlink if empty
+	- Structure - mailto - `<a href="mailto:jon@example.org">email jon</a>`
+		- `mailto:` - opens email window
+		  
+- Directory Structure
+	 - root
+		 - index.html
+		 - movies
+			 - cinema
+				 - index.html
+				 - listings.html
+				 - reviews.html
+			 - dvd
+				 - index.html
+				 - listings.html
+				 - reviews.html
+		 - music
+			 - index.html
+			 - listings.html
+			- reviews.html
+		- theater
+			- index.html
+			- listings.html
+			- reviews.html
+	- Relative URLs
+		- if it is in the same nested area: child.html
+		- different nested area: parent/child.html
+		- ../ - move up one folder level
+		- root/movies/dvd/reviews.html $\rightarrow$ root/index.html  = ../../index.html
+		- 
