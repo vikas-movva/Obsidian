@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "ML-Journey/Fast.ai/Lesson 1.md",
+            "file": "Calender/2022-10-24.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML-Journey/Fast.ai/Lesson 1.md",
+                "file": "Calender/2022-10-24.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ML-Journey/Fast.ai/Lesson 1.md",
+                "file": "Calender/2022-10-24.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML-Journey/Fast.ai/Lesson 1.md"
+                "file": "Calender/2022-10-24.md"
               }
             }
           },
@@ -138,7 +138,7 @@
             }
           },
           {
-            "id": "50708c712ad0ea4a",
+            "id": "8a01ae61bba61ffc",
             "type": "leaf",
             "state": {
               "type": "BC-matrix",
@@ -146,7 +146,7 @@
             }
           },
           {
-            "id": "4f1f2022ab0334a3",
+            "id": "5e98caaa3b46c4be",
             "type": "leaf",
             "state": {
               "type": "BC-tree",
@@ -163,6 +163,7 @@
   },
   "active": "9cde9d7d6ad102e7",
   "lastOpenFiles": [
+    "ML-Journey/Fast.ai/Lesson 1.md",
     "00 Kanban Board.md",
     "School/CP214 Discrete Structures for Comp-Sci/Predicate Logic.pdf",
     "School/CP214 Discrete Structures for Comp-Sci/01 Predicate Logic.md",
@@ -171,7 +172,6 @@
     "School/CP214 Discrete Structures for Comp-Sci/02 Sets, Functions, and Relations.md",
     "School/CP214 Discrete Structures for Comp-Sci/Sets, Functions, and Relations.pdf",
     "Pasted Image 20221006081347_261.png",
-    "Pasted Image 20221006081045_139.png",
-    "Drawing 2022-10-05 16.18.34.excalidraw.md"
+    "Pasted Image 20221006081045_139.png"
   ]
 }

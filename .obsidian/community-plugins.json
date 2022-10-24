@@ -11,5 +11,6 @@
   "obsidian-autocomplete-plugin",
   "obsidian-linter",
   "obsidian-banners",
-  "obsidian-kanban"
+  "obsidian-kanban",
+  "obsidian-git"
 ]
