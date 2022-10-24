@@ -20,9 +20,10 @@ kanban-plugin: basic
 - [ ] Book an appointment with psychiatrist
 - [ ] Finish Resume
 - [ ] Finish Portfolio Website
-- [ ] MNIST digit classifier Neural Net from scratch
-- [ ] MNIST digit classifier Neural Net using tensorflow/keras
 - [ ] Learn python data science/ ml libraries (numpy, pandas, mathplotlib, seaborn, scikitlearn, scipy)
+- [ ] Create demo site front end for MNIST classifier
+- [ ] Create demo site back end for MNIST classifier
+- [ ] Deploy demo site for MNIST classifier
 
 
 ## Quizes / Assignments
@@ -39,6 +40,8 @@ kanban-plugin: basic
 
 ## Completed
 
+- [ ] MNIST digit classifier Neural Net from scratch
+- [ ] MNIST digit classifier Neural Net using tensorflow/keras
 
 
 ***
