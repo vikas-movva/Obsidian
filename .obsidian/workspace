@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Calender/2022-10-24.md",
+            "file": "School/ML101 - Harry Potter and Medieval Culture/TUT 1A.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calender/2022-10-24.md",
+                "file": "School/ML101 - Harry Potter and Medieval Culture/TUT 1A.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calender/2022-10-24.md",
+                "file": "School/ML101 - Harry Potter and Medieval Culture/TUT 1A.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calender/2022-10-24.md"
+                "file": "School/ML101 - Harry Potter and Medieval Culture/TUT 1A.md"
               }
             }
           },
@@ -152,17 +152,25 @@
               "type": "BC-tree",
               "state": {}
             }
+          },
+          {
+            "id": "7eb476dee0f0ad4f",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 8
       }
     ],
     "direction": "horizontal",
-    "width": 206.5,
-    "collapsed": true
+    "width": 206.5
   },
   "active": "9cde9d7d6ad102e7",
   "lastOpenFiles": [
+    "Calender/2022-10-24.md",
     "ML-Journey/Fast.ai/Lesson 1.md",
     "00 Kanban Board.md",
     "School/CP214 Discrete Structures for Comp-Sci/Predicate Logic.pdf",
@@ -171,7 +179,6 @@
     "School/CP214 Discrete Structures for Comp-Sci/01.1 Propositional Logic.excalidraw.md",
     "School/CP214 Discrete Structures for Comp-Sci/02 Sets, Functions, and Relations.md",
     "School/CP214 Discrete Structures for Comp-Sci/Sets, Functions, and Relations.pdf",
-    "Pasted Image 20221006081347_261.png",
-    "Pasted Image 20221006081045_139.png"
+    "Pasted Image 20221006081347_261.png"
   ]
 }
