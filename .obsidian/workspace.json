@@ -11,11 +11,9 @@
             "id": "9cde9d7d6ad102e7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "kanban",
               "state": {
-                "file": "Calender/2022-10-24.md",
-                "mode": "source",
-                "source": false
+                "file": "Projects/MNIST demo/MNIST demo Kanban.md"
               }
             }
           }
@@ -69,7 +67,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 203
+    "width": 200
   },
   "right": {
     "id": "27f91139c8b17a17",
@@ -85,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calender/2022-10-24.md",
+                "file": "Projects/MNIST demo/MNIST demo Kanban.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calender/2022-10-24.md",
+                "file": "Projects/MNIST demo/MNIST demo Kanban.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calender/2022-10-24.md"
+                "file": "Projects/MNIST demo/MNIST demo Kanban.md"
               }
             }
           },
@@ -181,9 +179,9 @@
   },
   "active": "63a751964fa32143",
   "lastOpenFiles": [
+    "Projects/Projects Kanban.md",
     "Calender/2022-10-24.md",
     "00 Kanban Board.md",
-    "Projects/Projects Kanban.md",
     "School/ML101 - Harry Potter and Medieval Culture/TUT 1A.md",
     "ML-Journey/Fast.ai/Lesson 1.md",
     "School/CP214 Discrete Structures for Comp-Sci/Predicate Logic.pdf",
