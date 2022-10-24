@@ -11,9 +11,10 @@
             "id": "9cde9d7d6ad102e7",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "diff-view",
               "state": {
-                "file": "Projects/MNIST demo/MNIST demo Kanban.md"
+                "file": "Templates/Daily note template.md",
+                "staged": false
               }
             }
           }
@@ -83,7 +84,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Projects/MNIST demo/MNIST demo Kanban.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +100,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Projects/MNIST demo/MNIST demo Kanban.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -122,9 +121,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Projects/MNIST demo/MNIST demo Kanban.md"
-              }
+              "state": {}
             }
           },
           {
@@ -177,17 +174,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "63a751964fa32143",
+  "active": "9cde9d7d6ad102e7",
   "lastOpenFiles": [
+    "Templates/Basic.md",
+    "Projects/MNIST demo/MNIST demo Kanban.md",
+    "Templates/Daily note template.md",
     "Projects/Projects Kanban.md",
     "Calender/2022-10-24.md",
     "00 Kanban Board.md",
     "School/ML101 - Harry Potter and Medieval Culture/TUT 1A.md",
     "ML-Journey/Fast.ai/Lesson 1.md",
     "School/CP214 Discrete Structures for Comp-Sci/Predicate Logic.pdf",
-    "School/CP214 Discrete Structures for Comp-Sci/01 Predicate Logic.md",
-    "scrap.excalidraw.md",
-    "School/CP214 Discrete Structures for Comp-Sci/01.1 Propositional Logic.excalidraw.md",
-    "School/CP214 Discrete Structures for Comp-Sci/02 Sets, Functions, and Relations.md"
+    "School/CP214 Discrete Structures for Comp-Sci/01 Predicate Logic.md"
   ]
 }
