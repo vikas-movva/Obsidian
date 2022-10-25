@@ -8,12 +8,11 @@ kanban-plugin: basic
 
 - [ ] Rough page design
 - [ ] Figma page design
-- [ ] Write up of techs to be used or considered
-- [ ] Project plan
 
 
 ## In progress
 
+- [ ] [[Project outline]]
 
 
 ## In testing
@@ -22,6 +21,7 @@ kanban-plugin: basic
 
 ## Completed
 
+- [ ] Write up of techs to be used or considered
 
 
 

@@ -10,32 +10,30 @@ kanban-plugin: basic
 - [ ] Finish Coursera Course: Mathematics for Machine Learning: Linear Algebra
 - [ ] Finish Coursera Course: Mathematics for Machine Learning: Multivariate Calculus
 - [ ] Finish Coursera Course: Supervised Machine Learning: Regression and Classification
-- [ ] Book G2 Driving test
 - [ ] Learn Heap data structure
 - [ ] fast.ai course
 
 
 ## High Priority Tasks
 
-- [ ] Book an appointment with psychiatrist
 - [ ] Finish Resume
 - [ ] Finish Portfolio Website
 - [ ] Learn python data science/ ml libraries (numpy, pandas, mathplotlib, seaborn, scikitlearn, scipy)
-- [ ] Create demo site front end for MNIST classifier
 - [ ] Create demo site back end for MNIST classifier
 - [ ] Deploy demo site for MNIST classifier
 
 
 ## Quizes / Assignments
 
-- [ ] ML101 TUT 2A Response @{2022-10-07} @@{23:45}
-- [ ] CP214 Quiz 3 @{2022-10-07} @@{23:45}
-- [ ] CP264 A6 @{2022-10-26} @@{23:45}
+- [ ] CP214 Assignment 3 @{2022-10-26} @@{23:45}
 
 
 ## In Progress
 
 - [ ] Linear Regression Model from scratch
+- [ ] Create demo site front end for MNIST classifier
+- [ ] Book G2 Driving test
+- [ ] CP264 A6 @{2022-10-26} @@{23:45}
 
 
 ## Completed
