@@ -11,9 +11,11 @@
             "id": "781148f04c028a6e",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "Projects/ml-demo/ml-demo Kanban.md"
+                "file": "Projects/ml-demo/Project outline.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Projects/ml-demo/ml-demo Kanban.md",
+                "file": "Projects/ml-demo/Project outline.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Projects/ml-demo/ml-demo Kanban.md",
+                "file": "Projects/ml-demo/Project outline.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Projects/ml-demo/ml-demo Kanban.md"
+                "file": "Projects/ml-demo/Project outline.md"
               }
             }
           },
@@ -177,12 +179,12 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "7eb476dee0f0ad4f",
+  "active": "781148f04c028a6e",
   "lastOpenFiles": [
     "Projects/ml-demo/rough design.excalidraw.md",
-    "Calender/2022-10-25.md",
     "Projects/ml-demo/Project outline.md",
     "Projects/ml-demo/ml-demo Kanban.md",
+    "Calender/2022-10-25.md",
     "Calender/2022-10-26.md",
     "Calender/2022-09-27.md",
     "Templates/Daily note template.md",

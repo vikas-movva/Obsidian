@@ -16,5 +16,7 @@
 - [Google cloud cloud functions (free tier)](https://cloud.google.com/free)
 
 ### Design
+Rough design:![[rough design.excalidraw]]
+Figma design:
 
 
