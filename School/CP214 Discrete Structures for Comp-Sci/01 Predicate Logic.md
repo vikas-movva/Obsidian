@@ -109,7 +109,7 @@
 	
 	<th>$p\lorq$</th>
 	
-	<th>$p\lorq\rightarrow\negr$</th>
+	<th>$p\lorq\rightarrow\neg r$</th>
 	
 	</tr>
 	
@@ -162,6 +162,7 @@
 	</tr>
 	
 	</table>
+	
 	- Equivalent Propositions
 		- Example: Show using a truth table that the conditional is equivalent to the contra positive
 		- <table>
@@ -229,7 +230,7 @@
 	- System and Software engineers take requirements in English and Express them in a precise specification language based on logic
 		- Example: “The automated reply cannot be sent when the file system is full”
 		- $q \rightarrow \neg p$
-	- Consistent System Specificatons
+	- Consistent System Specifications
 		- ==Definition==: A list of propositions is *consistent* if it is possible to assign truth values to the proposition variables so that each proposition is true
 		- Example: Lets say that we have the following three statements
 			- “The diagnostic message is stored in the buffer or it is retransmitted.”
