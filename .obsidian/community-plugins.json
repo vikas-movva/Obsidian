@@ -12,5 +12,9 @@
   "obsidian-linter",
   "obsidian-banners",
   "obsidian-kanban",
-  "obsidian-git"
+  "obsidian-git",
+  "obsidian-diagrams-net",
+  "cm-editor-syntax-highlight-obsidian",
+  "url-into-selection",
+  "obsidian-jupyter"
 ]
