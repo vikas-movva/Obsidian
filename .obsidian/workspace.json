@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "f881ce8b7f00134d",
+        "id": "2b5dab446b7e478d",
         "type": "tabs",
         "children": [
           {
-            "id": "781148f04c028a6e",
+            "id": "81f71d9663e5abf2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calender/2022-10-26.md",
+                "file": "Calender/2022-10-25.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calender/2022-10-26.md",
+                "file": "Calender/2022-10-25.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calender/2022-10-26.md",
+                "file": "Calender/2022-10-25.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calender/2022-10-26.md"
+                "file": "Calender/2022-10-25.md"
               }
             }
           },
@@ -176,17 +176,17 @@
     "direction": "horizontal",
     "width": 206.5
   },
-  "active": "63a751964fa32143",
+  "active": "81f71d9663e5abf2",
   "lastOpenFiles": [
+    "Calender/2022-10-26.md",
+    "Assignment 2 1.pdf.md",
+    "Calender/2022-10-25.md",
+    "School/CP214 Discrete Structures for Comp-Sci/Assignment 2.pdf",
+    "School/CP214 Discrete Structures for Comp-Sci/Assignment 2 1.pdf",
     "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md",
     "Induction.md",
-    "Calender/2022-10-26.md",
     "00 Kanban Board.md",
     "Projects/Projects Kanban.md",
-    "Projects/ml-demo/Project outline.md",
-    "Projects/ml-demo/rough design.excalidraw.md",
-    "Projects/ml-demo/ml-demo Kanban.md",
-    "Calender/2022-10-25.md",
-    "Calender/2022-09-27.md"
+    "Projects/ml-demo/Project outline.md"
   ]
 }
