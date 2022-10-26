@@ -8,23 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "9cde9d7d6ad102e7",
+            "id": "781148f04c028a6e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "980c31f7c8de5b9f",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Calender/2022-10-26.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -74,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 203
   },
   "right": {
     "id": "27f91139c8b17a17",
@@ -90,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Calender/2022-10-26.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Calender/2022-10-26.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Calender/2022-10-26.md"
+              }
             }
           },
           {
@@ -147,7 +146,15 @@
             }
           },
           {
-            "id": "8a01ae61bba61ffc",
+            "id": "7eb476dee0f0ad4f",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "745f0a4c8d606fc0",
             "type": "leaf",
             "state": {
               "type": "BC-matrix",
@@ -155,39 +162,34 @@
             }
           },
           {
-            "id": "5e98caaa3b46c4be",
+            "id": "bbf212db2ce0836c",
             "type": "leaf",
             "state": {
               "type": "BC-tree",
               "state": {}
             }
-          },
-          {
-            "id": "7eb476dee0f0ad4f",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {}
-            }
           }
         ],
-        "currentTab": 8
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
     "width": 206.5
   },
-  "active": "980c31f7c8de5b9f",
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "63a751964fa32143",
   "lastOpenFiles": [
-    "Day Planners/Day Planner-20220912.md",
-    "Day Planners/Day Planner-20221026.md",
-    "Day Planners/Day Planner-20221024.md",
-    "Calender/2022-10-24.md",
+    "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md",
+    "Induction.md",
     "Calender/2022-10-26.md",
-    "Templates/Basic.md",
-    "Templates/Daily note template.md",
-    "Projects/MNIST demo/MNIST demo Kanban.md",
+    "00 Kanban Board.md",
     "Projects/Projects Kanban.md",
-    "00 Kanban Board.md"
+    "Projects/ml-demo/Project outline.md",
+    "Projects/ml-demo/rough design.excalidraw.md",
+    "Projects/ml-demo/ml-demo Kanban.md",
+    "Calender/2022-10-25.md",
+    "Calender/2022-09-27.md"
   ]
 }
