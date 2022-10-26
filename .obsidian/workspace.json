@@ -8,16 +8,23 @@
         "type": "tabs",
         "children": [
           {
-            "id": "781148f04c028a6e",
+            "id": "9cde9d7d6ad102e7",
             "type": "leaf",
             "state": {
-              "type": "kanban",
-              "state": {
-                "file": "00 Kanban Board.md"
-              }
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "980c31f7c8de5b9f",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -67,7 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 203
+    "width": 200
   },
   "right": {
     "id": "27f91139c8b17a17",
@@ -83,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "00 Kanban Board.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +106,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "00 Kanban Board.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -122,9 +127,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "00 Kanban Board.md"
-              }
+              "state": {}
             }
           },
           {
@@ -174,20 +177,17 @@
     "direction": "horizontal",
     "width": 206.5
   },
-  "ribbon": {
-    "mostRecentAction": ""
-  },
-  "active": "781148f04c028a6e",
+  "active": "7eb476dee0f0ad4f",
   "lastOpenFiles": [
-    "Projects/ml-demo/Project outline.md",
-    "Projects/ml-demo/rough design.excalidraw.md",
-    "Projects/ml-demo/ml-demo Kanban.md",
-    "Calender/2022-10-25.md",
-    "Calender/2022-10-26.md",
-    "Calender/2022-09-27.md",
-    "Templates/Daily note template.md",
+    "Day Planners/Day Planner-20221026.md",
+    "Day Planners/Day Planner-20221024.md",
+    "Day Planners/Day Planner-20220912.md",
     "Calender/2022-10-24.md",
-    "Projects/MNIST demo/Project plan.md",
-    "School/CP214 Discrete Structures for Comp-Sci/Assignment 2.pdf"
+    "Calender/2022-10-26.md",
+    "Templates/Basic.md",
+    "Templates/Daily note template.md",
+    "Projects/MNIST demo/MNIST demo Kanban.md",
+    "Projects/Projects Kanban.md",
+    "00 Kanban Board.md"
   ]
 }

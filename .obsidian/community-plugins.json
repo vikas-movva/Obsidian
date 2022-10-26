@@ -4,7 +4,6 @@
   "execute-code",
   "obsidian-excalidraw-plugin",
   "obsidian-text-format",
-  "obsidian-day-planner",
   "obsidian-outliner",
   "obsidian-annotator",
   "breadcrumbs",
@@ -12,9 +11,5 @@
   "obsidian-linter",
   "obsidian-banners",
   "obsidian-kanban",
-  "obsidian-git",
-  "obsidian-diagrams-net",
-  "cm-editor-syntax-highlight-obsidian",
-  "url-into-selection",
-  "obsidian-jupyter"
+  "obsidian-git"
 ]
