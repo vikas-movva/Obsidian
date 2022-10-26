@@ -11,11 +11,9 @@
             "id": "781148f04c028a6e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "kanban",
               "state": {
-                "file": "Projects/ml-demo/Project outline.md",
-                "mode": "source",
-                "source": false
+                "file": "00 Kanban Board.md"
               }
             }
           }
@@ -85,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Projects/ml-demo/Project outline.md",
+                "file": "00 Kanban Board.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Projects/ml-demo/Project outline.md",
+                "file": "00 Kanban Board.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Projects/ml-demo/Project outline.md"
+                "file": "00 Kanban Board.md"
               }
             }
           },
@@ -181,8 +179,8 @@
   },
   "active": "781148f04c028a6e",
   "lastOpenFiles": [
-    "Projects/ml-demo/rough design.excalidraw.md",
     "Projects/ml-demo/Project outline.md",
+    "Projects/ml-demo/rough design.excalidraw.md",
     "Projects/ml-demo/ml-demo Kanban.md",
     "Calender/2022-10-25.md",
     "Calender/2022-10-26.md",

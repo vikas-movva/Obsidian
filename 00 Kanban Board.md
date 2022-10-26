@@ -26,20 +26,21 @@ kanban-plugin: basic
 ## Quizes / Assignments
 
 - [ ] CP214 Assignment 3 @{2022-10-26} @@{23:45}
+- [ ] CP202 Assignment 3 @{2022-11-02} @@{23:45}
 
 
 ## In Progress
 
 - [ ] Linear Regression Model from scratch
 - [ ] Create demo site front end for MNIST classifier
-- [ ] Book G2 Driving test
-- [ ] CP264 A6 @{2022-10-26} @@{23:45}
 
 
 ## Completed
 
 - [ ] MNIST digit classifier Neural Net from scratch
 - [ ] MNIST digit classifier Neural Net using tensorflow/keras
+- [ ] CP264 A6 @{2022-10-26} @@{23:45}
+- [ ] Book G2 Driving test
 
 
 ***
