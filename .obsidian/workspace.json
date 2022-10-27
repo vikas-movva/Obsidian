@@ -13,9 +13,25 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calender/2022-10-26.md",
+                "file": "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "a4137400206d8aa8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "716a59ef653f9e6f",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "School/CP214 Discrete Structures for Comp-Sci/Induction and Recursive Programs.pdf"
               }
             }
           }
@@ -85,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calender/2022-10-26.md",
+                "file": "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calender/2022-10-26.md",
+                "file": "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calender/2022-10-26.md"
+                "file": "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md"
               }
             }
           },
@@ -176,15 +192,18 @@
     "direction": "horizontal",
     "width": 206.5
   },
+  "ribbon": {
+    "mostRecentAction": ""
+  },
   "active": "f9c7a3a801685aef",
   "lastOpenFiles": [
-    "Untitled.md",
-    "Calender/2022-10-26.md",
+    "School/CP214 Discrete Structures for Comp-Sci/Induction and Recursive Programs.pdf",
+    "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md",
     "School/CP214 Discrete Structures for Comp-Sci/Predicate Logic.pdf",
     "School/CP214 Discrete Structures for Comp-Sci/Predicate Logic2.pdf",
     "School/CP214 Discrete Structures for Comp-Sci/CP214 Assignment 2.pdf",
     "School/CP214 Discrete Structures for Comp-Sci/Sets, Functions, and Relations.pdf",
-    "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md",
+    "Calender/2022-10-26.md",
     "Induction.md",
     "00 Kanban Board.md",
     "Projects/Projects Kanban.md"
