@@ -21,17 +21,16 @@ kanban-plugin: basic
 - [ ] Learn python data science/ ml libraries (numpy, pandas, mathplotlib, seaborn, scikitlearn, scipy)
 - [ ] Create demo site back end for MNIST classifier
 - [ ] Deploy demo site for MNIST classifier
+- [ ] Linear Regression Model from scratch
 
 
 ## Quizes / Assignments
 
-- [ ] CP214 Assignment 3 @{2022-10-26} @@{23:45}
 - [ ] CP202 Assignment 3 @{2022-11-02} @@{23:45}
 
 
 ## In Progress
 
-- [ ] Linear Regression Model from scratch
 - [ ] Create demo site front end for MNIST classifier
 
 
@@ -41,6 +40,7 @@ kanban-plugin: basic
 - [ ] MNIST digit classifier Neural Net using tensorflow/keras
 - [ ] CP264 A6 @{2022-10-26} @@{23:45}
 - [ ] Book G2 Driving test
+- [ ] CP214 Assignment 2 @{2022-10-26} @@{23:45}
 
 
 ***

@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "166e0fe54c1c375b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "a4137400206d8aa8",
@@ -101,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md",
+                "file": "conflict-files-obsidian-git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md",
+                "file": "conflict-files-obsidian-git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md"
+                "file": "conflict-files-obsidian-git.md"
               }
             }
           },
@@ -195,10 +208,10 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "f9c7a3a801685aef",
+  "active": "166e0fe54c1c375b",
   "lastOpenFiles": [
-    "School/CP214 Discrete Structures for Comp-Sci/Induction and Recursive Programs.pdf",
     "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md",
+    "School/CP214 Discrete Structures for Comp-Sci/Induction and Recursive Programs.pdf",
     "School/CP214 Discrete Structures for Comp-Sci/Predicate Logic.pdf",
     "School/CP214 Discrete Structures for Comp-Sci/Predicate Logic2.pdf",
     "School/CP214 Discrete Structures for Comp-Sci/CP214 Assignment 2.pdf",
