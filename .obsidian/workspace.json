@@ -11,11 +11,9 @@
             "id": "f9c7a3a801685aef",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "kanban",
               "state": {
-                "file": "Calender/2022-10-26.md",
-                "mode": "source",
-                "source": false
+                "file": "00 Kanban Board.md"
               }
             }
           }
@@ -85,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calender/2022-10-26.md",
+                "file": "00 Kanban Board.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calender/2022-10-26.md",
+                "file": "00 Kanban Board.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calender/2022-10-26.md"
+                "file": "00 Kanban Board.md"
               }
             }
           },
@@ -178,15 +176,15 @@
   },
   "active": "f9c7a3a801685aef",
   "lastOpenFiles": [
-    "Untitled.md",
+    "Projects/Projects Kanban.md",
     "Calender/2022-10-26.md",
+    "Untitled.md",
     "School/CP214 Discrete Structures for Comp-Sci/Predicate Logic.pdf",
     "School/CP214 Discrete Structures for Comp-Sci/Predicate Logic2.pdf",
     "School/CP214 Discrete Structures for Comp-Sci/CP214 Assignment 2.pdf",
     "School/CP214 Discrete Structures for Comp-Sci/Sets, Functions, and Relations.pdf",
     "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md",
     "Induction.md",
-    "00 Kanban Board.md",
-    "Projects/Projects Kanban.md"
+    "00 Kanban Board.md"
   ]
 }
