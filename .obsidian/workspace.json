@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "2b5dab446b7e478d",
+        "id": "8ab38c2884f0db8c",
         "type": "tabs",
         "children": [
           {
-            "id": "81f71d9663e5abf2",
+            "id": "f9c7a3a801685aef",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Calender/2022-10-26.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -69,7 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300.5
+    "width": 203
   },
   "right": {
     "id": "27f91139c8b17a17",
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calender/2022-10-26.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calender/2022-10-26.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Calender/2022-10-26.md"
-              }
+              "state": {}
             }
           },
           {
@@ -176,13 +168,16 @@
     "direction": "horizontal",
     "width": 206.5
   },
-  "active": "81f71d9663e5abf2",
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "f9c7a3a801685aef",
   "lastOpenFiles": [
-    "Calender/2022-10-25.md",
+    "School/CP214 Discrete Structures for Comp-Sci/Predicate Logic.pdf",
+    "School/CP214 Discrete Structures for Comp-Sci/Predicate Logic2.pdf",
+    "School/CP214 Discrete Structures for Comp-Sci/CP214 Assignment 2.pdf",
+    "School/CP214 Discrete Structures for Comp-Sci/Sets, Functions, and Relations.pdf",
     "Calender/2022-10-26.md",
-    "Assignment 2 1.pdf.md",
-    "School/CP214 Discrete Structures for Comp-Sci/Assignment 2.pdf",
-    "School/CP214 Discrete Structures for Comp-Sci/Assignment 2 1.pdf",
     "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md",
     "Induction.md",
     "00 Kanban Board.md",
