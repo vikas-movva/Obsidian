@@ -21,6 +21,7 @@ kanban-plugin: basic
 - [ ] Learn python data science/ ml libraries (numpy, pandas, mathplotlib, seaborn, scikitlearn, scipy)
 - [ ] Create demo site back end for MNIST classifier
 - [ ] Deploy demo site for MNIST classifier
+- [ ] Linear Regression Model from scratch
 
 
 ## Quizes / Assignments
@@ -30,7 +31,6 @@ kanban-plugin: basic
 
 ## In Progress
 
-- [ ] Linear Regression Model from scratch
 - [ ] Create demo site front end for MNIST classifier
 
 
