@@ -26,7 +26,7 @@ kanban-plugin: basic
 
 ## Quizes / Assignments
 
-- [ ] CP202 Assignment 3 @{2022-11-02} @@{23:45}
+- [ ] CP264 Midterm @{2022-11-02}@@{23:59}
 
 
 ## In Progress
@@ -41,6 +41,7 @@ kanban-plugin: basic
 - [ ] CP264 A6 @{2022-10-26} @@{23:45}
 - [ ] Book G2 Driving test
 - [ ] CP214 Assignment 2 @{2022-10-26} @@{23:45}
+- [ ] CP202 Assignment 3 @{2022-11-02} @@{23:45}
 
 
 ***
