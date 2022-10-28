@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Projects/ml-demo/Project outline.md",
+                "file": "Calender/2022-10-27.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Projects/ml-demo/Project outline.md",
+                "file": "Calender/2022-10-27.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Projects/ml-demo/Project outline.md",
+                "file": "Calender/2022-10-27.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Projects/ml-demo/Project outline.md"
+                "file": "Calender/2022-10-27.md"
               }
             }
           },
@@ -179,8 +179,9 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "7eb476dee0f0ad4f",
+  "active": "f9c7a3a801685aef",
   "lastOpenFiles": [
+    "Projects/ml-demo/Project outline.md",
     "Calender/2022-10-27.md",
     "Calender/2022-10-26.md",
     "00 Kanban Board.md",
@@ -189,7 +190,6 @@
     "School/CP214 Discrete Structures for Comp-Sci/Induction and Recursive Programs.pdf",
     "School/CP214 Discrete Structures for Comp-Sci/Predicate Logic.pdf",
     "School/CP214 Discrete Structures for Comp-Sci/Predicate Logic2.pdf",
-    "School/CP214 Discrete Structures for Comp-Sci/CP214 Assignment 2.pdf",
-    "School/CP214 Discrete Structures for Comp-Sci/Sets, Functions, and Relations.pdf"
+    "School/CP214 Discrete Structures for Comp-Sci/CP214 Assignment 2.pdf"
   ]
 }
