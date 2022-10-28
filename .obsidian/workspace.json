@@ -11,9 +11,11 @@
             "id": "f9c7a3a801685aef",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "00 Kanban Board.md"
+                "file": "Projects/ml-demo/Project outline.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "00 Kanban Board.md",
+                "file": "Projects/ml-demo/Project outline.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "00 Kanban Board.md",
+                "file": "Projects/ml-demo/Project outline.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00 Kanban Board.md"
+                "file": "Projects/ml-demo/Project outline.md"
               }
             }
           },
@@ -177,17 +179,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "f9c7a3a801685aef",
+  "active": "7eb476dee0f0ad4f",
   "lastOpenFiles": [
+    "Calender/2022-10-27.md",
+    "Calender/2022-10-26.md",
+    "00 Kanban Board.md",
     "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md",
     "conflict-files-obsidian-git.md",
     "School/CP214 Discrete Structures for Comp-Sci/Induction and Recursive Programs.pdf",
     "School/CP214 Discrete Structures for Comp-Sci/Predicate Logic.pdf",
     "School/CP214 Discrete Structures for Comp-Sci/Predicate Logic2.pdf",
     "School/CP214 Discrete Structures for Comp-Sci/CP214 Assignment 2.pdf",
-    "School/CP214 Discrete Structures for Comp-Sci/Sets, Functions, and Relations.pdf",
-    "Calender/2022-10-26.md",
-    "Induction.md",
-    "00 Kanban Board.md"
+    "School/CP214 Discrete Structures for Comp-Sci/Sets, Functions, and Relations.pdf"
   ]
 }
