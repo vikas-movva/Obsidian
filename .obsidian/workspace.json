@@ -11,11 +11,9 @@
             "id": "f9c7a3a801685aef",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "kanban",
               "state": {
-                "file": "Calender/2022-10-28.md",
-                "mode": "source",
-                "source": false
+                "file": "Projects/ml-demo/ml-demo Kanban.md"
               }
             }
           }
@@ -85,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calender/2022-10-28.md",
+                "file": "Projects/ml-demo/ml-demo Kanban.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calender/2022-10-28.md",
+                "file": "Projects/ml-demo/ml-demo Kanban.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calender/2022-10-28.md"
+                "file": "Projects/ml-demo/ml-demo Kanban.md"
               }
             }
           },
@@ -174,19 +172,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 206.5
+    "width": 301.5
   },
   "active": "f9c7a3a801685aef",
   "lastOpenFiles": [
-    "Calender/2022-10-27.md",
-    "Calender/2022-10-28.md",
+    "Projects/Projects Kanban.md",
+    "Projects/ml-demo/rough design.excalidraw.md",
     "Projects/ml-demo/Project outline.md",
-    "Calender/2022-10-26.md",
+    "Projects/ml-demo/ml-demo Kanban.md",
     "00 Kanban Board.md",
+    "Calender/2022-10-28.md",
+    "Calender/2022-10-27.md",
+    "Calender/2022-10-26.md",
     "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md",
-    "conflict-files-obsidian-git.md",
-    "School/CP214 Discrete Structures for Comp-Sci/Induction and Recursive Programs.pdf",
-    "School/CP214 Discrete Structures for Comp-Sci/Predicate Logic.pdf",
-    "School/CP214 Discrete Structures for Comp-Sci/Predicate Logic2.pdf"
+    "conflict-files-obsidian-git.md"
   ]
 }

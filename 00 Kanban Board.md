@@ -27,6 +27,8 @@ kanban-plugin: basic
 ## Quizes / Assignments
 
 - [ ] CP264 Midterm @{2022-11-02}@@{23:59}
+- [ ] CP214 A3 @{2022-11-07} @@{23:59}
+- [ ] CP213 Quiz 4 @{2022-10-29} @@{23:59}
 
 
 ## In Progress
