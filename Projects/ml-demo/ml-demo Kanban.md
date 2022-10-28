@@ -6,6 +6,7 @@ kanban-plugin: basic
 
 ## Planned
 
+- [ ] **==learn styled components pseudo selectors==**
 - [ ] Finish Demo section
 - [ ] Finish Code explanation section
 - [ ] Finish Repo activity section
