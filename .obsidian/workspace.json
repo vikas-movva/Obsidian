@@ -4,18 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "01166b80fd48820a",
+        "id": "6343deaeefb0b9dd",
         "type": "tabs",
         "children": [
           {
-            "id": "ce5aa21fb37e2d31",
+            "id": "a193744b8d125031",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "kanban",
               "state": {
-                "file": "Calender/2022-10-29.md",
-                "mode": "source",
-                "source": false
+                "file": "Projects/ml-demo/ml-demo Kanban.md"
               }
             }
           }
@@ -85,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calender/2022-10-29.md",
+                "file": "Projects/ml-demo/ml-demo Kanban.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calender/2022-10-29.md",
+                "file": "Projects/ml-demo/ml-demo Kanban.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calender/2022-10-29.md"
+                "file": "Projects/ml-demo/ml-demo Kanban.md"
               }
             }
           },
@@ -176,12 +174,12 @@
     "direction": "horizontal",
     "width": 301.5
   },
-  "active": "7eb476dee0f0ad4f",
+  "active": "a193744b8d125031",
   "lastOpenFiles": [
-    "github.com/vikas-movva/website-resume.md",
-    "Calender/2022-10-29.md",
-    "Calender/2022-10-28.md",
     "Projects/ml-demo/ml-demo Kanban.md",
+    "Calender/2022-10-29.md",
+    "github.com/vikas-movva/website-resume.md",
+    "Calender/2022-10-28.md",
     "Projects/Projects Kanban.md",
     "Projects/ml-demo/rough design.excalidraw.md",
     "Projects/ml-demo/Project outline.md",
