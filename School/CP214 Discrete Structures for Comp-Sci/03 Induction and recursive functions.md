@@ -64,23 +64,24 @@
 - Ex.
 	- Recursive Euclidean Algorithm:
 	```python
-		def gcd(a: uint,b: uint) -> uint:
-			if(a==0):
-				return b
-			else:
-				return gcd(b%a, a)
+def gcd(a: uint,b: uint) -> uint:
+	if(a==0):
+		return b
+	else:
+		return gcd(b%a, a)
+print(gcd(input("a: "), input("b: ")))
 	```
 	- Recursive Fibonacci Algorithm
-	```python
-		def fib(n: uint) -> uint:
-			if(n==0):
-				return 0
-			elif(n==1):
-				return 1
-			else:
-				return fib(n-1) + fib(n-2)
-				
-	```
+```python
+def fib(n: uint) -> uint:
+	if(n==0):
+		return 0
+	elif(n==1):
+		return 1
+	else:
+		return fib(n-1) + fib(n-2)
+print(fib(input("n: ")))
+```
 
 ### Practice problems
 - Give a recursive definition of the set of natural numbers $N$.
@@ -88,13 +89,14 @@
 	- $(x+1)\in S$ if $(x \in S) \land (y \in S)$
 - Give a recursive algorithm for computing n!, where n is a nonnegative integer
 ```python
-	def factorial(n: uint) -> uint:
-		if(n==0):
-			return 0
-		elif(n==1):
-			return 1
-		else:
-			return: n * factorial(n-1)
+def factorial(n: uint) -> uint:
+	if(n==0):
+		return 0
+	elif(n==1):
+		return 1
+	else:
+		return: n * factorial(n-1)
+print(factorial(input("n: ")))
 ```
 - Give a recursive algorithm for computing $a^n$ , where $a$ is a nonzero real number and $n$ is a nonnegative integer.
 ```python

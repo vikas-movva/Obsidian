@@ -11,9 +11,11 @@
             "id": "a193744b8d125031",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "Projects/ml-demo/ml-demo Kanban.md"
+                "file": "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Projects/ml-demo/ml-demo Kanban.md",
+                "file": "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Projects/ml-demo/ml-demo Kanban.md",
+                "file": "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Projects/ml-demo/ml-demo Kanban.md"
+                "file": "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md"
               }
             }
           },
@@ -176,11 +178,11 @@
   },
   "active": "a193744b8d125031",
   "lastOpenFiles": [
+    "Projects/Projects Kanban.md",
     "Projects/ml-demo/ml-demo Kanban.md",
     "Calender/2022-10-29.md",
     "github.com/vikas-movva/website-resume.md",
     "Calender/2022-10-28.md",
-    "Projects/Projects Kanban.md",
     "Projects/ml-demo/rough design.excalidraw.md",
     "Projects/ml-demo/Project outline.md",
     "00 Kanban Board.md",
