@@ -11,11 +11,9 @@
             "id": "a193744b8d125031",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "kanban",
               "state": {
-                "file": "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md",
-                "mode": "source",
-                "source": false
+                "file": "Projects/ml-demo/ml-demo Kanban.md"
               }
             }
           }
@@ -85,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md",
+                "file": "Projects/ml-demo/ml-demo Kanban.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md",
+                "file": "Projects/ml-demo/ml-demo Kanban.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md"
+                "file": "Projects/ml-demo/ml-demo Kanban.md"
               }
             }
           },
@@ -178,6 +176,8 @@
   },
   "active": "a193744b8d125031",
   "lastOpenFiles": [
+    "Calender/2022-11-03.md",
+    "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md",
     "Projects/Projects Kanban.md",
     "Projects/ml-demo/ml-demo Kanban.md",
     "Calender/2022-10-29.md",
@@ -185,8 +185,6 @@
     "Calender/2022-10-28.md",
     "Projects/ml-demo/rough design.excalidraw.md",
     "Projects/ml-demo/Project outline.md",
-    "00 Kanban Board.md",
-    "Calender/2022-10-27.md",
-    "Calender/2022-10-26.md"
+    "00 Kanban Board.md"
   ]
 }
