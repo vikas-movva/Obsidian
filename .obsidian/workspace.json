@@ -6,16 +6,32 @@
       {
         "id": "192e913837919062",
         "type": "tabs",
+        "dimension": 63.325183374083124,
         "children": [
           {
             "id": "1bb8d64c1f26505c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "kanban",
               "state": {
-                "file": "Calender/2022-11-03.md",
-                "mode": "source",
-                "source": false
+                "file": "00 Kanban Board.md"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "2a40311c3761d370",
+        "type": "tabs",
+        "dimension": 36.674816625916876,
+        "children": [
+          {
+            "id": "f7ba2837c4561b76",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "School/CP214 Discrete Structures for Comp-Sci/Counting.pdf"
               }
             }
           }
@@ -85,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calender/2022-11-03.md",
+                "file": "00 Kanban Board.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calender/2022-11-03.md",
+                "file": "00 Kanban Board.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calender/2022-11-03.md"
+                "file": "00 Kanban Board.md"
               }
             }
           },
@@ -179,17 +195,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "7eb476dee0f0ad4f",
+  "active": "1bb8d64c1f26505c",
   "lastOpenFiles": [
-    "Calender/2022-10-29.md",
+    "School/CP214 Discrete Structures for Comp-Sci/04 Counting.md",
     "Calender/2022-11-03.md",
+    "School/CP214 Discrete Structures for Comp-Sci/Counting.pdf",
+    "Calender/2022-10-29.md",
     "Calender/2022-10-30.md",
     "Calender/2022-10-27.md",
     "Projects/ml-demo/Project outline.md",
     "Calender/2022-10-26.md",
     "00 Kanban Board.md",
-    "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md",
-    "conflict-files-obsidian-git.md",
-    "School/CP214 Discrete Structures for Comp-Sci/Induction and Recursive Programs.pdf"
+    "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md"
   ]
 }

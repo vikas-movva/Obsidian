@@ -10,30 +10,32 @@ kanban-plugin: basic
 - [ ] Finish Coursera Course: Mathematics for Machine Learning: Linear Algebra
 - [ ] Finish Coursera Course: Mathematics for Machine Learning: Multivariate Calculus
 - [ ] Finish Coursera Course: Supervised Machine Learning: Regression and Classification
-- [ ] Learn Heap data structure
 - [ ] fast.ai course
 
 
 ## High Priority Tasks
 
-- [ ] Finish Resume
 - [ ] Finish Portfolio Website
 - [ ] Learn python data science/ ml libraries (numpy, pandas, mathplotlib, seaborn, scikitlearn, scipy)
-- [ ] Create demo site back end for MNIST classifier
-- [ ] Deploy demo site for MNIST classifier
 - [ ] Linear Regression Model from scratch
+- [ ] Learn Heap data structure
+- [ ] Finish notes for [[04 Counting|Counting]]
 
 
 ## Quizes / Assignments
 
-- [ ] CP264 Midterm @{2022-11-02}@@{23:59}
 - [ ] CP214 A3 @{2022-11-07} @@{23:59}
 - [ ] CP213 Quiz 4 @{2022-10-29} @@{23:59}
+- [ ] CP264 A7 @{2022-11-09}@@{23:59}
+- [ ] CP202 A4 @{2022-11-09}@@{23:59}
+- [ ] CP264 A8 @{2022-11-16}@@{23:59}
+- [ ] CP202 A5 @{2022-11-16}@@{23:59}
+- [ ] CP264 A9 @{2022-11-23}@@{23:59}
+- [ ] CP202 A6 @{2022-11-23}@@{23:59}
 
 
 ## In Progress
 
-- [ ] Create demo site front end for MNIST classifier
 
 
 ## Completed
@@ -44,6 +46,11 @@ kanban-plugin: basic
 - [ ] Book G2 Driving test
 - [ ] CP214 Assignment 2 @{2022-10-26} @@{23:45}
 - [ ] CP202 Assignment 3 @{2022-11-02} @@{23:45}
+- [ ] CP264 Midterm @{2022-11-02}@@{23:59}
+- [ ] Create demo site front end for MNIST classifier
+- [ ] Create demo site back end for MNIST classifier
+- [ ] Deploy demo site for MNIST classifier
+- [ ] Finish Resume
 
 
 ***
