@@ -4,16 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "6343deaeefb0b9dd",
+        "id": "192e913837919062",
         "type": "tabs",
         "children": [
           {
-            "id": "a193744b8d125031",
+            "id": "1bb8d64c1f26505c",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "Projects/ml-demo/ml-demo Kanban.md"
+                "file": "Calender/2022-11-03.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Projects/ml-demo/ml-demo Kanban.md",
+                "file": "Calender/2022-11-03.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Projects/ml-demo/ml-demo Kanban.md",
+                "file": "Calender/2022-11-03.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Projects/ml-demo/ml-demo Kanban.md"
+                "file": "Calender/2022-11-03.md"
               }
             }
           },
@@ -152,7 +154,7 @@
             }
           },
           {
-            "id": "745f0a4c8d606fc0",
+            "id": "1d54841793e88d64",
             "type": "leaf",
             "state": {
               "type": "BC-matrix",
@@ -160,7 +162,7 @@
             }
           },
           {
-            "id": "bbf212db2ce0836c",
+            "id": "c71b9342fdf717af",
             "type": "leaf",
             "state": {
               "type": "BC-tree",
@@ -172,19 +174,22 @@
       }
     ],
     "direction": "horizontal",
-    "width": 301.5
+    "width": 206.5
   },
-  "active": "a193744b8d125031",
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "7eb476dee0f0ad4f",
   "lastOpenFiles": [
-    "Calender/2022-11-03.md",
-    "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md",
-    "Projects/Projects Kanban.md",
-    "Projects/ml-demo/ml-demo Kanban.md",
     "Calender/2022-10-29.md",
-    "github.com/vikas-movva/website-resume.md",
-    "Calender/2022-10-28.md",
-    "Projects/ml-demo/rough design.excalidraw.md",
+    "Calender/2022-11-03.md",
+    "Calender/2022-10-30.md",
+    "Calender/2022-10-27.md",
     "Projects/ml-demo/Project outline.md",
-    "00 Kanban Board.md"
+    "Calender/2022-10-26.md",
+    "00 Kanban Board.md",
+    "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md",
+    "conflict-files-obsidian-git.md",
+    "School/CP214 Discrete Structures for Comp-Sci/Induction and Recursive Programs.pdf"
   ]
 }
