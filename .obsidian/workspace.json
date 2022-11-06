@@ -4,34 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "192e913837919062",
+        "id": "6343deaeefb0b9dd",
         "type": "tabs",
-        "dimension": 63.325183374083124,
         "children": [
           {
-            "id": "1bb8d64c1f26505c",
+            "id": "a193744b8d125031",
             "type": "leaf",
             "state": {
               "type": "kanban",
               "state": {
-                "file": "00 Kanban Board.md"
-              }
-            }
-          }
-        ]
-      },
-      {
-        "id": "2a40311c3761d370",
-        "type": "tabs",
-        "dimension": 36.674816625916876,
-        "children": [
-          {
-            "id": "f7ba2837c4561b76",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "School/CP214 Discrete Structures for Comp-Sci/Counting.pdf"
+                "file": "Projects/Projects Kanban.md"
               }
             }
           }
@@ -101,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "00 Kanban Board.md",
+                "file": "Projects/Projects Kanban.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "00 Kanban Board.md",
+                "file": "Projects/Projects Kanban.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00 Kanban Board.md"
+                "file": "Projects/Projects Kanban.md"
               }
             }
           },
@@ -170,7 +152,7 @@
             }
           },
           {
-            "id": "1d54841793e88d64",
+            "id": "745f0a4c8d606fc0",
             "type": "leaf",
             "state": {
               "type": "BC-matrix",
@@ -178,7 +160,7 @@
             }
           },
           {
-            "id": "c71b9342fdf717af",
+            "id": "bbf212db2ce0836c",
             "type": "leaf",
             "state": {
               "type": "BC-tree",
@@ -190,22 +172,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 206.5
+    "width": 301.5
   },
-  "ribbon": {
-    "mostRecentAction": ""
-  },
-  "active": "1bb8d64c1f26505c",
+  "active": "a193744b8d125031",
   "lastOpenFiles": [
-    "School/CP214 Discrete Structures for Comp-Sci/04 Counting.md",
+    "Calender/2022-11-06.md",
+    "Projects/Projects Kanban.md",
+    "Projects/ml-demo/ml-demo Kanban.md",
     "Calender/2022-11-03.md",
-    "School/CP214 Discrete Structures for Comp-Sci/Counting.pdf",
+    "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md",
     "Calender/2022-10-29.md",
-    "Calender/2022-10-30.md",
-    "Calender/2022-10-27.md",
-    "Projects/ml-demo/Project outline.md",
-    "Calender/2022-10-26.md",
-    "00 Kanban Board.md",
-    "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md"
+    "github.com/vikas-movva/website-resume.md",
+    "Calender/2022-10-28.md",
+    "Projects/ml-demo/rough design.excalidraw.md",
+    "Projects/ml-demo/Project outline.md"
   ]
 }

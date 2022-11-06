@@ -9,6 +9,8 @@ kanban-plugin: basic
 - [ ] Sign language to natural language
 - [ ] TTs
 - [ ] MyGamesList
+- [ ] Mouth reading
+- [ ] Video about metaverse
 
 
 ## Planning
