@@ -109,3 +109,12 @@ def exp(a: int, n: int) -> int:
 		return a * exp(a, n-1)	
 print(exp(int(input("a: ")), int(input("n: "))))
 ```
+
+```python
+def foo(n, a):
+	if (n==1):
+		return a
+	else:
+		return foo(n-1, a) + a
+print(foo(3,2))
+```

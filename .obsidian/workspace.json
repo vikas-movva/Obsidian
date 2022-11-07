@@ -11,9 +11,11 @@
             "id": "a193744b8d125031",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "Projects/Projects Kanban.md"
+                "file": "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Projects/Projects Kanban.md",
+                "file": "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Projects/Projects Kanban.md",
+                "file": "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Projects/Projects Kanban.md"
+                "file": "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md"
               }
             }
           },
@@ -176,8 +178,8 @@
   },
   "active": "a193744b8d125031",
   "lastOpenFiles": [
-    "Calender/2022-11-06.md",
     "Projects/Projects Kanban.md",
+    "Calender/2022-11-06.md",
     "Projects/ml-demo/ml-demo Kanban.md",
     "Calender/2022-11-03.md",
     "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md",
