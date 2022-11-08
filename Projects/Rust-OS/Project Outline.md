@@ -72,3 +72,23 @@ panic = "abort" # this is to disable stack unwinding on panic -> OS related feat
 [profile.release]
 panic = "abort" # this is to disable stack unwinding on panic -> OS related feature
 ```
+
+### Building the binary for a bare metal target
+By default rust builds for your current OS and cpu architecture.
+
+In order to build for a bare metal target:
+
+add the target to the rustup tool
+```shell
+rustup target add thumbv7em-none-eabihf
+```
+this specific target is for a embedded arm system
+
+```shell
+cargo build --target thumbv7em-none-eabihf
+```
+
+now since the target has no OS the linker will not try to link the `C` runtime
+
+==Note: this is just a minimal implementation extra steps need to be taken in order for any real use of the binary==
+
