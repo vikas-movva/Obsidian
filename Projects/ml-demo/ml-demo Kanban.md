@@ -28,7 +28,7 @@ kanban-plugin: basic
 - [ ] Figma page design
 - [ ] Finish Demo section
 - [ ] **==learn styled components pseudo selectors==**
-- [ ] [[Project outline]]
+- [ ] [[Projects/ml-demo/Project outline]]
 
 
 

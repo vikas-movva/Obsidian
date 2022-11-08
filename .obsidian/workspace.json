@@ -4,22 +4,33 @@
     "type": "split",
     "children": [
       {
-        "id": "6343deaeefb0b9dd",
+        "id": "192e913837919062",
         "type": "tabs",
         "children": [
           {
-            "id": "a193744b8d125031",
+            "id": "1bb8d64c1f26505c",
+            "type": "leaf",
+            "state": {
+              "type": "kanban",
+              "state": {
+                "file": "Projects/Projects Kanban.md"
+              }
+            }
+          },
+          {
+            "id": "29eba471d8092fc8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calender/2022-11-08.md",
+                "file": "Projects/Rust-OS/Project Outline.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calender/2022-11-08.md",
+                "file": "Projects/Rust-OS/Project Outline.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calender/2022-11-08.md",
+                "file": "Projects/Rust-OS/Project Outline.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calender/2022-11-08.md"
+                "file": "Projects/Rust-OS/Project Outline.md"
               }
             }
           },
@@ -154,7 +165,7 @@
             }
           },
           {
-            "id": "745f0a4c8d606fc0",
+            "id": "1d54841793e88d64",
             "type": "leaf",
             "state": {
               "type": "BC-matrix",
@@ -162,7 +173,7 @@
             }
           },
           {
-            "id": "bbf212db2ce0836c",
+            "id": "c71b9342fdf717af",
             "type": "leaf",
             "state": {
               "type": "BC-tree",
@@ -174,19 +185,22 @@
       }
     ],
     "direction": "horizontal",
-    "width": 301.5
+    "width": 206.5
   },
-  "active": "a193744b8d125031",
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "29eba471d8092fc8",
   "lastOpenFiles": [
-    "School/CP214 Discrete Structures for Comp-Sci/03 Induction and recursive functions.md",
     "Projects/Projects Kanban.md",
-    "Calender/2022-11-06.md",
-    "Projects/ml-demo/ml-demo Kanban.md",
+    "Projects/Rust-OS/Project Outline.md",
+    "00 Kanban Board.md",
+    "School/CP214 Discrete Structures for Comp-Sci/04 Counting.md",
     "Calender/2022-11-03.md",
+    "School/CP214 Discrete Structures for Comp-Sci/Counting.pdf",
     "Calender/2022-10-29.md",
-    "github.com/vikas-movva/website-resume.md",
-    "Calender/2022-10-28.md",
-    "Projects/ml-demo/rough design.excalidraw.md",
+    "Calender/2022-10-30.md",
+    "Calender/2022-10-27.md",
     "Projects/ml-demo/Project outline.md"
   ]
 }
