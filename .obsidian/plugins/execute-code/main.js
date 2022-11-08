@@ -10841,6 +10841,7 @@ var Outputter = class extends import_events.EventEmitter {
     return true;
   }
   makeOutputVisible() {
+    this.closeInput();
     if (!this.clearButton)
       this.addClearButton();
     if (!this.outputElement)
@@ -11261,6 +11262,10 @@ var makeRSettings_default = (tab, containerEl) => {
   new import_obsidian14.Setting(containerEl).setName("R arguments").addText((text) => text.setValue(tab.plugin.settings.RArgs).onChange((value) => __async(void 0, null, function* () {
     tab.plugin.settings.RArgs = value;
     console.log("R args set to: " + value);
+    yield tab.plugin.saveSettings();
+  })));
+  new import_obsidian14.Setting(containerEl).setName("Run R blocks in Notebook Mode").addToggle((toggle) => toggle.setValue(tab.plugin.settings.rInteractive).onChange((value) => __async(void 0, null, function* () {
+    tab.plugin.settings.rInteractive = value;
     yield tab.plugin.saveSettings();
   })));
   tab.makeInjectSetting(containerEl, "r");
@@ -11761,7 +11766,7 @@ ${injectedCode}`;
 var import_events2 = require("events");
 
 // src/executors/ReplExecutor.ts
-var import_child_process = require("child_process");
+var import_child_process2 = require("child_process");
 var import_obsidian24 = require("obsidian");
 
 // src/executors/Executor.ts
@@ -11816,6 +11821,17 @@ var AsyncExecutor = class extends Executor {
   }
 };
 
+// src/executors/killWithChildren.ts
+var import_child_process = require("child_process");
+var killWithChildren_default = (pid) => {
+  if (process.platform === "win32") {
+    (0, import_child_process.execSync)(`taskkill /pid ${pid} /T /F`);
+  } else {
+    (0, import_child_process.execSync)(`pkill -P ${pid}`);
+    process.kill(pid);
+  }
+};
+
 // src/executors/ReplExecutor.ts
 var ReplExecutor = class extends AsyncExecutor {
   constructor(settings, path, args, file, language) {
@@ -11825,7 +11841,7 @@ var ReplExecutor = class extends AsyncExecutor {
       args.unshift("-e", path);
       path = "wsl";
     }
-    this.process = (0, import_child_process.spawn)(path, args);
+    this.process = (0, import_child_process2.spawn)(path, args);
     this.process.on("close", () => {
       this.emit("close");
       new import_obsidian24.Notice("Runtime exited");
@@ -11878,7 +11894,7 @@ var ReplExecutor = class extends AsyncExecutor {
       this.process.on("close", () => {
         resolve();
       });
-      this.process.kill();
+      killWithChildren_default(this.process.pid);
       this.process = null;
     });
   }
@@ -11890,15 +11906,6 @@ var NodeJSExecutor = class extends ReplExecutor {
     const args = settings.nodeArgs ? settings.nodeArgs.split(" ") : [];
     args.unshift(`-e`, `require("repl").start({prompt: "", preview: false, ignoreUndefined: true}).on("exit", ()=>process.exit())`);
     super(settings, settings.nodePath, args, file, "js");
-  }
-  stop() {
-    return new Promise((resolve, reject) => {
-      this.process.on("close", () => {
-        resolve();
-      });
-      this.process.kill();
-      this.process = null;
-    });
   }
   setup() {
     return __async(this, null, function* () {
@@ -12147,15 +12154,6 @@ var PythonExecutor = class extends ReplExecutor {
       this.settings.pythonEmbedPlots
     );
   }
-  stop() {
-    return new Promise((resolve, reject) => {
-      this.process.on("close", () => {
-        resolve();
-      });
-      this.process.kill();
-      this.process = null;
-    });
-  }
   setup() {
     return __async(this, null, function* () {
       this.addJobToQueue((resolve, reject) => {
@@ -12224,10 +12222,46 @@ var CppExecutor = class extends NonInteractiveCodeExecutor {
   }
 };
 
+// src/executors/RExecutor.ts
+var RExecutor = class extends ReplExecutor {
+  constructor(settings, file) {
+    const args = settings.RArgs ? settings.RArgs.split(" ") : [];
+    let conArgName = `notebook_connection_${Math.random().toString(16).substring(2)}`;
+    args.unshift(
+      `-e`,
+      `${conArgName}=file("stdin", "r"); while(1) { eval(parse(text=tail(readLines(con = ${conArgName}, n=1)))) }`
+    );
+    super(settings, settings.RPath, args, file, "r");
+  }
+  setup() {
+    return __async(this, null, function* () {
+      console.log("setup");
+    });
+  }
+  wrapCode(code, finishSigil) {
+    return `tryCatch({
+			cat(sprintf("%s", 
+				eval(parse(text = ${JSON.stringify(code)} ))
+			))
+		},
+		error = function(e){
+			cat(sprintf("%s", e), file=stderr())
+		}, 
+		finally = {
+			cat(${JSON.stringify(finishSigil)});
+			flush.console()
+		})`.replace(/\r?\n/g, "") + "\n";
+  }
+  removePrompts(output, source) {
+    return output;
+  }
+};
+
 // src/ExecutorContainer.ts
 var interactiveExecutors = {
   "js": NodeJSExecutor,
-  "python": PythonExecutor
+  "python": PythonExecutor,
+  "r": RExecutor
 };
 var nonInteractiveExecutors = {
   "prolog": PrologExecutor,
