@@ -16,5 +16,7 @@
   "cm-editor-syntax-highlight-obsidian",
   "url-into-selection",
   "obsidian-jupyter",
-  "oz-image-plugin"
+  "oz-image-plugin",
+  "obsidian-footnote-indicator",
+  "obsidian-footnotes"
 ]
