@@ -188,7 +188,7 @@ There are two options for running the kernel
 #### Creating a Bootimage
 To turn a compiled kernel into a bootable disk image we need to link it with a boot loader
 
-In order to do so add the folowing:
+In order to do so add the following:
 `Cargo.toml`
 ```toml
 [dependencies]
