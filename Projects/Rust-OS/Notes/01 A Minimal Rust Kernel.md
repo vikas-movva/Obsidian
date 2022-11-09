@@ -4,6 +4,15 @@
 On startup your computer begins to execute firmware code that is stored in motherboard ROM
 
 The process goes something like this:
+```mermaid
+graph LR
+	A[Power on] --> B[execute firmware code]
+	B --> C[POST]
+	C --> D[detect available RAM]
+	D --> E[preinitialize CPU and hardware]
+	E --> F[look for bootable drive] 
+	F --> G[boot OS]
+```
 Power on -> execute firmware code
                 -> POST -> detect available RAM -> pre-initialize CPU and hardware -> look for bootable drive -> boot OS
 
@@ -22,6 +31,16 @@ On a x86 CPU there are two firmware standards:
 In order to maintain compatibility most new [[01 A Minimal Rust Kernel#Firmware standards|UEFI]] machines use an emulated [[01 A Minimal Rust Kernel#Firmware standards|BIOS]] a byproduct of this compatibility is that the CPU is put into ==real mode== which is a 16bit compatibility mode
 
 Updated boot process
+```mermaid
+graph LR
+	A[Power on] --> B[execute firmware code]
+	B --> C[POST]
+	C --> D[detect available RAM]
+	D --> E[preinitialize CPU and hardware]
+	E --> F[look for bootable drive] 
+	F --> G[run bootloader]
+	G --> H[start OS]
+```
 Power on -> execute firmware code
                 -> POST -> detect available RAM -> pre-initialize CPU and hardware -> look for bootable drive -> run bootloader -> ?
 
@@ -64,9 +83,11 @@ There are three different channels of Rust: stable, beta, nightly
 - beta: new features that have yet to be tested
 - nightly: experimental features
 
-The nightly compiler allows you to 
+The nightly compiler allows you to opt-in to experimental features such as `!asm` macro for inline asm
 
 `rustup` can be used to easily install / update all three channels side-by-side.
+
+#### Target Specification
 
 
 
