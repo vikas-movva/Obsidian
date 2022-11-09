@@ -185,6 +185,30 @@ There are two options for running the kernel
 - Using a virtual machine such as QEMU
 - Boot it on real hardware using a USB
 
+#### Creating a Bootimage
+To turn a compiled kernel into a bootable disk image we need to link it with a boot loader
+
+In order to do so add the folowing:
+`Cargo.toml`
+```toml
+[dependencies]
+bootloader = "0.9.8"
+```
+
+then run:
+```shell
+cargo install bootimage
+rustup component add llvm-tools-preview
+cargo bootimage
+```
+
+What does the bootimage tool really do?
+- compiles kernel to an [ELF](https://en.wikipedia.org/wiki/Executable_and_Linkable_Format) file
+- compiles bootloader dependency as a standalone executable
+- links the bytes of the kernel ELF file to the bootloader
+
+
+
 
 
 [^1]: registers are temporary storage locations in the processor.
