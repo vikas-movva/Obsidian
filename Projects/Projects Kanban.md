@@ -11,8 +11,8 @@ kanban-plugin: basic
 - [ ] MyGamesList
 - [ ] Mouth reading
 - [ ] Video about metaverse
-- [ ] [[Projects/Rust-OS/Project Outline|OS in Rust]]
 - [ ] Video about twitter
+- [ ] [[Projects/Rust-OS/Project Outline|OS in Rust]]
 
 
 ## Planning
