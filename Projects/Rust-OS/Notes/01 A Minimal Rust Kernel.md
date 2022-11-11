@@ -18,7 +18,7 @@ Power on -> execute firmware code
 
 #### Firmware standards
 On a x86 CPU there are two firmware standards:
-- Basic Input/Output System or BIOS
+- Basic Input/output System or BIOS
 	- Old and outdated standard
 	- Simple to use and well supported on majority of x86 machines
 
@@ -60,13 +60,13 @@ Multiboot is a standard created by the Free Software Foundation in order to avoi
 
 The standard defines an interface between the bootloader and the operating system, so that any Multiboot-compliant bootloader can load any Multiboot-compliant OS
 - Reference implementation: [GNU GRUB](https://www.gnu.org/software/grub/) 
-	- Most popular bootloader for linux systems
+	- Most popular bootloader for Linux systems
 
 In order to make the Multiboot-compliant a Multiboot-header needs to be inserted at the beginning of the kernel file.
 
-This does makes it easy to boot an os from GRUB but there are some problems with this method too
+This does makes it easy to boot an OS from GRUB but there are some problems with this method too
 - Only 32bit protected mode is supported which means that the CPU configuration to switch to 64bit long mode still needs to be done
-- They are designed to make the bootloader simple instead of the kernal
+- They are designed to make the bootloader simple instead of the kernel
 - Documentation for both GRUB and Multiboot is sparse at best
 - GRUB needs to be installed on the host system to create a bootable disk image from the kernel file which makes development on Windows or Mac difficult
 
@@ -95,19 +95,19 @@ The target is described by a triple target format -> `CPU-vendor-OS-ABI`  Ex. `x
 because there is no underlaying target none of the default targets are useable but Rust allows you to make your own from a JSON file:
 ```json
 {
-"Llvm-target": "X86_64-unknown-none", // for running on bare metal
-"Data-layout": "E-m:e-i64:64-f80:128-n8:16:32:64-S128",
-"Arch": "X86_64",
-"Target-endian": "Little",
-"Target-pointer-width": "64",
-"Target-c-int-width": "32",
-"Os": "None", // for bare metal
-"Executables": true,
-"Linker-flavor": "Ld.lld",
-"Linker": "Rust-lld", // lld linker that comes with rust
-"Panic-strategy": "Abort", // has the same effect as editing Cargo.toml
-"Disable-redzone": true,
-"Features": "-mmx,-sse,+soft-float" // -: disable, +: enable
+"llvm-target": "x86_64-unknown-none", // for running on bare metal
+"data-layout": "e-m:e-i64:64-f80:128-n8:16:32:64-s128",
+"arch": "x86_64",
+"target-endian": "little",
+"target-pointer-width": "64",
+"target-c-int-width": "32",
+"os": "none", // for bare metal
+"executables": true,
+"linker-flavor": "ld.lld",
+"linker": "rust-lld", // lld linker that comes with rust
+"panic-strategy": "abort", // has the same effect as editing cargo.toml
+"disable-redzone": true,
+"features": "-mmx,-sse,+soft-float" // -: disable, +: enable
 }
 ```
 
