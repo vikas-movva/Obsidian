@@ -13,11 +13,11 @@ kanban-plugin: basic
 - [ ] Video about metaverse
 - [ ] Video about twitter
 - [ ] [[Projects/Rust-OS/Project Outline|OS in Rust]]
-- [ ] NES emulator
 
 
 ## Planning
 
+- [ ] NES emulator
 
 
 ## In production
