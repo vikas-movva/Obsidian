@@ -8,6 +8,7 @@ kanban-plugin: basic
 
 - [ ] add all unofficial opcodes
 - [ ] make it possible to run basic snake game
+- [ ] write tests
 
 
 ## In Progress
