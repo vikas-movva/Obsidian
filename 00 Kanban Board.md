@@ -11,6 +11,10 @@ kanban-plugin: basic
 - [ ] Finish Coursera Course: Mathematics for Machine Learning: Multivariate Calculus
 - [ ] Finish Coursera Course: Supervised Machine Learning: Regression and Classification
 - [ ] fast.ai course
+- [ ] LinkedIn account
+- [ ] Talk to sudhir kakarla
+- [ ] naina akka
+- [ ] interact
 
 
 ## High Priority Tasks
@@ -24,7 +28,6 @@ kanban-plugin: basic
 
 ## Quizes / Assignments
 
-- [ ] CP214 A3 @{2022-11-07} @@{23:59}
 - [ ] CP213 Quiz 4 @{2022-10-29} @@{23:59}
 - [ ] CP264 A7 @{2022-11-09}@@{23:59}
 - [ ] CP202 A4 @{2022-11-09}@@{23:59}
@@ -51,6 +54,7 @@ kanban-plugin: basic
 - [ ] Create demo site back end for MNIST classifier
 - [ ] Deploy demo site for MNIST classifier
 - [ ] Finish Resume
+- [ ] CP214 A3 @{2022-11-07} @@{23:59}
 
 
 ***

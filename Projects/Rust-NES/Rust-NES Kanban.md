@@ -6,7 +6,6 @@ kanban-plugin: basic
 
 ## TODO
 
-- [ ] add all unofficial opcodes
 - [ ] write tests
 
 
@@ -17,7 +16,9 @@ kanban-plugin: basic
 ## Complete
 
 - [ ] add all official opcodes
+- [ ] add all unofficial opcodes
 - [ ] make it possible to run basic snake game
+- [ ] add ppu registers
 
 
 

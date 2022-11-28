@@ -13,15 +13,17 @@ kanban-plugin: basic
 - [ ] Video about metaverse
 - [ ] Video about twitter
 - [ ] [[Projects/Rust-OS/Project Outline|OS in Rust]]
+- [ ] ML on embedded devices - KataOS?
+- [ ] crypto tumbler
 
 
 ## Planning
 
-- [ ] NES emulator
 
 
 ## In production
 
+- [ ] [[Rust-NES Kanban| Rust-NES]]
 
 
 ## Deployed
