@@ -10,31 +10,26 @@ kanban-plugin: basic
 - [ ] Finish Coursera Course: Mathematics for Machine Learning: Linear Algebra
 - [ ] Finish Coursera Course: Mathematics for Machine Learning: Multivariate Calculus
 - [ ] Finish Coursera Course: Supervised Machine Learning: Regression and Classification
+- [ ] Learn python data science/ ml libraries (numpy, pandas, mathplotlib, seaborn, scikitlearn, scipy)
 - [ ] fast.ai course
-- [ ] LinkedIn account
-- [ ] Talk to sudhir kakarla
-- [ ] naina akka
-- [ ] interact
+- [ ] Linear Regression Model from scratch
 
 
 ## High Priority Tasks
 
 - [ ] Finish Portfolio Website
-- [ ] Learn python data science/ ml libraries (numpy, pandas, mathplotlib, seaborn, scikitlearn, scipy)
-- [ ] Linear Regression Model from scratch
-- [ ] Learn Heap data structure
 - [ ] Finish notes for [[04 Counting|Counting]]
+- [ ] Apply for internships
+- [ ] Cover letter for Sushmita aunty
+- [ ] Finish notes for CP214
+- [ ] Finish notes for CP264
+- [ ] Talk to sudhir kakarla
+- [ ] naina akka
+- [ ] interact
 
 
 ## Quizes / Assignments
 
-- [ ] CP213 Quiz 4 @{2022-10-29} @@{23:59}
-- [ ] CP264 A7 @{2022-11-09}@@{23:59}
-- [ ] CP202 A4 @{2022-11-09}@@{23:59}
-- [ ] CP264 A8 @{2022-11-16}@@{23:59}
-- [ ] CP202 A5 @{2022-11-16}@@{23:59}
-- [ ] CP264 A9 @{2022-11-23}@@{23:59}
-- [ ] CP202 A6 @{2022-11-23}@@{23:59}
 
 
 ## In Progress
@@ -42,6 +37,12 @@ kanban-plugin: basic
 
 
 ## Completed
+
+
+
+***
+
+## Archive
 
 - [ ] MNIST digit classifier Neural Net from scratch
 - [ ] MNIST digit classifier Neural Net using tensorflow/keras
@@ -55,12 +56,15 @@ kanban-plugin: basic
 - [ ] Deploy demo site for MNIST classifier
 - [ ] Finish Resume
 - [ ] CP214 A3 @{2022-11-07} @@{23:59}
-
-
-***
-
-## Archive
-
+- [ ] LinkedIn account
+- [ ] Learn Heap data structure
+- [ ] CP264 A8 @{2022-11-16}@@{23:59}
+- [ ] CP213 Quiz 4 @{2022-10-29} @@{23:59}
+- [ ] CP264 A7 @{2022-11-09}@@{23:59}
+- [ ] CP202 A5 @{2022-11-16}@@{23:59}
+- [ ] CP202 A4 @{2022-11-09}@@{23:59}
+- [ ] CP264 A9 @{2022-11-23}@@{23:59}
+- [ ] CP202 A6 @{2022-11-23}@@{23:59}
 - [ ] CP264 A2 @{2022-09-21} @@{23:45}
 - [ ] CP214 Quiz 1 @{2022-09-22} @@{23:45}
 - [ ] ML101 TUT 1A Response @{2022-09-23} @@{23:45}

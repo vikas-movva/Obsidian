@@ -8,13 +8,14 @@ kanban-plugin: basic
 
 - [ ] Sign language to natural language
 - [ ] TTs
-- [ ] MyGamesList
+- [ ] [[Projects/MyGamesList/Outline|MyGamesList]]
 - [ ] Mouth reading
 - [ ] Video about metaverse
 - [ ] Video about twitter
 - [ ] [[Projects/Rust-OS/Project Outline|OS in Rust]]
 - [ ] ML on embedded devices - KataOS?
 - [ ] crypto tumbler
+- [ ] OS specialized for WASM-WASI
 
 
 ## Planning
