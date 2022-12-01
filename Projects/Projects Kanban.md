@@ -18,6 +18,7 @@ kanban-plugin: basic
 - [ ] OS specialized for WASM-WASI
 - [ ] Photoshop in the browser using wasm
 - [ ] NFT based card-game
+- [ ] syntax highlighting for english
 
 
 ## Planning
