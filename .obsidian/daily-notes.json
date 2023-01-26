@@ -1,5 +1,5 @@
 {
   "folder": "Calender",
-  "autorun": true,
+  "autorun": false,
   "template": "Templates/Daily note template"
 }
