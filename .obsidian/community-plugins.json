@@ -19,5 +19,11 @@
   "oz-image-plugin",
   "obsidian-footnote-indicator",
   "obsidian-footnotes",
-  "obsidian-vimrc-support"
+  "obsidian-vimrc-support",
+  "obsidian-latex-suite",
+  "omnisearch",
+  "text-extractor",
+  "obsidian-textgenerator-plugin",
+  "settings-search",
+  "cmdr"
 ]
