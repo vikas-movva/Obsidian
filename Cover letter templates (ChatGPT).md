@@ -108,3 +108,18 @@ I am confident that my skills and experience make me a strong candidate for this
 Thank you for considering my application. I look forward to the opportunity to discuss this internship further and how I can contribute to the success of [Bank].
 
 Sincerely, [Your Name]
+
+---
+Dear Hiring Manager,
+
+I am writing to express my interest in the Internship position at BeyondID. As a third-year computer science student at Wilfrid Laurier University, I am excited about the opportunity to join a company that is dedicated to solving the toughest identity challenges for its clients.
+
+My passion for computer science has been fueled by my coursework, which has covered a wide range of topics including cryptography, network security, and data structures. In addition to my studies, I have also completed several projects that demonstrate my ability to develop and implement solutions to complex problems. One such project involved building a Convolutional Neural Network in order to classify hand written digits using real world data.
+
+I am particularly drawn to BeyondID because of the company's commitment to helping its customers increase revenue, reduce costs, and improve their customers' experience. I believe that my technical skills and my passion for technology can contribute to the success of BeyondID and its clients.
+
+During my internship at BeyondID, I am confident that I can bring value to the team by helping with the development and deployment of solutions that address customers' identity challenges. I am also eager to learn from the experienced professionals at BeyondID and expand my knowledge of the industry.
+
+Thank you for considering my application. I look forward to the opportunity to discuss my qualifications further.
+
+Sincerely, Vikas Movva
