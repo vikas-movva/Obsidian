@@ -20,10 +20,5 @@
   "obsidian-footnote-indicator",
   "obsidian-footnotes",
   "obsidian-vimrc-support",
-  "obsidian-latex-suite",
-  "omnisearch",
-  "text-extractor",
-  "obsidian-textgenerator-plugin",
-  "settings-search",
-  "cmdr"
+  "obsidian-tasks-plugin"
 ]
