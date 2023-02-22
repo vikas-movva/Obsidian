@@ -23,8 +23,6 @@
   "matchThemeTrigger": false,
   "defaultMode": "normal",
   "defaultPenMode": "never",
-  "allowPinchZoom": false,
-  "allowWheelZoom": false,
   "zoomToFitOnOpen": true,
   "zoomToFitOnResize": true,
   "zoomToFitMaxLevel": 2,
@@ -86,6 +84,8 @@
   "mathjaxSourceURL": "https://cdn.jsdelivr.net/npm/mathjax@3.2.1/es5/tex-svg.js",
   "taskboneEnabled": false,
   "taskboneAPIkey": "",
+  "allowPinchZoom": false,
+  "allowWheelZoom": false,
   "pinnedScripts": [],
   "customPens": [
     {
