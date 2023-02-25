@@ -19,6 +19,7 @@ kanban-plugin: basic
 - [ ] Photoshop in the browser using wasm
 - [ ] NFT based card-game
 - [ ] syntax highlighting for english
+- [ ] WebToEpub-Mobile
 
 
 ## Planning
