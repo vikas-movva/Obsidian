@@ -6,7 +6,6 @@ kanban-plugin: basic
 
 ## Ideas
 
-- [ ] Sign language to natural language
 - [ ] TTs
 - [ ] [[Projects/MyGamesList/Outline|MyGamesList]]
 - [ ] Mouth reading
@@ -23,6 +22,7 @@ kanban-plugin: basic
 
 ## Planning
 
+- [ ] Sign language to natural language
 
 
 ## In production
