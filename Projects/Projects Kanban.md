@@ -19,6 +19,7 @@ kanban-plugin: basic
 - [ ] NFT based card-game
 - [ ] syntax highlighting for english
 - [ ] WebToEpub-Mobile
+- [ ] 2D sekiro
 
 
 ## Planning
