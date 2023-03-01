@@ -1,0 +1,33 @@
+[build]
+command = "rm -rf __obsidian __site && mkdir __obsidian && mv * __obsidian || true && git clone https://github.com/ppeetteerrs/obsidian-zola.git __site && __site/run.sh"
+publish = "public"
+
+[build.environment]
+# (REQUIRED) The Markdown page linked to landing page button (e.g. put home for ./home.md)
+LANDING_PAGE = "./Projects/Projects Kanban.md"
+# (Optional) Site title on landing page
+LANDING_TITLE = "Notes"
+PYTHON_VERSION = "3.8"
+# (REQUIRED) Site repo URL
+REPO_URL = "https://github.com/vikas-movva/Obsidian"
+# (REQUIRED) Netlify site URL
+SITE_URL = "https://tranquil-creponne-6c9e80.netlify.app/"
+# (Optional) Site Timezone
+TIMEZONE = "Asia/Hong_Kong"
+ZOLA_VERSION = "0.15.2"
+# (Optional, default title) How to sort notes inside each section on the right sidebar ("date" or "title"). Subsections on side bar are sorted by title, the sort order cannot be changed.
+SORT_BY = "title"
+# (Optional) Google Analytics Measurement ID
+GANALYTICS = ""
+# (Optional, default true) Slugify URLs. Put "" to disable.
+SLUGIFY = "y"
+# (Optional, default true) Shows knowledge graph on home page. Put "" to disable.
+HOME_GRAPH = "y"
+# (Optional, default true) Shows knowledge graph on every page. Put "" to disable.
+PAGE_GRAPH = "y"
+# (Optional, default false) Whether sidebar sections should be collapsed by default.
+SIDEBAR_COLLAPSED = ""
+# (Optional, default blank) Additional footer content.
+FOOTER = ""
+# (Optional, default main) Root section name.
+ROOT_SECTION_NAME = "main"
