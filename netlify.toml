@@ -11,7 +11,7 @@ PYTHON_VERSION = "3.8"
 # (REQUIRED) Site repo URL
 REPO_URL = "https://github.com/vikas-movva/Obsidian"
 # (REQUIRED) Netlify site URL
-SITE_URL = "https://tranquil-creponne-6c9e80.netlify.app/"
+SITE_URL = "https://vikas-movva-obsidian.netlify.app/"
 # (Optional) Site Timezone
 TIMEZONE = "Asia/Hong_Kong"
 ZOLA_VERSION = "0.15.2"
