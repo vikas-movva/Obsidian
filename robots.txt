@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vikas-movva-obsidian.netlify.app//sitemap.xml

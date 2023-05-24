@@ -1,0 +1,2972 @@
+<!doctype html><html lang=en-US><head><meta charset=utf-8><meta content="ie=edge" http-equiv=x-ua-compatible><meta content="width=device-width,initial-scale=1,shrink-to-fit=no" name=viewport><link href=https://fonts.googleapis.com rel=preconnect><link href=https://fonts.gstatic.com rel=preconnect><link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel=stylesheet><link href=https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css rel=stylesheet><link integrity="sha512-SJw7jzjMYJhsEnN/BuxTWXkezA2cRanuB8TdCNMXFJjxG9ZGSKOX5P3j03H6kdMxalKHZ7vlBMB4CagFP/de0A==" crossorigin=anonymous href=https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css referrerpolicy=no-referrer rel=stylesheet><link integrity="sha512-RliK2gk03WxUELn57ddjWLhEfhUiOZ85VvWLImFy8A7FOPMkF4Z9YGQ3VKX5jpwkEerAL6I0nC+JNeCPrxWBTw==" crossorigin=anonymous href=https://cdnjs.cloudflare.com/ajax/libs/csshake/1.5.3/csshake.min.css referrerpolicy=no-referrer rel=stylesheet><script integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin=anonymous referrerpolicy=no-referrer src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js></script><link href=https://vikas-movva-obsidian.netlify.app/main.css rel=stylesheet><meta content="index, follow" name=robots><meta content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" name=googlebot><meta content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" name=bingbot><title>01.1 Propositional Logic.excalidraw | Someone's Second 🧠</title><meta name=description><link href=https://vikas-movva-obsidian.netlify.app/docs/school/cp214-discrete-structures-for-comp-sci/01.1-propositional-logic.excalidraw/ rel=canonical><script type=application/ld+json>
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position":  1 ,
+        "name": "Home",
+        "item": "https://vikas-movva-obsidian.netlify.app/"
+      }
+    ]
+  }
+</script><meta content=#fff name=theme-color><link href=https://vikas-movva-obsidian.netlify.app/apple-touch-icon.png rel=apple-touch-icon sizes=180x180><link href=https://vikas-movva-obsidian.netlify.app/favicon-32x32.png rel=icon sizes=32x32 type=image/png><link href=https://vikas-movva-obsidian.netlify.app/favicon-16x16.png rel=icon sizes=16x16 type=image/png><link crossorigin=anonymous href=https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css integrity=sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB rel=stylesheet><script crossorigin=anonymous defer integrity=sha384-0fdwu/T/EQMsQlrHCCHoH10pkPLlKA1jL5dFyUOvB3lfeT2540/2g6YgSi2BL14p src=https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js></script><script crossorigin=anonymous defer integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR src=https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/auto-render.min.js></script><script>document.addEventListener("DOMContentLoaded", function() {
+		renderMathInElement(document.body, {
+		delimiters: [
+			{left: '$$', right: '$$', display: true},
+			{left: '$', right: '$', display: false},
+		],
+		throwOnError : false
+		});
+	});</script><body class="docs single"><script>if (localStorage.getItem("theme") === "dark" || (!localStorage.getItem("theme") && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+      document.body.classList.add("dark");
+    }</script><div class="header-bar fixed-top"></div><header class="navbar fixed-top navbar-expand-md navbar-light"><div class=container><input class="menu-btn order-0" id=menu-btn type=checkbox><label class="menu-icon d-md-none" for=menu-btn><span class=navicon></span></label><a class="navbar-brand order-1 order-md-0 me-auto" href=https://vikas-movva-obsidian.netlify.app/>Someone's Second 🧠</a><button aria-label="Toggle mode" class="btn btn-link order-2 order-md-4" id=mode type=button><span class=toggle-dark><svg class="feather feather-moon" viewbox="0 0 24 24" fill=none height=20 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=20 xmlns=http://www.w3.org/2000/svg><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span> <span class=toggle-light><svg class="feather feather-sun" viewbox="0 0 24 24" fill=none height=20 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=20 xmlns=http://www.w3.org/2000/svg><circle cx=12 cy=12 r=5></circle><line x1=12 x2=12 y1=1 y2=3></line><line x1=12 x2=12 y1=21 y2=23></line><line x1=4.22 x2=5.64 y1=4.22 y2=5.64></line><line x1=18.36 x2=19.78 y1=18.36 y2=19.78></line><line x1=1 x2=3 y1=12 y2=12></line><line x1=21 x2=23 y1=12 y2=12></line><line x1=4.22 x2=5.64 y1=19.78 y2=18.36></line><line x1=18.36 x2=19.78 y1=5.64 y2=4.22></line></svg></span></button><ul class="navbar-nav fork-me order-3 order-md-5"><li class=nav-item><a class=nav-link href=https://github.com/vikas-movva/Obsidian><svg class="feather feather-github" viewbox="0 0 24 24" fill=none height=20 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=20 xmlns=http://www.w3.org/2000/svg><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><span class="ms-2 visually-hidden">GitHub</span></a></ul><div class="collapse navbar-collapse order-4 order-md-1"><ul class="navbar-nav main-nav me-auto order-5 order-md-2"></ul><div class="break order-6 d-md-none"></div><form class="navbar-form flex-grow-1 order-7 order-md-3"><input aria-label="Search docs..." class="form-control is-search" placeholder="Search docs..." autocomplete=off id=userinput type=search><div class="shadow bg-white rounded" id=suggestions></div></form></div></div></header><div class="wrap container" role=document><div class=content><div class="row flex-xl-nowrap"><div class="col-lg-5 col-xl-4 docs-sidebar"><nav aria-label="Main navigation" class=docs-links><h3 class=collapsible-section>main</h3><div class=collapsible-wrapper><ul class=list-unstyled><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/00-kanban-board/>00 Kanban Board</a><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/cover-letter-templates-chatgpt/>Cover Letter Templates (Chatgpt)</a><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/scrap/>Scrap</a><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/scrap.excalidraw/>Scrap.Excalidraw</a></ul></div><h3 class=collapsible-section>FFXIV</h3><div class=collapsible-wrapper><ul class=list-unstyled><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/ffxiv/t9-phase-2.excalidraw/>T9 - Phase 2.Excalidraw</a><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/ffxiv/t9-phase-2/>T9 Phase 2</a></ul></div><h3 class=collapsible-section>ML-Journey</h3><div class=collapsible-wrapper><ul class=list-unstyled><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/ml-journey/untitled/>Untitled</a></ul></div><h4 class=collapsible-section>👉Fast.ai</h4><div class=collapsible-wrapper><ul class=list-unstyled><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/ml-journey/fast-ai/lesson-1/>Lesson 1</a></ul></div><h4 class=collapsible-section>👉Linear Algebra</h4><div class=collapsible-wrapper><ul class=list-unstyled><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/ml-journey/linear-algebra/solving-linear-systems.excalidraw/>Solving Linear Systems.excalidraw</a></ul></div><h5 class=collapsible-section>👉👉Matrices</h5><div class=collapsible-wrapper><ul class=list-unstyled><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/ml-journey/linear-algebra/matrices/drawing-2022-09-10-15.04.23.excalidraw/>Drawing 2022-09-10 15.04.23.Excalidraw</a><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/ml-journey/linear-algebra/matrices/matrices/>Matrices</a><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/ml-journey/linear-algebra/matrices/matrix-operations/>Matrix Operations</a></ul></div><h5 class=collapsible-section>👉👉Vectors</h5><div class=collapsible-wrapper><ul class=list-unstyled><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/ml-journey/linear-algebra/vectors/basis/>Basis</a><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/ml-journey/linear-algebra/vectors/opperations-with-vectors/>Opperations With Vectors</a><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/ml-journey/linear-algebra/vectors/vector-addition-practice.excalidraw/>Vector Addition Practice.excalidraw</a><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/ml-journey/linear-algebra/vectors/vector-dot-product-practice.excalidraw/>Vector Dot Product Practice.excalidraw</a><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/ml-journey/linear-algebra/vectors/vectors/>Vectors</a></ul></div><h4 class=collapsible-section>👉Statistics</h4><div class=collapsible-wrapper><ul class=list-unstyled><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/ml-journey/statistics/statistics/>Statistics</a></ul></div><h5 class=collapsible-section>👉👉1.1 What is Statistics</h5><div class=collapsible-wrapper><ul class=list-unstyled><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/ml-journey/statistics/1-1-what-is-statistics/1.1-what-is-statistics/>1.1 What Is Statistics</a></ul></div><h5 class=collapsible-section>👉👉1.2 Sampling</h5><div class=collapsible-wrapper><ul class=list-unstyled><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/ml-journey/statistics/1-2-sampling/1.2-sampling/>1.2 Sampling</a></ul></div><h3 class=collapsible-section>Projects</h3><div class=collapsible-wrapper><ul class=list-unstyled><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/projects/projects-kanban/>Projects Kanban</a></ul></div><h4 class=collapsible-section>👉MyGamesList</h4><div class=collapsible-wrapper><ul class=list-unstyled><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/projects/mygameslist/outline/>Outline</a></ul></div><h4 class=collapsible-section>👉Rust-NES</h4><div class=collapsible-wrapper><ul class=list-unstyled><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/projects/rust-nes/rust-nes-kanban/>Rust-NES Kanban</a></ul></div><h4 class=collapsible-section>👉Rust-OS</h4><div class=collapsible-wrapper><ul class=list-unstyled><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/projects/rust-os/project-outline/>Project Outline</a></ul></div><h5 class=collapsible-section>👉👉Notes</h5><div class=collapsible-wrapper><ul class=list-unstyled><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/projects/rust-os/notes/00-create-a-freestanding-rust-binary/>00 Create A Freestanding Rust Binary</a><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/projects/rust-os/notes/01-a-minimal-rust-kernel/>01 A Minimal Rust Kernel</a></ul></div><h4 class=collapsible-section>👉ml-demo</h4><div class=collapsible-wrapper><ul class=list-unstyled><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/projects/ml-demo/ml-demo-kanban/>Ml-Demo Kanban</a><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/projects/ml-demo/project-outline/>Project Outline</a><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/projects/ml-demo/rough-design.excalidraw/>Rough Design.Excalidraw</a></ul></div><h3 class=collapsible-section>Random</h3><div class=collapsible-wrapper><ul class=list-unstyled><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/random/random/>Random</a></ul></div><h4 class=collapsible-section>👉CP202 Website Design</h4><div class=collapsible-wrapper><ul class=list-unstyled><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/school/cp202-website-design/00-intro/>00 Intro</a><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/school/cp202-website-design/html/>HTML</a></ul></div><h5 class=collapsible-section>👉👉Week 1</h5><div class=collapsible-wrapper><ul class=list-unstyled><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/school/cp202-website-design/week-1/lecture-1/>Lecture 1</a></ul></div><h5 class=collapsible-section>👉👉Week 2</h5><div class=collapsible-wrapper><ul class=list-unstyled><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/school/cp202-website-design/week-2/links/>Links</a><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/school/cp202-website-design/week-2/text-and-lists/>Text And Lists</a></ul></div><h4 class=collapsible-section>👉CP214 Discrete Structures for Comp-Sci</h4><div class=collapsible-wrapper><ul class=list-unstyled><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/school/cp214-discrete-structures-for-comp-sci/00-intro/>00 Intro</a><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/school/cp214-discrete-structures-for-comp-sci/01-predicate-logic/>01 Predicate Logic</a><li><a class="docs-link active" href=https://vikas-movva-obsidian.netlify.app/docs/school/cp214-discrete-structures-for-comp-sci/01.1-propositional-logic.excalidraw/>01.1 Propositional Logic.excalidraw</a><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/school/cp214-discrete-structures-for-comp-sci/02-sets-functions-and-relations/>02 Sets, Functions, And Relations</a><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/school/cp214-discrete-structures-for-comp-sci/03-induction-and-recursive-functions/>03 Induction And Recursive Functions</a><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/school/cp214-discrete-structures-for-comp-sci/04-counting/>04 Counting</a></ul></div><h4 class=collapsible-section>👉CP317 Software Eng</h4><div class=collapsible-wrapper><ul class=list-unstyled><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/school/cp317-software-eng/ch1-notes/>Ch1 Notes</a><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/school/cp317-software-eng/ch2-notes/>Ch2 Notes</a></ul></div><h4 class=collapsible-section>👉CP372 Computer Networks</h4><div class=collapsible-wrapper><ul class=list-unstyled><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/school/cp372-computer-networks/assignment-1.excalidraw/>Assignment 1.Excalidraw</a></ul></div><h4 class=collapsible-section>👉ML101 - Harry Potter and Medieval Culture</h4><div class=collapsible-wrapper><ul class=list-unstyled><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/school/ml101-harry-potter-and-medieval-culture/00-intro/>00 Intro</a><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/school/ml101-harry-potter-and-medieval-culture/lecture-1/>Lecture 1</a><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/school/ml101-harry-potter-and-medieval-culture/tut-1a/>TUT 1A</a><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/school/ml101-harry-potter-and-medieval-culture/tut-2/>TUT 2</a></ul></div><h3 class=collapsible-section>Templates</h3><div class=collapsible-wrapper><ul class=list-unstyled><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/templates/basic/>Basic</a><li><a class=docs-link href=https://vikas-movva-obsidian.netlify.app/docs/templates/daily-note-template/>Daily Note Template</a></ul></div></nav></div><nav aria-label="Secondary navigation" class="docs-toc d-none d-xl-block col-xl-3"><div class=page-links><h3>On this page</h3><nav id=TableOfContents><ul><li><a href=https://vikas-movva-obsidian.netlify.app/docs/school/cp214-discrete-structures-for-comp-sci/01.1-propositional-logic.excalidraw/#text-elements>Text Elements</a><li><a href=https://vikas-movva-obsidian.netlify.app/docs/school/cp214-discrete-structures-for-comp-sci/01.1-propositional-logic.excalidraw/#drawing>Drawing</a></ul></nav></div></nav><main class="docs-content col-lg-11 col-xl-9"><h1>01.1 Propositional Logic.excalidraw</h1><p>==⚠ Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠==<h1 id=text-elements>Text Elements</h1><p>%%<h1 id=drawing>Drawing</h1><pre class=language-json data-lang=json style=background-color:#2b303b;color:#c0c5ce;><code class=language-json data-lang=json><span>{
+</span><span>	"</span><span style=color:#a3be8c;>type</span><span>": "</span><span style=color:#a3be8c;>excalidraw</span><span>",
+</span><span>	"</span><span style=color:#a3be8c;>version</span><span>": </span><span style=color:#d08770;>2</span><span>,
+</span><span>	"</span><span style=color:#a3be8c;>source</span><span>": "</span><span style=color:#a3be8c;>https://excalidraw.com</span><span>",
+</span><span>	"</span><span style=color:#a3be8c;>elements</span><span>": [
+</span><span>		{
+</span><span>			"</span><span style=color:#a3be8c;>id</span><span>": "</span><span style=color:#a3be8c;>YLWuMb2cfsqSGZ6ayQVz0</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>type</span><span>": "</span><span style=color:#a3be8c;>freedraw</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>x</span><span>": </span><span style=color:#d08770;>-146.9375</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>y</span><span>": </span><span style=color:#d08770;>-308.86328125</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>width</span><span>": </span><span style=color:#d08770;>283.90234375</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>height</span><span>": </span><span style=color:#d08770;>295.25</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>angle</span><span>": </span><span style=color:#d08770;>0</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>strokeColor</span><span>": "</span><span style=color:#a3be8c;>#000000</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>backgroundColor</span><span>": "</span><span style=color:#a3be8c;>transparent</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>fillStyle</span><span>": "</span><span style=color:#a3be8c;>hachure</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>strokeWidth</span><span>": </span><span style=color:#d08770;>1</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>strokeStyle</span><span>": "</span><span style=color:#a3be8c;>solid</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>roughness</span><span>": </span><span style=color:#d08770;>1</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>opacity</span><span>": </span><span style=color:#d08770;>100</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>groupIds</span><span>": [],
+</span><span>			"</span><span style=color:#a3be8c;>strokeSharpness</span><span>": "</span><span style=color:#a3be8c;>round</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>seed</span><span>": </span><span style=color:#d08770;>1922670792</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>version</span><span>": </span><span style=color:#d08770;>153</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>versionNonce</span><span>": </span><span style=color:#d08770;>1068132296</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>isDeleted</span><span>": </span><span style=color:#d08770;>true</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>boundElements</span><span>": </span><span style=color:#d08770;>null</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>updated</span><span>": </span><span style=color:#d08770;>1663076187336</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>link</span><span>": </span><span style=color:#d08770;>null</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>locked</span><span>": </span><span style=color:#d08770;>false</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>points</span><span>": [
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>0</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-1.15625</span><span>,
+</span><span>					</span><span style=color:#d08770;>-0.38671875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-2.3125</span><span>,
+</span><span>					</span><span style=color:#d08770;>-0.56640625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-2.3125</span><span>,
+</span><span>					</span><span style=color:#d08770;>1.01171875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-2.3125</span><span>,
+</span><span>					</span><span style=color:#d08770;>6.3046875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-2.3125</span><span>,
+</span><span>					</span><span style=color:#d08770;>12.62109375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-2.3125</span><span>,
+</span><span>					</span><span style=color:#d08770;>16.98046875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-2.3125</span><span>,
+</span><span>					</span><span style=color:#d08770;>20.3828125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-1.3359375</span><span>,
+</span><span>					</span><span style=color:#d08770;>22.171875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>3.62109375</span><span>,
+</span><span>					</span><span style=color:#d08770;>22.51953125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>13.00390625</span><span>,
+</span><span>					</span><span style=color:#d08770;>22.8046875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>21.4765625</span><span>,
+</span><span>					</span><span style=color:#d08770;>23.578125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>27.73046875</span><span>,
+</span><span>					</span><span style=color:#d08770;>25.05859375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>32.59375</span><span>,
+</span><span>					</span><span style=color:#d08770;>27.56640625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>35.6484375</span><span>,
+</span><span>					</span><span style=color:#d08770;>31.76953125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>37.2578125</span><span>,
+</span><span>					</span><span style=color:#d08770;>37.56640625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>37.73828125</span><span>,
+</span><span>					</span><span style=color:#d08770;>46.33203125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>37.98828125</span><span>,
+</span><span>					</span><span style=color:#d08770;>60.6796875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>36.0390625</span><span>,
+</span><span>					</span><span style=color:#d08770;>79.3046875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>30.39453125</span><span>,
+</span><span>					</span><span style=color:#d08770;>99.1796875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>21.6171875</span><span>,
+</span><span>					</span><span style=color:#d08770;>117.859375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>9.9453125</span><span>,
+</span><span>					</span><span style=color:#d08770;>132.671875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-3.546875</span><span>,
+</span><span>					</span><span style=color:#d08770;>142.6328125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-16.7734375</span><span>,
+</span><span>					</span><span style=color:#d08770;>147.85546875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-28.67578125</span><span>,
+</span><span>					</span><span style=color:#d08770;>149.375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-38.359375</span><span>,
+</span><span>					</span><span style=color:#d08770;>148.39453125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-45.08984375</span><span>,
+</span><span>					</span><span style=color:#d08770;>144.04296875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-48.70703125</span><span>,
+</span><span>					</span><span style=color:#d08770;>138.19921875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-50.22265625</span><span>,
+</span><span>					</span><span style=color:#d08770;>130.7265625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-49.78125</span><span>,
+</span><span>					</span><span style=color:#d08770;>121.80078125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-43.92578125</span><span>,
+</span><span>					</span><span style=color:#d08770;>112.41015625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-28.86328125</span><span>,
+</span><span>					</span><span style=color:#d08770;>100.46484375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-9.73828125</span><span>,
+</span><span>					</span><span style=color:#d08770;>89.5390625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>9.65625</span><span>,
+</span><span>					</span><span style=color:#d08770;>81.05859375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>33.14453125</span><span>,
+</span><span>					</span><span style=color:#d08770;>72.1171875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>56.05859375</span><span>,
+</span><span>					</span><span style=color:#d08770;>62.8984375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>74.39453125</span><span>,
+</span><span>					</span><span style=color:#d08770;>53.9375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>88.38671875</span><span>,
+</span><span>					</span><span style=color:#d08770;>45.3046875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>97.59375</span><span>,
+</span><span>					</span><span style=color:#d08770;>36.62890625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>102.7109375</span><span>,
+</span><span>					</span><span style=color:#d08770;>27.66015625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>104.421875</span><span>,
+</span><span>					</span><span style=color:#d08770;>17.8828125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>103.7421875</span><span>,
+</span><span>					</span><span style=color:#d08770;>7.171875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>98.3515625</span><span>,
+</span><span>					</span><span style=color:#d08770;>-4.5078125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>86.16796875</span><span>,
+</span><span>					</span><span style=color:#d08770;>-17.71484375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>70.0546875</span><span>,
+</span><span>					</span><span style=color:#d08770;>-29.83203125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>54.109375</span><span>,
+</span><span>					</span><span style=color:#d08770;>-37.9609375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>39.56640625</span><span>,
+</span><span>					</span><span style=color:#d08770;>-41.44140625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>26.58984375</span><span>,
+</span><span>					</span><span style=color:#d08770;>-41.7734375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>16.37109375</span><span>,
+</span><span>					</span><span style=color:#d08770;>-38.046875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>8.8671875</span><span>,
+</span><span>					</span><span style=color:#d08770;>-28.1171875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>4.15234375</span><span>,
+</span><span>					</span><span style=color:#d08770;>-14.62890625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>2.53515625</span><span>,
+</span><span>					</span><span style=color:#d08770;>-0.98046875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>2.43359375</span><span>,
+</span><span>					</span><span style=color:#d08770;>11.60546875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>4.84765625</span><span>,
+</span><span>					</span><span style=color:#d08770;>21.53515625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>11.5234375</span><span>,
+</span><span>					</span><span style=color:#d08770;>29.3515625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>23.9375</span><span>,
+</span><span>					</span><span style=color:#d08770;>39.3984375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>40.12109375</span><span>,
+</span><span>					</span><span style=color:#d08770;>52.3125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>55.140625</span><span>,
+</span><span>					</span><span style=color:#d08770;>66.57421875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>68.45703125</span><span>,
+</span><span>					</span><span style=color:#d08770;>83.05859375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>78.34765625</span><span>,
+</span><span>					</span><span style=color:#d08770;>99.859375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>83.171875</span><span>,
+</span><span>					</span><span style=color:#d08770;>115.71875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>84.640625</span><span>,
+</span><span>					</span><span style=color:#d08770;>132.296875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>80.1640625</span><span>,
+</span><span>					</span><span style=color:#d08770;>151.4140625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>70.8671875</span><span>,
+</span><span>					</span><span style=color:#d08770;>169.05859375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>59.09765625</span><span>,
+</span><span>					</span><span style=color:#d08770;>183.03125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>42.27734375</span><span>,
+</span><span>					</span><span style=color:#d08770;>195.5078125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>19.22265625</span><span>,
+</span><span>					</span><span style=color:#d08770;>203.171875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-2.67578125</span><span>,
+</span><span>					</span><span style=color:#d08770;>205.3203125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-17.7578125</span><span>,
+</span><span>					</span><span style=color:#d08770;>203.640625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-28.875</span><span>,
+</span><span>					</span><span style=color:#d08770;>199.56640625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-35.671875</span><span>,
+</span><span>					</span><span style=color:#d08770;>194.69140625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-37.765625</span><span>,
+</span><span>					</span><span style=color:#d08770;>189.6953125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-35.59375</span><span>,
+</span><span>					</span><span style=color:#d08770;>184.8671875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-28.6640625</span><span>,
+</span><span>					</span><span style=color:#d08770;>179.8515625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-17.0703125</span><span>,
+</span><span>					</span><span style=color:#d08770;>174.21484375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-1.75</span><span>,
+</span><span>					</span><span style=color:#d08770;>167.99609375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>15.46875</span><span>,
+</span><span>					</span><span style=color:#d08770;>162.2265625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>33.6640625</span><span>,
+</span><span>					</span><span style=color:#d08770;>156.1796875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>52.56640625</span><span>,
+</span><span>					</span><span style=color:#d08770;>148.21484375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>69.7421875</span><span>,
+</span><span>					</span><span style=color:#d08770;>138.5078125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>84.02734375</span><span>,
+</span><span>					</span><span style=color:#d08770;>126.89453125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>95.6640625</span><span>,
+</span><span>					</span><span style=color:#d08770;>112.3203125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>104.25390625</span><span>,
+</span><span>					</span><span style=color:#d08770;>94.80078125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>109.3046875</span><span>,
+</span><span>					</span><span style=color:#d08770;>74.84765625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>111.4765625</span><span>,
+</span><span>					</span><span style=color:#d08770;>53.65234375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>111.8359375</span><span>,
+</span><span>					</span><span style=color:#d08770;>32.33203125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>108.8359375</span><span>,
+</span><span>					</span><span style=color:#d08770;>12.4296875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>102.4609375</span><span>,
+</span><span>					</span><span style=color:#d08770;>-3.5390625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>96.3203125</span><span>,
+</span><span>					</span><span style=color:#d08770;>-13.05859375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>90.265625</span><span>,
+</span><span>					</span><span style=color:#d08770;>-17.8984375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>83.21484375</span><span>,
+</span><span>					</span><span style=color:#d08770;>-20.390625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>76.421875</span><span>,
+</span><span>					</span><span style=color:#d08770;>-18.32421875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>68.35546875</span><span>,
+</span><span>					</span><span style=color:#d08770;>-6.234375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>61.1015625</span><span>,
+</span><span>					</span><span style=color:#d08770;>13.12890625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>57.3984375</span><span>,
+</span><span>					</span><span style=color:#d08770;>34.859375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>56.0859375</span><span>,
+</span><span>					</span><span style=color:#d08770;>58.40625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>60.2578125</span><span>,
+</span><span>					</span><span style=color:#d08770;>81.140625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>70.0390625</span><span>,
+</span><span>					</span><span style=color:#d08770;>96.48046875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>83.99609375</span><span>,
+</span><span>					</span><span style=color:#d08770;>104.21875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>100.91796875</span><span>,
+</span><span>					</span><span style=color:#d08770;>109.96484375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>118.09375</span><span>,
+</span><span>					</span><span style=color:#d08770;>113.51953125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>131.375</span><span>,
+</span><span>					</span><span style=color:#d08770;>115.90234375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>140.23046875</span><span>,
+</span><span>					</span><span style=color:#d08770;>118.45703125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>147.48828125</span><span>,
+</span><span>					</span><span style=color:#d08770;>122.59765625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>151.109375</span><span>,
+</span><span>					</span><span style=color:#d08770;>128.21875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>151.49609375</span><span>,
+</span><span>					</span><span style=color:#d08770;>136.54296875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>148.01953125</span><span>,
+</span><span>					</span><span style=color:#d08770;>149.5390625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>138.71875</span><span>,
+</span><span>					</span><span style=color:#d08770;>165.2578125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>127.95703125</span><span>,
+</span><span>					</span><span style=color:#d08770;>178.4296875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>119.62109375</span><span>,
+</span><span>					</span><span style=color:#d08770;>187.76953125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>114.17578125</span><span>,
+</span><span>					</span><span style=color:#d08770;>193.65625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>111.41015625</span><span>,
+</span><span>					</span><span style=color:#d08770;>196.34765625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>111.41015625</span><span>,
+</span><span>					</span><span style=color:#d08770;>195.7578125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>112.765625</span><span>,
+</span><span>					</span><span style=color:#d08770;>191.71484375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>127.00390625</span><span>,
+</span><span>					</span><span style=color:#d08770;>165.4296875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>135.33203125</span><span>,
+</span><span>					</span><span style=color:#d08770;>151.31640625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>141.0546875</span><span>,
+</span><span>					</span><span style=color:#d08770;>142.30859375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>144.828125</span><span>,
+</span><span>					</span><span style=color:#d08770;>136.76171875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>146.93359375</span><span>,
+</span><span>					</span><span style=color:#d08770;>134.84765625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>147.89453125</span><span>,
+</span><span>					</span><span style=color:#d08770;>138.88671875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>148.16015625</span><span>,
+</span><span>					</span><span style=color:#d08770;>154.078125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>147.15625</span><span>,
+</span><span>					</span><span style=color:#d08770;>176.0078125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>144.8125</span><span>,
+</span><span>					</span><span style=color:#d08770;>194.1953125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>142.26171875</span><span>,
+</span><span>					</span><span style=color:#d08770;>206.875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>141.02734375</span><span>,
+</span><span>					</span><span style=color:#d08770;>214.6171875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>141.4296875</span><span>,
+</span><span>					</span><span style=color:#d08770;>216.8359375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>147.36328125</span><span>,
+</span><span>					</span><span style=color:#d08770;>211.3203125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>158.46484375</span><span>,
+</span><span>					</span><span style=color:#d08770;>200.125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>169.3125</span><span>,
+</span><span>					</span><span style=color:#d08770;>189.87109375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>179.09375</span><span>,
+</span><span>					</span><span style=color:#d08770;>181.43359375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>187.0390625</span><span>,
+</span><span>					</span><span style=color:#d08770;>176.21484375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>191.71484375</span><span>,
+</span><span>					</span><span style=color:#d08770;>175.33984375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>193.77734375</span><span>,
+</span><span>					</span><span style=color:#d08770;>181.36328125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>194.83203125</span><span>,
+</span><span>					</span><span style=color:#d08770;>195.11328125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>195.08203125</span><span>,
+</span><span>					</span><span style=color:#d08770;>211.23828125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>195.08203125</span><span>,
+</span><span>					</span><span style=color:#d08770;>223.7109375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>195.08203125</span><span>,
+</span><span>					</span><span style=color:#d08770;>231.25
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>195.22265625</span><span>,
+</span><span>					</span><span style=color:#d08770;>235.34765625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>196.9765625</span><span>,
+</span><span>					</span><span style=color:#d08770;>237.0078125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>201.63671875</span><span>,
+</span><span>					</span><span style=color:#d08770;>237.50390625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>208.4921875</span><span>,
+</span><span>					</span><span style=color:#d08770;>237.8984375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>216.1484375</span><span>,
+</span><span>					</span><span style=color:#d08770;>239.3671875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>223.21484375</span><span>,
+</span><span>					</span><span style=color:#d08770;>242.72265625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>229.17578125</span><span>,
+</span><span>					</span><span style=color:#d08770;>247.90625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>233.6796875</span><span>,
+</span><span>					</span><span style=color:#d08770;>253.4765625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>233.6796875</span><span>,
+</span><span>					</span><span style=color:#d08770;>253.4765625
+</span><span>				]
+</span><span>			],
+</span><span>			"</span><span style=color:#a3be8c;>pressures</span><span>": [],
+</span><span>			"</span><span style=color:#a3be8c;>simulatePressure</span><span>": </span><span style=color:#d08770;>true</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>lastCommittedPoint</span><span>": [
+</span><span>				</span><span style=color:#d08770;>233.6796875</span><span>,
+</span><span>				</span><span style=color:#d08770;>253.4765625
+</span><span>			]
+</span><span>		},
+</span><span>		{
+</span><span>			"</span><span style=color:#a3be8c;>id</span><span>": "</span><span style=color:#a3be8c;>izdZWy0mtnJA84ZZNyT2u</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>type</span><span>": "</span><span style=color:#a3be8c;>freedraw</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>x</span><span>": </span><span style=color:#d08770;>-84.2890625</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>y</span><span>": </span><span style=color:#d08770;>-331.28515625</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>width</span><span>": </span><span style=color:#d08770;>0.12109375</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>height</span><span>": </span><span style=color:#d08770;>0</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>angle</span><span>": </span><span style=color:#d08770;>0</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>strokeColor</span><span>": "</span><span style=color:#a3be8c;>#000000</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>backgroundColor</span><span>": "</span><span style=color:#a3be8c;>transparent</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>fillStyle</span><span>": "</span><span style=color:#a3be8c;>hachure</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>strokeWidth</span><span>": </span><span style=color:#d08770;>1</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>strokeStyle</span><span>": "</span><span style=color:#a3be8c;>solid</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>roughness</span><span>": </span><span style=color:#d08770;>1</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>opacity</span><span>": </span><span style=color:#d08770;>100</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>groupIds</span><span>": [],
+</span><span>			"</span><span style=color:#a3be8c;>strokeSharpness</span><span>": "</span><span style=color:#a3be8c;>round</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>seed</span><span>": </span><span style=color:#d08770;>338855624</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>version</span><span>": </span><span style=color:#d08770;>11</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>versionNonce</span><span>": </span><span style=color:#d08770;>879155384</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>isDeleted</span><span>": </span><span style=color:#d08770;>true</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>boundElements</span><span>": </span><span style=color:#d08770;>null</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>updated</span><span>": </span><span style=color:#d08770;>1663076187336</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>link</span><span>": </span><span style=color:#d08770;>null</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>locked</span><span>": </span><span style=color:#d08770;>false</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>points</span><span>": [
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>0</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.12109375</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>0</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				]
+</span><span>			],
+</span><span>			"</span><span style=color:#a3be8c;>pressures</span><span>": [],
+</span><span>			"</span><span style=color:#a3be8c;>simulatePressure</span><span>": </span><span style=color:#d08770;>true</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>lastCommittedPoint</span><span>": [
+</span><span>				</span><span style=color:#d08770;>-0.12109375</span><span>,
+</span><span>				</span><span style=color:#d08770;>0
+</span><span>			]
+</span><span>		},
+</span><span>		{
+</span><span>			"</span><span style=color:#a3be8c;>id</span><span>": "</span><span style=color:#a3be8c;>LlSyxgLmP6ogvt3aMk4Oc</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>type</span><span>": "</span><span style=color:#a3be8c;>freedraw</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>x</span><span>": </span><span style=color:#d08770;>-249.5625</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>y</span><span>": </span><span style=color:#d08770;>-283.2265625</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>width</span><span>": </span><span style=color:#d08770;>21.77734375</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>height</span><span>": </span><span style=color:#d08770;>34.38671875</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>angle</span><span>": </span><span style=color:#d08770;>0</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>strokeColor</span><span>": "</span><span style=color:#a3be8c;>#000000</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>backgroundColor</span><span>": "</span><span style=color:#a3be8c;>transparent</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>fillStyle</span><span>": "</span><span style=color:#a3be8c;>hachure</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>strokeWidth</span><span>": </span><span style=color:#d08770;>1</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>strokeStyle</span><span>": "</span><span style=color:#a3be8c;>solid</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>roughness</span><span>": </span><span style=color:#d08770;>1</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>opacity</span><span>": </span><span style=color:#d08770;>100</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>groupIds</span><span>": [],
+</span><span>			"</span><span style=color:#a3be8c;>strokeSharpness</span><span>": "</span><span style=color:#a3be8c;>round</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>seed</span><span>": </span><span style=color:#d08770;>1347132360</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>version</span><span>": </span><span style=color:#d08770;>36</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>versionNonce</span><span>": </span><span style=color:#d08770;>1285172936</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>isDeleted</span><span>": </span><span style=color:#d08770;>true</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>boundElements</span><span>": </span><span style=color:#d08770;>null</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>updated</span><span>": </span><span style=color:#d08770;>1663076187336</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>link</span><span>": </span><span style=color:#d08770;>null</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>locked</span><span>": </span><span style=color:#d08770;>false</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>points</span><span>": [
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>0</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.12890625</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.1484375</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>0.515625</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>2.0078125</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>3.484375</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>4.40234375</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>4.48828125</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>4.6953125</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>5.54296875</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>7.56640625</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>10.1328125</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>12.11328125</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>13.4453125</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>14.35546875</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>15.0703125</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>15.94921875</span><span>,
+</span><span>					</span><span style=color:#d08770;>0.14453125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>17.046875</span><span>,
+</span><span>					</span><span style=color:#d08770;>1.08984375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>18.4453125</span><span>,
+</span><span>					</span><span style=color:#d08770;>3.21875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>19.80859375</span><span>,
+</span><span>					</span><span style=color:#d08770;>6.42578125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>20.828125</span><span>,
+</span><span>					</span><span style=color:#d08770;>10.18359375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>21.43359375</span><span>,
+</span><span>					</span><span style=color:#d08770;>14.59375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>21.62890625</span><span>,
+</span><span>					</span><span style=color:#d08770;>19.640625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>21.62890625</span><span>,
+</span><span>					</span><span style=color:#d08770;>24.56640625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>21.62890625</span><span>,
+</span><span>					</span><span style=color:#d08770;>28.6796875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>21.62890625</span><span>,
+</span><span>					</span><span style=color:#d08770;>31.71875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>21.62890625</span><span>,
+</span><span>					</span><span style=color:#d08770;>33.49609375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>21.62890625</span><span>,
+</span><span>					</span><span style=color:#d08770;>34.38671875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>21.62890625</span><span>,
+</span><span>					</span><span style=color:#d08770;>34.38671875
+</span><span>				]
+</span><span>			],
+</span><span>			"</span><span style=color:#a3be8c;>pressures</span><span>": [],
+</span><span>			"</span><span style=color:#a3be8c;>simulatePressure</span><span>": </span><span style=color:#d08770;>true</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>lastCommittedPoint</span><span>": [
+</span><span>				</span><span style=color:#d08770;>21.62890625</span><span>,
+</span><span>				</span><span style=color:#d08770;>34.38671875
+</span><span>			]
+</span><span>		},
+</span><span>		{
+</span><span>			"</span><span style=color:#a3be8c;>id</span><span>": "</span><span style=color:#a3be8c;>hd2Fmh1TXwwuHjcLKhEjc</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>type</span><span>": "</span><span style=color:#a3be8c;>freedraw</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>x</span><span>": </span><span style=color:#d08770;>-202.73046875</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>y</span><span>": </span><span style=color:#d08770;>-297.921875</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>width</span><span>": </span><span style=color:#d08770;>31.32421875</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>height</span><span>": </span><span style=color:#d08770;>59.08203125</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>angle</span><span>": </span><span style=color:#d08770;>0</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>strokeColor</span><span>": "</span><span style=color:#a3be8c;>#000000</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>backgroundColor</span><span>": "</span><span style=color:#a3be8c;>transparent</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>fillStyle</span><span>": "</span><span style=color:#a3be8c;>hachure</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>strokeWidth</span><span>": </span><span style=color:#d08770;>1</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>strokeStyle</span><span>": "</span><span style=color:#a3be8c;>solid</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>roughness</span><span>": </span><span style=color:#d08770;>1</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>opacity</span><span>": </span><span style=color:#d08770;>100</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>groupIds</span><span>": [],
+</span><span>			"</span><span style=color:#a3be8c;>strokeSharpness</span><span>": "</span><span style=color:#a3be8c;>round</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>seed</span><span>": </span><span style=color:#d08770;>1616831688</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>version</span><span>": </span><span style=color:#d08770;>87</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>versionNonce</span><span>": </span><span style=color:#d08770;>75170232</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>isDeleted</span><span>": </span><span style=color:#d08770;>true</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>boundElements</span><span>": </span><span style=color:#d08770;>null</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>updated</span><span>": </span><span style=color:#d08770;>1663076187336</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>link</span><span>": </span><span style=color:#d08770;>null</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>locked</span><span>": </span><span style=color:#d08770;>false</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>points</span><span>": [
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>0</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.125</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.25</span><span>,
+</span><span>					</span><span style=color:#d08770;>0.2109375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.25</span><span>,
+</span><span>					</span><span style=color:#d08770;>0.765625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.25</span><span>,
+</span><span>					</span><span style=color:#d08770;>1.7421875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.25</span><span>,
+</span><span>					</span><span style=color:#d08770;>3.2265625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.25</span><span>,
+</span><span>					</span><span style=color:#d08770;>4.93359375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.25</span><span>,
+</span><span>					</span><span style=color:#d08770;>6.66796875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.25</span><span>,
+</span><span>					</span><span style=color:#d08770;>8.56640625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.25</span><span>,
+</span><span>					</span><span style=color:#d08770;>10.33203125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.25</span><span>,
+</span><span>					</span><span style=color:#d08770;>11.52734375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.25</span><span>,
+</span><span>					</span><span style=color:#d08770;>11.6484375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.25</span><span>,
+</span><span>					</span><span style=color:#d08770;>11.87109375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.25</span><span>,
+</span><span>					</span><span style=color:#d08770;>12.05859375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.25</span><span>,
+</span><span>					</span><span style=color:#d08770;>13.94921875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.25</span><span>,
+</span><span>					</span><span style=color:#d08770;>18.7109375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.10546875</span><span>,
+</span><span>					</span><span style=color:#d08770;>25.20703125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>0.54296875</span><span>,
+</span><span>					</span><span style=color:#d08770;>32.1328125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>1.5</span><span>,
+</span><span>					</span><span style=color:#d08770;>38.01953125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>2.19140625</span><span>,
+</span><span>					</span><span style=color:#d08770;>41.7109375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>2.578125</span><span>,
+</span><span>					</span><span style=color:#d08770;>43.37890625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>2.7265625</span><span>,
+</span><span>					</span><span style=color:#d08770;>44.125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>2.7265625</span><span>,
+</span><span>					</span><span style=color:#d08770;>44.69140625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>2.83984375</span><span>,
+</span><span>					</span><span style=color:#d08770;>44.8046875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>2.95703125</span><span>,
+</span><span>					</span><span style=color:#d08770;>45.18359375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>2.9609375</span><span>,
+</span><span>					</span><span style=color:#d08770;>45.71484375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>2.9609375</span><span>,
+</span><span>					</span><span style=color:#d08770;>46.60546875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>2.9609375</span><span>,
+</span><span>					</span><span style=color:#d08770;>47.671875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>2.9609375</span><span>,
+</span><span>					</span><span style=color:#d08770;>48.546875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>2.9609375</span><span>,
+</span><span>					</span><span style=color:#d08770;>49.484375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>2.9609375</span><span>,
+</span><span>					</span><span style=color:#d08770;>49.14453125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>2.89453125</span><span>,
+</span><span>					</span><span style=color:#d08770;>47.15625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>2.18359375</span><span>,
+</span><span>					</span><span style=color:#d08770;>43.3515625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>0.8828125</span><span>,
+</span><span>					</span><span style=color:#d08770;>38.98828125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.4140625</span><span>,
+</span><span>					</span><span style=color:#d08770;>34.63671875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-1.48046875</span><span>,
+</span><span>					</span><span style=color:#d08770;>30.44921875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-2.203125</span><span>,
+</span><span>					</span><span style=color:#d08770;>26.84375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-2.6015625</span><span>,
+</span><span>					</span><span style=color:#d08770;>23.703125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-2.796875</span><span>,
+</span><span>					</span><span style=color:#d08770;>20.39453125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-2.890625</span><span>,
+</span><span>					</span><span style=color:#d08770;>16.96484375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-2.890625</span><span>,
+</span><span>					</span><span style=color:#d08770;>13.52734375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-2.765625</span><span>,
+</span><span>					</span><span style=color:#d08770;>9.80078125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-2.22265625</span><span>,
+</span><span>					</span><span style=color:#d08770;>5.9296875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-1.26953125</span><span>,
+</span><span>					</span><span style=color:#d08770;>2.4765625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.3359375</span><span>,
+</span><span>					</span><span style=color:#d08770;>-0.19140625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>0.37890625</span><span>,
+</span><span>					</span><span style=color:#d08770;>-1.97265625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>1.0234375</span><span>,
+</span><span>					</span><span style=color:#d08770;>-3.48046875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>1.79296875</span><span>,
+</span><span>					</span><span style=color:#d08770;>-4.9296875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>2.85546875</span><span>,
+</span><span>					</span><span style=color:#d08770;>-6.17578125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>4.32421875</span><span>,
+</span><span>					</span><span style=color:#d08770;>-7.328125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>6.19921875</span><span>,
+</span><span>					</span><span style=color:#d08770;>-8.37109375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>8.28125</span><span>,
+</span><span>					</span><span style=color:#d08770;>-9.2421875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>10.17578125</span><span>,
+</span><span>					</span><span style=color:#d08770;>-9.59765625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>12.0703125</span><span>,
+</span><span>					</span><span style=color:#d08770;>-9.59765625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>14.2109375</span><span>,
+</span><span>					</span><span style=color:#d08770;>-9.59765625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>16.609375</span><span>,
+</span><span>					</span><span style=color:#d08770;>-9.57421875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>19.2421875</span><span>,
+</span><span>					</span><span style=color:#d08770;>-8.93359375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>22.00390625</span><span>,
+</span><span>					</span><span style=color:#d08770;>-7.05859375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>24.37890625</span><span>,
+</span><span>					</span><span style=color:#d08770;>-4.63671875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>26.06640625</span><span>,
+</span><span>					</span><span style=color:#d08770;>-2.109375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>27.328125</span><span>,
+</span><span>					</span><span style=color:#d08770;>0.578125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>28.13671875</span><span>,
+</span><span>					</span><span style=color:#d08770;>3.19921875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>28.43359375</span><span>,
+</span><span>					</span><span style=color:#d08770;>5.80859375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>28.43359375</span><span>,
+</span><span>					</span><span style=color:#d08770;>8.4140625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>28.43359375</span><span>,
+</span><span>					</span><span style=color:#d08770;>10.92578125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>27.78515625</span><span>,
+</span><span>					</span><span style=color:#d08770;>13.23046875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>26</span><span>,
+</span><span>					</span><span style=color:#d08770;>15.359375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>23.75</span><span>,
+</span><span>					</span><span style=color:#d08770;>17.33203125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>21.33203125</span><span>,
+</span><span>					</span><span style=color:#d08770;>19.00390625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>18.7109375</span><span>,
+</span><span>					</span><span style=color:#d08770;>20.4921875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>16.08203125</span><span>,
+</span><span>					</span><span style=color:#d08770;>21.7890625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>13.54296875</span><span>,
+</span><span>					</span><span style=color:#d08770;>22.7578125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>10.98828125</span><span>,
+</span><span>					</span><span style=color:#d08770;>23.40625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>8.30078125</span><span>,
+</span><span>					</span><span style=color:#d08770;>23.63671875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>5.86328125</span><span>,
+</span><span>					</span><span style=color:#d08770;>23.63671875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>4.12109375</span><span>,
+</span><span>					</span><span style=color:#d08770;>23.63671875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>2.9921875</span><span>,
+</span><span>					</span><span style=color:#d08770;>23.63671875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>2.23046875</span><span>,
+</span><span>					</span><span style=color:#d08770;>23.37109375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>2.23046875</span><span>,
+</span><span>					</span><span style=color:#d08770;>23.25390625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>2.23046875</span><span>,
+</span><span>					</span><span style=color:#d08770;>23.1328125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>2.23046875</span><span>,
+</span><span>					</span><span style=color:#d08770;>23.1328125
+</span><span>				]
+</span><span>			],
+</span><span>			"</span><span style=color:#a3be8c;>pressures</span><span>": [],
+</span><span>			"</span><span style=color:#a3be8c;>simulatePressure</span><span>": </span><span style=color:#d08770;>true</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>lastCommittedPoint</span><span>": [
+</span><span>				</span><span style=color:#d08770;>2.23046875</span><span>,
+</span><span>				</span><span style=color:#d08770;>23.1328125
+</span><span>			]
+</span><span>		},
+</span><span>		{
+</span><span>			"</span><span style=color:#a3be8c;>id</span><span>": "</span><span style=color:#a3be8c;>PjHFVKOr</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>type</span><span>": "</span><span style=color:#a3be8c;>text</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>x</span><span>": </span><span style=color:#d08770;>-243.515625</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>y</span><span>": </span><span style=color:#d08770;>-385.25</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>width</span><span>": </span><span style=color:#d08770;>11</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>height</span><span>": </span><span style=color:#d08770;>25</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>angle</span><span>": </span><span style=color:#d08770;>0</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>strokeColor</span><span>": "</span><span style=color:#a3be8c;>#000000</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>backgroundColor</span><span>": "</span><span style=color:#a3be8c;>transparent</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>fillStyle</span><span>": "</span><span style=color:#a3be8c;>hachure</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>strokeWidth</span><span>": </span><span style=color:#d08770;>1</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>strokeStyle</span><span>": "</span><span style=color:#a3be8c;>solid</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>roughness</span><span>": </span><span style=color:#d08770;>1</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>opacity</span><span>": </span><span style=color:#d08770;>100</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>groupIds</span><span>": [],
+</span><span>			"</span><span style=color:#a3be8c;>strokeSharpness</span><span>": "</span><span style=color:#a3be8c;>sharp</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>seed</span><span>": </span><span style=color:#d08770;>1015910072</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>version</span><span>": </span><span style=color:#d08770;>7</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>versionNonce</span><span>": </span><span style=color:#d08770;>1442387400</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>isDeleted</span><span>": </span><span style=color:#d08770;>true</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>boundElements</span><span>": </span><span style=color:#d08770;>null</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>updated</span><span>": </span><span style=color:#d08770;>1663076187336</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>link</span><span>": </span><span style=color:#d08770;>null</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>locked</span><span>": </span><span style=color:#d08770;>false</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>text</span><span>": "",
+</span><span>			"</span><span style=color:#a3be8c;>rawText</span><span>": "",
+</span><span>			"</span><span style=color:#a3be8c;>fontSize</span><span>": </span><span style=color:#d08770;>20</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>fontFamily</span><span>": </span><span style=color:#d08770;>1</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>textAlign</span><span>": "</span><span style=color:#a3be8c;>left</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>verticalAlign</span><span>": "</span><span style=color:#a3be8c;>top</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>baseline</span><span>": </span><span style=color:#d08770;>18</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>containerId</span><span>": </span><span style=color:#d08770;>null</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>originalText</span><span>": ""
+</span><span>		},
+</span><span>		{
+</span><span>			"</span><span style=color:#a3be8c;>id</span><span>": "</span><span style=color:#a3be8c;>mFM4KW42</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>type</span><span>": "</span><span style=color:#a3be8c;>text</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>x</span><span>": </span><span style=color:#d08770;>-251.7890625</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>y</span><span>": </span><span style=color:#d08770;>-356.6796875</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>width</span><span>": </span><span style=color:#d08770;>394</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>height</span><span>": </span><span style=color:#d08770;>50</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>angle</span><span>": </span><span style=color:#d08770;>0</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>strokeColor</span><span>": "</span><span style=color:#a3be8c;>#000000</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>backgroundColor</span><span>": "</span><span style=color:#a3be8c;>transparent</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>fillStyle</span><span>": "</span><span style=color:#a3be8c;>hachure</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>strokeWidth</span><span>": </span><span style=color:#d08770;>1</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>strokeStyle</span><span>": "</span><span style=color:#a3be8c;>solid</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>roughness</span><span>": </span><span style=color:#d08770;>1</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>opacity</span><span>": </span><span style=color:#d08770;>100</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>groupIds</span><span>": [],
+</span><span>			"</span><span style=color:#a3be8c;>strokeSharpness</span><span>": "</span><span style=color:#a3be8c;>sharp</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>seed</span><span>": </span><span style=color:#d08770;>515604424</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>version</span><span>": </span><span style=color:#d08770;>8</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>versionNonce</span><span>": </span><span style=color:#d08770;>134214584</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>isDeleted</span><span>": </span><span style=color:#d08770;>true</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>boundElements</span><span>": </span><span style=color:#d08770;>null</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>updated</span><span>": </span><span style=color:#d08770;>1663076187683</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>link</span><span>": </span><span style=color:#d08770;>null</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>locked</span><span>": </span><span style=color:#d08770;>false</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>text</span><span>": "</span><span style=color:#a3be8c;>p : I bought a lottery ticket this week.</span><span style=color:#96b5b4;>\n</span><span style=color:#a3be8c;>q : I won the million dollar jackpot.</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>rawText</span><span>": "</span><span style=color:#a3be8c;>p : I bought a lottery ticket this week.</span><span style=color:#96b5b4;>\n</span><span style=color:#a3be8c;>q : I won the million dollar jackpot.</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>fontSize</span><span>": </span><span style=color:#d08770;>20</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>fontFamily</span><span>": </span><span style=color:#d08770;>1</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>textAlign</span><span>": "</span><span style=color:#a3be8c;>left</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>verticalAlign</span><span>": "</span><span style=color:#a3be8c;>top</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>baseline</span><span>": </span><span style=color:#d08770;>43</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>containerId</span><span>": </span><span style=color:#d08770;>null</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>originalText</span><span>": "</span><span style=color:#a3be8c;>p : I bought a lottery ticket this week.</span><span style=color:#96b5b4;>\n</span><span style=color:#a3be8c;>q : I won the million dollar jackpot.</span><span>"
+</span><span>		},
+</span><span>		{
+</span><span>			"</span><span style=color:#a3be8c;>id</span><span>": "</span><span style=color:#a3be8c;>9kVpJTmzfHe4gqvL7K-Rl</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>type</span><span>": "</span><span style=color:#a3be8c;>freedraw</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>x</span><span>": </span><span style=color:#d08770;>-274.0859375</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>y</span><span>": </span><span style=color:#d08770;>-259.21875</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>width</span><span>": </span><span style=color:#d08770;>22.5234375</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>height</span><span>": </span><span style=color:#d08770;>12.3984375</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>angle</span><span>": </span><span style=color:#d08770;>0</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>strokeColor</span><span>": "</span><span style=color:#a3be8c;>#000000</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>backgroundColor</span><span>": "</span><span style=color:#a3be8c;>transparent</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>fillStyle</span><span>": "</span><span style=color:#a3be8c;>hachure</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>strokeWidth</span><span>": </span><span style=color:#d08770;>1</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>strokeStyle</span><span>": "</span><span style=color:#a3be8c;>solid</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>roughness</span><span>": </span><span style=color:#d08770;>1</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>opacity</span><span>": </span><span style=color:#d08770;>100</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>groupIds</span><span>": [],
+</span><span>			"</span><span style=color:#a3be8c;>strokeSharpness</span><span>": "</span><span style=color:#a3be8c;>round</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>seed</span><span>": </span><span style=color:#d08770;>1168387528</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>version</span><span>": </span><span style=color:#d08770;>49</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>versionNonce</span><span>": </span><span style=color:#d08770;>1088625864</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>isDeleted</span><span>": </span><span style=color:#d08770;>true</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>boundElements</span><span>": </span><span style=color:#d08770;>null</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>updated</span><span>": </span><span style=color:#d08770;>1663076187336</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>link</span><span>": </span><span style=color:#d08770;>null</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>locked</span><span>": </span><span style=color:#d08770;>false</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>points</span><span>": [
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>0</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>0.44140625</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>1.35546875</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>3.6640625</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>7.66015625</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>12.30078125</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>16.6328125</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>19.51953125</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>21.15625</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>22.02734375</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>22.41015625</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>22.5234375</span><span>,
+</span><span>					</span><span style=color:#d08770;>0.17578125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>22.5234375</span><span>,
+</span><span>					</span><span style=color:#d08770;>0.51171875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>22.5234375</span><span>,
+</span><span>					</span><span style=color:#d08770;>0.90234375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>22.5234375</span><span>,
+</span><span>					</span><span style=color:#d08770;>1.40625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>22.38671875</span><span>,
+</span><span>					</span><span style=color:#d08770;>1.94921875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>22.16796875</span><span>,
+</span><span>					</span><span style=color:#d08770;>2.48828125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>22.03125</span><span>,
+</span><span>					</span><span style=color:#d08770;>3.02734375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>21.84765625</span><span>,
+</span><span>					</span><span style=color:#d08770;>3.56640625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>21.6171875</span><span>,
+</span><span>					</span><span style=color:#d08770;>4.10546875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>21.48046875</span><span>,
+</span><span>					</span><span style=color:#d08770;>4.64453125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>21.44140625</span><span>,
+</span><span>					</span><span style=color:#d08770;>5.0546875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>21.3046875</span><span>,
+</span><span>					</span><span style=color:#d08770;>5.453125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>21.16796875</span><span>,
+</span><span>					</span><span style=color:#d08770;>5.84765625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>21.16796875</span><span>,
+</span><span>					</span><span style=color:#d08770;>6.2421875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>21.16796875</span><span>,
+</span><span>					</span><span style=color:#d08770;>6.765625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>21.16796875</span><span>,
+</span><span>					</span><span style=color:#d08770;>7.234375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>21.16796875</span><span>,
+</span><span>					</span><span style=color:#d08770;>7.6328125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>21.10546875</span><span>,
+</span><span>					</span><span style=color:#d08770;>8.01953125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>20.91796875</span><span>,
+</span><span>					</span><span style=color:#d08770;>8.59765625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>20.91796875</span><span>,
+</span><span>					</span><span style=color:#d08770;>8.71875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>20.91796875</span><span>,
+</span><span>					</span><span style=color:#d08770;>8.9609375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>20.91796875</span><span>,
+</span><span>					</span><span style=color:#d08770;>9.2265625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>20.91796875</span><span>,
+</span><span>					</span><span style=color:#d08770;>9.640625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>20.91796875</span><span>,
+</span><span>					</span><span style=color:#d08770;>10.1796875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>20.91796875</span><span>,
+</span><span>					</span><span style=color:#d08770;>10.71875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>20.91796875</span><span>,
+</span><span>					</span><span style=color:#d08770;>11.44140625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>20.91796875</span><span>,
+</span><span>					</span><span style=color:#d08770;>11.609375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>20.91796875</span><span>,
+</span><span>					</span><span style=color:#d08770;>11.86328125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>20.91796875</span><span>,
+</span><span>					</span><span style=color:#d08770;>12.0390625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>20.91796875</span><span>,
+</span><span>					</span><span style=color:#d08770;>12.15625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>20.91796875</span><span>,
+</span><span>					</span><span style=color:#d08770;>12.28515625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>20.91796875</span><span>,
+</span><span>					</span><span style=color:#d08770;>12.3984375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>20.91796875</span><span>,
+</span><span>					</span><span style=color:#d08770;>12.3984375
+</span><span>				]
+</span><span>			],
+</span><span>			"</span><span style=color:#a3be8c;>pressures</span><span>": [],
+</span><span>			"</span><span style=color:#a3be8c;>simulatePressure</span><span>": </span><span style=color:#d08770;>true</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>lastCommittedPoint</span><span>": [
+</span><span>				</span><span style=color:#d08770;>20.91796875</span><span>,
+</span><span>				</span><span style=color:#d08770;>12.3984375
+</span><span>			]
+</span><span>		},
+</span><span>		{
+</span><span>			"</span><span style=color:#a3be8c;>id</span><span>": "</span><span style=color:#a3be8c;>vEfF8Tt_cMjCLCrXfIA7m</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>type</span><span>": "</span><span style=color:#a3be8c;>freedraw</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>x</span><span>": </span><span style=color:#d08770;>-234.33984375</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>y</span><span>": </span><span style=color:#d08770;>-267.3671875</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>width</span><span>": </span><span style=color:#d08770;>2.20703125</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>height</span><span>": </span><span style=color:#d08770;>25.3828125</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>angle</span><span>": </span><span style=color:#d08770;>0</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>strokeColor</span><span>": "</span><span style=color:#a3be8c;>#000000</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>backgroundColor</span><span>": "</span><span style=color:#a3be8c;>transparent</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>fillStyle</span><span>": "</span><span style=color:#a3be8c;>hachure</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>strokeWidth</span><span>": </span><span style=color:#d08770;>1</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>strokeStyle</span><span>": "</span><span style=color:#a3be8c;>solid</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>roughness</span><span>": </span><span style=color:#d08770;>1</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>opacity</span><span>": </span><span style=color:#d08770;>100</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>groupIds</span><span>": [],
+</span><span>			"</span><span style=color:#a3be8c;>strokeSharpness</span><span>": "</span><span style=color:#a3be8c;>round</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>seed</span><span>": </span><span style=color:#d08770;>767072440</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>version</span><span>": </span><span style=color:#d08770;>33</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>versionNonce</span><span>": </span><span style=color:#d08770;>1925287864</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>isDeleted</span><span>": </span><span style=color:#d08770;>true</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>boundElements</span><span>": </span><span style=color:#d08770;>null</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>updated</span><span>": </span><span style=color:#d08770;>1663076186972</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>link</span><span>": </span><span style=color:#d08770;>null</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>locked</span><span>": </span><span style=color:#d08770;>false</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>points</span><span>": [
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>0</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>0</span><span>,
+</span><span>					</span><span style=color:#d08770;>-0.12109375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>0</span><span>,
+</span><span>					</span><span style=color:#d08770;>0.03515625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>0</span><span>,
+</span><span>					</span><span style=color:#d08770;>0.90625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>0</span><span>,
+</span><span>					</span><span style=color:#d08770;>2.19921875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>0</span><span>,
+</span><span>					</span><span style=color:#d08770;>3.4140625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>0</span><span>,
+</span><span>					</span><span style=color:#d08770;>4.453125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>0</span><span>,
+</span><span>					</span><span style=color:#d08770;>5.6015625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>0</span><span>,
+</span><span>					</span><span style=color:#d08770;>7.05859375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>0</span><span>,
+</span><span>					</span><span style=color:#d08770;>8.83984375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>0</span><span>,
+</span><span>					</span><span style=color:#d08770;>11.10546875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>0</span><span>,
+</span><span>					</span><span style=color:#d08770;>13.4609375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>0</span><span>,
+</span><span>					</span><span style=color:#d08770;>15.30078125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.30859375</span><span>,
+</span><span>					</span><span style=color:#d08770;>16.54296875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.6171875</span><span>,
+</span><span>					</span><span style=color:#d08770;>17.25390625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.6171875</span><span>,
+</span><span>					</span><span style=color:#d08770;>17.9296875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.7734375</span><span>,
+</span><span>					</span><span style=color:#d08770;>18.953125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-1.07421875</span><span>,
+</span><span>					</span><span style=color:#d08770;>20.3671875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-1.421875</span><span>,
+</span><span>					</span><span style=color:#d08770;>22.03515625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-1.77734375</span><span>,
+</span><span>					</span><span style=color:#d08770;>23.53125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-2.05859375</span><span>,
+</span><span>					</span><span style=color:#d08770;>24.4375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-2.1953125</span><span>,
+</span><span>					</span><span style=color:#d08770;>24.98828125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-2.20703125</span><span>,
+</span><span>					</span><span style=color:#d08770;>25.26171875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-2.20703125</span><span>,
+</span><span>					</span><span style=color:#d08770;>25.11328125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-2.20703125</span><span>,
+</span><span>					</span><span style=color:#d08770;>24.69140625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-2.20703125</span><span>,
+</span><span>					</span><span style=color:#d08770;>24.10546875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-2.20703125</span><span>,
+</span><span>					</span><span style=color:#d08770;>23.390625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-2.20703125</span><span>,
+</span><span>					</span><span style=color:#d08770;>22.65234375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-2.20703125</span><span>,
+</span><span>					</span><span style=color:#d08770;>22.65234375
+</span><span>				]
+</span><span>			],
+</span><span>			"</span><span style=color:#a3be8c;>pressures</span><span>": [],
+</span><span>			"</span><span style=color:#a3be8c;>simulatePressure</span><span>": </span><span style=color:#d08770;>true</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>lastCommittedPoint</span><span>": [
+</span><span>				</span><span style=color:#d08770;>-2.20703125</span><span>,
+</span><span>				</span><span style=color:#d08770;>22.65234375
+</span><span>			]
+</span><span>		},
+</span><span>		{
+</span><span>			"</span><span style=color:#a3be8c;>id</span><span>": "</span><span style=color:#a3be8c;>TFCzeChS-Y1CS3pG2dx9s</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>type</span><span>": "</span><span style=color:#a3be8c;>freedraw</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>x</span><span>": </span><span style=color:#d08770;>-236.546875</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>y</span><span>": </span><span style=color:#d08770;>-253.6640625</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>width</span><span>": </span><span style=color:#d08770;>0</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>height</span><span>": </span><span style=color:#d08770;>0.26171875</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>angle</span><span>": </span><span style=color:#d08770;>0</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>strokeColor</span><span>": "</span><span style=color:#a3be8c;>#000000</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>backgroundColor</span><span>": "</span><span style=color:#a3be8c;>transparent</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>fillStyle</span><span>": "</span><span style=color:#a3be8c;>hachure</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>strokeWidth</span><span>": </span><span style=color:#d08770;>1</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>strokeStyle</span><span>": "</span><span style=color:#a3be8c;>solid</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>roughness</span><span>": </span><span style=color:#d08770;>1</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>opacity</span><span>": </span><span style=color:#d08770;>100</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>groupIds</span><span>": [],
+</span><span>			"</span><span style=color:#a3be8c;>strokeSharpness</span><span>": "</span><span style=color:#a3be8c;>round</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>seed</span><span>": </span><span style=color:#d08770;>1993924536</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>version</span><span>": </span><span style=color:#d08770;>7</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>versionNonce</span><span>": </span><span style=color:#d08770;>808528824</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>isDeleted</span><span>": </span><span style=color:#d08770;>true</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>boundElements</span><span>": </span><span style=color:#d08770;>null</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>updated</span><span>": </span><span style=color:#d08770;>1663076186460</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>link</span><span>": </span><span style=color:#d08770;>null</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>locked</span><span>": </span><span style=color:#d08770;>false</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>points</span><span>": [
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>0</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>0</span><span>,
+</span><span>					</span><span style=color:#d08770;>-0.26171875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>0</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				]
+</span><span>			],
+</span><span>			"</span><span style=color:#a3be8c;>pressures</span><span>": [],
+</span><span>			"</span><span style=color:#a3be8c;>simulatePressure</span><span>": </span><span style=color:#d08770;>true</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>lastCommittedPoint</span><span>": [
+</span><span>				</span><span style=color:#d08770;>0</span><span>,
+</span><span>				</span><span style=color:#d08770;>-0.26171875
+</span><span>			]
+</span><span>		},
+</span><span>		{
+</span><span>			"</span><span style=color:#a3be8c;>id</span><span>": "</span><span style=color:#a3be8c;>op8lpancpujrlkWUtP1a3</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>type</span><span>": "</span><span style=color:#a3be8c;>freedraw</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>x</span><span>": </span><span style=color:#d08770;>-231.34375</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>y</span><span>": </span><span style=color:#d08770;>-268.80859375</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>width</span><span>": </span><span style=color:#d08770;>26.9609375</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>height</span><span>": </span><span style=color:#d08770;>17.8984375</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>angle</span><span>": </span><span style=color:#d08770;>0</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>strokeColor</span><span>": "</span><span style=color:#a3be8c;>#000000</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>backgroundColor</span><span>": "</span><span style=color:#a3be8c;>transparent</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>fillStyle</span><span>": "</span><span style=color:#a3be8c;>hachure</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>strokeWidth</span><span>": </span><span style=color:#d08770;>1</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>strokeStyle</span><span>": "</span><span style=color:#a3be8c;>solid</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>roughness</span><span>": </span><span style=color:#d08770;>1</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>opacity</span><span>": </span><span style=color:#d08770;>100</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>groupIds</span><span>": [],
+</span><span>			"</span><span style=color:#a3be8c;>strokeSharpness</span><span>": "</span><span style=color:#a3be8c;>round</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>seed</span><span>": </span><span style=color:#d08770;>1813169608</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>version</span><span>": </span><span style=color:#d08770;>66</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>versionNonce</span><span>": </span><span style=color:#d08770;>725158088</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>isDeleted</span><span>": </span><span style=color:#d08770;>true</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>boundElements</span><span>": </span><span style=color:#d08770;>null</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>updated</span><span>": </span><span style=color:#d08770;>1663076186244</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>link</span><span>": </span><span style=color:#d08770;>null</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>locked</span><span>": </span><span style=color:#d08770;>false</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>points</span><span>": [
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>0</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>0.109375</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>0.50390625</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>1.828125</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>3.9375</span><span>,
+</span><span>					</span><span style=color:#d08770;>-0.52734375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>6.04296875</span><span>,
+</span><span>					</span><span style=color:#d08770;>-1.3984375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>7.72265625</span><span>,
+</span><span>					</span><span style=color:#d08770;>-2.046875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>9.00390625</span><span>,
+</span><span>					</span><span style=color:#d08770;>-2.48046875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>10.25390625</span><span>,
+</span><span>					</span><span style=color:#d08770;>-2.63671875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>11.45703125</span><span>,
+</span><span>					</span><span style=color:#d08770;>-2.8125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>12.51953125</span><span>,
+</span><span>					</span><span style=color:#d08770;>-3.078125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>13.40234375</span><span>,
+</span><span>					</span><span style=color:#d08770;>-3.19140625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>14.25390625</span><span>,
+</span><span>					</span><span style=color:#d08770;>-3.19140625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>14.96484375</span><span>,
+</span><span>					</span><span style=color:#d08770;>-3.19140625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>15.5078125</span><span>,
+</span><span>					</span><span style=color:#d08770;>-3.19140625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>16.046875</span><span>,
+</span><span>					</span><span style=color:#d08770;>-3.19140625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>16.7578125</span><span>,
+</span><span>					</span><span style=color:#d08770;>-3.19140625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>17.64453125</span><span>,
+</span><span>					</span><span style=color:#d08770;>-3.19140625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>18.53125</span><span>,
+</span><span>					</span><span style=color:#d08770;>-3.19140625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>19.3359375</span><span>,
+</span><span>					</span><span style=color:#d08770;>-3.19140625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>20.046875</span><span>,
+</span><span>					</span><span style=color:#d08770;>-3.19140625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>20.6640625</span><span>,
+</span><span>					</span><span style=color:#d08770;>-3.19140625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>21.203125</span><span>,
+</span><span>					</span><span style=color:#d08770;>-3.109375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>21.7421875</span><span>,
+</span><span>					</span><span style=color:#d08770;>-2.890625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>22.28125</span><span>,
+</span><span>					</span><span style=color:#d08770;>-2.484375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>22.6875</span><span>,
+</span><span>					</span><span style=color:#d08770;>-1.9453125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>22.98828125</span><span>,
+</span><span>					</span><span style=color:#d08770;>-1.5390625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>23.2890625</span><span>,
+</span><span>					</span><span style=color:#d08770;>-1.1328125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>23.55078125</span><span>,
+</span><span>					</span><span style=color:#d08770;>-0.59765625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>23.8125</span><span>,
+</span><span>					</span><span style=color:#d08770;>0.0859375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>23.96484375</span><span>,
+</span><span>					</span><span style=color:#d08770;>0.95703125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>23.984375</span><span>,
+</span><span>					</span><span style=color:#d08770;>2.0234375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>23.984375</span><span>,
+</span><span>					</span><span style=color:#d08770;>2.9140625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>23.984375</span><span>,
+</span><span>					</span><span style=color:#d08770;>3.63671875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>23.984375</span><span>,
+</span><span>					</span><span style=color:#d08770;>4.3515625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>23.97265625</span><span>,
+</span><span>					</span><span style=color:#d08770;>4.89453125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>23.67578125</span><span>,
+</span><span>					</span><span style=color:#d08770;>5.30078125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>22.9375</span><span>,
+</span><span>					</span><span style=color:#d08770;>5.7265625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>21.86328125</span><span>,
+</span><span>					</span><span style=color:#d08770;>6.5078125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>20.5703125</span><span>,
+</span><span>					</span><span style=color:#d08770;>7.62890625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>19.109375</span><span>,
+</span><span>					</span><span style=color:#d08770;>8.875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>17.4765625</span><span>,
+</span><span>					</span><span style=color:#d08770;>9.99609375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>16.015625</span><span>,
+</span><span>					</span><span style=color:#d08770;>10.96484375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>14.7734375</span><span>,
+</span><span>					</span><span style=color:#d08770;>11.734375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>13.52734375</span><span>,
+</span><span>					</span><span style=color:#d08770;>12.29296875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>12.35546875</span><span>,
+</span><span>					</span><span style=color:#d08770;>12.6953125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>11.28125</span><span>,
+</span><span>					</span><span style=color:#d08770;>13.0703125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>9.92578125</span><span>,
+</span><span>					</span><span style=color:#d08770;>13.4453125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>8.35546875</span><span>,
+</span><span>					</span><span style=color:#d08770;>13.76953125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>6.76953125</span><span>,
+</span><span>					</span><span style=color:#d08770;>14.01953125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>5.20703125</span><span>,
+</span><span>					</span><span style=color:#d08770;>14.25390625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>3.859375</span><span>,
+</span><span>					</span><span style=color:#d08770;>14.40625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>2.78515625</span><span>,
+</span><span>					</span><span style=color:#d08770;>14.40625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>2.01171875</span><span>,
+</span><span>					</span><span style=color:#d08770;>14.40625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>1.23828125</span><span>,
+</span><span>					</span><span style=color:#d08770;>14.40625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>0.390625</span><span>,
+</span><span>					</span><span style=color:#d08770;>14.5234375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.45703125</span><span>,
+</span><span>					</span><span style=color:#d08770;>14.67578125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-1.2109375</span><span>,
+</span><span>					</span><span style=color:#d08770;>14.70703125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-1.796875</span><span>,
+</span><span>					</span><span style=color:#d08770;>14.70703125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-2.2734375</span><span>,
+</span><span>					</span><span style=color:#d08770;>14.70703125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-2.6015625</span><span>,
+</span><span>					</span><span style=color:#d08770;>14.70703125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-2.79296875</span><span>,
+</span><span>					</span><span style=color:#d08770;>14.70703125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-2.9765625</span><span>,
+</span><span>					</span><span style=color:#d08770;>14.70703125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-2.9765625</span><span>,
+</span><span>					</span><span style=color:#d08770;>14.70703125
+</span><span>				]
+</span><span>			],
+</span><span>			"</span><span style=color:#a3be8c;>pressures</span><span>": [],
+</span><span>			"</span><span style=color:#a3be8c;>simulatePressure</span><span>": </span><span style=color:#d08770;>true</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>lastCommittedPoint</span><span>": [
+</span><span>				</span><span style=color:#d08770;>-2.9765625</span><span>,
+</span><span>				</span><span style=color:#d08770;>14.70703125
+</span><span>			]
+</span><span>		},
+</span><span>		{
+</span><span>			"</span><span style=color:#a3be8c;>id</span><span>": "</span><span style=color:#a3be8c;>dAcqSluv83rogk3lm4ube</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>type</span><span>": "</span><span style=color:#a3be8c;>freedraw</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>x</span><span>": </span><span style=color:#d08770;>-290.50390625</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>y</span><span>": </span><span style=color:#d08770;>-224.44921875</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>width</span><span>": </span><span style=color:#d08770;>349.25390625</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>height</span><span>": </span><span style=color:#d08770;>525.48828125</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>angle</span><span>": </span><span style=color:#d08770;>0</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>strokeColor</span><span>": "</span><span style=color:#a3be8c;>#000000</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>backgroundColor</span><span>": "</span><span style=color:#a3be8c;>transparent</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>fillStyle</span><span>": "</span><span style=color:#a3be8c;>hachure</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>strokeWidth</span><span>": </span><span style=color:#d08770;>1</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>strokeStyle</span><span>": "</span><span style=color:#a3be8c;>solid</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>roughness</span><span>": </span><span style=color:#d08770;>1</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>opacity</span><span>": </span><span style=color:#d08770;>100</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>groupIds</span><span>": [],
+</span><span>			"</span><span style=color:#a3be8c;>strokeSharpness</span><span>": "</span><span style=color:#a3be8c;>round</span><span>",
+</span><span>			"</span><span style=color:#a3be8c;>seed</span><span>": </span><span style=color:#d08770;>1861501896</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>version</span><span>": </span><span style=color:#d08770;>239</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>versionNonce</span><span>": </span><span style=color:#d08770;>720757960</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>isDeleted</span><span>": </span><span style=color:#d08770;>true</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>boundElements</span><span>": </span><span style=color:#d08770;>null</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>updated</span><span>": </span><span style=color:#d08770;>1663081531152</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>link</span><span>": </span><span style=color:#d08770;>null</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>locked</span><span>": </span><span style=color:#d08770;>false</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>points</span><span>": [
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>0</span><span>,
+</span><span>					</span><span style=color:#d08770;>0
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.15625</span><span>,
+</span><span>					</span><span style=color:#d08770;>-0.46484375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.3125</span><span>,
+</span><span>					</span><span style=color:#d08770;>-0.70703125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.3125</span><span>,
+</span><span>					</span><span style=color:#d08770;>6.734375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.3125</span><span>,
+</span><span>					</span><span style=color:#d08770;>28
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.3125</span><span>,
+</span><span>					</span><span style=color:#d08770;>59.140625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.3125</span><span>,
+</span><span>					</span><span style=color:#d08770;>83.35546875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.3125</span><span>,
+</span><span>					</span><span style=color:#d08770;>96.0859375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.3125</span><span>,
+</span><span>					</span><span style=color:#d08770;>103.8359375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-0.3125</span><span>,
+</span><span>					</span><span style=color:#d08770;>106.53125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>0.0625</span><span>,
+</span><span>					</span><span style=color:#d08770;>106.53125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>3.44140625</span><span>,
+</span><span>					</span><span style=color:#d08770;>105.84765625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>10.87109375</span><span>,
+</span><span>					</span><span style=color:#d08770;>102.96484375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>18.09375</span><span>,
+</span><span>					</span><span style=color:#d08770;>99.76171875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>23.2421875</span><span>,
+</span><span>					</span><span style=color:#d08770;>97.64453125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>26.6953125</span><span>,
+</span><span>					</span><span style=color:#d08770;>96.49609375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>28.4765625</span><span>,
+</span><span>					</span><span style=color:#d08770;>96.71875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>30.484375</span><span>,
+</span><span>					</span><span style=color:#d08770;>104.1328125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>33.39453125</span><span>,
+</span><span>					</span><span style=color:#d08770;>123.00390625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>35.828125</span><span>,
+</span><span>					</span><span style=color:#d08770;>149.71875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>37.09375</span><span>,
+</span><span>					</span><span style=color:#d08770;>174.640625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>37.5078125</span><span>,
+</span><span>					</span><span style=color:#d08770;>191.53515625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>37.5078125</span><span>,
+</span><span>					</span><span style=color:#d08770;>202.56640625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>37.5078125</span><span>,
+</span><span>					</span><span style=color:#d08770;>207.7578125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>37.58984375</span><span>,
+</span><span>					</span><span style=color:#d08770;>208.9765625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>38.50390625</span><span>,
+</span><span>					</span><span style=color:#d08770;>206.69140625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>41.5703125</span><span>,
+</span><span>					</span><span style=color:#d08770;>198.046875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>45.1640625</span><span>,
+</span><span>					</span><span style=color:#d08770;>187.73828125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>47.9609375</span><span>,
+</span><span>					</span><span style=color:#d08770;>180.03125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>50.1015625</span><span>,
+</span><span>					</span><span style=color:#d08770;>174.72265625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>51.078125</span><span>,
+</span><span>					</span><span style=color:#d08770;>172.9296875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>51.5625</span><span>,
+</span><span>					</span><span style=color:#d08770;>173.7890625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>52.3203125</span><span>,
+</span><span>					</span><span style=color:#d08770;>180.35546875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>53.546875</span><span>,
+</span><span>					</span><span style=color:#d08770;>193.39453125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>55.30859375</span><span>,
+</span><span>					</span><span style=color:#d08770;>206.671875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>57.57421875</span><span>,
+</span><span>					</span><span style=color:#d08770;>216.63671875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>59.80078125</span><span>,
+</span><span>					</span><span style=color:#d08770;>222.5859375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>63.5546875</span><span>,
+</span><span>					</span><span style=color:#d08770;>224.4140625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>70.25</span><span>,
+</span><span>					</span><span style=color:#d08770;>220.265625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>79.58984375</span><span>,
+</span><span>					</span><span style=color:#d08770;>209.01953125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>88.0859375</span><span>,
+</span><span>					</span><span style=color:#d08770;>197.28515625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>93.51171875</span><span>,
+</span><span>					</span><span style=color:#d08770;>189.80078125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>96.78515625</span><span>,
+</span><span>					</span><span style=color:#d08770;>185.7734375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>98.41015625</span><span>,
+</span><span>					</span><span style=color:#d08770;>184.5234375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>100.16796875</span><span>,
+</span><span>					</span><span style=color:#d08770;>186.69921875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>103.703125</span><span>,
+</span><span>					</span><span style=color:#d08770;>196.40625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>109.3046875</span><span>,
+</span><span>					</span><span style=color:#d08770;>211.6875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>114.96875</span><span>,
+</span><span>					</span><span style=color:#d08770;>224.7265625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>119.6484375</span><span>,
+</span><span>					</span><span style=color:#d08770;>234.015625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>123.97265625</span><span>,
+</span><span>					</span><span style=color:#d08770;>239.69140625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>128.37890625</span><span>,
+</span><span>					</span><span style=color:#d08770;>241.02734375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>134.51953125</span><span>,
+</span><span>					</span><span style=color:#d08770;>236.95703125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>141.61328125</span><span>,
+</span><span>					</span><span style=color:#d08770;>229.65234375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>147.5390625</span><span>,
+</span><span>					</span><span style=color:#d08770;>223.5
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>151.48828125</span><span>,
+</span><span>					</span><span style=color:#d08770;>219.87109375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>153.4375</span><span>,
+</span><span>					</span><span style=color:#d08770;>218.62890625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>154.39453125</span><span>,
+</span><span>					</span><span style=color:#d08770;>218.5546875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>155.13671875</span><span>,
+</span><span>					</span><span style=color:#d08770;>221.671875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>156.76953125</span><span>,
+</span><span>					</span><span style=color:#d08770;>229.7421875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>159.265625</span><span>,
+</span><span>					</span><span style=color:#d08770;>238.53515625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>161.76171875</span><span>,
+</span><span>					</span><span style=color:#d08770;>244.91796875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>164.01953125</span><span>,
+</span><span>					</span><span style=color:#d08770;>248.72265625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>167.9453125</span><span>,
+</span><span>					</span><span style=color:#d08770;>249.5078125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>177.875</span><span>,
+</span><span>					</span><span style=color:#d08770;>242.14453125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>197.546875</span><span>,
+</span><span>					</span><span style=color:#d08770;>221.27734375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>224.78515625</span><span>,
+</span><span>					</span><span style=color:#d08770;>189.06640625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>255.5546875</span><span>,
+</span><span>					</span><span style=color:#d08770;>149.515625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>285.40234375</span><span>,
+</span><span>					</span><span style=color:#d08770;>107.51171875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>309.7421875</span><span>,
+</span><span>					</span><span style=color:#d08770;>66.03515625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>327.16796875</span><span>,
+</span><span>					</span><span style=color:#d08770;>23.76953125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>337.28125</span><span>,
+</span><span>					</span><span style=color:#d08770;>-18.73828125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>341.00390625</span><span>,
+</span><span>					</span><span style=color:#d08770;>-47.33203125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>341.43359375</span><span>,
+</span><span>					</span><span style=color:#d08770;>-63.21875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>341.43359375</span><span>,
+</span><span>					</span><span style=color:#d08770;>-75.44921875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>340.9921875</span><span>,
+</span><span>					</span><span style=color:#d08770;>-80.81640625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>335.55078125</span><span>,
+</span><span>					</span><span style=color:#d08770;>-83.796875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>320.44140625</span><span>,
+</span><span>					</span><span style=color:#d08770;>-87.90625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>286.203125</span><span>,
+</span><span>					</span><span style=color:#d08770;>-94.07421875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>240.2734375</span><span>,
+</span><span>					</span><span style=color:#d08770;>-100.0078125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>191.22265625</span><span>,
+</span><span>					</span><span style=color:#d08770;>-102.6953125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>139.86328125</span><span>,
+</span><span>					</span><span style=color:#d08770;>-103.1640625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>103.15625</span><span>,
+</span><span>					</span><span style=color:#d08770;>-100.96875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>77.0625</span><span>,
+</span><span>					</span><span style=color:#d08770;>-91.30078125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>53.28515625</span><span>,
+</span><span>					</span><span style=color:#d08770;>-71.66015625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>37.93359375</span><span>,
+</span><span>					</span><span style=color:#d08770;>-41.8671875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>30.65234375</span><span>,
+</span><span>					</span><span style=color:#d08770;>-1.40234375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>28.125</span><span>,
+</span><span>					</span><span style=color:#d08770;>48.07421875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>29.16015625</span><span>,
+</span><span>					</span><span style=color:#d08770;>99.5
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>34.62890625</span><span>,
+</span><span>					</span><span style=color:#d08770;>139.40234375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>43.3203125</span><span>,
+</span><span>					</span><span style=color:#d08770;>166.30078125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>53.77734375</span><span>,
+</span><span>					</span><span style=color:#d08770;>187.04296875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>66.3359375</span><span>,
+</span><span>					</span><span style=color:#d08770;>198.24609375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>85.25</span><span>,
+</span><span>					</span><span style=color:#d08770;>195.8203125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>114.76953125</span><span>,
+</span><span>					</span><span style=color:#d08770;>169.80078125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>150.1875</span><span>,
+</span><span>					</span><span style=color:#d08770;>109.98828125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>182.5703125</span><span>,
+</span><span>					</span><span style=color:#d08770;>21.3984375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>200.75</span><span>,
+</span><span>					</span><span style=color:#d08770;>-61.23046875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>205.47265625</span><span>,
+</span><span>					</span><span style=color:#d08770;>-114.04296875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>206.25390625</span><span>,
+</span><span>					</span><span style=color:#d08770;>-144.23828125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>203.90625</span><span>,
+</span><span>					</span><span style=color:#d08770;>-162.60546875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>195.60546875</span><span>,
+</span><span>					</span><span style=color:#d08770;>-172.90234375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>180.3828125</span><span>,
+</span><span>					</span><span style=color:#d08770;>-168.359375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>153.80078125</span><span>,
+</span><span>					</span><span style=color:#d08770;>-139.05859375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>123.16015625</span><span>,
+</span><span>					</span><span style=color:#d08770;>-80.4921875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>101.08984375</span><span>,
+</span><span>					</span><span style=color:#d08770;>2.25
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>91.00390625</span><span>,
+</span><span>					</span><span style=color:#d08770;>83.0234375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>89.8359375</span><span>,
+</span><span>					</span><span style=color:#d08770;>140.16796875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>92.97265625</span><span>,
+</span><span>					</span><span style=color:#d08770;>175.46875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>100.84375</span><span>,
+</span><span>					</span><span style=color:#d08770;>197.42578125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>112.3359375</span><span>,
+</span><span>					</span><span style=color:#d08770;>207.80078125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>130.06640625</span><span>,
+</span><span>					</span><span style=color:#d08770;>194.19140625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>153.3671875</span><span>,
+</span><span>					</span><span style=color:#d08770;>150.703125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>175.09375</span><span>,
+</span><span>					</span><span style=color:#d08770;>78.3046875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>186.96875</span><span>,
+</span><span>					</span><span style=color:#d08770;>10.5078125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>189.26953125</span><span>,
+</span><span>					</span><span style=color:#d08770;>-26.73828125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>187.640625</span><span>,
+</span><span>					</span><span style=color:#d08770;>-51.625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>179.75</span><span>,
+</span><span>					</span><span style=color:#d08770;>-70.09765625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>162.44140625</span><span>,
+</span><span>					</span><span style=color:#d08770;>-68.69140625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>134.33984375</span><span>,
+</span><span>					</span><span style=color:#d08770;>-39.140625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>100.58203125</span><span>,
+</span><span>					</span><span style=color:#d08770;>17.0703125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>71.51953125</span><span>,
+</span><span>					</span><span style=color:#d08770;>90.01171875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>55.14453125</span><span>,
+</span><span>					</span><span style=color:#d08770;>155.38671875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>50.5078125</span><span>,
+</span><span>					</span><span style=color:#d08770;>200.40234375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>50.48046875</span><span>,
+</span><span>					</span><span style=color:#d08770;>233.6640625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>54.49609375</span><span>,
+</span><span>					</span><span style=color:#d08770;>253.83203125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>63.43359375</span><span>,
+</span><span>					</span><span style=color:#d08770;>260.6328125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>76.19140625</span><span>,
+</span><span>					</span><span style=color:#d08770;>256.82421875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>96.66015625</span><span>,
+</span><span>					</span><span style=color:#d08770;>229.55078125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>118.3046875</span><span>,
+</span><span>					</span><span style=color:#d08770;>178.390625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>128.62109375</span><span>,
+</span><span>					</span><span style=color:#d08770;>126.1171875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>130.5859375</span><span>,
+</span><span>					</span><span style=color:#d08770;>84.4375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>128.63671875</span><span>,
+</span><span>					</span><span style=color:#d08770;>52.703125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>121.75</span><span>,
+</span><span>					</span><span style=color:#d08770;>32.67578125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>108.23828125</span><span>,
+</span><span>					</span><span style=color:#d08770;>23.55078125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>89.3046875</span><span>,
+</span><span>					</span><span style=color:#d08770;>24.015625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>67.4140625</span><span>,
+</span><span>					</span><span style=color:#d08770;>39.6875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>42.34375</span><span>,
+</span><span>					</span><span style=color:#d08770;>78.91015625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>25.23046875</span><span>,
+</span><span>					</span><span style=color:#d08770;>127.73828125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>20.65234375</span><span>,
+</span><span>					</span><span style=color:#d08770;>177.96484375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>21.63671875</span><span>,
+</span><span>					</span><span style=color:#d08770;>223.91796875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>30.47265625</span><span>,
+</span><span>					</span><span style=color:#d08770;>257.25390625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>49.4296875</span><span>,
+</span><span>					</span><span style=color:#d08770;>282.87890625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>72.59375</span><span>,
+</span><span>					</span><span style=color:#d08770;>294.44921875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>104.66015625</span><span>,
+</span><span>					</span><span style=color:#d08770;>286.91796875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>142.24609375</span><span>,
+</span><span>					</span><span style=color:#d08770;>257.9375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>172.73828125</span><span>,
+</span><span>					</span><span style=color:#d08770;>208.28125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>193.078125</span><span>,
+</span><span>					</span><span style=color:#d08770;>144.0390625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>200.23046875</span><span>,
+</span><span>					</span><span style=color:#d08770;>83.671875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>197.44140625</span><span>,
+</span><span>					</span><span style=color:#d08770;>31.875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>184.703125</span><span>,
+</span><span>					</span><span style=color:#d08770;>-9.4296875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>163.42578125</span><span>,
+</span><span>					</span><span style=color:#d08770;>-31.34765625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>136.4296875</span><span>,
+</span><span>					</span><span style=color:#d08770;>-38.8203125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>104.890625</span><span>,
+</span><span>					</span><span style=color:#d08770;>-32.0859375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>69.30859375</span><span>,
+</span><span>					</span><span style=color:#d08770;>-2.31640625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>42.26953125</span><span>,
+</span><span>					</span><span style=color:#d08770;>42.40234375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>29.390625</span><span>,
+</span><span>					</span><span style=color:#d08770;>97.75390625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>24.4921875</span><span>,
+</span><span>					</span><span style=color:#d08770;>158.1796875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>31.10546875</span><span>,
+</span><span>					</span><span style=color:#d08770;>208.80859375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>48.45703125</span><span>,
+</span><span>					</span><span style=color:#d08770;>245.52734375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>71.0078125</span><span>,
+</span><span>					</span><span style=color:#d08770;>264.8046875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>97.796875</span><span>,
+</span><span>					</span><span style=color:#d08770;>271.015625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>128.7265625</span><span>,
+</span><span>					</span><span style=color:#d08770;>263.94921875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>161.77734375</span><span>,
+</span><span>					</span><span style=color:#d08770;>238.14453125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>196.93359375</span><span>,
+</span><span>					</span><span style=color:#d08770;>187.08203125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>222.88671875</span><span>,
+</span><span>					</span><span style=color:#d08770;>120.87109375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>231.90625</span><span>,
+</span><span>					</span><span style=color:#d08770;>61.625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>231.625</span><span>,
+</span><span>					</span><span style=color:#d08770;>17.20703125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>222.73828125</span><span>,
+</span><span>					</span><span style=color:#d08770;>-18.93359375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>202.3671875</span><span>,
+</span><span>					</span><span style=color:#d08770;>-48.65234375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>176.55078125</span><span>,
+</span><span>					</span><span style=color:#d08770;>-63.09375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>148.99609375</span><span>,
+</span><span>					</span><span style=color:#d08770;>-64.29296875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>120.09375</span><span>,
+</span><span>					</span><span style=color:#d08770;>-54.265625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>93.02734375</span><span>,
+</span><span>					</span><span style=color:#d08770;>-27.140625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>71.96875</span><span>,
+</span><span>					</span><span style=color:#d08770;>19.15234375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>63.06640625</span><span>,
+</span><span>					</span><span style=color:#d08770;>78.28125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>65.984375</span><span>,
+</span><span>					</span><span style=color:#d08770;>132.8046875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>77.875</span><span>,
+</span><span>					</span><span style=color:#d08770;>177.48046875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>94.37109375</span><span>,
+</span><span>					</span><span style=color:#d08770;>210.953125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>112.1640625</span><span>,
+</span><span>					</span><span style=color:#d08770;>230.91796875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>131.859375</span><span>,
+</span><span>					</span><span style=color:#d08770;>240.28515625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>152.7734375</span><span>,
+</span><span>					</span><span style=color:#d08770;>235.8515625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>180.34375</span><span>,
+</span><span>					</span><span style=color:#d08770;>206.69140625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>207.5625</span><span>,
+</span><span>					</span><span style=color:#d08770;>153.66796875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>222.4609375</span><span>,
+</span><span>					</span><span style=color:#d08770;>84.74609375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>226.984375</span><span>,
+</span><span>					</span><span style=color:#d08770;>22.59765625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>221.875</span><span>,
+</span><span>					</span><span style=color:#d08770;>-18.90234375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>205.140625</span><span>,
+</span><span>					</span><span style=color:#d08770;>-55.12109375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>181.94140625</span><span>,
+</span><span>					</span><span style=color:#d08770;>-77.21484375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>155.8671875</span><span>,
+</span><span>					</span><span style=color:#d08770;>-80.9375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>118.99609375</span><span>,
+</span><span>					</span><span style=color:#d08770;>-64.0390625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>80.75390625</span><span>,
+</span><span>					</span><span style=color:#d08770;>-20.99609375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>54.12890625</span><span>,
+</span><span>					</span><span style=color:#d08770;>43.62890625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>39.1328125</span><span>,
+</span><span>					</span><span style=color:#d08770;>126.328125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>35.203125</span><span>,
+</span><span>					</span><span style=color:#d08770;>199.12109375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>39.046875</span><span>,
+</span><span>					</span><span style=color:#d08770;>246.80078125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>50.1953125</span><span>,
+</span><span>					</span><span style=color:#d08770;>280.29296875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>67.9765625</span><span>,
+</span><span>					</span><span style=color:#d08770;>301.48828125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>93.75</span><span>,
+</span><span>					</span><span style=color:#d08770;>307.140625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>126.73046875</span><span>,
+</span><span>					</span><span style=color:#d08770;>289.09375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>163.5859375</span><span>,
+</span><span>					</span><span style=color:#d08770;>243.07421875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>198.99609375</span><span>,
+</span><span>					</span><span style=color:#d08770;>175.2109375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>221.58203125</span><span>,
+</span><span>					</span><span style=color:#d08770;>107.59375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>230.26953125</span><span>,
+</span><span>					</span><span style=color:#d08770;>46.81640625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>230.171875</span><span>,
+</span><span>					</span><span style=color:#d08770;>1.14453125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>216.3359375</span><span>,
+</span><span>					</span><span style=color:#d08770;>-29.01953125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>186.77734375</span><span>,
+</span><span>					</span><span style=color:#d08770;>-47.43359375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>145.70703125</span><span>,
+</span><span>					</span><span style=color:#d08770;>-43.28515625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>99.1875</span><span>,
+</span><span>					</span><span style=color:#d08770;>-14.51171875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>54.50390625</span><span>,
+</span><span>					</span><span style=color:#d08770;>41.89453125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>18.71484375</span><span>,
+</span><span>					</span><span style=color:#d08770;>118.55859375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-1.4375</span><span>,
+</span><span>					</span><span style=color:#d08770;>195.3515625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-7.8203125</span><span>,
+</span><span>					</span><span style=color:#d08770;>258.92578125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-7.80859375</span><span>,
+</span><span>					</span><span style=color:#d08770;>302.80078125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>-2.578125</span><span>,
+</span><span>					</span><span style=color:#d08770;>329.20703125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>10.4609375</span><span>,
+</span><span>					</span><span style=color:#d08770;>346.59375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>28.22265625</span><span>,
+</span><span>					</span><span style=color:#d08770;>352.5859375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>50.58203125</span><span>,
+</span><span>					</span><span style=color:#d08770;>343.875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>82.97265625</span><span>,
+</span><span>					</span><span style=color:#d08770;>310.64453125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>111.078125</span><span>,
+</span><span>					</span><span style=color:#d08770;>266.3671875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>127.23046875</span><span>,
+</span><span>					</span><span style=color:#d08770;>217.8046875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>136.625</span><span>,
+</span><span>					</span><span style=color:#d08770;>169.859375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>138.66015625</span><span>,
+</span><span>					</span><span style=color:#d08770;>133.13671875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>136.7890625</span><span>,
+</span><span>					</span><span style=color:#d08770;>109.140625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>130.35546875</span><span>,
+</span><span>					</span><span style=color:#d08770;>96.83203125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>121.11328125</span><span>,
+</span><span>					</span><span style=color:#d08770;>90.84375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>111.1953125</span><span>,
+</span><span>					</span><span style=color:#d08770;>91.171875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>100.6015625</span><span>,
+</span><span>					</span><span style=color:#d08770;>96.7578125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>91.30859375</span><span>,
+</span><span>					</span><span style=color:#d08770;>106.35546875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>85.609375</span><span>,
+</span><span>					</span><span style=color:#d08770;>114.23046875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>83.12109375</span><span>,
+</span><span>					</span><span style=color:#d08770;>119.62109375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>82.1875</span><span>,
+</span><span>					</span><span style=color:#d08770;>122.96875
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>82.0703125</span><span>,
+</span><span>					</span><span style=color:#d08770;>124.4453125
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>82.0703125</span><span>,
+</span><span>					</span><span style=color:#d08770;>124.9609375
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>82.1640625</span><span>,
+</span><span>					</span><span style=color:#d08770;>125.03515625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>82.375</span><span>,
+</span><span>					</span><span style=color:#d08770;>125.03515625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>82.51953125</span><span>,
+</span><span>					</span><span style=color:#d08770;>125.03515625
+</span><span>				],
+</span><span>				[
+</span><span>					</span><span style=color:#d08770;>82.51953125</span><span>,
+</span><span>					</span><span style=color:#d08770;>125.03515625
+</span><span>				]
+</span><span>			],
+</span><span>			"</span><span style=color:#a3be8c;>pressures</span><span>": [],
+</span><span>			"</span><span style=color:#a3be8c;>simulatePressure</span><span>": </span><span style=color:#d08770;>true</span><span>,
+</span><span>			"</span><span style=color:#a3be8c;>lastCommittedPoint</span><span>": [
+</span><span>				</span><span style=color:#d08770;>82.51953125</span><span>,
+</span><span>				</span><span style=color:#d08770;>125.03515625
+</span><span>			]
+</span><span>		}
+</span><span>	],
+</span><span>	"</span><span style=color:#a3be8c;>appState</span><span>": {
+</span><span>		"</span><span style=color:#a3be8c;>theme</span><span>": "</span><span style=color:#a3be8c;>dark</span><span>",
+</span><span>		"</span><span style=color:#a3be8c;>viewBackgroundColor</span><span>": "</span><span style=color:#a3be8c;>#ffffff</span><span>",
+</span><span>		"</span><span style=color:#a3be8c;>currentItemStrokeColor</span><span>": "</span><span style=color:#a3be8c;>#000000</span><span>",
+</span><span>		"</span><span style=color:#a3be8c;>currentItemBackgroundColor</span><span>": "</span><span style=color:#a3be8c;>transparent</span><span>",
+</span><span>		"</span><span style=color:#a3be8c;>currentItemFillStyle</span><span>": "</span><span style=color:#a3be8c;>hachure</span><span>",
+</span><span>		"</span><span style=color:#a3be8c;>currentItemStrokeWidth</span><span>": </span><span style=color:#d08770;>1</span><span>,
+</span><span>		"</span><span style=color:#a3be8c;>currentItemStrokeStyle</span><span>": "</span><span style=color:#a3be8c;>solid</span><span>",
+</span><span>		"</span><span style=color:#a3be8c;>currentItemRoughness</span><span>": </span><span style=color:#d08770;>1</span><span>,
+</span><span>		"</span><span style=color:#a3be8c;>currentItemOpacity</span><span>": </span><span style=color:#d08770;>100</span><span>,
+</span><span>		"</span><span style=color:#a3be8c;>currentItemFontFamily</span><span>": </span><span style=color:#d08770;>1</span><span>,
+</span><span>		"</span><span style=color:#a3be8c;>currentItemFontSize</span><span>": </span><span style=color:#d08770;>20</span><span>,
+</span><span>		"</span><span style=color:#a3be8c;>currentItemTextAlign</span><span>": "</span><span style=color:#a3be8c;>left</span><span>",
+</span><span>		"</span><span style=color:#a3be8c;>currentItemStrokeSharpness</span><span>": "</span><span style=color:#a3be8c;>sharp</span><span>",
+</span><span>		"</span><span style=color:#a3be8c;>currentItemStartArrowhead</span><span>": </span><span style=color:#d08770;>null</span><span>,
+</span><span>		"</span><span style=color:#a3be8c;>currentItemEndArrowhead</span><span>": "</span><span style=color:#a3be8c;>arrow</span><span>",
+</span><span>		"</span><span style=color:#a3be8c;>currentItemLinearStrokeSharpness</span><span>": "</span><span style=color:#a3be8c;>round</span><span>",
+</span><span>		"</span><span style=color:#a3be8c;>gridSize</span><span>": </span><span style=color:#d08770;>null</span><span>,
+</span><span>		"</span><span style=color:#a3be8c;>colorPalette</span><span>": {}
+</span><span>	},
+</span><span>	"</span><span style=color:#a3be8c;>files</span><span>": {}
+</span><span>}
+</span></code></pre><p>%%<div class=docs-graph id=graph></div></main></div></div></div><script integrity="sha512-XHDcSyqhOoO2ocB7sKOCJEkUjw/pQCJViP1ynpy+EGh/LggzrP6U/V3a++LQTnZT7sCQKeHRyWHfhN2afjXjCg==" crossorigin=anonymous referrerpolicy=no-referrer src=https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js></script><script defer src=https://vikas-movva-obsidian.netlify.app/js/graph_info.js></script><script defer src=https://vikas-movva-obsidian.netlify.app/js/graph.js></script><script defer src=https://vikas-movva-obsidian.netlify.app/js/settings.js></script><script defer src=https://vikas-movva-obsidian.netlify.app/js/main.js></script><script defer src=https://vikas-movva-obsidian.netlify.app/plugins/elasticlunr.min.js></script><script defer src=https://vikas-movva-obsidian.netlify.app/search_index.en.js></script><script defer src=https://vikas-movva-obsidian.netlify.app/js/search.js></script>
