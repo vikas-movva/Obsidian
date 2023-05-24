@@ -15,7 +15,6 @@ kanban-plugin: basic
 - [ ] ML on embedded devices - KataOS?
 - [ ] crypto tumbler
 - [ ] OS specialized for WASM-WASI
-- [ ] Photoshop in the browser using wasm
 - [ ] NFT based card-game
 - [ ] syntax highlighting for english
 - [ ] WebToEpub-Mobile
