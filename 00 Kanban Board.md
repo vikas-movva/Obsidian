@@ -20,11 +20,8 @@ kanban-plugin: basic
 - [ ] Finish Portfolio Website
 - [ ] Finish notes for [[04 Counting|Counting]]
 - [ ] Apply for internships
-- [ ] Cover letter for Sushmita aunty
 - [ ] Finish notes for CP214
 - [ ] Finish notes for CP264
-- [ ] Talk to sudhir kakarla
-- [ ] naina akka
 - [ ] interact
 
 
