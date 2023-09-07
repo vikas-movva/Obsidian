@@ -22,7 +22,8 @@
 - Prove: $1+3+5+...+(2n-1) = n^2 : n\in Z^+$
 
 ### Guidelines for Mathematical Induction Proofs
-- [[Induction and Recursive Programs.pdf#page=12]]
+- ![[Induction and Recursive Programs.pdf#page=12]]
+- 
 
 ### Strong Induction
 - Steps:
