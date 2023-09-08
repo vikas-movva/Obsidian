@@ -8,3 +8,6 @@
 8. [[Transform and Conquer]]
 9. [[Dynamic Programming]]
 10. [[Advanced Topics]]
+
+Textbook: A. Levitin, Introduction to the Design and Analysis of Algorithms, 3rd edition
+
