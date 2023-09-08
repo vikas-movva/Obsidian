@@ -6,8 +6,6 @@ kanban-plugin: basic
 
 ## Medium Priority Tasks
 
-- [ ] Finish Coursera Course: Mathematics for Machine Learning: Linear Algebra
-- [ ] Finish Coursera Course: Mathematics for Machine Learning: Multivariate Calculus
 - [ ] Finish Coursera Course: Supervised Machine Learning: Regression and Classification
 - [ ] Learn python data science/ ml libraries (numpy, pandas, mathplotlib, seaborn, scikitlearn, scipy)
 - [ ] fast.ai course
@@ -17,6 +15,8 @@ kanban-plugin: basic
 
 - [ ] Finish Portfolio Website
 - [ ] Book an appointment with academic advisor
+- [ ] Finish Coursera Course: Mathematics for Machine Learning: Linear Algebra
+- [ ] Finish Coursera Course: Mathematics for Machine Learning: Multivariate Calculus
 
 
 ## Quizes / Assignments
@@ -29,7 +29,6 @@ kanban-plugin: basic
 
 ## Completed
 
-- [ ] Linear Regression Model from scratch
 
 
 ***
@@ -67,6 +66,7 @@ kanban-plugin: basic
 - [ ] CP264 A5 @{2022-10-19} @@{23:45}
 - [ ] CP214 Assignment 1 @{2022-10-06} @@{23:45}
 - [ ] Finish notes for [[04 Counting|Counting]]
+- [ ] Linear Regression Model from scratch
 
 %% kanban:settings
 ```

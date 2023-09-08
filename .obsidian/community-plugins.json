@@ -5,7 +5,6 @@
   "obsidian-excalidraw-plugin",
   "obsidian-text-format",
   "obsidian-outliner",
-  "obsidian-annotator",
   "breadcrumbs",
   "obsidian-autocomplete-plugin",
   "obsidian-linter",
@@ -19,5 +18,7 @@
   "obsidian-footnote-indicator",
   "obsidian-footnotes",
   "obsidian-vimrc-support",
-  "obsidian-tasks-plugin"
+  "obsidian-tasks-plugin",
+  "dataview",
+  "obsidian-checklist-plugin"
 ]
