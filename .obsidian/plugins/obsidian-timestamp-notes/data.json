@@ -1,8 +1,8 @@
 {
   "noteTitle": "",
   "urlStartTimeMap": {},
-  "urlColor": "blue",
-  "timestampColor": "green",
+  "urlColor": "black",
+  "timestampColor": "black",
   "urlTextColor": "white",
   "timestampTextColor": "white",
   "forwardSeek": "10",

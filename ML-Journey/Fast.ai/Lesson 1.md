@@ -4,7 +4,6 @@ tags:
   - "#Fast.ai"
   - "#Code"
 ---
-
 ```timestamp-url 
  https://www.youtube.com/watch?v=8SF_h3xF3cE
  ```
@@ -100,4 +99,6 @@ in-->m-->res
 ### Homework
 #todo
 - [ ] ⏫ Read chapter 1 of the book [here](https://fastai.github.io/fastbook2e/intro.html)
-- [ ] ⏫ play around with [[Lesson 1]] Kaggle notebooks [here](https://www.kaggle.com/code/jhoward/is-it-a-bird-creating-a-model-from-your-own-data) and [here](https://www.kaggle.com/code/jhoward/jupyter-notebook-101)
+- [ ] ⏫ play around with [[Lesson 1]] Kaggle notebooks [here](https://www.kaggle.com/code/jhoward/is-it-a-bird-creating-a-model-from-your-own-data) and [here](https://www.kaggle.com/code/jhoward/jupyter-notebook-101) 
+	- [ ] make a dog classifier instead
+
