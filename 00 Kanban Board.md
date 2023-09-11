@@ -8,12 +8,12 @@ kanban-plugin: basic
 
 - [ ] Finish Coursera Course: Supervised Machine Learning: Regression and Classification
 - [ ] Learn python data science/ ml libraries (numpy, pandas, mathplotlib, seaborn, scikitlearn, scipy)
-- [ ] fast.ai course
+- [ ] Finish Portfolio Website
 
 
 ## High Priority Tasks
 
-- [ ] Finish Portfolio Website
+- [ ] fast.ai course
 - [ ] Book an appointment with academic advisor
 - [ ] Finish Coursera Course: Mathematics for Machine Learning: Linear Algebra
 - [ ] Finish Coursera Course: Mathematics for Machine Learning: Multivariate Calculus
