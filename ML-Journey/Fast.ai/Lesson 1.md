@@ -47,5 +47,57 @@ tags:
 	- `.fine_tune`: fine tunes an existing model on your data
 >fast.ai docs can be found [here](https://docs.fast.ai/)
 
+```timestamp 
+ 01:11:12
+ ```
+### What is happening in a neural network
+- Classic computer program
+```mermaid
+flowchart LR
+id1(Start)
+id2[program]
+id3(results)
 
+id1-->id2-->id3
+```
+- Neural network
+```mermaid
+flowchart LR
+in(inputs)
+w(weights)
+m[model]
+res(results)
+in & w-->m-->res
+```
+- it is a mathematical function that takes the inputs and weights multiplies them a bunch of times and returns a result
+- ok but how does it learn?
+```mermaid
+flowchart LR
+in(inputs)
+w(weights)
+m[model]
+res(results)
+l(loss)
 
+w-->m
+in-->m
+m-->res
+res-->l
+l--update-->w
+```
+
+- run the model and find out how bad it is (loss) then use backprop to update weights to get a better result (lower loss)
+- when interpreting the result the loss and update is removed
+```mermaid
+flowchart LR
+in(inputs)
+m[model]
+res(results)
+in-->m-->res
+```
+- this looks pretty similar to a classic computer program
+
+### Homework
+#todo
+- [ ] ⏫ Read chapter 1 of the book [here](https://fastai.github.io/fastbook2e/intro.html)
+- [ ] ⏫ play around with [[Lesson 1]] Kaggle notebooks [here](https://www.kaggle.com/code/jhoward/is-it-a-bird-creating-a-model-from-your-own-data) and [here](https://www.kaggle.com/code/jhoward/jupyter-notebook-101)
