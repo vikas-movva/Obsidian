@@ -35,7 +35,7 @@ tags:
  ```
 ### Data blocks, Dataloaders, & Learners
 - datablocks represent your data
-- over many projects what are all the params that change from project to project
+- over many projects what are all the parameters that change from project to project
 	- `blocks`: Input & Output
 	- `get_items`: Items
 	- `splinter`: Validation set
