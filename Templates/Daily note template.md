@@ -5,8 +5,8 @@ tags:
 ---
 ### Tasks
 #todo 
-- [ ] 
-- [ ] 
+- [ ] Plan daily schedule
+- [ ] Plan meals
 - [ ] 
 - [ ] 
 

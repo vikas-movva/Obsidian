@@ -1,9 +1,9 @@
 {
   "globalQuery": "",
-  "globalFilter": "",
+  "globalFilter": "#task",
   "removeGlobalFilter": false,
-  "taskFormat": "tasksPluginEmoji",
-  "setCreatedDate": false,
+  "taskFormat": "dataview",
+  "setCreatedDate": true,
   "setDoneDate": true,
   "autoSuggestInEditor": true,
   "autoSuggestMinMatch": 0,
