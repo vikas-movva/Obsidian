@@ -1,5 +1,7 @@
 {
   "cssTheme": "AnuPpuccin",
   "accentColor": "#6cb2d5",
-  "textFontFamily": ""
+  "textFontFamily": "",
+  "translucency": false,
+  "showViewHeader": false
 }

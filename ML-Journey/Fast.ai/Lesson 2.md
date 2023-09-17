@@ -97,7 +97,7 @@ The following is a list of use cases that deep learning is effective in:
 - Limitations
 	- Same as with NLP the output is not guaranteed to be correct thus human screening is still needed at this time
 
-#### Tabular Data
+#### Tabular Data / Recommendation Systems
 - Advantages with using deep learning
 	- greatly increases the variety of columns that can be included 
 		- natural language columns
@@ -106,6 +106,25 @@ The following is a list of use cases that deep learning is effective in:
 	- deep learning models take longer to train than the traditional methods
 	- more info in [[Lesson 9]]
 
-#### Recommendation Systems
-- 
+### The Drivetrain Approach
+There are many accurate models that are not useful at all, and there are many inaccurate models that are highly useful to people. How can we ensure that a model is useful?
 
+The Drivetrain Approach is a method to think about this issue.
+1. Defined Objective
+	- What is the outcome to be achieved
+2. Levers
+	- What inputs are controllable
+3. Data
+	- What data is collectable
+4. Models
+	- How do the levers influence the objective
+
+### Gathering Data
+For most projects the data that you need is usually found online. Ex. for a bear classifier all of the image data can gathered by any of the modern search engines (Duck Duck Go, Bing, Google)
+
+```python
+
+
+
+print(1+1)
+```
