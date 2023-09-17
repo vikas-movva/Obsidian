@@ -1,0 +1,30 @@
+---
+date: "{{date}}"
+tags:
+  - journal/daily
+---
+## Goals for today
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
+
+## Things learned today
+- 
+- 
+- 
+
+## Classes
+- 
+- 
+- 
+
+## Quick summary of the day/thoughts
+
+
+## Work out
+- [ ] Went to gym today
+	- 
+
+
+

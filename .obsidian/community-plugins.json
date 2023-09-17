@@ -6,7 +6,6 @@
   "obsidian-text-format",
   "obsidian-outliner",
   "breadcrumbs",
-  "obsidian-autocomplete-plugin",
   "obsidian-linter",
   "obsidian-banners",
   "obsidian-kanban",
@@ -14,12 +13,14 @@
   "obsidian-diagrams-net",
   "cm-editor-syntax-highlight-obsidian",
   "url-into-selection",
-  "obsidian-jupyter",
   "obsidian-footnote-indicator",
   "obsidian-footnotes",
   "obsidian-vimrc-support",
   "obsidian-tasks-plugin",
   "dataview",
   "obsidian-checklist-plugin",
-  "obsidian-timestamp-notes"
+  "obsidian-timestamp-notes",
+  "cmdr",
+  "text-extractor",
+  "obsidian-completr"
 ]

@@ -5,6 +5,6 @@
   "timestampColor": "black",
   "urlTextColor": "white",
   "timestampTextColor": "white",
-  "forwardSeek": "10",
-  "backwardsSeek": "10"
+  "forwardSeek": "5",
+  "backwardsSeek": "5"
 }

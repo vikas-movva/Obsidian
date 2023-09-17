@@ -1,29 +1,33 @@
 ---
 date: "{{date}}"
 tags:
+  - journal/daily
 ---
-## Goals for today
+### Tasks
+#todo 
 - [ ] 
 - [ ] 
 - [ ] 
 - [ ] 
 
-## Things learned today
+### Meals
 - 
 - 
 - 
 
-## Classes
-- 
-- 
-- 
+### Schedule
+| Time | Activity |     |
+| ---- | -------- | --- |
+|      |          |     |
 
-## Quick summary of the day/thoughts
-
-
-## Work out
-- [ ] Went to gym today
-	- 
-
+### Exercise
+- [ ] Gym 
+#### Workout
+| Activity | Sets | Reps |
+| ---- | ---- | -------- |
+|      |      |          |
+|      |      |          |
+|      |      |          |
+|      |      |          |
 
 

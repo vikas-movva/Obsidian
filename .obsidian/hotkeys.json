@@ -14,5 +14,29 @@
       ],
       "key": "`"
     }
+  ],
+  "obsidian-timestamp-notes:seek-backward": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Numpad4"
+    }
+  ],
+  "obsidian-timestamp-notes:seek-forward": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Numpad6"
+    }
+  ],
+  "obsidian-timestamp-notes:pause-player": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Numpad5"
+    }
   ]
 }
