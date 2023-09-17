@@ -1,0 +1,16 @@
+{
+  "circularProgress": false,
+  "nowAndNextInStatusBar": false,
+  "showTaskNotification": false,
+  "zoomLevel": "1",
+  "timelineIcon": "create-new",
+  "endLabel": "All done",
+  "startHour": 9,
+  "timelineDateFormat": "LLLL",
+  "centerNeedle": true,
+  "plannerHeading": "Schedule",
+  "plannerHeadingLevel": 3,
+  "timelineColored": true,
+  "timelineStartColor": "#66001a",
+  "timelineEndColor": "#a80011"
+}
