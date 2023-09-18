@@ -3,5 +3,5 @@
   "accentColor": "#6cb2d5",
   "textFontFamily": "",
   "translucency": false,
-  "showViewHeader": false
+  "showViewHeader": true
 }
