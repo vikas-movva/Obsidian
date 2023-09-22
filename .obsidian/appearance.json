@@ -3,5 +3,6 @@
   "accentColor": "#6cb2d5",
   "textFontFamily": "",
   "translucency": false,
-  "showViewHeader": true
+  "showViewHeader": true,
+  "baseFontSize": 15
 }

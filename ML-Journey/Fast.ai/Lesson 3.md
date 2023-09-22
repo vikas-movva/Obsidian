@@ -72,3 +72,19 @@ for i in range(10):
 At the most basic level deep learning is just a bunch of activation functions stringed together plus gradient descent to optimize the parameters.
 
 ## Textbook notes 
+### Bias
+According to a paper from [MIT](https://arxiv.org/abs/1901.10002) there are six types of biases in machine learning.
+
+- Historical bias
+	- comes from the fact that people are biased, processes are biased, and society is biased 
+	- it is a fundamental, structural issue with the first step of the data generation process
+	- 
+- Representation bias
+- Measurement bias
+- Aggregation bias
+- Evaluation bias
+- Deployment bias
+
+
+
+
