@@ -113,6 +113,6 @@ learn.fine_tune(1)
 ### Homework
 #todo
 - [x] ⏫ Read chapter 1 of the book [here](https://fastai.github.io/fastbook2e/intro.html) ✅ 2023-09-15
-- [x] ⏫ play around with [[Lesson 1]] Kaggle notebooks [here](https://www.kaggle.com/code/jhoward/is-it-a-bird-creating-a-model-from-your-own-data) and [here](https://www.kaggle.com/code/jhoward/jupyter-notebook-101) ✅ 2023-09-15
+- [x] ⏫ play around with [[Lesson 1 - Getting started]] Kaggle notebooks [here](https://www.kaggle.com/code/jhoward/is-it-a-bird-creating-a-model-from-your-own-data) and [here](https://www.kaggle.com/code/jhoward/jupyter-notebook-101) ✅ 2023-09-15
 	- [x] make a dog classifier instead ✅ 2023-09-15
  

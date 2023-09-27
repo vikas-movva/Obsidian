@@ -41,7 +41,7 @@ for idx, cat in cleaner.change(): shutil.move(str(cleaner.fns[idx]), path/cat)
 
 ### The Practice of Deep Learning
 - Deep learning can solve a lot of challenges with little code however that doesn't mean that deep learning is magic.
-	- The same [[Lesson 1#Code Example|6 lines of code]] wont work for every problem.
+	- The same [[Lesson 1 - Getting started#Code Example|6 lines of code]] wont work for every problem.
 	- But at the same time it is important to realistically gauge the constraints and capabilities correctly so that you dont under or over estimate deep learning
 
 ### Starting Your Project

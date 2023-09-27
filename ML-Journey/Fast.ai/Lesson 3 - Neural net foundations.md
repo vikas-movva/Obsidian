@@ -15,7 +15,7 @@ Video: https://www.youtube.com/watch?v=hBBOjCiFcuo
  12:34
  ```
 ### Make a better pet detector
-The pet detector used in [[Lesson 2]] finetunes the ==Resnet18== model to classify images. You can increase the performance by finetuning a different model such as a ==convnext== model.
+The pet detector used in [[Lesson 2 - Deployment]] finetunes the ==Resnet18== model to classify images. You can increase the performance by finetuning a different model such as a ==convnext== model.
 
 ```timestamp 
  20:40
