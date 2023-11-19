@@ -6,6 +6,8 @@ kanban-plugin: basic
 
 ## Ideas
 
+- [ ] Sign language to natural language
+- [ ] Shopify purchase alerts for streamers
 - [ ] TTs
 - [ ] [[Projects/MyGamesList/Outline|MyGamesList]]
 - [ ] Mouth reading
@@ -23,10 +25,9 @@ kanban-plugin: basic
 
 ## Planning
 
-- [ ] Sign language to natural language
 
 
-## In production
+## In Development
 
 - [ ] [[Rust-NES Kanban| Rust-NES]]
 

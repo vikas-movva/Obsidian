@@ -9,12 +9,11 @@ kanban-plugin: basic
 - [ ] Finish Coursera Course: Supervised Machine Learning: Regression and Classification
 - [ ] Learn python data science/ ml libraries (numpy, pandas, mathplotlib, seaborn, scikitlearn, scipy)
 - [ ] Finish Portfolio Website
+- [ ] Learn gRPC
 
 
 ## High Priority Tasks
 
-- [ ] fast.ai course
-- [ ] Book an appointment with academic advisor
 - [ ] Finish Coursera Course: Mathematics for Machine Learning: Linear Algebra
 - [ ] Finish Coursera Course: Mathematics for Machine Learning: Multivariate Calculus
 
@@ -25,6 +24,7 @@ kanban-plugin: basic
 
 ## In Progress
 
+- [ ] fast.ai course
 
 
 ## Completed
@@ -67,6 +67,7 @@ kanban-plugin: basic
 - [ ] CP214 Assignment 1 @{2022-10-06} @@{23:45}
 - [ ] Finish notes for [[04 Counting|Counting]]
 - [ ] Linear Regression Model from scratch
+- [ ] Book an appointment with academic advisor
 
 %% kanban:settings
 ```
