@@ -10,8 +10,6 @@
   "sortDirectionSubGroups": "new->old",
   "includeFiles": "",
   "lookAndFeel": "classic",
-  "_collapsedSections": [
-    "Templates/Daily note template.md"
-  ],
+  "_collapsedSections": [],
   "_hiddenTags": []
 }

@@ -25,6 +25,7 @@ kanban-plugin: basic
 
 ## Planning
 
+- [ ] Rust-FMG
 
 
 ## In Development

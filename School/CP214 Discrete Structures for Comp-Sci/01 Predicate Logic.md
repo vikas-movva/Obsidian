@@ -38,13 +38,16 @@
 	- x + 1 = 2
 	- x + y = z
 - Practice:
-| Statement                        | Truth value (T/F) |
-| -------------------------------- | ----------------- |
-| Elephants are bigger than mice   | T                 |
-| 520 < 111                        | F                 |
-| y > 5                            | N/A               |
-| Today is September 13 and 99 < 5 | F                 |
-| Today is Jan. 1 or 99 > 5        | F                  |
+
+| Statement | Truth value (T/F) |
+| --------------------------------|----------------- |
+| Elephants are bigger than mice  | T |
+| 520 < 111| F |
+| y > 5| N/A |
+| Today is September 13 and 99 < 5 | F|
+| Today is Jan. 1 or 99 > 5| F|
+
+
 
 - Propositional Logic
 	- Prop. Vars: *p, q, r, s, ...*

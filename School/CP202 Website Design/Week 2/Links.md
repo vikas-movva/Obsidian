@@ -1,7 +1,7 @@
 - Writing Links
 	- Structure - Hyperlinks - `<a href="http://www.example.com#section_2" target="_blank">example text</a>`
 		- `<a>` - anchor tag
-		- ==href== - attribute where you but the hyperlink
+		- ==href== - attribute where you put the hyperlink
 		- `"http://www.example.com"` - the hyperlink
 		- `#section_2` - link to html element with id `section_2`
 		- `target` - where to open the linked document

@@ -1,32 +1,3 @@
-### Neuralink
-
-Dear Hiring Manager at Neuralink,
-
-I am writing to apply for an internship at Neuralink. As a university student studying Computer Science, I am extremely interested in the field of neuroscience and the work that Neuralink is doing to advance our understanding of the brain.
-
-I am confident that my background in computer science and my passion for neuroscience make me a strong candidate for this internship. I have experience with a range of programming languages, including C++ and Python, and have completed coursework in artificial intelligence and machine learning. I am also highly organized and detail-oriented, and am able to work independently as well as in a team setting.
-
-I am excited about the opportunity to work with the talented team at Neuralink and contribute to the cutting-edge research being conducted at the company. I believe that my skills and experience make me a valuable addition to the team, and I am eager to learn and grow as a professional in this field.
-
-Thank you for considering my application. I look forward to the opportunity to discuss this internship further and how I can contribute to the success of Neuralink.
-
-Sincerely,
-Vikas Movva
-
----
-Dear Hiring Manager,
-
-I am writing to apply for the internship at Neuralink. As a current university student pursuing a degree in neuroscience, I am excited by the opportunity to gain hands-on experience with cutting-edge technology in the field of neural engineering.
-
-I have always been fascinated by the human brain and its ability to control the body and process information. The work that Neuralink is doing to improve the understanding and treatment of neurological conditions is truly inspiring, and I believe that an internship with your company would provide me with invaluable experience and knowledge.
-
-In addition to my coursework, I have also completed several research projects in the field of neuroscience, including a study on the effects of meditation on brain activity and a project on the neural basis of memory. I am highly skilled in data analysis and have experience working with scientific software such as Matlab and Python.
-
-I am confident that my passion for neuroscience and my skills in data analysis make me a strong candidate for this internship. Thank you for considering my application, and I look forward to discussing how I can contribute to the work of Neuralink.
-
-Sincerely, Vikas Movva
-
----
 ### General template
 
 Dear [Employer],
