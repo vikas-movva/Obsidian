@@ -10,7 +10,7 @@ kanban-plugin: basic
 - [ ] Shopify purchase alerts for streamers
 - [ ] TTs
 - [ ] [[Projects/MyGamesList/Outline|MyGamesList]]
-- [ ] Mouth reading
+- [ ] Lip reading
 - [ ] Video about metaverse
 - [ ] Video about twitter
 - [ ] [[Projects/Rust-OS/Project Outline|OS in Rust]]
@@ -25,16 +25,21 @@ kanban-plugin: basic
 
 ## Planning
 
+- [ ] Portfolio
 - [ ] Rust-FMG
 
 
 ## In Development
 
-- [ ] [[Rust-NES Kanban| Rust-NES]]
 
 
 ## Deployed
 
+
+
+## Haitus
+
+- [ ] [[Rust-NES Kanban| Rust-NES]]
 
 
 

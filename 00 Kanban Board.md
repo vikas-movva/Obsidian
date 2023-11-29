@@ -4,7 +4,7 @@ kanban-plugin: basic
 
 ---
 
-## Medium Priority Tasks
+## Medium Priority Tasks #todo
 
 - [ ] Finish Coursera Course: Supervised Machine Learning: Regression and Classification
 - [ ] Learn python data science/ ml libraries (numpy, pandas, mathplotlib, seaborn, scikitlearn, scipy)
@@ -12,7 +12,7 @@ kanban-plugin: basic
 - [ ] Learn gRPC
 
 
-## High Priority Tasks
+## High Priority Tasks #todo
 
 - [ ] Finish Coursera Course: Mathematics for Machine Learning: Linear Algebra
 - [ ] Finish Coursera Course: Mathematics for Machine Learning: Multivariate Calculus

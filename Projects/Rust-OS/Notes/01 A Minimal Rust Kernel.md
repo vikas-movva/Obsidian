@@ -5,7 +5,7 @@ On startup your computer begins to execute firmware code that is stored in mothe
 
 The process goes something like this:
 ```mermaid
-graph LR
+graph TD
 	A[Power on] --> B[execute firmware code]
 	B --> C[POST]
 	C --> D[detect available RAM]
@@ -32,7 +32,7 @@ In order to maintain compatibility most new [[01 A Minimal Rust Kernel#Firmware 
 
 Updated boot process
 ```mermaid
-graph LR
+graph TD
 	A[Power on] --> B[execute firmware code]
 	B --> C[POST]
 	C --> D[detect available RAM]

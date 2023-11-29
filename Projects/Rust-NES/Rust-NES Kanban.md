@@ -4,7 +4,7 @@ kanban-plugin: basic
 
 ---
 
-## TODO
+## #todo
 
 - [ ] write tests
 
