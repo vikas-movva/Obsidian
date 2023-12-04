@@ -1,6 +1,6 @@
 {
-  "circularProgress": false,
-  "nowAndNextInStatusBar": false,
+  "snapStepMinutes": 10,
+  "progressIndicator": "bar",
   "showTaskNotification": false,
   "zoomLevel": "1",
   "timelineIcon": "create-new",
@@ -12,5 +12,19 @@
   "plannerHeadingLevel": 3,
   "timelineColored": true,
   "timelineStartColor": "#66001a",
-  "timelineEndColor": "#a80011"
+  "timelineEndColor": "#a80011",
+  "timestampFormat": "HH:mm",
+  "hourFormat": "H",
+  "dataviewSource": "",
+  "showDataviewMigrationWarning": true,
+  "extendDurationUntilNext": false,
+  "defaultDurationMinutes": 30,
+  "showTimestampInTaskBlock": false,
+  "unscheduledTasksHeight": 100,
+  "showUncheduledTasks": true,
+  "showUnscheduledNestedTasks": true,
+  "showNow": true,
+  "showNext": true,
+  "circularProgress": false,
+  "nowAndNextInStatusBar": false
 }

@@ -21,12 +21,12 @@ kanban-plugin: basic
 - [ ] syntax highlighting for english
 - [ ] WebToEpub-Mobile
 - [ ] 2D sekiro
+- [ ] Worldbuilding tool with procedural map generation
 
 
 ## Planning
 
 - [ ] Portfolio
-- [ ] Rust-FMG
 
 
 ## In Development
