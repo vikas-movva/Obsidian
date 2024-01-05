@@ -7,7 +7,6 @@
   "obsidian-linter",
   "obsidian-kanban",
   "obsidian-git",
-  "obsidian-diagrams-net",
   "url-into-selection",
   "obsidian-footnotes",
   "obsidian-vimrc-support",
@@ -22,6 +21,5 @@
   "omnisearch",
   "settings-search",
   "templater-obsidian",
-  "obsidian-admonition",
   "obsidian-leaflet-plugin"
 ]
