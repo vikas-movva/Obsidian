@@ -15,12 +15,13 @@
   "syncMethod": "merge",
   "customMessageOnAutoBackup": false,
   "autoBackupAfterFileChange": false,
-  "treeStructure": false,
+  "treeStructure": true,
   "refreshSourceControl": true,
   "basePath": "",
   "differentIntervalCommitAndPush": false,
   "changedFilesInStatusBar": false,
   "showedMobileNotice": true,
   "refreshSourceControlTimer": 7000,
-  "showBranchStatusBar": true
+  "showBranchStatusBar": true,
+  "setLastSaveToLastCommit": false
 }
