@@ -2,11 +2,11 @@
 - Memory is comprised of two primary structures: long term and short term
 - the aim of instruction is to alter long-term memory however information must first pass through short-term memory
 - short term memory can hold ~7 items which is lost within 20seconds without review.
-- In data viz it is important to ==present information in a comprehensible manner== and ==make use of CLT to present info in a way that people can digest==
+- In data visualization it is important to ==present information in a comprehensible manner== and ==make use of CLT to present info in a way that people can digest==
 
 ---
-### Multiple Repersentation / Multimedia
-- different types of info (words, images, videos) are relatively independant to absorb
+### Multiple Representation / Multimedia
+- different types of info (words, images, videos) are relatively independent to absorb
 - the Multiple-channel learning principle says that 
 	1. *Multimedia principle:* People learn better form words and pictures than from words alone
 	2. *Split attention principle:* it is important to avoid formats that require learners to split their attention between, and mentally integrate, multiple sources of info
@@ -14,9 +14,9 @@
 	4. *Redundancy principle:* People learn better when important information is given multiple times in different forms (text & spoken)
 	5. *Spacial contiguity principle:* learning is improved when words and pictures that are related to each other are physically close on the page
 	6. *Temporal contiguity principle:* learning is improved when words and pictures that are related to each other are presented at the same time
-	7. *Coherence Principle:* People learn more deeply from multimedia message when extraneous material is excluded (==Dont information overload==)
+	7. *Coherence Principle:* People learn more deeply from multimedia message when extraneous material is excluded (==Don't information overload==)
 	8. *Signalling Principle:* People learn more deeply from a multimedia message when cues are added that highlight the critical aspects of presented information (Headings, ==highlights==, ***emphasis*** )
-	9. *Personalization Principle:* People learn more deeply wheen the words in a multimedia presentation are in conversational style rather than formal style (use **We** or **You** as if talking directly to the reader)
+	9. *Personalization Principle:* People learn more deeply when the words in a multimedia presentation are in conversational style rather than formal style (use **We** or **You** as if talking directly to the reader)
 	10. *Pre-training Principle:* People learn more deeply from a multimedia message when they know the names and characteristics of the main concepts
 
 ### Cognitive model
