@@ -1,4 +1,4 @@
-### Cognative Load theory
+### Cognitive Load theory
 - Memory is comprised of two primary structures: long term and short term
 - the aim of instruction is to alter long-term memory however information must first pass through short-term memory
 - short term memory can hold ~7 items which is lost within 20seconds without review.

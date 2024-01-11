@@ -15,7 +15,7 @@ DBMS - **D**ata**B**ase **M**anagement **S**ystem (Postgress, MySQL, SQLite, etc
 ```mermaid
 erDiagram
 	STUDENT{
-	int ID
+	int Id
 	string Name
 	}
 ```
