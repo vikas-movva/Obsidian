@@ -6,7 +6,6 @@ kanban-plugin: basic
 
 ## Ideas
 
-- [ ] Sign language to natural language
 - [ ] Shopify purchase alerts for streamers
 - [ ] TTs
 - [ ] [[Projects/MyGamesList/Outline|MyGamesList]]
@@ -26,6 +25,7 @@ kanban-plugin: basic
 
 ## Planning
 
+- [ ] [[Projects/sign2nl/Outline|Sign language to natural language]]
 - [ ] Portfolio
 
 
