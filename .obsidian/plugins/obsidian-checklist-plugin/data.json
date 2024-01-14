@@ -10,6 +10,9 @@
   "sortDirectionSubGroups": "new->old",
   "includeFiles": "",
   "lookAndFeel": "classic",
-  "_collapsedSections": [],
+  "_collapsedSections": [
+    "Projects/ml-demo/ml-demo Kanban.md",
+    "Tasks Kanban.md"
+  ],
   "_hiddenTags": []
 }
