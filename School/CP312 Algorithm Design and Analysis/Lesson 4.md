@@ -55,14 +55,61 @@ def merge_sort(arr:list) -> list:
 ```
 
 in psuedocode:
-```psuedocode
-MergeSort(A, p, r):
-	if p < r:
-		q = |(p+ r)/2|
-		MergeSort(A, p, q)
-		MergeSort(A, p + 1, r)
-		Merge(A, p, r)
+```pseudocode
+function mergeSort(array, leftIndex, rightIndex)
+    // If the left index is less than the right index, the array has more than one element
+    if leftIndex < rightIndex then
+        // Calculate the middle index
+        middleIndex = (leftIndex + rightIndex) / 2
+
+        // Recursively sort the left half
+        mergeSort(array, leftIndex, middleIndex)
+
+        // Recursively sort the right half
+        mergeSort(array, middleIndex + 1, rightIndex)
+
+        // Initialize pointers for the left, right, and merged subarrays
+        leftPointer = leftIndex
+        rightPointer = middleIndex + 1
+        mergePointer = leftIndex
+
+        // Temporary array for merged numbers
+        tempArray = []
+
+        // Merge the two sorted subarrays
+        while leftPointer <= middleIndex and rightPointer <= rightIndex do
+            if array[leftPointer] <= array[rightPointer] then
+                tempArray[mergePointer] = array[leftPointer]
+                leftPointer = leftPointer + 1
+            else
+                tempArray[mergePointer] = array[rightPointer]
+                rightPointer = rightPointer + 1
+            end if
+            mergePointer = mergePointer + 1
+        end while
+
+        // If there are remaining elements in the left subarray, add them to the merged array
+        while leftPointer <= middleIndex do
+            tempArray[mergePointer] = array[leftPointer]
+            leftPointer = leftPointer + 1
+            mergePointer = mergePointer + 1
+        end while
+
+        // If there are remaining elements in the right subarray, add them to the merged array
+        while rightPointer <= rightIndex do
+            tempArray[mergePointer] = array[rightPointer]
+            rightPointer = rightPointer + 1
+            mergePointer = mergePointer + 1
+        end while
+
+        // Copy the merged numbers back into the original array
+        for i = leftIndex to rightIndex do
+            array[i] = tempArray[i]
+        end for
+    end if
+end function
 ```
+
 ### Math
 We are merging 2 **sorted lists** each of size $n/2$ 
 In every step there is:

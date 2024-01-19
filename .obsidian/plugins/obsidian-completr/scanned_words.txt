@@ -2007,6 +2007,7 @@ pCw
 pgwQn
 pnR
 psuedo
+psuedocode
 tags
 to
 the
@@ -6550,6 +6551,7 @@ iSS
 iho
 iHo
 increment
+insertion
 MORE
 Mathematical
 MK
