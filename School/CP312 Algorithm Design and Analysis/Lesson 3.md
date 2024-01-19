@@ -1,3 +1,6 @@
+---
+Notes: "[[L3 - Characterizing Running Time.pdf]]"
+---
 ### Simplify Running time Expansion
 consider the following running time:
 - $T(n) = a_0 + a_1n +a_2n^2, ... a_dn^d$
@@ -30,3 +33,37 @@ There are **Three** main types of asymptotic complexity expressions:
 	- Express asymptotic **tight bound**
 	- This is represented by Big Theta notation (Θ). It requires both Big O and Omega, so it’s referred to as a tight bound (it must be both the upper and lower bound). If $f(n) = Θ(g(n))$, that gives you more precise information. It tells you that the algorithm is bounded on both sides by the given function, so it will never be significantly faster or slower than stated.
 
+### Asymptotic notation $\Theta$
+Recall that $f(n) = \Theta(g(n))$ if $f(n) = g(n)$ after removing the lower order terms and constant factors([[Lesson 3#Simplify Running time Expansion]])
+- #defn For a given function $g(n)$, we denote by $\Theta(g(n))$ the set of functions:
+- $$\Theta(g(n)) = \{f(n)|\exists c_1, c_2, n_0 > 0 \text{ such that}\forall n \ge n_0, 0\le c_1g(n)\le f(n)\le c_2g(n) \}$$
+- Example: 
+	- $\frac{1}{2}n^2 - 3n = \Theta(n^2)$ ?
+	- $c_1n^2 \le \frac{1}{2}n^2 - 3n \le c_2n^2$
+	- $c_1 \le \frac{1}{2} - \frac {3}{n} \le c_2$
+	- pick $c_1 = \frac{1}{14}, c_2 = \frac{1}{2}, n_0. = 7$
+
+### Asymptotic notation $O$
+- #defn For a given function $g(n)$, we denote by $O(g(n))$ the set of functions:
+- $$O(g(n)) = \{f(n)|\exists c, n_0 > 0 \text{ such that }\forall n\ge n_0, f(n) \le cg(n)\}$$
+- Example:
+- Is $2^{n+1} = O(2^n)$? (==YES==)
+	- $2^{n+1} = c2^n$
+	- $2^n * 2 = c2^n$
+	- $2 \le c$ 
+	- $\therefore 2^{n+1} = O(2^n)$ 
+- is $2^{2n} = 2^{O(n)}$?(==NO==)
+- is $log_10(n) = O(log_2(n))$? (==YES==)
+	- $log_10(n) \le clog_2(n)$
+	- $log_10(n) \le c\frac{log_10(n)}{log_2(2)}$
+	- $log_2(2) \le c$
+	- $\therefore log_10(n) = O(log_2(n))$ 
+- is $n^2.5 = O(n^2.8)$?
+	- $n^{2.5} \le cn^{2.8}$
+	- $n^{-0.3} \le c$
+	- as $\lim_{{n \to \infty}} \exists n \le c$
+
+### Asymptotic notation $\Omega$
+- #defn For a given function $g(n)$, we denote $\Omega(g(n))$ the set of functions:
+- $$\Omega(g(n)) = \{f(n)|\exists c, n_0 > 0 \text{ such that } \forall n\ge n_0, 0 \le cg(n) \le f(n)\}$$
+- 

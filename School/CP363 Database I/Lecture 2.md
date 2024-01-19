@@ -1,14 +1,13 @@
 ### Definitions
-#defn 
 
 ### Data Models
 A set of concepts to describe the structure of a DB, the operations for manipulating these structure, and certain constraints that the database should obey
-- Structure
+- #defn Structure
 	- Constructs are used to define the database structure
 	- Constructs typically include elements as well as groups of elements
-- Constraints
+- #defn Constraints
 	- specify some restrictions on valid data; these constraints must be enforced at all times
-- Operations
+- #defn Operations
 	- are used for specifying database retrievals and updates by referring to the constructs of the data model.
 	- Operations on the data model may include **basic model operations**(insert, delete, update) and **user-defined operations**(custom functions)
 #### Categories

@@ -1,3 +1,6 @@
+---
+Notes: "[[L2 - Analyzing Algorithms.pdf]]"
+---
 ### Insertion Sort
 Recall [[Lesson 1#What are algorithms?|The Sorting Problem]]
 ```python

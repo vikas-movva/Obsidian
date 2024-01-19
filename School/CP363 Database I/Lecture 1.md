@@ -1,17 +1,17 @@
 ### Definitions
-#defn
-**Data** - known facts that can be recorded and have an implicit meaning. is usually unstructured
+
+#defn **Data** - known facts that can be recorded and have an implicit meaning. is usually unstructured
 
 **Information** - Structured form of data where useful information and relationships are more easily found.
 
-**Database** - a collection of related data
+#defn **Database** - a collection of related data
 - Shared collection of logically related data, designed to meet the information needs of an organization
 - system catalog (metadata) provides a description of data to enable program-data independence 
 - logically related data comprises entities, attributes, and relationships of an organization's information
 
-**Metadata** (or catalog) - describes attributes of your data that can be important to know, but may not be immediately relevant to your data’s primary function
+#defn **Metadata** (or catalog) - describes attributes of your data that can be important to know, but may not be immediately relevant to your data’s primary function
 
-DBMS - **D**ata**B**ase **M**anagement **S**ystem (Postgress, MySQL, SQLite, etc.) Supports Create Retrieve Update Delete operations
+#defn **DBMS** - **D**ata**B**ase **M**anagement **S**ystem (Postgress, MySQL, SQLite, etc.) Supports Create Retrieve Update Delete operations
 ```mermaid
 erDiagram
 	STUDENT{
