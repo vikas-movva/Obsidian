@@ -66,4 +66,9 @@ Recall that $f(n) = \Theta(g(n))$ if $f(n) = g(n)$ after removing the lower orde
 ### Asymptotic notation $\Omega$
 - #defn For a given function $g(n)$, we denote $\Omega(g(n))$ the set of functions:
 - $$\Omega(g(n)) = \{f(n)|\exists c, n_0 > 0 \text{ such that } \forall n\ge n_0, 0 \le cg(n) \le f(n)\}$$
-- 
+- suppose $T_b(n)$ is the **best-case** running-time of an algorithm (on input b) and $T_y(n)$ is the running-time of an algorithm on **any** input $y$. Then $T_b(n) = \Omega(g(n)) \Rightarrow T_y(n) = \Omega(g(n))$ 
+
+### Asymptotic notation $o$ and $\omega$ 
+![[L3 - Characterizing Running Time.pdf#page=24]]
+
+#todo review [[Lesson 3#Asymptotic notation $o$ and $ omega$|o and omega]] 
