@@ -1,5 +1,7 @@
 ---
 Notes: "[[L1 - Introduction to Algorithms.pdf]]"
+tags:
+  - algorithms
 ---
 ### What are algorithms?
 - #defn An algorithm is a well-defined procedure consisting of a sequence of computational steps that take some value, or set of values, as **input** and produces some value, or set of values, as **output**.

@@ -1,5 +1,9 @@
 ---
 Notes: "[[L2 - Analyzing Algorithms.pdf]]"
+tags:
+  - algorithms
+  - "#insertion-sort"
+  - Code
 ---
 ### Insertion Sort
 Recall [[Lesson 1#What are algorithms?|The Sorting Problem]]

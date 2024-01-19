@@ -1,5 +1,9 @@
 ---
 Notes: "[[L3 - Characterizing Running Time.pdf]]"
+tags:
+  - "#running-time"
+  - algorithms
+  - "#math"
 ---
 ### Simplify Running time Expansion
 consider the following running time:
