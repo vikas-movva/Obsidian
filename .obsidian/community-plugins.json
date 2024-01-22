@@ -22,5 +22,6 @@
   "settings-search",
   "templater-obsidian",
   "obsidian-leaflet-plugin",
-  "obsidian-textgenerator-plugin"
+  "obsidian-textgenerator-plugin",
+  "cm-editor-syntax-highlight-obsidian"
 ]
