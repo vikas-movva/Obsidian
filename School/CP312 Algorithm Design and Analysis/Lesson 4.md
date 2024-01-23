@@ -118,5 +118,24 @@ In every step there is:
 - 1 pointer increment
 In the worst case running-time is $3n \Rightarrow \Theta(n)$
 
+```psuedo
+MergeSort(A, p, r):             | T(n)
+if p < r                        |
+	1 = floor((p+r)/2)          | Theta(1)
+	MergeSort(A, p, q)          | T(n/2)
+	MergeSort(A, q + 1, r)      | T(n/2)
+	Merge(A, p, r)              | Theta(n)
+```
+$$T(n) = \{ \Theta(1) \text{ if } n=1 \text{ or } 2T(n/2) + \Theta(n) \text{ if } n>1\} $$
+### Recurrence Tree
+![[Pasted image 20240122084408.png]]
+$T(n) = \Theta(lg(n) * n)$
+$T(n)= \Theta(nlog(n))$
 
+### Divide-and-Conquer
+#todo copy divide and conquer slide from [[L4 - Merge Sort.pdf]]
+### Insertion sort vs. Merge Sort
+- Insertion sort **worst-case** running-time is $\Theta(n^2)$
+- Merge sort **worst-case** running-time is $\Theta(nlog(n))$
+- $\therefore$ we can say that *merge sort* is **asymptotically** faster than *insertion sort*
 
