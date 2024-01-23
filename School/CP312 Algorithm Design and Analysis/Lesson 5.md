@@ -9,6 +9,7 @@ Notes: "[[L5 - Recurrences.pdf]]"
 $T(n) = \{ \Theta(1) \text{ if } n=1 \text{ or } 2T(n/2) + \Theta(n) \text{ if } n>1\}$
 #todo 
 
+
 #### Solving recurrences
 - There are three methods that will be covered in this course
 	1. Substitution Method
