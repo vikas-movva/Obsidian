@@ -7,9 +7,11 @@ Notes: "[[L5 - Recurrences.pdf]]"
 
 #### Examples
 $T(n) = \{ \Theta(1) \text{ if } n=1 \text{ or } 2T(n/2) + \Theta(n) \text{ if } n>1\}$
-#todo 
+$T(n) = T(2n/3) + T(n/3) + \Theta(n)$
+$T(n) \le 4T(n/4) + \Theta(n^2)$
 
-
+>[!info]
+>Unless otherwise stated it is always assumed that the base case ==$T(1) = \Theta(1)$==
 #### Solving recurrences
 - There are three methods that will be covered in this course
 	1. Substitution Method
@@ -33,6 +35,7 @@ Example:
 	    $= (c/2)n^3 + n +(c/2)n^3 - (c/2)n^3$
     	$= cn^3 - ((c/2)n^3 -n)$
 	    $\le cn^3 \text{ whenever }((c/2)m^3 - n)\ge 0 \text{ which is when }c\ge 2$
+	However is this guess ($O(n^3)$) a ==tight Upper Bound==?
 #todo ![[L5 - Recurrences.pdf#page=8]]
 #### Recursion Tree Method
 
