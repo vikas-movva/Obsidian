@@ -34,8 +34,24 @@ Example:
     	$=(c/2)n^3 + n$
 	    $= (c/2)n^3 + n +(c/2)n^3 - (c/2)n^3$
     	$= cn^3 - ((c/2)n^3 -n)$
-	    $\le cn^3 \text{ whenever }((c/2)m^3 - n)\ge 0 \text{ which is when }c\ge 2$
-	However is this guess ($O(n^3)$) a ==tight Upper Bound==?
-#todo ![[L5 - Recurrences.pdf#page=8]]
+	    $\le cn^3 \text{ whenever }((c/2)n^3 - n)\ge 0 \text{ which is when }c\ge 2$
+	**Base case:** $k = n_0$: Let $n_0 = 1$
+	$T(n_0) = T(1) \le d$
+		       $\le c(1)^3$  (by inductive hypothesis)
+	$\therefore$ the constants are $n_0 = 1$ and $c \ge d$
+	Thus, $T(n) = O(n^3)$, However is this a tight upper bound?	
+	$T(n) = 4T(n/2) + n$ 
+	Assume that $T(1) = \Theta(1) \le d$ for some constant $d$
+	$T(n) = 4T(n/2) + n$
+		$\le 4c(n/2)^2 + n$
+		$= cn^2 + n$
+		$\le cn^2$ for what value of c does this inequality hold?
+		==For **no** value of $c > 0$==
 #### Recursion Tree Method
-
+#question Why is the second level of the tree $T(n/4) \text{ and } T(n/2)$ instead of $T(n/2) \text{ and } T(n/2)$
+Solve: 
+$T(n) = T(n/4) + T(n/2) + n^2$
+	$= n^2 + \frac{5}{15}n^2 + \frac{5}{15}^2n^2 + \frac{5}{15}^3n^2 + ... \frac{5}{15}^hn^2$ 
+	$= n^2 \sum^{\infty}_{i=0}\frac{5}{16}^i$
+	$= \frac{16}{11}n^2 = O(n^2)$
+	 
