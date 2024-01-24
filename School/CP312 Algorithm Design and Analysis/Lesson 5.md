@@ -3,7 +3,7 @@ Notes: "[[L5 - Recurrences.pdf]]"
 ---
 ### Recurrences
 - A **recurrence** is an equation or inequality that describes a function in terms of its value on **smaller inputs**
-- Recurrences give us a natural way to analize the running times of **divide-and-conquer** algorithms
+- Recurrences give us a natural way to analyze the running times of **divide-and-conquer** algorithms
 
 #### Examples
 $T(n) = \{ \Theta(1) \text{ if } n=1 \text{ or } 2T(n/2) + \Theta(n) \text{ if } n>1\}$
