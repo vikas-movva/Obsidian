@@ -18,8 +18,9 @@ The Running-time function looks like so:
 $$T(n) = aT(s(n)) + C(n) + D(n)$$
 **Where:**
 
-| $T(n)$ | Running-time on input size $n$ |
+| Symbol | Description |
 | ---- | ---- |
+| $T(n)$ | Running-time on input size $n$ |
 | $a$ | Number of subproblems |
 | $s(n)$ | Subproblem size |
 | $C(n)$ | Work combining |
@@ -28,8 +29,9 @@ $$T(n) = aT(s(n)) + C(n) + D(n)$$
 #### Example: Merge sort
 $$T(n) = 2T(n/2) + \Theta(n) + \Theta(1)$$
 
-| $T(n)$ | Running-time on input size $n$ |
+| Symbol | Description |
 | ---- | ---- |
+| $T(n)$ | Running-time on input size $n$ |
 | $2$ | Number of subproblems |
 | $n/2$ | Subproblem size |
 | $\Theta(n)$ | Work combining |
