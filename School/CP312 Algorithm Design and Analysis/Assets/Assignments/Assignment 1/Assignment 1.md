@@ -83,6 +83,11 @@ $1 = 1$
 $\therefore$ the loop invariant is true at the start of the first iteration
 
 **Maintenance:** 
-assume: $i = j!$
-$i = (j+1)!$
-$j! * (j+1) = ()$
+Assume: $i_{j} = j!$
+
+$i_{j+1} = (j+1)!$
+$i_{j} * \cancel{ (j+1) } = j! * \cancel{ (j+1) }$
+$\therefore i = (j+1)!$
+
+**Termination:**
+The loop terminates when $j = n$. Due to the loop invariant at this point $i = n!$ which is the value being returned by the algorithm. $\therefore$ the algorithm correctly outputs the factorial of an input $n$.

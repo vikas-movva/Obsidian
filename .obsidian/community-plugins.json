@@ -24,5 +24,6 @@
   "obsidian-textgenerator-plugin",
   "cm-editor-syntax-highlight-obsidian",
   "obsidian-latex-suite",
-  "open-in-new-tab"
+  "open-in-new-tab",
+  "obsidian-pandoc"
 ]
