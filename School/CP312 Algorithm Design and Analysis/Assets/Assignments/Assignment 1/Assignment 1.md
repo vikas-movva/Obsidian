@@ -125,8 +125,8 @@ $\\lim_{ n \to \infty } \frac{1}{n^3} = 0 \therefore \cancel{ \exists } c > 0 \t
 
 #### 2.C
 $\frac{\lg n}{10} = \Omega(1)$ - **TRUE**
-Pick: $c = 1,n_{0} = 100$
-$\frac{\lg100}{\lg100} \geq 1$
+Pick: $c = 1,n_{0} = 2^{10}$
+$\frac{10}{10} \geq 1$
 $1 \geq 1$
 $\therefore \frac{\lg n}{10} = \Omega(1)$
 
@@ -138,17 +138,47 @@ $8 \leq 9$
 $\therefore \lg n^8 = O(\lg n)$
 
 #### 2.E
-$3^n = O(2^n)$
+$3^n = O(2^n)$ - **FALSE**
 By contradiction.
 Assume that $c, n_{0}$ exist:
-
+$\frac{3^n}{2^n}\leq c\frac{\cancel{ 2^n }}{\cancel{ 2^n }}$
+$\lim_{ n \to \infty} \frac{3}{2}^n = \infty \therefore \cancel{ \exists } c > 0 \text{ such that } 3^n \leq c2^n$ which is a contradiction 
 
 #### 2.F
-
+$100n^3 = o(n^3\lg n)$ - **TRUE**
+$100\cancel{ n^3 } < c \cancel{ n^3 }\lg n$
+$100 < c \lg n$
+$2^{100/c} < n$
+Pick: $n_{0} = 2^{101/c}$
+$100 < c \lg{2^{101/c}}$
+$100 < 101$
+$\therefore 100n^3 = o(n^3\lg n)$
 #### 2.G
-
-#### 2.H
+$5n^{10} = \omega(n^{10})$ - **TRUE**
+$5\cancel{ n^{10} } > c\cancel{ n^{10} }$
+$5>c$
+Pick: $n_{0} = 1$
+$5(1) > c(1)$
+$\therefore 5n^{10} = \omega(n^{10})$
 
 #### 2.I
-
+$\log^2(n) = O(\log(n^2))$ - **TRUE**
+$\frac{\log^\cancel{ 2 }{n}}{\cancel{ \log(n) }} \leq \frac{2c\cancel{ \log(n) }}{\cancel{ \log(n) }}$
+$\log(n) \leq 2c$
+Pick: $c = 1, n = 10$
+$1 \leq 2(1)$
+$\therefore \log^2(n) = O(\log(n^2))$
+#### 2.H
+$3\log_{7}(n) = \Theta(\log_{2}(n))$
+Pick: $c_{1} = 1, c_{2} = 2. n_{0} = 7$
+$c_{1}\lg(n) \leq 3 \log_{7}(n)  \leq c_{2}\lg(n)$
+$(1)\lg(7) \leq 3\cancel{ \log_{7}(7) }(1) \leq (2)\lg(7)$ 
+$\lg(7) \approx 2.81$
+$lg(7) \leq 3 \leq 2\lg(7)$
+$\therefore 3\log_{7}(n) = \Theta(\log_{2}(n))$
 #### 2.J
+$\frac{1}{n^2} = O(1)$
+Pick: $c = 1, n_{0} = 1$
+$\frac{1}{1^2} \leq 1$
+$1\leq 1$
+$\therefore \frac{1}{n^2} = O(1)$
