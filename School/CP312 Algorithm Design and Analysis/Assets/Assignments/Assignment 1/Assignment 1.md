@@ -142,7 +142,7 @@ $3^n = O(2^n)$ - **FALSE**
 By contradiction.
 Assume that $c, n_{0}$ exist:
 $\frac{3^n}{2^n}\leq c\frac{\cancel{ 2^n }}{\cancel{ 2^n }}$
-$\lim_{ n \to \infty} \frac{3}{2}^n = \infty \therefore \cancel{ \exists } c > 0 \text{ such that } 3^n \leq c2^n$ which is a contradiction 
+$\lim_{ n \to \infty} \frac{3}{2}^n = \infty \therefore \cancel{ \exists } c > 0 \text{ such that } 3^n \leq c2^n$ which is a **contradiction** 
 
 #### 2.F
 $100n^3 = o(n^3\lg n)$ - **TRUE**
@@ -182,3 +182,39 @@ Pick: $c = 1, n_{0} = 1$
 $\frac{1}{1^2} \leq 1$
 $1\leq 1$
 $\therefore \frac{1}{n^2} = O(1)$
+
+
+### Question 3
+
+#### 3.A
+$f_{1}(n)=O(g_{1}(n))$, $f_{2}(n)=O(g_{2}(n))$
+$f_{1}(n) \le c_{1}g_{1}(n)$, $f_{2}(n) \le c_{2}g_{2}(n)$
+Pick $c = c_{1}+c_{2}, n_{0} = max(n_{01}, n_{02})$
+$f_{1}(n) + f_{2}(n) \leq c_{1}g_{1}(n) + c_{2}g_{2}(n)$ 
+$f_{1}(n) + f_{2}(n) \leq (c_{1}+c_{2})(g_{1}(n) + g_{2}(n))$
+$f_{1}(n) + f_{2}(n) \leq c(g_{1}(n) + g_{2}(n))$
+$\therefore \text{ by definition }f_{1}(n) + f_{2}(n) = O(g_{1}(n) + g_{2}(n))$
+
+#### 3.B
+Prove that if$f(n) = O(n) + O(n^2) + O(n^3)$ then $f (n) = O(n3)$.
+$f(n) = O(n) + O(n^2) + O(n^3)$
+$f(n) \leq c_{1}n + c_{2}n^2 + c_{3}n^3$
+$f(n) \leq c_{1}+c_{2}+c_{3}(n+n^2+n^3)$
+Pick: $c = c_{1}+c_{2}+c_{3}, n_{0} = max(n_{01},n_{02},n_{03})$
+$f(n) \leq cn^3$
+$\therefore f(n) = O(n^3) \text{ if }f(n) = O(n) + O(n^2) + O(n^3)$
+### Question 4
+$T(n)=T(n - 1) + 10$
+#### 4.A
+Assume that the base case is $T (1) = Θ(1)$. Show that the solution to this recurrence is $O(n)$ using:
+##### 4.A.I
+**Substitution method:**
+guess: $T(n) = O(n)$
+
+##### 4.A.II
+**Recursion tree method**
+
+#### 4.B
+
+
+#### 4.C
