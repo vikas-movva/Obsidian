@@ -14,13 +14,16 @@ In this case we will use **binary trees** instead of arrays
 ### Binary Search Tree Review
 ```mermaid
 graph TB;
-    A((1))-->B((2))
-    A-->C((3));
-    B-->E((4))
-    B-->F((5))
-    C-->H((6))
-    C-->I((7))
+    A((8))-->B((3))
+    A-->C((10))
+    B-->D((1))
+    B-->E((6))
+    C-->F((9))
+    C-->G((14))
+    E-->H((4))
+    E-->I((7))
 ```
+
 The tree is made up of nodes that have at most two children. values that are greater than the value of the node will be added to the right child. Values that are less than or equal are added to the left child.
 
 >[!note] Key Property:
