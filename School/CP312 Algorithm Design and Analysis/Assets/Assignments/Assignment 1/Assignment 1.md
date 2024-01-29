@@ -1,11 +1,11 @@
 ### Question 1
 
 #### 1.A
-```
+```psuedo
 function CheckUnique(A, n):
 	for i = 1; i < n:
 		for j = i + 1; j< n:
-			if $a_1$ == $a_j$ :
+			if a1 == aj :
 				return False
 	return True
 ```
@@ -210,11 +210,29 @@ Assume that the base case is $T (1) = Θ(1)$. Show that the solution to this rec
 ##### 4.A.I
 **Substitution method:**
 guess: $T(n) = O(n)$
-
+Assume $T(k)\leq ck$ for $k<n$
+$T(n) = T(n-1)+10$
+$\leq c(n-1)+10$
+$= cn -c +10$
+$-c + 10 \leq 0$
+$c \geq 10$
+$\therefore$ by induction $T(n) = O(n)$ when $c \geq 10$
 ##### 4.A.II
 **Recursion tree method**
+```psuedo
+Level 1  : T(1)   = Θ(1)
+Level 2  : T(2)   = T(1) + 10
+Level 3  : T(3)   = T(2) + 10
+...
+Level n-1: T(n-1) = T(n-2) + 10
+Level n  : T(n)   = T(n-1) + 10
+```
+There are $n$ levels in the recursion tree and each level there is a computation time of $10$. Thus the total cost at all levels of the tree is $10n$.
 
+$\therefore$ The Running time of this recurrence using the recursion tree method is $O(n)$
 #### 4.B
-
-
+**YES** 
+The recurrence $T(n) = t(n-1)+10$  with the base case $T(1) = \Theta(1)$
+preforms 10 units of constant work every function call and as there are $n$ number of calls the total amount of work done for this algorithm is $10n$. as $\Omega$ notation is used for the **lower bound** of the running time function and the running time for this recurrence is **at least** $10n$ we can say that $T(n) = \Omega(n)$
 #### 4.C
+
