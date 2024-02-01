@@ -1,7 +1,7 @@
 - [x]  Week 1
 - [ ]  Week 2
 - [x]  Week 3
-- [ ]  Week 4
+- [x]  Week 4
 - [ ]  Week 5
 - [ ]  Week 6
 - [ ]  Week 7
@@ -11,4 +11,4 @@
 - [ ]  Week 11
 - [ ]  Week 12
 
-**Projected participation mark: 2/10**
+**Projected participation mark: 3/10**
