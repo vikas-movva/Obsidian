@@ -66,6 +66,10 @@ def inorder_walk(node: BST_node) -> None:
 #### Binary-Search Tree delete
 Deleting a leaf node is trivial and $O(1)$ in time complexity
 however deleting a node that has children is more complicated and in the worst case is $O(n)$ in time complexity
+BST delete steps:
+1. BST_search($k$)
+2. Replace $k$ with its successor
+3. Delete node $k$
 ![[leafnodedeleted.gif]]
 
 ### Binary-Search Tree sort
@@ -100,8 +104,12 @@ Heapsort combines the best attributes of these deterministic sorting algorithms
 >
 >**Max-Heap Operations:**
 >1. HEAPIFY($i$)
->	- Running Time: Worst-case $T(n) = \Theta(n)$
+>	- Running Time: Worst-case $T(n) = \Theta(\lg n)$
 >2. HEAP-getmax()
 >	- Running Time: Worst-case $T(n) = \Theta(n)$
 >3. HEAP-insert($k$)
 >	- Running Time: Worst-case $T(n) = \Theta(n)$
+>
+ **Array Representation:**
+ Children of Node $i$ at indices $2i$ and $2i+1$
+
