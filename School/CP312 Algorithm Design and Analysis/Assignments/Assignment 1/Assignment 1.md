@@ -59,7 +59,7 @@ Constant time operations and their counts:
 as these primitive operations are happening in the `k` loop, the running time for the `k` loop would be $T(n_k) = 8n_k$ $\therefore T(n) = 2n*2n*8n = 32n^3$ 
 
 ##### 1.B.III
-From [[Assignment 1#1.B.II|1.B.II]] we got the running time: 
+From [[School/CP312 Algorithm Design and Analysis/Assignments/Assignment 1/Assignment 1#1.B.II|1.B.II]] we got the running time: 
 $T(n) = 32n^3 + 1$ 
 
 **Running time using $\Theta$-notation:**
