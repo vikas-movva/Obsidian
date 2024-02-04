@@ -255,3 +255,32 @@ The lower-bound for $T(n)$ can be found by looking at the cost of the first leve
 ### Question 6
 
 #### 6.A
+$T(n) = 64T\left( \frac{n}{8} \right)+3n$
+
+$a = 64, b=8, f(n) = 3n$
+$n^{\log_{b}a} = n^{\log_{8}64} = n^2$
+$f(n)=3n=O(n)$
+Case 1: $f(n) = O(n^{2 -\epsilon}) \text{ where } \epsilon = 1$
+$\therefore T(n) = \Theta(n^2)$
+
+#### 6.B
+$T(n) = 8T\left( \frac{n}{2} \right)+n^3$
+
+$a = 8, b=2, f(n) = n^3$
+$n^{\log_{b}a} = n^{\log_{2}8} = n^3$
+$f(n) = O(n^3)$
+Case 2: $f(n) = O(n^{3}\lg^0n) \text{ where } k = 0$
+$\therefore T(n) = \Theta(n^3\lg n)$
+
+#### 6.C
+$T(n) = T(2n)+n^2$
+
+$a = 1, b=1, f(n) = n^2$
+The master theorem can not be used for this recurrence as the running time function is not in the form $T(n) = aT\left( \frac{n}{b} \right) + f(n)$ where the function is doubling ($2n$) instead of decreasing by a factor of $b$ and the value of $b \leq 1$
+
+#### 6.D
+$T(n) = T\left( \frac{3n}{10} \right)+n$
+
+$a = 1, b=\frac{10}{3}, f(n) = n$
+$n^{\log_{b}a} = n^{\log_{\frac{10}{3}}1} = n$
+
