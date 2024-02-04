@@ -239,3 +239,19 @@ The master method can't be used to solve this recurrence as the master method is
 
 ### Question 5
 
+#### 5.A
+Level 1: $n$
+Level 2: $2\frac{n}{4}+\frac{n}{8}=\frac{5n}{8}$
+Level 3: $\frac{16n}{64}+\frac{4n}{64} + \frac{4n}{64}+\frac{n}{64}=\frac{25n}{64} = n(\frac{5}{8})^2$
+...
+
+$\sum_{i=0}^{\infty}x^i = \frac{1}{1-x} \text{ for } |x| < 1$
+$\therefore \text{the sum of the cost at each level is } \frac{1}{1-\frac{5}{8}} = \frac{8}{3}n$
+The upper-bound for this recurrence would be $O(n)$
+
+#### 5.B 
+The lower-bound for $T(n)$ can be found by looking at the cost of the first level of the recursion tree ($n$). Since every node in the tree represents some amount of work done, the total cost of the tree must be at least $n$ $\therefore$ the lower-bound for $T(n) = \Omega(n)$
+
+### Question 6
+
+#### 6.A
