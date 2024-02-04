@@ -235,4 +235,7 @@ $\therefore$ The Running time of this recurrence using the recursion tree method
 The recurrence $T(n) = t(n-1)+10$  with the base case $T(1) = \Theta(1)$
 preforms 10 units of constant work every function call and as there are $n$ number of calls the total amount of work done for this algorithm is $10n$. as $\Omega$ notation is used for the **lower bound** of the running time function and the running time for this recurrence is **at least** $10n$ we can say that $T(n) = \Omega(n)$
 #### 4.C
+The master method can't be used to solve this recurrence as the master method is used to solve recurrences in the form $T(n) = aT\left( \frac{n}{b} \right) + f(n)$. As the value of $n$ is being reduced by a constant amount ($1$) and not a factor ($b$) the master method can't be used to solve this recursion.
+
+### Question 5
 
