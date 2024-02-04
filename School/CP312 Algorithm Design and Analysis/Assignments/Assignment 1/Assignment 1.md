@@ -101,8 +101,10 @@ The loop terminates when $j = n$. Due to the loop invariant at this point $i = n
 
 ##### 1.C.II
 Worst-case running time:
-$T(n) = 2 + 5n$
-$T(n) = \cancel{ 2 + 5 }n$
+$T(n) = 2 + 5n = O(n)?$
+Pick: $c = 7, n_{0} = 1$
+$2+5(1)\leq 7(1)$
+$7\leq 7$
 $T(n) = O(n)$
 $\therefore$ the worst-case running-time of this algorithm is $O(n)$
 
@@ -259,7 +261,7 @@ $T(n) = 64T\left( \frac{n}{8} \right)+3n$
 
 $a = 64, b=8, f(n) = 3n$
 $n^{\log_{b}a} = n^{\log_{8}64} = n^2$
-$f(n)=3n=O(n)$
+$f(n)=3n=\Omega(n)$
 Case 1: $f(n) = O(n^{2 -\epsilon}) \text{ where } \epsilon = 1$
 $\therefore T(n) = \Theta(n^2)$
 
@@ -268,8 +270,8 @@ $T(n) = 8T\left( \frac{n}{2} \right)+n^3$
 
 $a = 8, b=2, f(n) = n^3$
 $n^{\log_{b}a} = n^{\log_{2}8} = n^3$
-$f(n) = O(n^3)$
-Case 2: $f(n) = O(n^{3}\lg^0n) \text{ where } k = 0$
+$f(n) = \Omega(n^3)$
+Case 2: $f(n) = \Theta(n^{3}\lg^0n) \text{ where } k = 0$
 $\therefore T(n) = \Theta(n^3\lg n)$
 
 #### 6.C
@@ -282,5 +284,27 @@ The master theorem can not be used for this recurrence as the running time funct
 $T(n) = T\left( \frac{3n}{10} \right)+n$
 
 $a = 1, b=\frac{10}{3}, f(n) = n$
-$n^{\log_{b}a} = n^{\log_{\frac{10}{3}}1} = n$
+$n^{\log_{b}a} = n^{\log_{\frac{10}{3}}1} = 1$
+$f(n) = \Omega(n)$
+Case 3: $f(n) = \Omega(n^{0 + 1})\text{ where }\epsilon = 1$ and $\frac{3}{10}n \leq cn \text{ where } c= 2$
+$\therefore T(n) = \Theta(n)$
+
+#### 6.E
+$T(n) = 2T\left( \frac{n}{2} \right)+\sqrt{ n }$
+
+$a=2, b=2, f(n) = n^{\frac{1}{2}}$
+$n^{\log_{b}a} = n^{\log_{2}2} = n$
+$f(n) = \Omega(n^{\frac{1}{2}})$
+Case 1: $f(n) = O\left( n^{1-\frac{1}{2}} \right) \text{ where } \epsilon = \frac{1}{2}$ 
+$\therefore  T(n)= \Theta(n)$
+
+#### 6.F
+$T(n) = T\left( \frac{n}{7} \right) + \lg^3 n$
+
+$a=1, b=7, f(n) = \lg^3 n$
+$n^{\log_{b}a} = n^{\log_{7}1} = 1$
+$f(n) = \Omega(\lg^3n)$
+Case 2: $f(n) = \Theta(n^0(\lg^kn)) \text{ where }k = 3$
+$\therefore T(n)=\Theta(lg^4n)$
+
 
