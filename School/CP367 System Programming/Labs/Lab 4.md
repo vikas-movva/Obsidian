@@ -9,7 +9,9 @@ sort -n in1.txt in2.txt | uniq > output.txt
 ```
 3. Generate and append at least three different error messages to `errors.txt`:
 ```bash
-(echo "error1" > /; echo "error2" > ~; echo "error3" > ..) 2> errors.txt
+grep test text1.txt 2>> errors.txt
+grep test text2.txt 2>> errors.txt
+grep test text3.txt 2>> errors.txt
 ```
 4. List only the files or directories in your workspace that have `rwx` as one of their permissions:
 ```bash
