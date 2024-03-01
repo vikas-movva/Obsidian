@@ -96,5 +96,5 @@ Given $T(n) = aT(\frac{n}{b}) + f(n)$ where $a \ge 1, b> 1$ are constants
 
 **Example 4:**
 	$T(n) = 4T(n/2) + \frac{n^2}{lg(n)}$ | $a = 4, b = 2$
-	$n^log_ba = n^2$  and $f(n) = n^2/lg(n)$
+	$n^{log_ba} = n^2$  and $f(n) = n^2/lg(n)$
 	In this example **None** of the cases' conditions are filled therefore the [[Lesson 5#The Master Theorem|Master Theorem]] can't be used
