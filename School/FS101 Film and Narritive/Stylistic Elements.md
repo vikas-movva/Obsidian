@@ -46,3 +46,10 @@
 	- music
 		- leitmotif: a recurrent musical phrase
 	- diegetic / nondiegetic
+
+
+Sherlock Jr. - Buster Keaton, 1924
+M - Fritz Lang, 1931
+Citizen Kane - Orson Welles - 1941
+Singin' in the rain - Gene Kelly, 1952
+Do the right thing - Spike Lee, 1989
