@@ -1,13 +1,11 @@
 `funcsort()`:
 ```bash
 funcsort() {
-    # Check arguments
     if [[ $# -lt 1 || $# -gt 3 ]]; then
         echo "Invalid number of arguments."
         exit 4
     fi
 
-    # Check if -n argument is present
     if [[ $1 == "-n" ]]; then
         if [[ $# -eq 1 ]]; then
             echo "No filename provided."
