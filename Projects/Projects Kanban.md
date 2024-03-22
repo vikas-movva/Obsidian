@@ -21,6 +21,7 @@ kanban-plugin: basic
 - [ ] WebToEpub-Mobile
 - [ ] 2D sekiro
 - [ ] Worldbuilding tool with procedural map generation
+- [ ] Infinite craft like game using Word2Vec
 
 
 ## Planning
