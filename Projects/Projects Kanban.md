@@ -22,6 +22,7 @@ kanban-plugin: basic
 - [ ] 2D sekiro
 - [ ] Worldbuilding tool with procedural map generation
 - [ ] Infinite craft like game using Word2Vec
+- [ ] synthetic muscles
 
 
 ## Planning
