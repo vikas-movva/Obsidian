@@ -1,9 +1,9 @@
 ```bash
-gcc -g -o ctest.c ctest
+gcc -g -o ctest ctest.c
 ```
 
 ```gdb
-break 11
+break 9
 run
 
 print letter
