@@ -20,3 +20,18 @@ git add conflict.txt
 git commit -m "Resolve merge conflict"
 
 ```
+
+```bash
+# Switch back to 'master' and attempt to merge 'new-branch'
+git checkout master
+git merge new-branch > conflict.txt
+# This will result in a conflict.
+
+# Resolve the conflict by editing 'conflict.txt', then add and commit it
+git add conflict.txt
+git commit -m "Resolve merge conflict" >> conflict.txt
+
+# Append the git log graph to the file
+echo "TREE:" >> conflict.txt
+git log --graph >> conflict.txt
+```
