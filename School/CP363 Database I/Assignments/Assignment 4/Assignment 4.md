@@ -1,7 +1,4 @@
 ```sql
-CREATE DATABASE University;
-USE University;
-
 CREATE TABLE Students (
     StudentID INT PRIMARY KEY,
     FirstName VARCHAR(50) NOT NULL,
