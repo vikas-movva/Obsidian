@@ -23,6 +23,7 @@ kanban-plugin: basic
 - [ ] Worldbuilding tool with procedural map generation
 - [ ] Infinite craft like game using Word2Vec
 - [ ] synthetic muscles
+- [ ] LLM RAG on wikia
 
 
 ## Planning
