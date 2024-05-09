@@ -1,5 +1,5 @@
 {
-  "version": "0.6.2",
+  "version": "0.7.11",
   "endpoint": "https://api.openai.com/v1",
   "models": {},
   "api_key": "",
@@ -8,13 +8,13 @@
   "max_tokens": 500,
   "temperature": 0.7,
   "frequency_penalty": 0.5,
-  "prompt": "",
   "showStatusBar": true,
   "outputToBlockQuote": false,
   "freeCursorOnStreaming": false,
   "allowJavascriptRun": false,
   "experiment": false,
   "promptsPath": "textgenerator/prompts",
+  "textGenPath": "textgenerator/",
   "prefix": "\n\n",
   "tgSelectionLimiter": "^\\*\\*\\*",
   "stream": true,
@@ -82,6 +82,7 @@
     "ImageExtractor": true
   },
   "displayErrorInEditor": false,
+  "LLMProviderProfiles": {},
   "LLMProviderOptions": {
     "whisper": {
       "base_path": "https://api.openai.com/v1"
@@ -91,8 +92,6 @@
     },
     "Default (Custom)": {
       "endpoint": "http://localhost:1234/v1/completions",
-      "handlebars_headers_in": "{\n      \"Content-Type\": \"application/json\",\n      \"authorization\": \"Bearer {{api_key}}\"\n}",
-      "handlebars_body_in": "{\n    \"model\": \"{{model}}\",\n    \"temperature\": {{temperature}},\n    \"top_p\": {{top_p}},\n    \"frequency_penalty\": {{frequency_penalty}},\n    \"presence_penalty\": {{presence_penalty}},\n    \"max_tokens\": {{max_tokens}},\n    \"n\": {{n}},\n    \"stream\": {{stream}},\n\t\"stop\": \"{{stop}}\",\n    \"messages\": [\n      {{#each messages}}{{#if @index}},{{/if}}\n      {\n        \"role\": \"{{role}}\",\n        \"content\": \"{{escp content}}\"\n      }{{/each}}\n    ],\"prompt\": \"{{prompt}}\"\n  }",
       "path_to_choices": "choices",
       "path_to_message_content": "message.content",
       "path_to_error_message": "error.message",
@@ -102,11 +101,15 @@
       "top_p": 1,
       "api_key": "",
       "role": "",
-      "prompt": "Complete the following in obsidian markdown syntax."
+      "prompt": "Complete the following in obsidian markdown syntax.",
+      "custom_header": "{\n      \"Content-Type\": \"application/json\",\n      \"authorization\": \"Bearer {{api_key}}\"\n}",
+      "custom_body": "{\n    \"model\": \"{{model}}\",\n    \"temperature\": {{temperature}},\n    \"top_p\": {{top_p}},\n    \"frequency_penalty\": {{frequency_penalty}},\n    \"presence_penalty\": {{presence_penalty}},\n    \"max_tokens\": {{max_tokens}},\n    \"n\": {{n}},\n    \"stream\": {{stream}},\n\t\"stop\": \"{{stop}}\",\n    \"messages\": [\n      {{#each messages}}{{#if @index}},{{/if}}\n      {\n        \"role\": \"{{role}}\",\n        \"content\": \"{{escp content}}\"\n      }{{/each}}\n    ],\"prompt\": \"{{prompt}}\"\n  }",
+      "sanatization_response": "async (data, res)=>{\n          // catch error\n          if (res.status >= 300) {\n            const err = data?.error.message || JSON.stringify(data);\n            throw err;\n          }\n        \n          // get choices\n          const choices =  data.choices.map(c=>({\n            role:\"assistant\", \n            content: c.message.content\n          }));\n        \n          // the return object should be in the format of \n          // { content: string }[] \n          // if there's only one response, put it in the array of choices.\n          return choices;\n        }"
     }
   },
   "LLMProviderOptionsKeysHashed": {
     "Default (Custom).api_key": "__@#key_prefix#@__not-needed"
   },
+  "prompt": "",
   "api_key_encrypted": "__@#key_prefix#@__"
 }
