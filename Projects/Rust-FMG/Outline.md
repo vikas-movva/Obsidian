@@ -19,7 +19,7 @@ Heightmap Algo:
 1. Choose seed points
 2. give seed points
 	1. random vector3 for plate movement
-3. Add neighbors to queue - BFS
+3. Add neighbours to queue - BFS
 5. Assign Cell height
 6. Mark visited
 7. Use prng to generate height for next cell
@@ -27,7 +27,7 @@ Heightmap Algo:
 9. assign plate origin
 10. stop when height is >= height threshold
 11. recalculate height for each border plate based on plate vectors
-12. depending on height increase, update heights for edge cell neighbors that belong to the same plate
+12. depending on height increase, update heights for edge cell neighbours that belong to the same plate
 13. Apply falloff map so that the edges are water
 
 Plate interactions
