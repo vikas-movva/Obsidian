@@ -16,7 +16,6 @@
   "obsidian-timestamp-notes",
   "text-extractor",
   "obsidian-day-planner",
-  "code-emitter",
   "omnisearch",
   "settings-search",
   "templater-obsidian",
@@ -26,5 +25,6 @@
   "obsidian-latex-suite",
   "open-in-new-tab",
   "obsidian-pandoc",
-  "obsidian-functionplot"
+  "obsidian-functionplot",
+  "execute-code"
 ]
