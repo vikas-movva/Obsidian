@@ -19,8 +19,12 @@ prio: `boolean < integer < double < character`
 
 ### GGplot basiscs
 ```r
-install.packages("tidyverse")
 library(tidyverse)
-diamonds <- read.csv(dataset)
-glimpse(diamonds)
+plot(ggplot(data = diamonds, mapping = aes(x = cut)) + geom_bar())
 ```
+
+```r
+by_cut <- diamonds |> group_by(cut) |> count() 
+by_cut
+```
+

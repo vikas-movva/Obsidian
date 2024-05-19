@@ -75,7 +75,7 @@
   "RArgs": "-",
   "REmbedPlots": true,
   "RFileExtension": "R",
-  "rInject": "",
+  "rInject": "options(repos = c(CRAN = \"https://cloud.r-project.org/\"))\nlibrary(tidyverse)",
   "kotlinPath": "kotlinc",
   "kotlinArgs": "-script",
   "kotlinFileExtension": "kts",
