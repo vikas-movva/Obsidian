@@ -11,10 +11,7 @@ typeof(x)
 y <- c(1L, 3)
 typeof(y)
 ```
-```shell
-#> [1] "integer"
-#> [1] "double"
-```
+
 prio: `boolean < integer < double < character`
 
 ### GGplot basiscs
@@ -28,3 +25,35 @@ by_cut <- diamonds |> group_by(cut) |> count()
 by_cut
 ```
 
+### Missing values
+```r
+NA & TRUE
+```
+
+```r
+NA | TRUE
+```
+
+```r
+!NA
+```
+
+```r
+NA + 1
+```
+
+```r
+NA * 0
+```
+
+```r
+NA == NA
+```
+
+```r
+NA^0
+```
+
+```r
+is.na(NA)
+```
