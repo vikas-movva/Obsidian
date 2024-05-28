@@ -12,12 +12,12 @@ Meeting on May 27th
 - Omar
 
 
-| Group member | Tasks    |
-| ------------ | -------- |
-| Vikas        | 1, 2     |
-| Omar         | Any      |
-| Christina    | 3        |
-| Deva         | 4,6 or 7 |
-| Malay        | ?        |
-| Chewpop      | ?        |
+| Group member | Tasks |
+| ------------ | ----- |
+| Vikas        | 1, 2  |
+| Omar         | 5     |
+| Christina    | 3     |
+| Deva         | 4     |
+| Malay        | 6     |
+| Chewpop      | 7     |
 
