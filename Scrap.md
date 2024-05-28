@@ -12,3 +12,16 @@ grid: true
 ---
 f(x) = (x-3)/(3x+(4x^2 + 1)^(1/2))
 ```
+
+
+```functionplot
+---
+title: 
+xLabel: 
+yLabel: 
+bounds: [-10,10,-10,10]
+disableZoom: false
+grid: true
+---
+f(x) = (x^20 -1)/x-1
+```
