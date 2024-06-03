@@ -32,3 +32,28 @@ $$\frac{d}{dx}\cot(x) = -\csc^2(x)$$
 >[!Rule]
 >$$\frac{d}{dx} f(g(x)) = f^`(g(x)) * {g^`(x)}$$
 
+### Special limit identities
+>[!rule]
+$$\lim_{ h \to 0 } \frac{\sin(h)}{h} = 1$$
+$$\lim_{ h \to 0 } \frac{\cos(h) -1}{h} = 0$$
+
+### Examples
+>[!Example] Example 1
+$$\lim_{ x \to 0 } \frac{x^2}{\sin(4x)\cos(3x)}$$
+$$\lim_{ x \to 0 } \frac{x\cdot \cancel{x}}{\frac{\sin(4x)}{4x}\cos(3x)4\cancel{x}}$$
+$$\lim_{ x \to 0 } \frac{x}{(1)\cancel{\frac{\sin(4x)}{4x}}\cos(3x)(4)}$$
+$$\lim_{ x \to 0 } \frac{0}{(1)(1)\cancel{\cos(3x)}(4)}$$
+$$\lim_{ x \to 0 } \frac{0}{4} = 0$$
+
+>[!Example] Example 2
+Find the equation of the tangent line and the normal line to $y = 2^{\cos(x)}$ where $x= \frac{\pi}{2}$
+>$$(x_{0}, y_{0} = (\frac{\pi}{2}), y(\frac{\pi}{2}) = (\frac{\pi}{2}, 1))$$
+>$$y\prime = 2^{\cos(x)} \cdot \ln(2) \cdot -\sin(x)$$
+>$$y-y_0 = m(x-x_{0})$$
+>$$y-1 = \ln(2)(x-\frac{\pi}{2})$$
+>
+>Tangent Line:
+>$$y = \ln(2) x - \frac{\pi \ln(2)}{2} + 1$$
+>Normal Line:
+>$$y = -\frac{1}{\ln(2)(} x - \frac{\pi \ln(2)}{2} + 1$$
+
