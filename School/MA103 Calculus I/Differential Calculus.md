@@ -4,7 +4,12 @@ $f^`(x) = 2x$
 
 >[!Rule]
 >$$f^`(x) = nx^{n-1}$$
+### Log rule
+if $f(x) = \log_{2}(x)$
+$f\prime(x) = \frac{1}{x\ln(2)}$
 
+>[!Rule]
+>$$f\prime(x) = \frac{1}{x\ln(b)} \text{ where } \log_{b}(a)$$ 
 ### Product rule
 >[!Rule]
 >$$\frac{d}{dx}(f(x)g(x)) = f^`(x)g(x) + f(x)g^`(x)$$
@@ -21,12 +26,18 @@ $f^`(x) = e^x$
 
 ### Differentiating Trigonometric functions
 Some common things to know:
+#### Normal trig functions
 $$\frac{d}{dx} \sin(x) = \cos(x)$$
 $$\frac{d}{dx} \cos(x) = -\sin(x)$$
 $$\frac{d}{dx} \tan(x) = \sec^2(x)$$
+#### Inverse trig functions
 $$\frac{d}{dx} \csc(x) = -\csc(x)\cot(x)$$
 $$\frac{d}{dx} \sec(x) = \sec(x)\tan(x)$$
 $$\frac{d}{dx}\cot(x) = -\csc^2(x)$$
+#### Arc trig functions
+$$\frac{d}{dx} \arcsin(x) = \frac{1}{\sqrt{ 1-x^2 }}$$
+$$\frac{d}{dx} \arccos(x) = -\frac{1}{\sqrt{ 1-x^2 }}$$
+$$\frac{d}{dx} \arctan(x) = \frac{1}{1+x^2}$$
 
 ### Chain rule
 >[!Rule]
