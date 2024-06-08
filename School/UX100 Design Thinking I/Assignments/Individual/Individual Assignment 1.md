@@ -1,6 +1,6 @@
-**Name:** Vikas Movva
+#  Vikas Movva
 
-**Subject:** Research Strategy and User Experience Design for Newcomers to Ontario
+## Research Strategy and User Experience Design for Newcomers to Ontario
 ## **Introduction**
 Ontario, as one of Canada’s most diverse and economically vibrant provinces, has been actively encouraging immigrants to settle within its borders. The provincial government recognizes the significant contributions immigrants make to the workforce, cultural diversity, and economic growth. However, the transition to a new country presents numerous challenges for newcomers. They must navigate unfamiliar systems, establish social connections, secure employment, and ensure their families are comfortable and well-integrated into their new environment. To address these challenges, the Ontario government has initiated a project to develop a digital experience aimed at easing the transition for newcomers and providing them with the necessary resources for a successful settlement.
 
@@ -45,59 +45,19 @@ To create a meaningful digital experience for newcomers, a comprehensive researc
 ## **Combining Insights**
 The data collected from primary and secondary research will be synthesized to identify common themes and critical issues. This comprehensive understanding will inform the development of the empathy map, personas, and journey map, ensuring they accurately reflect the experiences of newcomers.
 
-### **Empathy Map**
+## **Empathy Map**
 **User Perspective: Ahmed, a recent immigrant from Syria**
 ![[Pasted image 20240608160704.png]]
 
-### **Personas**
-**Persona 1: Ahmed, the Engineer
+## **Personas**
+**Persona 1: Ahmed, the Engineer**
 ![[Pasted image 20240608164249.png]]
 
 
 **Persona 2: Maria, the International Student**
 ![[Pasted image 20240608164946.png]]
-### **Journey Map**
+## **Journey Map**
 **Ahmed’s Journey to Settling in Ontario**
-1. **Pre-Arrival**
-
-• **Actions:** Researches Ontario’s job market and housing options, applies for visas, arranges temporary accommodation.
-
-• **Touchpoints:** Immigration websites, online forums, contact with friends or family already in Canada.
-
-• **Feelings:** Excitement mixed with anxiety about the unknown.
-
-2. **Arrival**
-
-• **Actions:** Arrives in Ontario, goes through customs, and moves into temporary housing.
-
-• **Touchpoints:** Airport services, rental agencies, initial orientation programs.
-
-• **Feelings:** Overwhelmed by the new environment and logistical tasks.
-
-3. **First Month**
-
-• **Actions:** Registers children in school, attends language classes, starts job hunting.
-
-• **Touchpoints:** Schools, community centers, job fairs, online job portals.
-
-• **Feelings:** Stress from adjusting to a new routine and managing family needs.
-
-4. **Three to Six Months**
-
-• **Actions:** Finds part-time work, improves language skills, seeks permanent housing.
-
-• **Touchpoints:** Employment services, language schools, real estate agents.
-
-• **Feelings:** Gradual sense of adaptation but persistent worries about long-term stability.
-
-5. **One Year and Beyond**
-
-• **Actions:** Secures full-time employment, children settle in school, engages in community activities.
-
-• **Touchpoints:** Workplace, schools, community events, healthcare services.
-
-• **Feelings:** Increased confidence and sense of belonging, though occasional homesickness and cultural adjustments continue.
-
-  
+![[Pasted image 20240608185124.png]]
 
 By using these research insights, the digital experience designed for newcomers will be better tailored to address their specific needs, making their transition to living in Ontario smoother and more supportive.
