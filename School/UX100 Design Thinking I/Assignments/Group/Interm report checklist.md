@@ -10,7 +10,7 @@ Meeting on May 27th
 - Vikas
 - Christina
 - Omar
-
+- Deva
 
 | Group member | Tasks |
 | ------------ | ----- |
@@ -20,4 +20,3 @@ Meeting on May 27th
 | Deva         | 4     |
 | Malay        | 6     |
 | Chewpop      | 7     |
-

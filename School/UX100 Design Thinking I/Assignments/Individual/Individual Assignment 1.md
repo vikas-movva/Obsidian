@@ -1,4 +1,4 @@
-#  Vikas Movva
+# Vikas Movva
 
 ## Research Strategy and User Experience Design for Newcomers to Ontario
 ## **Introduction**
