@@ -5,10 +5,10 @@
   "promptDelete": false,
   "vimMode": true,
   "pdfExportSettings": {
-    "includeName": false,
+    "includeName": true,
     "pageSize": "Letter",
     "landscape": false,
-    "margin": "0",
-    "downscalePercent": 80
+    "margin": "1",
+    "downscalePercent": 100
   }
 }

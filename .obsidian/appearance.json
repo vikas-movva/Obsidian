@@ -4,6 +4,5 @@
   "textFontFamily": "",
   "translucency": false,
   "showViewHeader": true,
-  "baseFontSize": 17,
-  "theme": "obsidian"
+  "baseFontSize": 17
 }
