@@ -19,7 +19,7 @@ Meeting on June 10th
 
 | Group member | Tasks | Completed |
 | ------------ | ----- | --------- |
-| Vikas        | 1, 2  | -[x]      |
+| Vikas        | 1, 2  | X         |
 | Omar         | 5     |           |
 | Christina    | 3     |           |
 | Deva         | 4     |           |
