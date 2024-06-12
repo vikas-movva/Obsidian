@@ -21,3 +21,16 @@ Your assignment should consist of the following:
 4. An empathy map
 5. Two personas
 6. A journey map
+
+
+
+Suppose that the National Hockey League has determined that the relationship between the demand q for tickets in an upper bowl section to "game 7" of the Stanley Cup Finals and each ticket's price p is given by:
+
+$\frac{2p -9000}{q} = \frac{1}{90}q -20$
+
+Use implicit differentiation to find $\frac{dq}{dp}$ by hand
+
+It can be shown that revenue is maximized when the elasticity of demand $E=-\frac{p}{q} \frac{dq}{dp}$ is equal to 1. Use your results from the previous part to find an implicit equation in terms of p and q that could be used to maximize revenue
+
+
+Use $\ln(y)=\sin^{-1}(x)(\ln (x)+x)$ and logarithmic differentiation to find $\frac{dy}{dx}$. Use this result and logarithmic differentiation to find $\frac{dy}{dx}$ explicitly. Complete all work by hand. You do not need to expand your final answer
