@@ -1,6 +1,6 @@
-- [ ] A title page with the names of the group members who contributed to the report. 
-- [ ] An introduction to your report and to the problem you are working on.  
-- [ ] A description of the research you performed. What did you learn about the problem, the organization, and the people?  
+- [x] A title page with the names of the group members who contributed to the report. 
+- [x] An introduction to your report and to the problem you are working on.  
+- [x] A description of the research you performed. What did you learn about the problem, the organization, and the people?  
 - [ ] An empathy map.  
 - [ ] Personas  
 - [ ] Journey Map  
@@ -16,12 +16,13 @@ Meeting on June 10th
 - Vikas
 - Omar
 - Deva
+- Christina
 
 | Group member | Tasks | Completed |
 | ------------ | ----- | --------- |
 | Vikas        | 1, 2  | X         |
 | Omar         | 5     |           |
-| Christina    | 3     |           |
+| Christina    | 3     | X         |
 | Deva         | 4     |           |
 | Malay        | 6     |           |
 | Adar         | 7     |           |
