@@ -1,5 +1,7 @@
-Suppose $xy=5$ and $\frac{dy}{dx}=5$ find $\frac{dx}{dt}$ when $x=1$
+In baseball, a batter stands 2 feet from the home plate as a pitcher throws the ball towards home plate with a velocity of 150 ft/s. Suppose:
 
-find all critical numbers $c$ in $f(t)=8t^{2/3} + t^{5/3}$
+I) a(t) represents the batter's angle of gaze (in radians) between the ball and home plate at time t and 
 
-Suppose $f(x)=xe^{-3x}$, $0\leq x \leq 2$. Use the Closed Interval Method to find points at which the absolute extrema of $f$ occur.
+II) b(t) represents the distance (in ft) between the ball and home plate at time t
+
+Determine the rate at which the batter's angle of gaze must change in order to keep his eyes on the ball as it crosses home plate
