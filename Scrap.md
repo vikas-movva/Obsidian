@@ -1,5 +1,10 @@
-Solve $\lim_{ x \to \infty } x^{\ln(2)/(1+\ln(x))}$ Indicate all points at which L'Hopital's rule is applied
+find the antiderivative of $f(x) = 50\left( \frac{2+x^2}{1+x^2} \right)$
 
-Suppose, at time $t=0$, a penny is dropped from a bridge that is 122.5m from the ground. Ignoring air resistance, the distance the penny is from the ground $t$ seconds after it is dropped is then given by $s(t)=122.5-4.9t^2$. Since $s(t)$ is a polynomial it is continuous and differentiable for all $t$. Use the Mean Value Theorem to show that the velocity of the penny is at least -24.5 m/s at some point during its decent. Show all of your work
+Find the function $f$ that has a slope $\frac{3+\cos^3(x)}{\cos^2(x)}$ for $x \in \left[ 0,\frac{\pi}{2} \right]$ and passes through the point $(0,-2)$
 
-Find all horizontal and vertical asymptotes of $f(x)=\frac{5\ln(x)}{x^2}$
+A home owner is building a garden containing three rectangular plots. Fencing will surround the garden and separate each plot.
+
+(a) Let $x$ represent the width of the entire garden and $y$ the length of each plot. If the owner has 400 meters of fencing state the possible range of the independant variables $x$ and $y$  representing the dimensions of the fence
+
+
+A painting of height 3 feet hangs on a wall of a museum, with the bottom of the painting 1 foot above the eye of an observer. How far from the wall should the observer stand to maximize their angle of vision? (In other words, where should the observer stand as to maximize the angle subtended at her eye by the painting?) Use the first derivative test to verify that the result is a maximum.
