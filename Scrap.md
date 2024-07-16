@@ -8,3 +8,14 @@ A home owner is building a garden containing three rectangular plots. Fencing wi
 
 
 A painting of height 3 feet hangs on a wall of a museum, with the bottom of the painting 1 foot above the eye of an observer. How far from the wall should the observer stand to maximize their angle of vision? (In other words, where should the observer stand as to maximize the angle subtended at her eye by the painting?) Use the first derivative test to verify that the result is a maximum.
+
+
+
+```r
+fun0(fun1(fun2(x)), fun3(x))
+```
+
+fun2
+fun1
+fun3
+fun0
