@@ -19,3 +19,9 @@ fun2
 fun1
 fun3
 fun0
+
+
+$f(x)=x^2 -3x$
+Recall that $\int _{a}^b f(x)\, dt = \lim_{ n \to \infty }\frac{b-a}{n}\sum f(a+ \frac{b-a}{n}i$. Verify $\int _{0}^{12}f(x) \, dx = 360$ result by evaluating this limit.
+
+$[\frac{1}{3}x^3 - \frac{3}{2}x^2]_{a}^b = \frac{1}{3}b^3 - \frac{3}{2}b^2 - (\frac{1}{3}a^3 - \frac{3}{2}a^2)$ $= \frac{1}{3}(b^3 - 3a^3 + 3a^2b - 3ab^2)$
