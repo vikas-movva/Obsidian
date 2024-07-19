@@ -1,11 +1,18 @@
-Consider the points $Q=(0,6)$ and $R=(6,11)$. Find the point $P=(x,0)$ where $x\in[0,6]$ such that the sum of distances $PQ+PR$ is minimized.
+Create the following tables M and N using R code.Show the R code.
 
-(a) Determine the function $f(x)$ to be minimized
-(b) Find the only critical value of $c$ of $f(x)$ in the given interval.
-(c) Calculate the following:
-- $f(0)$
-- $f(c)$
-- f(6)
-(d) Use the Extreme Value Theorem to find the minimum of $f(x)$. What $x$-value minimizes $f(x)$?
+| key | value_M |
+| --- | ------- |
+| 8   | M8      |
+| 12  | M12     |
+| 19  | M19     |
+| 25  | M25     |
 
-find the antiderivative for $f(x) = \frac{-1x^2-8x-7}{x}$
+| key | value_N |
+| --- | ------- |
+| 12  | N12     |
+| 19  | N19     |
+| 25  | N25     |
+| 30  | N30     |
+
+Use inner_join(), left_join() and right_join() with by ="key" to combine tables M  
+and N. Show the R code and the corresponding combined tables.
