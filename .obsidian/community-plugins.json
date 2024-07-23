@@ -18,12 +18,12 @@
   "omnisearch",
   "settings-search",
   "templater-obsidian",
-  "obsidian-leaflet-plugin",
   "cm-editor-syntax-highlight-obsidian",
   "obsidian-latex-suite",
   "open-in-new-tab",
   "obsidian-pandoc",
   "obsidian-functionplot",
   "execute-code",
-  "tldraw"
+  "tldraw",
+  "obsidian-map-view"
 ]
