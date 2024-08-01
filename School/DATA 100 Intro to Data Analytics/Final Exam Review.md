@@ -234,7 +234,7 @@ cov(temperature$RegionA, temperature$RegionB)
 $$cor(X,Y)= \frac{cov(X,Y)}{\sqrt{ var(X)var(Y) }}$$
 therefore  $cor(X,Y)= \frac{9.93}{\sqrt{ (10.03)(10.12) }}=0.986$. This indicates that `RegionA` and `RegionB` are strongly correlated
 
-1. In the `prcticedata` dataframe, u and x are the explanatory variables, and y is the response variable. We fitted a linear regression model, mod, to identify the relationship between u, x, and y. The output of the summary(mod) command is provided below:
+14. In the `prcticedata` dataframe, u and x are the explanatory variables, and y is the response variable. We fitted a linear regression model, mod, to identify the relationship between u, x, and y. The output of the summary(mod) command is provided below:
 
 ```
 Coefficients:
@@ -252,9 +252,18 @@ F-statistic: 104.7 on 4 and 95 DF, p-value: < 2.2e-16
 ```
 
 a) Write down the equation of the linear regression model expressing y as a combination of functions of u and x, with the appropriate coefficients.
+$$y=0.5033+0.3215u+0.2901x+0.1559x^2+0.0502(ux)$$
 b) How confident are you that the estimated non-zero value for the intercept is not by chance? Justify your answer.
+
+>[!Answer]
+>From the output of `summary(mod)` we can see that the **p** value is 0.710221. This is significantly greater than the **p**-value threshold of 0.05. Therefore we can determine that the intercept is **not** statistically significant and is most likely 0. 
+
 c) Calculate the predicted y value when u = 2 and x = 3.
+$$y=0.5033+0.3215(2)+0.2901(3)+0.1559(3)^2+0.0502(2)(3) = 3.7209$$
 d) Interpret the coefficient of the interaction term (u:x) in the context of the model.
+
+>[!Answer]
+>The coefficient of interaction term ($u:x$) represents the how the relationship between $u$ and $y$ change as $x$ changes and vice versa. This term captures the combined influence of both variables on the response variable
 
 15. Write R code to create a simple linear regression model predicting `price` based on `carat` in the `diamonds` dataset. How would you interpret the coefficient for `carat` in this model?
 
