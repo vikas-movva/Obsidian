@@ -135,7 +135,7 @@ plot <- diamonds2 %>% ggplot(mapping=aes(x=cut, y=proportion)) +
 ```
 In the context of the `geom_bar` function in `ggplot2`, `stat = "identity"` is used to tell `ggplot2` to use the values provided in the data frame for the y-axis. By default, `geom_bar` uses `stat = "count"`, which counts the number of occurrences of each x value. However, when you provide your own y values (like proportions), you need to specify `stat = "identity"` to instruct `ggplot2` to use those values directly.
 
->[!Tip] Important
+>[!Tip] Explanation
 >- **Default behavior (`stat = "count"`):** `geom_bar` will count the occurrences of each x value and use these counts for the height of the bars.
 >- **Custom y values (`stat = "identity"`):** `geom_bar` will use the y values provided in the data frame without modification.
 ## Part 3: Data Joining and Manipulation
@@ -183,10 +183,39 @@ b) Show the table T2 that is created by the following R code:
 T2 <- left_join(x, y, by = "key")
 ```
 
+| key | val_x | val_y |
+| --- | ----- | ----- |
+| 1   | x1    | y1    |
+| 2   | x2    | y2    |
+| 3   | x3    | NA    |
+>[!Tip] Explanation
+>The difference in the syntax between `join_by(key)` and `"key"` is due to the different functions or versions of the functions being used in the examples.
+>1. **The pipe operator (`|>`) and `inner_join` with `join_by()`**:
+>```r
+>T1 <- x |> inner_join(y, by = join_by(key))
+>```
+This syntax uses the pipe operator (`|>`) and `join_by()`, which is part of a newer and more flexible approach in the `dplyr` package for specifying join conditions. The `join_by()` function allows for more complex join specifications, such as non-equijoin conditions or joins involving multiple keys. This approach is available in recent versions of `dplyr`.
+>2. **Traditional `left_join` with a string for the key**:
+>```r
+T2 <- left_join(x, y, by = "key")
+>``` 
+This syntax uses the traditional way of specifying the join key as a string directly in the `by` parameter. This method is simple and works well for straightforward joins where the key is a single column and the join condition is an equality.
+
 11. Write R code to perform an outer join of the tables x and y from the previous question. What would the resulting table look like?
+```r
+T3 <- full_join(x, y, by = "key")
+```
 
-12. Explain the difference between `inner_join()` and `left_join()` in the context of merging data frames. Provide an example scenario where you would prefer to use each type of join.
+| key | val_x | val_y |
+| --- | ----- | ----- |
+| 1   | x1    | y1    |
+| 2   | x2    | y2    |
+| 3   | x3    | NA    |
+| 4   | NA    | y3    |
 
+1. Explain the difference between `inner_join()` and `left_join()` in the context of merging data frames. Provide an example scenario where you would prefer to use each type of join.
+>[!Answer]
+>The `inner_join()` function only includes rows where the key is present in both data frames, resulting in a data frame that contains only the intersecting rows. In contrast, the `left_join()` function includes **all** rows from the left data frame and adds any matching rows from the right data frame based on the key. If there is no matching row in the right data frame, the result will still include the row from the left data frame, with `NA` values for the columns from the right data frame.
 ## Part 4: Statistical Analysis and Modeling
 
 13. Given the following information about a temperature dataset:
@@ -198,9 +227,14 @@ var(temperature$RegionB)
 cov(temperature$RegionA, temperature$RegionB)
 [1] 9.93
 ```
-Calculate the correlation coefficient between RegionA and RegionB. What does this value indicate about the relationship between these two variables?
+- Calculate the correlation coefficient between RegionA and RegionB. What does this value indicate about the relationship between these two variables?
 
-14. In the prcticedata dataframe, u and x are the explanatory variables, and y is the response variable. We fitted a linear regression model, mod, to identify the relationship between u, x, and y. The output of the summary(mod) command is provided below:
+>[!Answer] 
+>Correlation is given by the formula:
+$$cor(X,Y)= \frac{cov(X,Y)}{\sqrt{ var(X)var(Y) }}$$
+therefore  $cor(X,Y)= \frac{9.93}{\sqrt{ (10.03)(10.12) }}=0.986$. This indicates that `RegionA` and `RegionB` are strongly correlated
+
+1. In the `prcticedata` dataframe, u and x are the explanatory variables, and y is the response variable. We fitted a linear regression model, mod, to identify the relationship between u, x, and y. The output of the summary(mod) command is provided below:
 
 ```
 Coefficients:
