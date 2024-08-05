@@ -21,3 +21,16 @@ Suppose that $f$ satisfies the equation  $\cos\left( \frac{3\pi}{4}x \right)=\in
 
 
 evaluate this integral using integration by parts $\int x^6(x^7+5) \, dx$ where $u=x^6$ and $dv=(x^7+5)$
+
+
+Determine the partial fractions decomposition/expansion and solve for
+any unknown constants for $$\frac{2+3x+x^2}{x(x^2+1)}$$
+
+
+The region bounded by$y = x^2 + 1$ and $y = x + 3$ is to be rotated about the $x$
+axis.
+Write down the area A(x) of a cross section and then an integral that
+gives the volume of revolution
+
+
+For $f (x) = \frac{x^3}{2 − 6x^2}$ , find a power series representation (centered at zero, and starting at $n = 0$) and determine the radius of convergence.
