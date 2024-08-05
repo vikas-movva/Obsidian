@@ -266,38 +266,126 @@ d) Interpret the coefficient of the interaction term (u:x) in the context of the
 >The coefficient of interaction term ($u:x$) represents the how the relationship between $u$ and $y$ change as $x$ changes and vice versa. This term captures the combined influence of both variables on the response variable
 
 15. Write R code to create a simple linear regression model predicting `price` based on `carat` in the `diamonds` dataset. How would you interpret the coefficient for `carat` in this model?
+>[!Answer]
+>```r 
+>model <- linear_reg() %>% 
+>	set_engine("lm") %>% 
+>	set_mode("regression") %>% 
+>	fit(price ~ carat, data=diamonds)
+>```
+>`intercept` - The price if carat is 0. While this doesn't make in reality as 0 carat diamonds don't exist it is important in order to get an accurate prediction.
+>
+>`carat` - The expected change in price as carat increases.
 
-16. Given a data frame `df` with variables `x1`, `x2`, and `y`, write R code to create a multiple regression model that includes an interaction term between `x1` and `x2`. How would you interpret the coefficient of the interaction term?
+17. Given a data frame `df` with variables `x1`, `x2`, and `y`, write R code to create a multiple regression model that includes an interaction term between `x1` and `x2`. How would you interpret the coefficient of the interaction term?
+>[!Answer]
+>```r
+>model <- linear_reg() %>% 
+>	set_engine("lm") %>%
+>	set_mode("regression")
+>
+>recipe <- recipe(y~ x1*x2)
+>
+>workflow <- workflow() %>%
+>	add_model(model) %>%
+>	add_recipe(recipe)
+>
+>fit <- workflow %>%
+>	fit(data = df)
+>```
+>`intercept` - the y intercept of the model
+>`x1` - how `y` changes as `x1` changes
+>`x2` - how `y` changes as `x2` changes
+>`x1:x2` - how the relationship between `x1` and `y` changes as `x2` changes and vice versa
+>$$y=\beta + W_{1}x_{1} + W_{2}x_{2} + W_{3}x_{1}x_{2}$$
 
 ## Part 5: R Formulas and Mathematical Expressions
 
-17. Write the explicit mathematical formula corresponding to each of the R formulas:
-    a) `y ~ x1 + x2`
-    b) `y ~ x1:x2`
-    c) `y ~ x1 * x2`
-    d) `y ~ x1 * x2 - x1`
-    e) `y ~ x1 * x2 - 1`
-    f) `y ~ I(x1 * x2 - 1)`
+1. Write the explicit mathematical formula corresponding to each of the R formulas:
+    1. `y ~ x1 + x2`
+        - $y=b_{0} + b_{1}x_{1} + b_{2}x_{2}$ 
+    2. `y ~ x1:x2`
+        - $y= b_{0} + b_{1}(x_{1}x_{2})$ 
+    3. `y ~ x1 * x2`
+        - $y=b_{0} + b_{1}x_{1}+b_{2}x_{2}+b_{3}(x_{1}x_{2})$ 
+    4. `y ~ x1 * x2 - x1`
+        - $y= b_{0}+b_{2}x_{2}+b_{3}(x_{1}x_{2})$ 
+    5. `y ~ x1 * x2 - 1`
+        - $y=b_{1}x_{1}+b_{2}x_{2}+b_{3}(x_{1}x_{2})$
+    6. `y ~ I(x1 * x2 - 1)`
+        - $y=b_{0} + b_{2}(x_{1}x_{2}-1)$ 
 
 18. Translate the following R formula into its explicit mathematical form:
 ```R
 y ~ x1 * x2 + I(x3^2) - 1
 ```
-
+$$y=b_{1}x_{1}+b_{2}x_{2}+b_{3}x_{3}^2 + b_{4}(x_{1}x_{2})$$
 19. Describe the purpose of the `I()` function in R formulas. Provide an example of when you might use it in a linear regression model.
+>[!Answer]
+>The `I()` funciton is used in r formulas to indicate that whatever is inside it should be treated as a single term and not an interaction.
 
 ## Part 6: Advanced R Functions and Tidyverse
 
 20. Write a function in R that uses `case_when()` instead of `switch()` to perform the same operations as in question 1. Then, demonstrate how to use this function to multiply 4 and 7.
+>[!Answer]
+>   ```R
+   >operation <- function(x, y, op) {
+ >    case_when(
+>       op == plus ~ x + y,
+>       op == minus ~ x - y,
+>       op == times ~ x * y,
+>     op == divide ~ x / y,
+>       TRUE ~ stop("Unknown op!")
+>     )
+>   }
+>   ```
+   
 
-21. Using the `tibble` function from the tidyverse package, create a dataframe that contains the sequences from questions 2 and 3. Then, use `mutate()` to add a new column that calculates the difference between the two sequences.
+22. Using the `tibble` function from the tidyverse package, create a dataframe that contains the sequences from questions 2 and 3. Then, use `mutate()` to add a new column that calculates the difference between the two sequences.
+>[!Answer]
+>```r
+>df <- tibble(
+>value1= c(0:10),
+>value2=seq(from = 0, to = 100, by = 10)
+>) %>%
+>mutate(value_diff = value2 - value1)
+>```
 
-22. The `lubridate` package (part of tidyverse) was used in questions 4 and 5. Write R code to calculate the number of days between the date in question 4 and today's date.
+23. The `lubridate` package (part of tidyverse) was used in questions 4 and 5. Write R code to calculate the number of days between the date in question 4 and today's date.
+>[!Answer]
+>```r
+>as.numeric(ymd("20240801")- ymd("20231103"))
+>```
 
-23. Create a function that takes a vector of numbers as input and returns a vector of strings based on the following conditions:
+25. Create a function that takes a vector of numbers as input and returns a vector of strings based on the following conditions:
     - If the number is positive, return "Positive"
     - If the number is negative, return "Negative"
     - If the number is zero, return "Zero"
     Use `purrr::map()` to apply this function to the vector `c(-2, 0, 3, -1, 5)`.
-
-24. Create a small dataset using `tibble()` that demonstrates a right-skewed distribution. Then, use ggplot2 to create a histogram of this distribution and explain how you can tell it's right-skewed from the plot.
+>[!Answer]
+>```r
+>categorize_number <- function(x) {
+> 	case_when(
+> 		x > 0 ~ "Positive",
+>		x < 0 ~ "Negative",
+>		TRUE ~ "Zero"
+>	  )
+>}
+>
+>input_vector <- c(-2, 0, 3, -1, 5)
+>
+>result <- map_chr(input_vector, categorize_number)
+>```
+1. Create a small dataset using `tibble()` that demonstrates a right-skewed distribution. Then, use ggplot2 to create a histogram of this distribution and explain how you can tell it's right-skewed from the plot.
+>[!Answer]
+>```r
+>df <- tibble(
+>	letter=c("A", "B", "C", "D", "E")
+>	count=c(8, 6, 4, 2, 1)
+>)
+>plot <- ggplot(mapping=aes(x=letter, y=count)) +
+>	geom_histogram(stat="identity")+
+>	labs(xlab="Letter", ylab="Count", title="Histogram of x vs y")
+>```
+>
+>This histogram has right skew because the mean is less than the median
