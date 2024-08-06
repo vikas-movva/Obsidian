@@ -34,3 +34,11 @@ gives the volume of revolution
 
 
 For $f (x) = \frac{x^3}{2 − 6x^2}$ , find a power series representation (centered at zero, and starting at $n = 0$) and determine the radius of convergence.
+
+
+Consider the equation: $\sin(x) -2x = 1- \frac{1}{\sqrt{ 2 }}$
+Use Rolle’s Theorem to prove that the equation has no more than one one real solution.
+
+
+Find an equation of the line tangent to the curve given below, at the point $\left( 0,-\frac{1}{2} \right)$:
+$6\sin^{-1}(x-y)=\pi(x^2 + e^{xy})$
