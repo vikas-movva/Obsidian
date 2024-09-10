@@ -39,7 +39,7 @@ graph LR
 2. A malicious third party, Oscar (the bad guy) has channel access but should not be able to understand the communication
 
 ```mermaid
-graph LR
+graph TD
     A["Alice (good)"] -->|x| E["Encryption e()"]
     E -->|y| C{Unsecure channel}
     C -->|y| D["Decryption d()"]
