@@ -1,3 +1,6 @@
+---
+Notes: "[[Understanding_Cryptography_Chptr_1---Intro_to_Crypto + Historical_Ciphers.pdf]]"
+---
 ## Overview of the cryptology field
 
 ### Classification of the Field of Cryptology
@@ -70,9 +73,57 @@ Encryption and decryption are inverse opperations if the same key $K$ is used on
 >
 >Therefore: **The problem of secure communication is reduced to the secure transmission and storage of the key $K$**
 ## Cryptanalysis
+### Why do we need Cryptanalysis?
+There is no _mathimatical proof_ of security for any practical cipher and the only way to have assurance that a cipher is secure is to try to break it(and possibly fail)
 
+>[!Important]
+>**Kerckhoff's Principal**
+>A very important idea in modern cryptography
+>>A cryptosystem should be secure even if the attacker (Oscar) knows all details about the system, with the exception of the secret key
+
+**How do we follow this principle?**
+Only use **known** ciphers that have been cryptanalized for several years by good cryptographers.
+
+>[!Remark]
+>It might be tempting to assume that a cipher is _"more secure"_ if its details are kept secret. However, throughout history it has been shown that secret ciphers are almost always reverse engineered and broken.
+
+### Cryptanalysis: Attacking Cryptosystems
+```mermaid
+graph LR 
+	A[Cryptanalisis] --> B[Classical Cryptanalisis] 
+	A --> C[Implementatoin Attacks] 
+	A --> D[Social Engineering] 
+	B --> E[Mathematical Analysis] 
+	B --> F[Brute-Force Attacks] 
+```
+
+**Classical Attacks**
+- Mathematical Analysis
+- Brute-Force Attack
+
+**Implementation Attack**
+- The method of extracting a key through reverse engineering or power measurement 
+	- EX. smart banking card
+
+**Social Engineering**
+- The method of extracting the key or other important information through person to person interactions
+	- EX. tricking a user into giving up their password or recovery answers
+
+### Brute-Force Attack (or Exhaustive Key Search) against Symmetric Ciphers
+This method treats the cipher as a black box. It requires at least 1 plaintext-ciphertext pair $(X_{0}, Y_{0})$ and checks all possible keys until the conditions are fulfilled.
+$$d_{K}(Y_{0}=?X_{0})$$
+How many keys are needed?
+
+| Key length (bits) | Key space | Security lifetime                                                                                                        |
+| ----------------- | --------- | ------------------------------------------------------------------------------------------------------------------------ |
+| $64$              | $2^{64}$  | **Short-term** (a few days or less)                                                                                      |
+| $128$             | $2^{128}$ | **Long-term** (several decades in the absence of quantum computers)                                                      |
+| $256$             | $2^{256}$ | **Long-term** (also resistant against quantum computers – note that QC do not exist at the moment and might never exist) |
+>[!Important]
+>An adversary only needs to succeed with one attack. Thus, a long key space does not help if other attacks (social engineering) is possible
 
 ## Substitution Cipher
+
 
 ## Modular Arithmetic
 
