@@ -206,3 +206,82 @@ $P(L\cup M) = \frac{3496}{5000} = 0.6992$
 $P(L\cup S) = \frac{2615}{5000}=0.523$
 \
 ## 1.5 Conditional Probability and Independence
+>[!Note]
+>Suppose that a coin is flipped twice. On the first flip it landed on heads. Does this mean that the probability of the coin landing on heads again is $> 0.5$? **NO!** The probability stays the same!
+
+### Conditional Probability
+If $A$ and $B$ are any events in $S$ and $P(B) \neq 0$, the **conditional probability** of $A$ given $B$ is:
+$$P(A|B)=\frac{P(A\cap B)}{P(B)}$$
+
+### Independence
+Events $A$ and $B$ are **independent** if occurrence of $B$ does not affect the probability of $A$, i.e.,
+$$P(A|B)=P(A)$$
+
+>[!Theorem]
+>**Multiplication Rule for Independent Events**
+>If $A$ an $B$ are independent:
+>$$P(A \cap B)=P(A) * P(B)$$
+>Conversely, if this condition is not satisfied, then events $A$ and $B$ are dependent
+
+**Example 1.5.1**: Flights
+Ninety percent of flights depart on time. Eighty percent of flights arrive on time. Seventy-five percent of flights depart on time and arrive on time.
+
+1. You are meeting a flight that departed on time. What is the probability that it will arrive on time?
+	- $P(A|D)= \frac{P(A\cap D)}{P(D)} = \frac{0.75}{0.9}$ 
+2. You have met a flight, and it arrived on time. What is the probability that it departed on time?
+	-  $P(D|A)= \frac{P(D\cap A)}{P(A)}=\frac{0.75}{0.8}$
+3. Are the events, departing on time and arriving on time, independent?
+	- No as $P(A\cap D) \neq P(A)*P(D)$ or $P(A|D) \neq P(A)$
+
+>[!Note]
+>**Disjoint vs Independent**
+>Be careful not to confuse "disjoint" with "independent".
+>If $A$ and $B$ are disjoint, then the fact that $A$ occurs tells us that $B$ cannot occur.
+>Therefore, disjoint events are **not** independent; disjoint events are **dependent**!
+
+>[!Theorem]
+>**General Multiplication Rule for Two Events**
+>For _any_ two events $A$ and $B$,
+>$$P(\cap B)=P(A|B)*P(B) \text{ if } P(B)\neq 0$$
+>$$P(\cap B)=P(B|A)*P(A) \text{ if } P(A)\neq 0$$
+
+**Example 1.5.2**: Cards
+The colours of successive cards dealt from the same deck are not independent. Knowing the outcome of the first card dealt changes the probability for the second. A standard 52-card deck contains 26 red cards and 26 black cards. What is the probability that first two cards dealt from the top are both red?
+- $\left( \frac{1}{2} \right) * (\frac{25}{51}) = 0.245$
+
+## Bayes' Theorem
+The general multiplication rules are useful in solving many problems in which the ultimate outcome of an experiment depends on the outcomes of various intermediate stages
+
+**Example 1.6.1** Defective Tablet Screens
+A manufacturer of tablets receives its LED screens from three different suppliers, 60% from supplier $B_{1}$, 30% from supplier $B_{2}$, and 10% from supplier $B_{3}$. Also suppose that 95% of the LED screens from $B_{1}$, 80% of those from $B_{2}$, and 65% of those from $B_{3}$ perform according to specifications. We would like to know the probability that any one LED screen received by the plant will perform according to specifications. Let $A$ be the event that a LED screen received by the plant performs according to specifications, and $B_{1}$, $B_{2}$, and $B_{3}$ be the events that it comes from the respective suppliers.
+
+- $P(A) = P(A \cap(B_{1}\cup B_{2}\cup B_{3}))$
+- $P(A) = P(A\cap B_{1})+P(A\cap B_{2})+P(A\cap B_{3})$
+- $P(A) = P(A|B_{1})*P(B_{1})+P(A|B_{2})*P(B_{2})+P(A|B_{3})*P(B_{3})$
+- $P(A) = (0.95)(0.6)+(0.8)(0.3)+(0.65)(0.1)$
+- $P(A) = 0.875$
+
+This example only had three possibilities at the intermediate stage, but we can extend this idea of summing the product of the branches when there are $n$ mutually exclusive possibilities. Therefore we get the following **rule of total probability**.
+
+>[!Theorem]
+>**Rule of Total Probability**
+>If $B_{1}, B_{2}, \dots, B_{n}$ are mutually exclusive events of which one must occur, then:
+>$$P(A) = \sum^n_{i=1}P(B_{i})P(A|B)$$
+
+**Example 1.6.2**: Defective Tablet Screens, cont.
+Suppose we want to know the probability that a particular LED screen, which is known to perform according to specifications, came from supplier $B_{3}$. Symbolically, we want to know the value of $P(B_{3}|A)$.
+
+>[!Theorem]
+>**Bayes’ Theorem**
+>If $B_{1}, B_{2}, \dots, B_{n}$ are mutually exclusive events of which one must occur, then:
+>$$P(B_{r}|A)=\frac{P(B_{r}\cap A)}{P(A)}=\frac{P(B_{r})P(A|B)}{\sum^n_{i=1}P(B_{i})P(A|B)}$$
+
+**Example 1.6.3**: Identifying Spam
+A first step towards identifying spam is to create a list of words that are more likely to appear in spam than in normal messages. For instance, words like “buy” or the brand name of an enhancement drug are more likely to occur in spam messages than in normal messages. Suppose a specified list of words is available and that your data base of 5000 messages contains 1700 that are spam. Among the spam messages, 1343 contain words in the list. Of the 3300 normal messages, only 297 contain words in the list. Obtain the probability that a message is spam given that the message contains words in the list.
+Define $A$ = \[message contains words in list] (i.e. message is identified as spam),
+$B_{1}$ =\[message is spam], and $B_{2}$ = \[message is normal].
+
+$P(B_{1}|A) = $
+
+$P(B_{1}|A) = 0.8189$
+
