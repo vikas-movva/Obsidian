@@ -1,8 +1,11 @@
 {
-  "cssTheme": "Things",
+  "cssTheme": "Blue Topaz",
   "accentColor": "#6cb2d5",
   "textFontFamily": "",
   "translucency": false,
   "showViewHeader": true,
-  "baseFontSize": 17
+  "baseFontSize": 17,
+  "enabledCssSnippets": [
+    "mermaid"
+  ]
 }
