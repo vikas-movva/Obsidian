@@ -74,7 +74,7 @@ Encryption and decryption are inverse opperations if the same key $K$ is used on
 >Therefore: **The problem of secure communication is reduced to the secure transmission and storage of the key $K$**
 ## Cryptanalysis
 ### Why do we need Cryptanalysis?
-There is no _mathimatical proof_ of security for any practical cipher and the only way to have assurance that a cipher is secure is to try to break it(and possibly fail)
+There is no _mathematical proof_ of security for any practical cipher and the only way to have assurance that a cipher is secure is to try to break it (and possibly fail)
 
 >[!Important]
 >**Kerckhoff's Principal**
