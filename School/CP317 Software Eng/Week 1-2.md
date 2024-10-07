@@ -142,4 +142,13 @@ Used to estimate the effort, cost and development time for a software project wh
 Used to estimate the effort, cost  and development time for a software project which depends on multiple internal or external variables
 
 ## Risk Management
-#todo 
+Risk management is a process that allows individual risk events and overall risks to be understood and managed proactively, optimizing success by minimizing threats and maximizing opportunities
+
+> [!Important]
+> **Risk management steps**
+> For each task, determine the following:
+> 1. Likelihood
+> 2. Severity/impact
+> 3. Consequence
+> 4. Workaround
+
