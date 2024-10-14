@@ -1,0 +1,1 @@
+A group of networks that are connected to each other.

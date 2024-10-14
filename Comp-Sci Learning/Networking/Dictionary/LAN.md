@@ -1,0 +1,1 @@
+A group of devices that are connected to each other to form a network
