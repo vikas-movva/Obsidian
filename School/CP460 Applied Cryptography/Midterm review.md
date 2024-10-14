@@ -29,7 +29,7 @@ $\therefore$ ABCD -> KDWS
 - for modern computers searching through a key-space of $2^{88}$ will take years and therefore not very feasible
 
 **Letter Frequency Analysis Attack (Brute-Force)**
-- In the english language some letters are used more than others. Ex. the letter E is the most used letter followed by T and A.
+- In the English language some letters are used more than others. Ex. the letter E is the most used letter followed by T and A.
 - We can use this property by analyzing which letter appears most often in the ciphertext and replace it with e then pick the second most frequent letter and replace it with T etc.
 - Through this method we can intelligently search through the key space and break the cipher using brute-force methods.
 
