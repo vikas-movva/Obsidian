@@ -46,7 +46,7 @@ $\therefore$ ABCD -> KDWS
 - This cipher is an extension of the shift cipher the only difference is that you multiply $x$ by a variable $a$ before adding the shift $b$ 
 - Equations: 
 	- Encryption: $y = e_{k}(x)\equiv ax+b |26|$
-	- Decryption $x = d_{k}(x) \equiv a^{-1}(y-b) |26|$
+	- Decryption: $x = d_{k}(x) \equiv a^{-1}(y-b) |26|$
 	- ==Remember==: $a^{-1}$ is a number such that $a\times a^{-1} \equiv 1 |m|$
 
 ### Stream Cipher
