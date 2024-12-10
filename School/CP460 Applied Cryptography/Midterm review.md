@@ -7,7 +7,7 @@
 7. RSA  algorithm
 
 ### Definitions
-**Symmetric Cryptography**: Encryption and decryption are inverse opperations if the same key $K$ is used on both sides. EX:$$d_{k}(y)=d_{k}(e_{k}(x))=x$$ This basically means that given the key you can get back the original info.
+**Symmetric Cryptography**: Encryption and decryption are inverse operations if the same key $K$ is used on both sides. EX:$$d_{k}(y)=d_{k}(e_{k}(x))=x$$ This basically means that given the key you can get back the original info.
 
 ### Substitution cipher
 Replace each plaintext letter by another fixed letter.
