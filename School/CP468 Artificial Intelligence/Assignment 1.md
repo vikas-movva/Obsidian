@@ -43,3 +43,57 @@ The agent function maps _entire percept sequences_ to actions, while the agent
 _Example_: A reflex agent program uses only the latest percept, but its agent function’s input includes all prior percepts.
 
 # Problem 3
+**a) Navigation State Space (States 1 to 15)**
+
+The hierarchical decision tree forms a binary tree where each node $k$ branches to $2k$ (left) and $2k+1$ (right). The structure is:
+```mermaid
+graph TD;
+    1 --> 2;
+    1 --> 3;
+    2 --> 4;
+    2 --> 5;
+    3 --> 6;
+    3 --> 7;
+    4 --> 8;
+    4 --> 9;
+    5 --> 10;
+    5 --> 11;
+    6 --> 12;
+    6 --> 13;
+    7 --> 14;
+    7 --> 15;
+```
+
+
+**b) Search Order for Goal State 11**
+
+|**Search Algorithm**|**Order of States Explored**|
+|---|---|
+|**Breadth-First Search (BFS)**|`1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11`|
+|**Depth-Limited Search (DLS)**  <br>(Limit = 3)|`1, 2, 4, 8, 9, 5, 10, 11`|
+|**Iterative Deepening Search (IDS)**|`1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11`|
+
+**Explanation**:
+- **BFS** explores all nodes level by level until reaching state 11.
+- **DLS** (limit 3) performs depth-first search up to depth 3, prioritizing the leftmost path first.
+- **IDS** mimics BFS by incrementally increasing depth limits, resulting in the same final order as BFS.
+
+**c) GBFS vs. A_ Search**
+
+**Heuristic Function**:  
+$$h(k)=\lceil log⁡_{2}11 \rceil - \lceil log⁡_{2}k \rceil=4-\lceil log⁡_{2}k \rceil$$
+**Key Values**:
+$h(1)=4$,$h(2)=3$, $h(3)=2$,$h(5)=1$, $h(11)=0$.
+
+| **Algorithm**                       | **Expansion Order**                              | **Explanation**                                                                                                                                                                        |
+| ----------------------------------- | ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Greedy Best-First Search (GBFS)** | `1, 3, 6, 12, 13, 7, 14, 15, 2, 4, 9, 5, 10, 11` | Prioritizes nodes with the lowest heuristic h(k)h(k), leading to exploration of many low-h(k)h(k) nodes (e.g., 12, 13, 14, 15) before reaching 11.                                     |
+| **A\* Search**                      | `1, 3, 6, 7, 12, 13, 14, 15, 2, 5, 10, 11`       | Balances path cost g(k)g(k) and heuristic h(k)h(k). Expands nodes with lowest f(k)=g(k)+h(k)f(k)=g(k)+h(k), finding the goal faster by prioritizing the path through state 2 → 5 → 11. |
+
+**Comparison**:
+
+- **GBFS** is misled by the heuristic h(k)h(k), exploring irrelevant nodes with h(k)=0h(k)=0 (e.g., 12, 13) before finding the goal.
+- **A*** efficiently combines path cost and heuristic, focusing on the optimal path 1→2→5→111→2→5→11.
+
+> [!IMPORTANT] Key Takeaway 
+> While GBFS relies solely on the heuristic (leading to suboptimal exploration), A\* leverages both path cost and heuristic for a more effective search. However, the heuristic $h(k)=4-\lceil log⁡_{2}k \rceil$ is **not admissible** (overestimates cost for $k=1$), so A\* may not guarantee optimality here.
