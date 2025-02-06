@@ -83,7 +83,7 @@ graph TD;
 **Heuristic Function**:  
 $$h(k)=\lceil log⁡_{2}11 \rceil - \lceil log⁡_{2}k \rceil=4-\lceil log⁡_{2}k \rceil$$
 **Key Values**:
-$h(1)=4$,$h(2)=3$, $h(3)=2$,$h(5)=1$, $h(11)=0$.
+$$h(1)=4, h(2)=3, h(3)=2, h(5)=1, h(11)=0$$
 
 | **Algorithm**                       | **Expansion Order**                              | **Explanation**                                                                                                                                                                        |
 | ----------------------------------- | ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -97,3 +97,54 @@ $h(1)=4$,$h(2)=3$, $h(3)=2$,$h(5)=1$, $h(11)=0$.
 
 > [!IMPORTANT] Key Takeaway 
 > While GBFS relies solely on the heuristic (leading to suboptimal exploration), A\* leverages both path cost and heuristic for a more effective search. However, the heuristic $h(k)=4-\lceil log⁡_{2}k \rceil$ is **not admissible** (overestimates cost for $k=1$), so A\* may not guarantee optimality here.
+
+# Problem 4
+**a) Number of Possible Games**
+Approximately **255,000** possible games of tic-tac-toe exist when accounting for all valid move sequences and early terminations due to wins. This number considers symmetry reduction and excludes invalid continuations after a win.
+
+**b) Game Tree (Depth 2 with Symmetry)**
+The tree starts at the root (empty board) and branches as follows:
+
+- **Depth 1 (X's first move)**:
+    - **Corner (C)**
+    - **Edge (E)**
+    - **Center (M)**
+- **Depth 2 (O's responses)**:
+    - **X in Corner (C)**:
+        - O in Center (C-M): `Eval = -2`
+        - O in Opposite Corner (C-C'): `Eval = 0`
+        - O in Adjacent Edge (C-E): `Eval = +1`
+    - **X in Edge (E)**:
+        - O in Center (E-M): `Eval = -2`
+        - O in Adjacent Corner (E-C): `Eval = -1`
+        - O in Opposite Edge (E-E'): `Eval = 0`
+    - **X in Center (M)**:
+        - O in Corner (M-C): `Eval = 0`
+        - O in Edge (M-E): `Eval = +1`
+
+**c) Evaluations at Depth 2**
+
+|**Position**|**Evaluation**|
+|---|---|
+|X in C → O in Center (C-M)|-2|
+|X in C → O in Corner (C-C')|0|
+|X in C → O in Edge (C-E)|+1|
+|X in E → O in Center (E-M)|-2|
+|X in E → O in Corner (E-C)|-1|
+|X in E → O in Edge (E-E')|0|
+|X in M → O in Corner (M-C)|0|
+|X in M → O in Edge (M-E)|+1|
+
+**d) Minimax Backed-Up Values and Best Move**
+- **Backed-Up Values**:
+    - **X in Corner (C)**: Min(O’s choices) = `-2`
+    - **X in Edge (E)**: Min(O’s choices) = `-2`
+    - **X in Center (M)**: Min(O’s choices) = `0`
+- **Best Starting Move**:  
+    **X in Center (M)** with a backed-up value of **0**, as it maximizes the minimum guaranteed outcome.
+
+> [!IMPORTANT] **Key Takeaways**:
+> - The evaluation function prioritizes creating two-in-a-row threats (`X₂`) while blocking opponent threats (`O₂`).
+> - The **center** is the optimal first move under minimax, balancing offensive and defensive potential.
+> - Symmetry reduction simplifies the game tree significantly, enabling tractable analysis.
+
