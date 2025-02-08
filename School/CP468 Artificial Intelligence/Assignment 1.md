@@ -85,10 +85,10 @@ $$h(k)=\lceil log⁡_{2}11 \rceil - \lceil log⁡_{2}k \rceil=4-\lceil log⁡_{2
 **Key Values**:
 $$h(1)=4, h(2)=3, h(3)=2, h(5)=1, h(11)=0$$
 
-| **Algorithm**                       | **Expansion Order**                              | **Explanation**                                                                                                                                                                        |
-| ----------------------------------- | ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Greedy Best-First Search (GBFS)** | `1, 3, 6, 12, 13, 7, 14, 15, 2, 4, 9, 5, 10, 11` | Prioritizes nodes with the lowest heuristic h(k)h(k), leading to exploration of many low-h(k)h(k) nodes (e.g., 12, 13, 14, 15) before reaching 11.                                     |
-| **A\* Search**                      | `1, 3, 6, 7, 12, 13, 14, 15, 2, 5, 10, 11`       | Balances path cost g(k)g(k) and heuristic h(k)h(k). Expands nodes with lowest f(k)=g(k)+h(k)f(k)=g(k)+h(k), finding the goal faster by prioritizing the path through state 2 → 5 → 11. |
+| **Algorithm**                       | **Expansion Order**                              | **Explanation**                                                                                                                                                        |
+| ----------------------------------- | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Greedy Best-First Search (GBFS)** | `1, 3, 6, 12, 13, 7, 14, 15, 2, 4, 9, 5, 10, 11` | Prioritizes nodes with the lowest heuristic $h(k)$, leading to exploration of many low-$h(k)$ nodes (e.g., 12, 13, 14, 15) before reaching 11.                         |
+| **A\* Search**                      | `1, 3, 6, 7, 12, 13, 14, 15, 2, 5, 10, 11`       | Balances path cost $g(k)$ and heuristic $h(k)$. Expands nodes with lowest $f(k)=g(k)+h(k)$, finding the goal faster by prioritizing the path through state 2 → 5 → 11. |
 
 **Comparison**:
 
@@ -100,7 +100,7 @@ $$h(1)=4, h(2)=3, h(3)=2, h(5)=1, h(11)=0$$
 
 # Problem 4
 **a) Number of Possible Games**
-Approximately **255,000** possible games of tic-tac-toe exist when accounting for all valid move sequences and early terminations due to wins. This number considers symmetry reduction and excludes invalid continuations after a win.
+**255,168** possible games of tic-tac-toe exist when accounting for all valid move sequences and early terminations due to wins. This number considers symmetry reduction and excludes invalid continuations after a win.
 
 **b) Game Tree (Depth 2 with Symmetry)**
 The tree starts at the root (empty board) and branches as follows:
