@@ -1,6 +1,6 @@
 # Detailed Notes on Collective Communication in MPI
 
-## Page 1: Introduction to Collective Communication
+## Introduction to Collective Communication
 - **Collective Communication**: Involves coordination among multiple processes in parallel computing.
 - **Issues with Naive Approaches**:
   1. **Idle Processes**: Lower-ranked processes (1-7) remain idle while proc 0 handles all work.
@@ -13,7 +13,7 @@
 
 ---
 
-## Page 2: Logarithmic Distribution and `Get_data` Modification
+## Logarithmic Distribution and `Get_data` Modification
 - **Logarithmic Scaling**:
   - Generalizes the tree approach: `log_p` stages instead of linear `p` stages.
   - Example: 104 processes ⇒ 10 stages (100x reduction).
@@ -35,7 +35,7 @@
 
 ---
 
-## Page 3: Tree Structure Implementation
+## Tree Structure Implementation
 - **Tree Design**:
   - No canonical structure; depends on system topology (e.g., hypercube, binary tree).
   - Example: Binary tree with `power_of_2` stages.
@@ -56,7 +56,7 @@
 
 ---
 
-## Page 5: MPI Broadcast (`MPI_Bcast`)
+## MPI Broadcast (`MPI_Bcast`)
 - **Definition**:
   - A root process sends identical data to all processes in a communicator.
   - **Parameters**:
@@ -72,7 +72,7 @@
 
 ---
 
-## Page 6: Example Code and Tag Safety
+## Example Code and Tag Safety
 - **Example `Get_data` Implementation**:
   ```c
   void Get_data(int* a_ptr, int* b_ptr, int my_rank) {
@@ -92,7 +92,7 @@
 
 ---
 
-## Pages 7-8: Buffering and Synchronization
+## Buffering and Synchronization
 - **Buffering**:
   - MPI may buffer messages if the receiver is not ready, preventing deadlocks.
   - **Risk**: If buffering is unavailable, `MPI_Send` blocks until the receiver calls `MPI_Recv`.
