@@ -19,7 +19,6 @@ kanban-plugin: board
 - [ ] NFT based card-game
 - [ ] syntax highlighting for english
 - [ ] WebToEpub-Mobile
-- [ ] 2D sekiro
 - [ ] Worldbuilding tool with procedural map generation
 - [ ] Infinite craft like game using Word2Vec
 - [ ] synthetic muscles
@@ -30,6 +29,7 @@ kanban-plugin: board
 
 - [ ] [[Projects/sign2nl/Outline|Sign language to natural language]]
 - [ ] Portfolio
+- [ ] 2D sekiro
 
 
 ## In Development

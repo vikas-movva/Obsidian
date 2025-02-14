@@ -1,5 +1,3 @@
-
-
 ## Introduction to Performance Analysis
 **Aim**: Derive a general formula for the speed-up of parallel programs and analyze barriers to performance.  
 
