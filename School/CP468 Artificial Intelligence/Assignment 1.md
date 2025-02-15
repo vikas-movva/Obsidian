@@ -1,5 +1,8 @@
-# Assignment Part I 
-## Problem 1
+# Part I 
+**Group 13**
+Members:
+Vikas Movva, 190957230 | Samiha Mridha, 169060718 | Adam Menzies, 210886410
+## Problem 1 
 ### **PEAS Descriptions**
 
 |Activity|Performance Measure|Environment|Actuators|Sensors|
@@ -84,8 +87,8 @@ graph TD;
 **Heuristic Function**:  
 $$h(k)=\lceil log⁡_{2}11 \rceil - \lceil log⁡_{2}k \rceil=4-\lceil log⁡_{2}k \rceil$$
 **Key Values**:
-$$h(1)=4, h(2)=3, h(3)=2, h(5)=1, h(11)=0$$
-
+$$h(1)=4, h(2)=3, h(3)=2,$$
+$$h(5)=1, h(11)=0$$
 
 
 | **Algorithm**                       | **Expansion Order**                              | **Explanation**                                                                                                                                                        |
@@ -151,26 +154,27 @@ The tree starts at the root (empty board) and branches as follows:
 > - The **center** is the optimal first move under minimax, balancing offensive and defensive potential.
 > - Symmetry reduction simplifies the game tree significantly, enabling tractable analysis.
 
-# Assignment Part II
+# Part II
 
 ## Task I (8 - Puzzle Heuristic Observations):
  1. **$h_{1}$ (Misplaced Tiles):**
 	 - This heuristic only counts the number of misplaced tiles but ignores how far each tile is from its goal. As a result, it expands more nodes and takes the most steps to find the solution compared to the other heuristics. 
  2. **$h_{2}$ (Manhattan Distance)**:
-	 - Unlike $h_{1}$ , this heuristics takes into account how far each tile has to move, which results in a more informed estimate. This results in it taking less steps and nodes expanded than $h_{1}$
+	 - Unlike $h_{1}$ , this heuristics takes into account how far each tile has to move, which results in a more informed estimate. This results in it taking less steps and nodes expanded than $h_{1}$.
  3. **$h_{3}$**:
-	 - This heuristic is a modified $h_{2}$ by adding a penalty for conflicting tiles that must switch places. This one has a result of the fewest steps to the solution and expands the last number of nodes, making it the most efficient and the best choice. 
+	 - This heuristic is a modified $h_{2}$ by adding a penalty for conflicting tiles that must switch places. This one has a result of the fewest steps to the solution and expands the least number of nodes, making it the most efficient and the best choice. 
  
  >[!Important] Conclusion
-For the 8-puzzle, $h_{3}$ is the most efficient heuristic as it will consistently solve the puzzle faster and with fewer nodes expansions than $h_{1}$ and $h_{2}$ 
+For the 8-puzzle, $h_{3}$ is the most efficient heuristic as it will consistently solve the puzzle faster and with fewer nodes expansions than $h_{1}$ and $h_{2}$ .
 
 ## Task II (15- Puzzle Heuristic Observations):
  1. **$h_{1}$ (Misplaced Tiles)**:
 	 - H1 performs very poorly for this puzzle. Since the 15-puzzle is a lot bigger, this heuristics lack of accurate distance estimation makes A* expand a lot more nodes and results in the average steps and nodes expanded being much higher than $h_{2}$ and $h_{3}$ . 
  2. **$h_{2}$ (Manhattan Distance)**: 
-	 - Since the 15-puzzle requires more moves, an accurate estimate of distance using this heuristic helps reduce unnecessary exploration. The number of nodes expanded is cut by more than half compared to $h_{1}$
+	 - Since the 15-puzzle requires more moves, an accurate estimate of distance using this heuristic helps reduce unnecessary exploration. The number of nodes expanded is cut by more than half compared to $h_{1}$.
  3. **$h_{3}$**:
 	 - Similar to the 8-puzzle, adding conflict penalties allows A* to avoid unnecessary swaps. It reduces steps to the solution and node expansions, making it the best-performing heuristic.
  
  >[!Important] Conclusion
 For the 15-puzzle, $h_{1}$ should be avoided as it will result in a long run time. While h3 stays the most efficient heuristic as it will consistently solve the puzzle faster and with fewer node expansions than $h_{1}$ and $h_{2}$ .
+
