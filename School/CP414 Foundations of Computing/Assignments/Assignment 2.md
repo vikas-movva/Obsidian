@@ -3,19 +3,19 @@
 1. **L1 = the set of all strings that start with 1 or have odd length**
 	1. $1(0|1)^*|0((0|1)(0|1))^*$
 2. **L2 = the set of all strings that start with 0 and have even length** 
-	1. $1(0|1)^*|0((0|1)(0|1))^*$
+	2. $1(0|1)^*|0((0|1)(0|1))^*$
 3. **L3 = the set of all strings that end with 1 and have even length** 
 	1. $(0|1)((0|1)(0|1))^*1$
 4. **L1$\cap$L2** 
-	1. $\emptyset$
+	2. $\emptyset$
 5. **L2$\cup$L3** 
-	2. $0(0|1)((0|1)(0|1))^*|(0|1)((0|1)(0|1))^*1$
+	1. $0(0|1)((0|1)(0|1))^*|(0|1)((0|1)(0|1))^*1$
 6. **L2$\cap$L3** 
-	1. $0((0|1)(0|1))^*1$
+	2. $0((0|1)(0|1))^*1$
 7. **The set of all strings such that every occurrence of 1 is followed by at least two 0s, e.g., 0001000100, 100, 0, 00000000010000000100100 are in this language, but 1011, 1, 101 are not.** 
-	2. $(0|1000^*)^*$
+	1. $(0|1000^*)^*$
 8. **The set of all strings that does not contain pattern 0110.** 
-	1. $(1+0(0+10)^*(\epsilon+1+11))^*(\epsilon+0(0+10)^*(\epsilon+1+11))$
+	2. $(1+0(0+10)^*(\epsilon+1+11))^*(\epsilon+0(0+10)^*(\epsilon+1+11))$
 9. **The set of all strings except 100 and 01.**
 	1. $\epsilon|0|1|00|10|11|000|001|010|011|101|110|111|(0|1)4(0|1)^*$
 
@@ -133,7 +133,7 @@ Since $k = 2$, the regular expression is the label:$$1^* (0|1) (0 1^* (0|1))^*$$
 
 ## Question 3
 **Convert the following regular expressions to NFAs using procedure given in Theorem 1.54. In all parts $\Sigma = \{0,1\}$.**
-1. **$1(110)^* \cup 010$**
+10. **$1(110)^* \cup 010$**
 ```mermaid
 graph LR
     s((s)) -- ε --> qs((qs))
@@ -150,7 +150,7 @@ graph LR
     a1((a1))
     p3((p3))
 ```
-2. **$110^+ \cup (010)^*$**
+11. **$110^+ \cup (010)^*$**
 ```mermaid
 graph LR
     s((s)) -- ε --> q0((q0))
@@ -168,7 +168,7 @@ graph LR
     a1((a1))
     a2((a2))
 ```
-3. **$(1\cup0^*)0^*1^+$**
+12. **$(1\cup0^*)0^*1^+$**
 ```mermaid
 graph LR
     s((s)) -- ε --> q0((q0))
@@ -189,9 +189,9 @@ graph LR
 
 To prove that the language $L = \{10^n10^n \mid n > 0\}$ over the alphabet $\Sigma = \{0,1\}$ is not regular, we use the Pumping Lemma for regular languages. The Pumping Lemma states that if $L$ is regular, there exists a pumping length $p$ such that for any string $w \in L$ with $|w| \geq p$, we can divide $w$ into three parts, $w = xyz$, satisfying:
 
-4. $|y| > 0$,
-5. $|xy| \leq p$,
-6. For all $k \geq 0$, $xy^kz \in L$.
+13. $|y| > 0$,
+14. $|xy| \leq p$,
+15. For all $k \geq 0$, $xy^kz \in L$.
 
 We proceed by contradiction. Assume $L$ is regular, and let $p$ be the pumping length. Choose the string $w = 10^p10^p$, which is in $L$ since it is of the form $10^n10^n$ with $n = p > 0$. The length of $w$ is $|w| = 2p + 2$ (since it has $p$ 0's, a 1, then $p$ 0's, and a 1), and since $p \geq 1$, $|w| \geq p$, satisfying the length condition.
 
@@ -328,5 +328,3 @@ In all cases, for $k \neq 1$, $xy^k z \notin SUB$, violating the Pumping Lemma.
 Since $|xy| \leq p$ restricts $y$ to the first $x$ part, pumping $y$ alters $x$ without adjusting $z$ (or $y$, which remains "0"), breaking the equality $z = x - y$. This contradiction shows that $SUB$ cannot satisfy the Pumping Lemma, so it is not regular.
 
 Thus, $SUB$ is not a regular language.
-
-
