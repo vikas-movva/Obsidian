@@ -1,7 +1,7 @@
 ---
 Notes: "[[01_Introduction.pdf]]"
 ---
- What happens when a program runs? **The CPU**:
+What happens when a program runs? **The CPU**:
  - **fetches** an instruction from memory
  - **decodes** the instruction
  - **executes** the instruction
