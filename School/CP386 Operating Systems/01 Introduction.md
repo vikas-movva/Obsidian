@@ -43,9 +43,9 @@ The OS is a resource manager. The OS allows:
 - Many programs to access devices -> Sharing disks
 
 **System Calls**
-System calls (syscalls) allow the user to tell the OS what to do.
+System calls (`syscalls`) allow the user to tell the OS what to do.
 - The OS provides some interface (API, Standard Lib)
-- A typical OS exports a few hundred syscalls
+- A typical OS exports a few hundred `syscalls`
 	- Run programs
 	- Access memory
 	- Access devices
