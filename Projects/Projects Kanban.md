@@ -7,7 +7,7 @@ kanban-plugin: board
 ## Ideas
 
 - [ ] Shopify purchase alerts for streamers
-- [ ] TTs
+- [ ] TTS
 - [ ] [[Projects/MyGamesList/Outline|MyGamesList]]
 - [ ] Lip reading
 - [ ] Video about metaverse
