@@ -1,34 +1,5 @@
-```mermaid
-stateDiagram-v2
-    direction LR
+For each NFA below:
+(1) start state q1, accepting state q2 
+a b ε -> q1 {q2} {q1, q2} Ø * q2 {q1} Ø Ø (2) start state q1, accepting state q2 a b ε -> q1 Ø Ø {q3} * q2 {q2, q3} {q3} Ø q3 {q3} {q2} {q3} (a) Provide an NFA state transition diagram. (b) Use the construction given in Theorem 1.39 to convert the NFA to an equivalent DFA. Show your work (including ALL intermediate steps).
 
-    %% Defining states
-    state "q_ε (Start)" as q_eps
-    state "q_0" as q0
-    state "q_01" as q01
-    state "q_010" as q010
-    state "q_trap (Reject)" as q_trap
-
-    %% Transitions
-    [*] --> q_eps
-    
-    q_eps --> q_eps : 1
-    q_eps --> q0 : 0
-    
-    q0 --> q0 : 0
-    q0 --> q01 : 1
-    
-    q01 --> q_eps : 1
-    q01 --> q010 : 0
-    
-    q010 --> q01 : 1
-    q010 --> q_trap : 0
-    
-    q_trap --> q_trap : 0, 1
-
-    %% Styling for clarity
-    note right of q_eps : Accepting
-    note right of q0 : Accepting
-    note right of q01 : Accepting
-    note right of q010 : Accepting
-```
+![[Pasted image 20260128221004.png]]
