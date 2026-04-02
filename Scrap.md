@@ -1,86 +1,108 @@
-## SECTION 1: INTRODUCTORY PARAGRAPH
+# Project Outline
+Purpose: To demonstrate your knowledge of the course topics.  
+- Make sure you’re using things learned in the course. You might want to train an LLM from scratch and document it perfectly, but that wouldn’t demonstrate your knowledge of the course!  
 
-**A) Topic.** This essay compares how Socrates, Martin Luther King Jr., and Nelson Mandela each defend **civil disobedience** by appealing to higher principles—testing whose appeals best justify breaking the law in order to serve a superior moral standard. [[Stage Two...and Rubric | Word]](https://lauriercloud-my.sharepoint.com/personal/movv7230_mylaurier_ca/_layouts/15/Doc.aspx?sourcedoc=%7BCEEC32EC-9DCF-42F5-BA7F-E5FD3A199D0A%7D&file=Stage%20Two%20Outline%20Instructions%20and%20Rubric.docx&action=default&mobileredirect=true)
+A detailed rubric is below, but you should include the following components:  
+- Data cleaning using pandas/numpy  
+- Effective visualizations of your data and model results  
+	- I’m expecting approx. 3 plots in EDA, 2-3 for model results.  
+- Feature engineering  
+	- I’m expecting at least 5 features in your data, with at least some being continuous, discrete, and categorical.  
+- Correctly using cross-validation and test sets  
+- Regularization techniques, with appropriate interpretations (especially regarding the bias-variance tradeoff)  
+- Regression and classification (and potentially clustering)  
 
-**B) Primary Sources.** The analysis focuses on Plato’s _Apology_ (Socrates), King’s “Letter from Birmingham Jail,” and Mandela’s “Black Man in a White Man’s Court,” with occasional reference to Mandela’s 1964 Rivonia statement. [[lexundria.com]](https://lexundria.com/plat_apol/38/j), [[africa.upenn.edu]](https://www.africa.upenn.edu/Articles_Gen/Letter_Birmingham.html), [[un.org]](https://www.un.org/en/events/mandeladay/court_statement_1962.shtml), [[un.org]](https://www.un.org/en/events/mandeladay/court_statement_1964.shtml)
+You may continue on your given project with your current group, or you may use different data or a different group!  
 
-**C) Problem.** All three claim that legitimate authority can be limited by “higher law,” but they invoke different standards (divine command, natural law, human dignity, democratic equality). The problem is to evaluate **which thinker most effectively** uses higher principles to justify disobedience rather than mere lawbreaking. [[nlnrac.org]](https://www.nlnrac.org/american/american-civil-rights-movements/primary-source-documents/letter-from-a-birmingham-jail.html)
+Submissions will be ipynb files uploaded to GradeScope. Be sure to include all group members when submitting! 
 
-**D) Thesis.** **King offers the most effective argument** because he (1) defines a clear, general test for law’s legitimacy grounded in **natural law and human dignity**, (2) ties disobedience to **open, loving, and penalty-accepting** action, and (3) shows how such action **heals** the legal order instead of abandoning it. Socrates’ appeal to divine duty is powerful but less publicly shareable, and Mandela’s appeal to equal dignity and justice is compelling yet ultimately permits **sabotage** under extreme conditions, which weakens the universality of his civil-disobedience standard. [[jfklibrary.org]](https://www.jfklibrary.org/sites/default/files/2020-04/Birmingham%20Letter%20Excerpts%20for%20Activity.pdf), [[nlnrac.org]](https://www.nlnrac.org/american/american-civil-rights-movements/primary-source-documents/letter-from-a-birmingham-jail.html), [[studyinghq.com]](https://studyinghq.com/literature/letter-from-birmingham-jail-rhetorical-analysis/), [[un.org]](https://www.un.org/en/events/mandeladay/court_statement_1964.shtml)
+# Rubric  
+As before, 0 means incomplete, 2 is somewhere between 1 and 3, and 4 means above and beyond in some way. This rubric also acts as a suggestion for you to organize your project. You may deviate as necessary.  
+## Introduction  
+- Problem in context  
+	- 1: The introduction assumes the reader is already familiar with the problem  context.  
+	- 3: The introduction provides the necessary context and makes the reader ex-cited to know how you solved the problem.  
+- Clear Goals  
+	-  1: A broad idea of the goals is given.  
+	-  3: Goals are clearly laid out and can be solved with the available data.  
+- Data Description  
+	- 1: All data are shown to the reader instead of taking time to orient the reader.  
+	- 3: Data are described concisely, with emphasis on the important features.  
 
----
+## Exploratory Data Analysis  
+- Use of course concepts  
+	-  1: Only a few data cleaning concepts are used, e.g. just groupby and agg a bunch of times.  
+	- 3: A variety of data cleaning concepts are used effectively, e.g., groupby/agg with custom functions, pivoting, regex, clustering-as-preprocessing, etc.  
+- Correctness of cleaning  
+	- 1: Major errors in cleaning code.  
+	- 3: Code is correct.  
+	- 4: Code is correct and concise.  
+- Visualization Content  
+	- 1: Important visualizations are missed, or irrelevant visualizations are included.  
+	- 3: Visualizations are all relevant to the analysis and each reveal something unique.  
+- Visualization Density  
+	- 1: Visualizations are too sparse or too dense.  
+	- 3: Visualizations contain enough information for the reader to make the same conclusion as you.  
+- Feature Engineering 
+	- 1: Features are all used as-is.  
+	- 3: Appropriate features are constructed from the input data.  
+## Modelling  
+- Feature Selection  
+	- 1: Models are chosen by stepwise regression techniques.  
+	- 3: Features are chosen based on what’s important to the problem, with appropriate regularization.  
+- Model Building  
+	- 1: Basic linear regression is the only model attempted.  
+	- 3: Several models are attempted, and the evaluation of models is based on the context of the problem.  
+- Regression and Classification  
+	- 1: Only linear regression is attempted.  
+	- 3: Both regression and classification are used in appropriate contexts, both contributing to the project goals.  
+- Clustering (Option 1; only one of the three options will be graded)  
+	- 1: Clustering is used.  
+	- 3: Clustering is used effectively and interpreted correctly.  
+- Custom Models (Option 2)  
+	- 1: A non-linear transformation of either 𝑦 or 𝑋 is used  
+	- 3: A custom model, requiring a self-coded gradient descent algorithm, is used. (Similar to Sigmoid Regression on assignment 3, but Sigmoid Regression would not count towards this.)  
+- Advanced Modelling: (Option 3)  
+	- 1: Base implementations of advanced models (such as Random Forests or smoothing splines) are applied.  
+	- 3: Advanced models are explained, used, and interpreted effectively.  
+- Training/Test Set  
+	- 1: Training and test sets are used, but there is significant data leakage (e.g., visualizations or transformations include the test set)  
+	- 3: The training/test split is respected throughout the project.  
+	- 4: The test set is used effectively to compare the final versions of each model.  
+- Cross-Validation  
+	- 1: Cross-validation is used to estimate prediction accuracy.  
+	- 3: CV is used to estimate parameters and decide between models.  
+- Results  
+	- 1: Results are presented.  
+	- 3: More than one evaluation metric is used, and models are compared effectively.  
 
-## SECTION 2: BODY PARAGRAPH 1
+## Conclusions  
+- Relation to Goals  
+	- 1: Conclusions only vaguely relate to the stated goals of the paper, or do not follow from your analysis.  
+	- 3: Conclusions apply to the research goals and follow logically from the results of the analysis.  
+- Exposition  
+	- 1: The conclusions only relate to some of the work shown.  
+	- 3: The conclusions neatly tie up all of the work shown in the notebook.  
+## Miscellaneous  
+- Code Cell Organization  
+	- 1: Code is poorly organized.  
+	- 3: Code is neatly organized into cells based on logical steps in the analysis.  
+- Output  
+	- 1: No thought appears to be given into what output should be shown. Output is clearly for your benefit, not the readers’.  
+	- 3: All code output contributes to the reader’s understanding of your analysis/results.  
+- Markdown Cell Organization  
+	- 1: Conclusions or interpretations are included as comments in code cells.  
+	- 3: Markdown cells are included where appropriate, containing concise explanations or interpretations.  
+- Scrollability  
+	- 1: The reader must scroll through a lot in order to find the important things.  
+	- 3: Everything is concise and the reader can easily find the explanations, interpretations, and results.  
 
-**Supporting claim (Higher principle #1: _Moral Law / Natural Law_).**
+Benefit-of-the-Doubt Marks: Each project will be given 4 marks by default. Marks  
+can be removed for major errors not covered by this rubic, such as not including names  
+or submitting an assignment with errors (or no outputs).  
 
-- **Socrates:** Grounds his defiance in obedience to the **god** and care for the soul—“I shall obey God rather than you”—linking justice to a law **above** the city (Apology **29d**). [[lexundria.com]](https://lexundria.com/plat_apol/29/j)
-- **King:** Distinguishes **just** from **unjust** laws by reference to the **moral law / law of God** and **Aquinas’s natural law**; unjust laws degrade personality and so must be disobeyed (Letter, mid-letter; widely excerpted). [[isi.org]](https://isi.org/an-unjust-law-is-no-law-at-all-excerpts-from-letter-from-birmingham-jail/), [[jfklibrary.org]](https://www.jfklibrary.org/sites/default/files/2020-04/Birmingham%20Letter%20Excerpts%20for%20Activity.pdf)
-- **Mandela:** Challenges apartheid courts by claiming he is **not morally bound** by laws made without the consent of the disenfranchised—an appeal to a **higher standard of legitimacy** (First Court Statement, 1962).  
-    **Argument.** King uses moral/natural law **most effectively** because he offers **publicly accessible criteria** (uplifts vs. degrades human personality) and links them to a disciplined method of civil disobedience; Socrates’ divine-command framing is sincere but **less shareable** in pluralist politics, and Mandela’s legitimacy claim correctly targets injustice but does not, by itself, offer **universal tests** for judging laws. [[un.org]](https://www.un.org/en/events/mandeladay/court_statement_1962.shtml) [[jfklibrary.org]](https://www.jfklibrary.org/sites/default/files/2020-04/Birmingham%20Letter%20Excerpts%20for%20Activity.pdf), [[isi.org]](https://isi.org/an-unjust-law-is-no-law-at-all-excerpts-from-letter-from-birmingham-jail/), [[lexundria.com]](https://lexundria.com/plat_apol/29/j), [[un.org]](https://www.un.org/en/events/mandeladay/court_statement_1962.shtml)
-
-**Supporting primary-text evidence.**
-
-- Socrates: “I shall obey **God** rather than you” (Apology **29d**). [[lexundria.com]](https://lexundria.com/plat_apol/29/j)
-- King: “An unjust law is no law at all… A just law squares with the **moral law** or the **law of God**; an unjust law is not rooted in **eternal** and **natural law**” (Letter, “Just and Unjust Laws” section; educational excerpts). [[jfklibrary.org]](https://www.jfklibrary.org/sites/default/files/2020-04/Birmingham%20Letter%20Excerpts%20for%20Activity.pdf), [[isi.org]](https://isi.org/an-unjust-law-is-no-law-at-all-excerpts-from-letter-from-birmingham-jail/)
-- Mandela: “I consider myself **neither legally nor morally bound** to obey laws made by a parliament in which I have no representation” (1962 statement). [[un.org]](https://www.un.org/en/events/mandeladay/court_statement_1962.shtml)
-
-**Supporting secondary-text evidence.**
-
-- **Mott** reads King’s letter as a carefully reasoned **moral appeal** that integrates Christian theism with classical **natural-law** rhetoric (discussion of King’s rhetorical strategy). _(Digital pagination varies; use article PDF page numbers if assigned edition.)_ [[jstor.org]](https://www.jstor.org/stable/274640)
-- **Brumbaugh** (on Socrates) highlights the philosopher’s self-understood **divine mission** and the tension it creates with Athenian legal authority, clarifying why Socrates subordinates city law to **higher justice**. _(Use your course packet/edition for page numbers.)_ [[famous-trials.com]](https://famous-trials.com/socrates/833-home)
-
----
-
-## SECTION 3: BODY PARAGRAPH 2
-
-**Supporting claim (Higher principle #2: _Human Dignity / Personhood_).**
-
-- **Socrates:** Centers the **care of the soul** and the **examined life** as what gives humans dignity; philosophy serves citizens’ **moral excellence** (Apology **38a**). [[lexundria.com]](https://lexundria.com/plat_apol/38/j)
-- **King:** States that laws are just **only if** they **uplift human personality**; segregation is unjust because it **“distorts the soul and damages the personality.”** This makes dignity the test for obedience. [[jfklibrary.org]](https://www.jfklibrary.org/sites/default/files/2020-04/Birmingham%20Letter%20Excerpts%20for%20Activity.pdf)
-- **Mandela:** Frames apartheid as a systematic violation of **human equality and dignity**—“a black man in a white man’s court”—and insists that genuine “equality before the law” requires **inclusive participation**.  
-    **Argument.** King uses the dignity principle **most effectively** because he makes it an **operational criterion** for judging laws and a **guideline for protest** (nonviolent, open, accepting penalty), whereas Socrates emphasizes inner excellence more than social reform, and Mandela’s dignity appeal is powerful but oriented toward **regime transformation** rather than a stable rule for **civil** disobedience. [[sahistory.org.za]](https://www.sahistory.org.za/archive/black-man-white-court-nelson-mandelas-first-court-statement-1962), [[peaceandjustice.org]](https://peaceandjustice.org/birthday-tribute-nelson-mandelas-five-most-memorable-speeches/) [[jfklibrary.org]](https://www.jfklibrary.org/sites/default/files/2020-04/Birmingham%20Letter%20Excerpts%20for%20Activity.pdf), [[lexundria.com]](https://lexundria.com/plat_apol/38/j), [[sahistory.org.za]](https://www.sahistory.org.za/archive/black-man-white-court-nelson-mandelas-first-court-statement-1962)
-
-**Supporting primary-text evidence.**
-
-- Socrates: “To discourse daily about virtue… the **unexamined life** is not worth living” (Apology **38a**). [[lexundria.com]](https://lexundria.com/plat_apol/38/j)
-- King: “Any law that **uplifts human personality** is just; any law that **degrades** human personality is unjust.” (Letter). [[jfklibrary.org]](https://www.jfklibrary.org/sites/default/files/2020-04/Birmingham%20Letter%20Excerpts%20for%20Activity.pdf)
-- Mandela: On courtroom inequality and **dignity** under apartheid (1962 statement excerpts). [[sahistory.org.za]](https://www.sahistory.org.za/archive/black-man-white-court-nelson-mandelas-first-court-statement-1962)
-
-**Supporting secondary-text evidence.**
-
-- **Mott** emphasizes how King fuses **ethos, logos, and pathos** to articulate dignity as a **measurable moral standard**, strengthening his justification for civil disobedience. _(Cite course PDF page.)_ [[jstor.org]](https://www.jstor.org/stable/274640)
-- **Nash** interprets Mandela’s democratic thought as rooted in a vision of **equal participation** and **collective dignity**, illuminating why Mandela challenges the court’s legitimacy (Monthly Review). _(Online article—use paragraph numbers or PDF pages if provided.)_ [[monthlyreview.org]](https://monthlyreview.org/articles/mandelas-democracy/)
-
----
-
-## SECTION 4: BODY PARAGRAPH 3
-
-**Supporting claim (Higher principle #3: _Civic Responsibility / Duty to Justice_).**
-
-- **Socrates:** Claims a duty to continue **questioning** for the city’s good even at the cost of death; he accepts the court’s **penalty**, modeling fidelity to justice over self-preservation (Apology **29d**, **38a–b**). [[lexundria.com]](https://lexundria.com/plat_apol/29/j), [[lexundria.com]](https://lexundria.com/plat_apol/38/j)
-- **King:** Insists that one who breaks an unjust law must do so **openly, lovingly, and with willingness to accept the penalty**—linking duty to justice with **respect for law** as an ideal. [[jfklibrary.org]](https://www.jfklibrary.org/sites/default/files/2020-04/Birmingham%20Letter%20Excerpts%20for%20Activity.pdf)
-- **Mandela:** Argues a duty to resist injustice; by 1964 he justifies **sabotage** as a last resort after peaceful avenues closed, accepting the risk of **imprisonment or death** for the ideal of a **democratic and free society**.  
-    **Argument.** King again uses this principle **most effectively** because he **institutionalizes** civic responsibility: civil disobedience aims to **restore** justice to the legal order through disciplined nonviolence and penalty-acceptance. Socrates’ stance is exemplary but anchored in a **religious vocation**; Mandela’s stance is morally serious yet **expands** beyond civil disobedience into justified violence, which complicates its applicability as a **general civic** model. [[un.org]](https://www.un.org/en/events/mandeladay/court_statement_1964.shtml) [[jfklibrary.org]](https://www.jfklibrary.org/sites/default/files/2020-04/Birmingham%20Letter%20Excerpts%20for%20Activity.pdf), [[lexundria.com]](https://lexundria.com/plat_apol/29/j), [[un.org]](https://www.un.org/en/events/mandeladay/court_statement_1964.shtml)
-
-**Supporting primary-text evidence.**
-
-- Socrates: refuses to stop philosophizing and accepts condemnation (Apology **29d**, **38a–e**). [[lexundria.com]](https://lexundria.com/plat_apol/29/j), [[lexundria.com]](https://lexundria.com/plat_apol/38/j)
-- King: “One who breaks an unjust law must do it **openly, lovingly**, and be willing to **accept the penalty**” (Letter). [[jfklibrary.org]](https://www.jfklibrary.org/sites/default/files/2020-04/Birmingham%20Letter%20Excerpts%20for%20Activity.pdf)
-- Mandela: “I have cherished the ideal of a **democratic and free society**… it is an ideal for which **I am prepared to die**” (Rivonia statement, 1964). [[un.org]](https://www.un.org/en/events/mandeladay/court_statement_1964.shtml)
-
-**Supporting secondary-text evidence.**
-
-- **Brumbaugh** underlines Socrates’ **public service** ethos—the “gadfly” as a civic role—clarifying why accepting the penalty fits his duty to the polis. _(Use your assigned edition for page numbers.)_ [[famous-trials.com]](https://famous-trials.com/socrates/833-home)
-- **Nash** shows Mandela’s duty framed by a **democratic ideal** requiring inclusive sovereignty; this clarifies why, after legal avenues failed, he accepted severe punishment for resistance. _(Online article—record paragraph/page as available.)_ [[monthlyrev...chives.org]](https://monthlyreviewarchives.org/index.php/mr/article/view/MR-050-11-1999-04_2)
-
----
-
-### Notes on Citations (for your template submission)
-
-- **Plato’s _Apology_** is cited by **Stephanus numbers** (e.g., 29d, 38a), which are standard across editions. [[aithor.com]](https://aithor.com/blog/how-to-cite-platos-apology)
-- **King’s Letter** appears in multiple formats; include **paragraph or page numbers** from your assigned copy (the quoted sections appear in standard educational excerpts). [[jfklibrary.org]](https://www.jfklibrary.org/sites/default/files/2020-04/Birmingham%20Letter%20Excerpts%20for%20Activity.pdf), [[africa.upenn.edu]](https://www.africa.upenn.edu/Articles_Gen/Letter_Birmingham.html)
-- **Mandela’s 1962/1964 statements** are available via the **UN** and **SA History Online** archives; include section or paragraph numbers where provided. [[un.org]](https://www.un.org/en/events/mandeladay/court_statement_1962.shtml), [[un.org]](https://www.un.org/en/events/mandeladay/court_statement_1964.shtml)
-- For **Brumbaugh, Mott, and Nash**, use the page numbers from the exact versions assigned in your course pack or library access (JSTOR/Monthly Review). [[jstor.org]](https://www.jstor.org/stable/274640), [[monthlyrev...chives.org]](https://monthlyreviewarchives.org/index.php/mr/article/view/MR-050-11-1999-04_2), [[monthlyreview.org]](https://monthlyreview.org/articles/mandelas-democracy/)
-
-If you want, I can drop this directly into your **Stage Two Template** boxes and adapt the in-text references to the exact pagination of your assigned editions.
+## Bonus Marks  
+- 3 marks: Notebook is hosted publicly on GitHub, GitLab, Bitbucket, etc., with a commit history documenting the contributions of each team member over time.  
+	- Be careful not to include personal information - such as student numbers - in the version hosted publicly. Your GradeScope submission should have this information, but not the version on GitHub.  
+	- You can only get these marks if each group member contributed throughout the project. One member uploading the final notebook does not count. I check the commit history, including timing and content!  
+- Up to 4 marks can be added for extra creativity in the modelling approaches.
