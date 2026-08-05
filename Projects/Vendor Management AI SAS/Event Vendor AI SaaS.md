@@ -3,7 +3,6 @@ title: "Project Pitch: Event Vendor Communication AI SaaS"
 date: 2026-08-05
 tags: #startup #SaaS #AI #wedding-tech #product-pitch #B2B
 ---
-
 # Project Pitch: Event Vendor Communication AI SaaS
 
 > [!summary] Executive Summary
@@ -40,7 +39,7 @@ A centralized dashboard for the planner to oversee all logistics.
 - **Master Interactive Timeline:** Dynamic timeline highlighting vendor conflicts.
 
 ### C. Vendor View (Magic Link Portal)
-A **no-login required** view for vendors to guarantee adoption.
+A **no-login-required** view for vendors to guarantee adoption.
 - **Single Event Snapshot:** A clean, mobile-first view of only *their* responsibilities.
 - **One-Click Uploads:** Simple buttons to submit missing COIs, final invoices, or menus.
 - **Instant Confirmation Toggle:** One-click confirmation of arrival times without needing to type an email reply.
