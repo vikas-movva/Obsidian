@@ -84,3 +84,5 @@ Every time a planner adopts our platform, 10-15 vendors interact with our zero-f
 > [!warning] Key Risks to Mitigate
 > - **Email Forwarding Friction:** The onboarding OAuth connection (Gmail/Outlook) must be flawless.
 > - **Multi-Event Mapping:** The AI must accurately disambiguate when a popular vendor (e.g., a high-end florist) is emailing about multiple weddings simultaneously.
+
+
