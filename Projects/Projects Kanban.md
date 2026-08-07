@@ -6,6 +6,9 @@ kanban-plugin: board
 
 ## Ideas
 
+- [ ] 2D sekiro
+- [ ] Portfolio
+- [ ] [[Projects/sign2nl/Outline|Sign language to natural language]]
 - [ ] Shopify purchase alerts for streamers
 - [ ] TTS
 - [ ] [[Projects/MyGamesList/Outline|MyGamesList]]
@@ -27,9 +30,6 @@ kanban-plugin: board
 
 ## Planning
 
-- [ ] [[Projects/sign2nl/Outline|Sign language to natural language]]
-- [ ] Portfolio
-- [ ] 2D sekiro
 
 
 ## In Development
