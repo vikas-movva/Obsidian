@@ -1,3 +1,6 @@
+/* === Mermaid Diagram Styling for Blue Topaz Theme === */
+
+/* Container sizing */
 .mermaid svg {
   max-width: 100%;
   height: auto;
@@ -5,9 +8,103 @@
 
 .mermaid {
   overflow: scroll;
-  fill: black;
 }
 
 .mermaid:hover svg {
   max-width: 250%;
+}
+
+/* === Dark mode: dark background, light text === */
+.theme-dark .mermaid {
+  /* Node text color — slightly brighter than --text-normal for readability */
+  --mermaid-node-text-color: #e0e0e0;
+  --mermaid-edge-label-color: #c6c6c6;
+  --mermaid-node-bg-color: #2f2f2f;
+  --mermaid-node-border-color: #6cb2d5;
+  --mermaid-title-color: #e0e0e0;
+}
+
+/* === Light mode: light background, dark text === */
+.theme-light .mermaid {
+  --mermaid-node-text-color: #1a1a1a;
+  --mermaid-edge-label-color: #333333;
+  --mermaid-node-bg-color: #f5f5f5;
+  --mermaid-node-border-color: #4a90c2;
+  --mermaid-title-color: #1a1a1a;
+}
+
+/* === Apply text colors to Mermaid elements === */
+
+/* Node labels (inside rectangles, rounded rectangles, etc.) */
+.theme-dark .mermaid .nodeLabel,
+.theme-dark .mermaid .node .label,
+.theme-dark .mermaid .edgeLabel {
+  color: #e0e0e0 !important;
+}
+
+.theme-light .mermaid .nodeLabel,
+.theme-light .mermaid .node .label,
+.theme-light .mermaid .edgeLabel {
+  color: #1a1a1a !important;
+}
+
+/* Edge labels (on arrows/connections) */
+.theme-dark .mermaid .edgeLabel {
+  color: #c6c6c6 !important;
+  background-color: #202020 !important;
+}
+
+.theme-light .mermaid .edgeLabel {
+  color: #333333 !important;
+  background-color: #ffffff !important;
+}
+
+/* Subgraph titles */
+.theme-dark .mermaid .cluster-label,
+.theme-dark .mermaid .cluster rect {
+  color: #e0e0e0 !important;
+}
+
+.theme-light .mermaid .cluster-label,
+.theme-light .mermaid .cluster rect {
+  color: #1a1a1a !important;
+}
+
+/* Flowchart node fill — subtle dark/light background instead of transparent */
+.theme-dark .mermaid .node rect,
+.theme-dark .mermaid .node circle,
+.theme-dark .mermaid .node ellipse,
+.theme-dark .mermaid .node polygon {
+  fill: #2a2a2a !important;
+  stroke: #6cb2d5 !important;
+}
+
+.theme-light .mermaid .node rect,
+.theme-light .mermaid .node circle,
+.theme-light .mermaid .node ellipse,
+.theme-light .mermaid .node polygon {
+  fill: #f5f5f5 !important;
+  stroke: #4a90c2 !important;
+}
+
+/* Arrow/edge lines */
+.theme-dark .mermaid .edgePaths path,
+.theme-dark .mermaid .flowchart-link {
+  stroke: #8a8a8a !important;
+}
+
+.theme-light .mermaid .edgePaths path,
+.theme-light .mermaid .flowchart-link {
+  stroke: #666666 !important;
+}
+
+/* Arrowheads */
+.theme-dark .mermaid .marker {
+  fill: #8a8a8a !important;
+  stroke: #8a8a8a !important;
+}
+
+.theme-light .mermaid .marker {
+  fill: #666666 !important;
+  stroke: #666666 !important;
 }

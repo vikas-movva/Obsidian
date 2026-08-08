@@ -1,6 +1,6 @@
 ---
 
-kanban-plugin: basic
+kanban-plugin: board
 
 ---
 
@@ -8,7 +8,6 @@ kanban-plugin: basic
 
 - [ ] Finish Coursera Course: Supervised Machine Learning: Regression and Classification
 - [ ] Learn python data science/ ml libraries (numpy, pandas, mathplotlib, seaborn, scikitlearn, scipy)
-- [ ] Finish Portfolio Website
 - [ ] Learn gRPC
 
 
@@ -24,11 +23,12 @@ kanban-plugin: basic
 
 ## In Progress
 
-- [ ] fast.ai course
+- [ ] Finish Portfolio Website
 
 
 ## Completed
 
+- [ ] fast.ai course
 
 
 ***
@@ -71,6 +71,6 @@ kanban-plugin: basic
 
 %% kanban:settings
 ```
-{"kanban-plugin":"basic"}
+{"kanban-plugin":"board"}
 ```
 %%
