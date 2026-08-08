@@ -12,12 +12,21 @@ A real-time credit card fraud detection pipeline built from scratch. Synthetic t
 
 **Pipeline at a glance:**
 
-```
-Transaction Generator → Kafka (3 brokers) → Spark Streaming → {Cassandra, PostgreSQL}
-                                                                ↓
-                                          Metrics Exporter ← Postgres
-                                                                ↓
-                                                     Prometheus → Grafana
+```mermaid
+flowchart TD
+    A["Transaction Generator<br/>Python + kafka-python<br/>~100 tx/sec, 10% fraud"]
+    B["Apache Kafka<br/>3-Broker Cluster<br/>3 partitions, RF=3"]
+    C["Spark Structured Streaming<br/>foreachBatch, local&#91;2&#93;<br/>Fraud rules engine"]
+    D["Cassandra 4.1<br/>Fraud alerts only<br/>Low-latency lookups"]
+    E["PostgreSQL 16<br/>All results + alerts audit<br/>Full audit trail"]
+    F["Metrics Exporter<br/>Python, polls every 10s<br/>9 business KPIs on :9100"]
+    G["Prometheus<br/>Scrapes :9100 every 10s"]
+    H["Grafana<br/>10-panel dashboard<br/>auto-refresh 10s"]
+
+    A --> B --> C
+    C --> D
+    C --> E
+    E --> F --> G --> H
 ```
 
 ---
@@ -56,6 +65,38 @@ docker exec fraud-kafka-1 /usr/bin/kafka-topics \
 
 3 partitions means up to 3 concurrent Spark consumers. RF=3 means any single broker can fail without data loss.
 
+```mermaid
+flowchart TD
+    Z["Zookeeper<br/>:2181"]
+    K1["kafka-1<br/>:29092 / :9092<br/>Broker ID = 1"]
+    K2["kafka-2<br/>:29093 / :9093<br/>Broker ID = 2"]
+    K3["kafka-3<br/>:29094 / :9094<br/>Broker ID = 3"]
+    UI["kafka-ui<br/>:8080<br/>Web UI"]
+
+    Z --> K1
+    Z --> K2
+    Z --> K3
+    K1 --> UI
+    K2 --> UI
+    K3 --> UI
+
+    subgraph "transactions topic"
+        P1["Partition 0<br/>RF=3"]
+        P2["Partition 1<br/>RF=3"]
+        P3["Partition 2<br/>RF=3"]
+    end
+
+    K1 --> P1
+    K1 --> P2
+    K1 --> P3
+    K2 --> P1
+    K2 --> P2
+    K2 --> P3
+    K3 --> P1
+    K3 --> P2
+    K3 --> P3
+```
+
 ---
 
 ## Step 2 — Transaction Producer (Python)
@@ -81,6 +122,19 @@ A Python script using `kafka-python` that generates synthetic credit card transa
 **Fraud injection:**
 
 The producer cycles through 4 fraud types when `--fraud-rate` is set:
+
+```mermaid
+flowchart LR
+    P["Transaction Producer<br/>--fraud-rate 0.1<br/>10% of transactions"]
+    P -->|"random.random() < fraud_rate"| F["Inject Fraud"]
+    P -->|otherwise| N["Normal transaction"]
+    F --> T["random.choice(fraud_types)"]
+
+    T --> H["HIGH_AMOUNT<br/>amount $5,000–$15,000"]
+    T --> O["OFFLINE_HIGH<br/>offline merchant<br/>amount $2,000–$8,000"]
+    T --> G["GEO_IMPOSSIBILITY<br/>far city jump"]
+    T --> V["VELOCITY<br/>rapid-fire same card"]
+```
 
 - **HIGH_AMOUNT** — amount is forced to $5,000–$15,000
 - **OFFLINE_HIGH** — offline merchant, amount $2,000–$8,000
@@ -119,6 +173,30 @@ This produces 100 tx/sec across 50 cards with 10% injected fraud. Messages are k
 File: `spark/jobs/fraud_detection.py`
 
 The core of the pipeline. A PySpark Structured Streaming job that reads from Kafka, applies fraud detection rules, and writes results to dual sinks.
+
+```mermaid
+flowchart TD
+    K["Kafka<br/>transactions topic"]
+    R["readStream<br/>from_json + to_timestamp"]
+
+    Q1["Query 1: Per-row rules<br/>HIGH_AMOUNT + OFFLINE_HIGH<br/>outputMode: append"]
+    Q2["Query 2: Windowed aggregation<br/>VELOCITY<br/>window 60s, watermark 120s"]
+
+    FB["foreachBatch<br/>write_batch_to_sinks"]
+
+    PG["PostgreSQL<br/>fraud_detection_results<br/>(all transactions)"]
+    CA["Cassandra<br/>fraud_alerts<br/>(alert rows only)"]
+    PA["PostgreSQL<br/>fraud_alerts_audit<br/>(alert rows only)"]
+
+    K --> R
+    R --> Q1
+    R --> Q2
+    Q1 -->|trigger: 10s| FB
+    Q2 -->|trigger: 10s| FB
+    FB --> PG
+    FB --> CA
+    FB --> PA
+```
 
 ### 3a — Reading from Kafka
 
@@ -172,10 +250,20 @@ per_row_enriched = (transactions
 | VELOCITY | 25 pts | +5 pts per tx above 5 in window | 100 pts |
 
 Scores are composited and capped at 100. Severity is bucketed:
-- LOW: 0–30
-- MEDIUM: 30–50
-- HIGH: 50–70
-- CRITICAL: 70+
+
+```mermaid
+flowchart LR
+    R["Risk Score<br/>0–100"]
+    R -->|0–30| L["LOW"]
+    R -->|30–50| M["MEDIUM"]
+    R -->|50–70| H["HIGH"]
+    R -->|70+| C["CRITICAL"]
+
+    style L fill:#4CAF50,color:#fff
+    style M fill:#FF9800,color:#fff
+    style H fill:#f44336,color:#fff
+    style C fill:#b71c1c,color:#fff
+```
 
 ### 3c — Velocity Detection (Windowed Aggregation)
 
@@ -337,6 +425,20 @@ CREATE TABLE fraud_alerts_audit (
 
 **Dual-sink architecture:**
 
+```mermaid
+flowchart LR
+    S["Spark foreachBatch<br/>Each micro-batch"]
+    A["All transactions<br/>fraud + clean"]
+    B["Fraud alerts only"]
+
+    S --> A
+    S --> B
+
+    A -->|JDBC write| P["PostgreSQL<br/>fraud_detection_results<br/>Full audit trail"]
+    B -->|Python driver| C["Cassandra<br/>fraud_alerts<br/>Low-latency lookups"]
+    B -->|JDBC write| PA["PostgreSQL<br/>fraud_alerts_audit<br/>Mirrors Cassandra"]
+```
+
 | Sink | What it stores | Why |
 |------|---------------|-----|
 | Cassandra | Fraud alerts only | Low-latency card-level lookups |
@@ -353,14 +455,18 @@ This is what makes the Grafana dashboard work. Instead of relying on JMX exporte
 
 **Architecture:**
 
-```
-PostgreSQL ← (query every 10s) ← Metrics Exporter (:9100)
-                                        ↓
-                                  /metrics endpoint
-                                        ↓
-                                  Prometheus scrapes
-                                        ↓
-                                  Grafana dashboard
+```mermaid
+flowchart TD
+    E["PostgreSQL<br/>fraud_detection_results<br/>fraud_alerts_audit"]
+    F["Metrics Exporter<br/>Python HTTP server on :9100<br/>Background thread polls every 10s"]
+    M["/metrics endpoint<br/>Prometheus exposition format"]
+    P["Prometheus<br/>Scrapes :9100 every 10s"]
+    G["Grafana<br/>10-panel dashboard"]
+
+    E -->|SQL query| F
+    F -->|serves| M
+    M -->|scrape| P
+    P -->|datasource| G
 ```
 
 **9 exposed metrics:**
