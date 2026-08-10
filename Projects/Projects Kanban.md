@@ -7,7 +7,6 @@ kanban-plugin: board
 ## Ideas
 
 - [ ] 2D sekiro
-- [ ] Portfolio
 - [ ] [[Projects/sign2nl/Outline|Sign language to natural language]]
 - [ ] Shopify purchase alerts for streamers
 - [ ] TTS
@@ -22,7 +21,6 @@ kanban-plugin: board
 - [ ] NFT based card-game
 - [ ] syntax highlighting for english
 - [ ] WebToEpub-Mobile
-- [ ] Worldbuilding tool with procedural map generation
 - [ ] Infinite craft like game using Word2Vec
 - [ ] synthetic muscles
 - [ ] LLM RAG on wikia
@@ -30,6 +28,7 @@ kanban-plugin: board
 
 ## Planning
 
+- [ ] [[worldgen]]
 
 
 ## In Development
@@ -38,11 +37,12 @@ kanban-plugin: board
 
 ## Deployed
 
+- [ ] [[Rust-NES Kanban| Rust-NES]]
+- [ ] Portfolio
 
 
 ## Haitus
 
-- [ ] [[Rust-NES Kanban| Rust-NES]]
 
 
 

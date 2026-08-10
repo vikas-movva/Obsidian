@@ -62,7 +62,9 @@
       "style": "Title Case",
       "ignore-case-words": true,
       "ignore-words": "macOS, iOS, iPhone, iPad, JavaScript, TypeScript, AppleScript",
-      "lowercase-words": "via, a, an, the, and, or, but, for, nor, so, yet, at, by, in, of, on, to, up, as, is, if, it, for, to, with, without, into, onto, per"
+      "lowercase-words": "via, a, an, the, and, or, but, for, nor, so, yet, at, by, in, of, on, to, up, as, is, if, it, for, to, with, without, into, onto, per",
+      "starting-word-ignore-characters": "'\"(‘“-",
+      "ending-word-ignore-characters": ".?!,:;'\")”’0123456789-"
     },
     "file-name-heading": {
       "enabled": false
@@ -75,7 +77,8 @@
       "enabled": false
     },
     "move-footnotes-to-the-bottom": {
-      "enabled": false
+      "enabled": false,
+      "include-blank-line-between-footnotes": false
     },
     "re-index-footnotes": {
       "enabled": false
@@ -285,9 +288,13 @@
   "lintOnSave": true,
   "recordLintOnSaveLogs": false,
   "displayChanged": true,
+  "suppressMessageWhenNoChange": false,
+  "suppressLintAllFilesConfirmationModal": false,
+  "suppressLintAllFilesInFolderConfirmationModal": false,
   "lintOnFileChange": false,
   "displayLintOnFileChangeNotice": false,
   "settingsConvertedToConfigKeyValues": true,
+  "additionalFileExtensions": [],
   "foldersToIgnore": [],
   "filesToIgnore": [],
   "linterLocale": "system-default",
