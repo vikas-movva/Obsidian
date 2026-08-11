@@ -28,11 +28,11 @@ kanban-plugin: board
 
 ## Planning
 
-- [ ] [[worldgen]]
 
 
 ## In Development
 
+- [ ] [[worldgen]]
 
 
 ## Deployed

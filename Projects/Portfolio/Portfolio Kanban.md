@@ -11,6 +11,7 @@ kanban-plugin: board
 - [ ] fix timeline line
 - [ ] move date for professional timeline beside dot
 - [ ] Fix contact form in production
+	. Problem not encountered on Chromium browsers. only firefox for now
 
 
 ## Planning
