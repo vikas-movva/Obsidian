@@ -32,10 +32,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout notes vault (this repo, default cwd)
+      - name: Checkout notes vault (this repo) into a clean subdir
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          path: vault
 
       - name: Checkout Quartz framework
         uses: actions/checkout@v4
@@ -66,7 +67,8 @@ jobs:
             --exclude='.git' \
             --exclude='netlify.toml' \
             --exclude='private' \
-            "${{ github.workspace }}/" content/
+            --exclude='node_modules' \
+            "${{ github.workspace }}/vault/" content/
           echo "Copied $(find content -name '*.md' | wc -l) markdown files"
 
       - name: Build Quartz site
