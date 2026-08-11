@@ -6,12 +6,7 @@ kanban-plugin: board
 
 ## #todo
 
-- [ ] add read more button for project cards
-- [ ] expand skills under project cards
-- [ ] fix timeline line
-- [ ] move date for professional timeline beside dot
-- [ ] Fix the contact form error on Firefox for now
-- [ ] Fix contact form not sending email after successful submission
+- [ ] Remove ouline when clicking show more in project cards
 
 
 ## Planning
@@ -25,9 +20,18 @@ kanban-plugin: board
 ## Completed
 
 **Complete**
+- [x] add read more button for project cards
+- [x] fix timeline line
+- [x] move date for professional timeline beside dot
+- [x] Fix the contact form error on Firefox for now
+- [x] Fix contact form not sending email after successful submission
 
 
+***
 
+## Archive
+
+- [x] expand skills under project cards
 
 %% kanban:settings
 ```
