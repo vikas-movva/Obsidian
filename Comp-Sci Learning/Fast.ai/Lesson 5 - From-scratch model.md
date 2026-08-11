@@ -7,18 +7,12 @@ Web page: https://course.fast.ai/Lessons/lesson5.html
 Video: https://www.youtube.com/watch?v=_rXzeWq4C6w
 ---
 ## Video Notes
-```timestamp-url 
- https://www.youtube.com/watch?v=_rXzeWq4C6w
- ```
 ### Creating a tabular model from scratch
 
 #### Dataset and objective
 The dataset used for this model is the [titanic passengers dataset](<file:///B:\Obsidian\ML-Journey\Fast.ai\Resources\titanic_train.csv>).
 The objective is to create a classifier to classify if a given passenger has survived or not.
 
-```timestamp 
- 01:59
- ```
 #### Linear model and NN from scratch
 Import pytorch, numpy and pandas
 ```python
@@ -27,9 +21,6 @@ from pathlib import Path
 path = Path('../Resources')
 ```
 
-```timestamp 
- 07:30
- ```
 ##### Clean the data
 ```python
 df = pd.read_csv(path/'titanic_train.csv')
@@ -106,12 +97,10 @@ t_indep.shape()
 ```
 `torch.Size([891, 12])`
 
-From the shape we can see that `t_indep` has 891 rows and 12 columns
-
-
+From the shape, we can see that `t_indep` has 891 rows and 12 columns
 
 ##### Setting up a linear model
-Now that the data is cleaned the next step is to create a linear model.
+Now that the data is cleaned, the next step is to create a linear model.
 ```python
 torch.manual_seed(442) #just for this example for reproducibility
 
@@ -136,13 +125,13 @@ tensor([[-10.1838,   0.1386,   0.0000,  -0.4772,  -0.2632,  -0.0000,   0.0000,  
         [-14.8128,   0.0000,   0.0000,  -0.4905,  -0.2632,  -0.0000,   0.0000,   0.0000,   0.2799,  -0.0000,   0.2103,   0.0000]])
 ```
 
-From the above output we can see that the first value in every row has a much higher value than the rest of the values. If you look back at the data you can see that this column is the age column. While this may not be a big problem it is not ideal and can be fixed by simply dividing all the values in the column with whatever the max value is. 
+From the above output, we can see that the first value in every row has a much higher value than the rest of the values. If you look back at the data, you can see that this column is the age column. While this may not be a big problem, it is not ideal and can be fixed by simply dividing all the values in the column by whatever the max value is. 
 ```python
 vals, indices = t_indep.max(dim=0) # dim=0 is specifying which column to get the max of 
 t_indep = t_indep / vals
 ```
 
-Now lets take another look
+Now let's take another look
 ```python
 t_indep*coeffs
 ```
@@ -157,7 +146,7 @@ tensor([[-0.1273,  0.0173,  0.0000, -0.0765, -0.2632, -0.0000,  0.0000,  0.0000,
 ```
 The values are now pretty similar
 
-Next we get the predictions:
+Next, we get the predictions:
 ```python
 preds = (t_indep*coeffs).sum(axis=1)
 preds[:10]
@@ -175,9 +164,6 @@ loss
 tensor(0.5382)
 ```
 
-```timestamp 
- 38:48
- ```
 Now that all the steps have been tested lets refactor and turn them into functions.
 ```python
 def calc_preds(coeffs, indeps): 
@@ -188,11 +174,7 @@ def calc_loss(coeffs, indeps, deps):
 ```
 
 ##### Doing a gradient descent step
-```timestamp 
- 39:39
- ```
 The following is an example of one epoch of gradient descent manually
-
 Track the gradient. 
 ```python
 coeffs.requires_grad_()
@@ -300,10 +282,5 @@ show_coeffs()
 ```
 
 ##### Measuring accuracy
-
-
-
-
-
 
 ## Textbook notes 
