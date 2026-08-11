@@ -11,7 +11,6 @@ on:
       - ".obsidian/**"
       - "private/**"
       - "netlify.toml"
-      - ".github/**"
       - "README.md"
   workflow_dispatch:
 
