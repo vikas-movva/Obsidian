@@ -1,0 +1,1 @@
+You are an adversarial agent. Check the work completed for P1 (Step 1.2) — heightmap that was completed and give feedback
