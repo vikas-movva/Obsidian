@@ -7,22 +7,14 @@ Web page: https://course.fast.ai/Lessons/lesson3.html
 Video: https://www.youtube.com/watch?v=hBBOjCiFcuo
 ---
 ## Video Notes
-
-
-```timestamp 
- 12:34
- ```
 ### Make a better pet detector
-The pet detector used in [[Lesson 2 - Deployment]] finetunes the ==Resnet18== model to classify images. You can increase the performance by finetuning a different model such as a ==convnext== model.
+The pet detector used in [[Lesson 2 - Deployment]] Fine-tunes the ==ResNet18== model to classify images. You can increase the performance by fine-tuning a different model, such as a ConvNeXt model.
 
-```timestamp 
- 20:40
- ```
 ### What is in the model
-The `export.pkl` file you get through the `export` function gives saves a `Learner` object to your disk.
+The `export.pkl` file you get through the `export` function saves a `Learner` object to your disk.
 
 The `Learner` object has two main things inside of it.
-1. The list of pre-proccessing steps done in order to turn your images into the model
+1. The list of pre-processing steps done in order to turn your images into the model
 	- `Dataloaders`, `Datablocks`
 2. The parameters
 	- The model weights 
@@ -74,15 +66,10 @@ At the most basic level deep learning is just a bunch of activation functions st
 According to a paper from [MIT](https://arxiv.org/abs/1901.10002) there are six types of biases in machine learning.
 
 - Historical bias
-	- comes from the fact that people are biased, processes are biased, and society is biased 
-	- it is a fundamental, structural issue with the first step of the data generation process
-	- 
+	- Comes from the fact that people are biased, processes are biased, and society is biased 
+	- It is a fundamental, structural issue with the first step of the data generation process
 - Representation bias
 - Measurement bias
 - Aggregation bias
 - Evaluation bias
 - Deployment bias
-
-
-
-
