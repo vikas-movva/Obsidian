@@ -10,8 +10,8 @@ kanban-plugin: board
 - [ ] expand skills under project cards
 - [ ] fix timeline line
 - [ ] move date for professional timeline beside dot
-- [ ] Fix contact form in production
-	. Problem not encountered on Chromium browsers. only firefox for now
+- [ ] Fix the contact form error on Firefox for now
+- [ ] Fix contact form not sending email after successful submission
 
 
 ## Planning
