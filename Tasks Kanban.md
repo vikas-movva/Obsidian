@@ -23,12 +23,12 @@ kanban-plugin: board
 
 ## In Progress
 
-- [ ] Finish Portfolio Website
 
 
 ## Completed
 
 - [ ] fast.ai course
+- [ ] Finish Portfolio Website
 
 
 ***
