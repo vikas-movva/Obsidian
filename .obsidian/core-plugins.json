@@ -29,6 +29,6 @@
   "bookmarks": true,
   "properties": true,
   "webviewer": true,
-  "footnotes": false,
+  "footnotes": true,
   "bases": true
 }
