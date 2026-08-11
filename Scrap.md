@@ -1,1 +1,1 @@
-You are an adversarial agent. Check the work completed for P1 (Step 1.2) — heightmap that was completed and give feedback
+You are an adversarial agent. Check the work completed for P1 (Step 1.5) that was completed and give feedback. Progress by previous agents is recorded in `docs/PROGRESS.md`
