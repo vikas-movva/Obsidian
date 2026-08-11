@@ -1,0 +1,91 @@
+name: Publish Obsidian notes to GitHub Pages
+
+# Builds the vault with Quartz and deploys to GitHub Pages.
+# Host repo = vikas-movva/obsidian (this repo) -> site at https://vikas-movva.github.io/obsidian
+# Build framework = vikas-movva/quartz (fork of jackyzha0/quartz, branch v5, holds quartz.config.yaml + .quartz/plugins)
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - ".obsidian/**"
+      - "private/**"
+      - "netlify.toml"
+      - ".github/**"
+      - "README.md"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+env:
+  FRAMEWORK_REPO: vikas-movva/quartz
+  FRAMEWORK_REF: v5
+  FRAMEWORK_DIR: framework
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout notes vault (this repo, default cwd)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Checkout Quartz framework
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.FRAMEWORK_REPO }}
+          ref: ${{ env.FRAMEWORK_REF }}
+          path: ${{ env.FRAMEWORK_DIR }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: ${{ env.FRAMEWORK_DIR }}/package-lock.json
+
+      - name: Install dependencies
+        working-directory: ${{ env.FRAMEWORK_DIR }}
+        run: npm ci
+
+      - name: Copy vault into Quartz content/ (exclude .obsidian/private/netlify)
+        run: |
+          set -euo pipefail
+          cd "${{ env.FRAMEWORK_DIR }}"
+          rm -rf content
+          mkdir -p content
+          rsync -a \
+            --exclude='.obsidian' \
+            --exclude='.git' \
+            --exclude='netlify.toml' \
+            --exclude='private' \
+            "${{ github.workspace }}/" content/
+          echo "Copied $(find content -name '*.md' | wc -l) markdown files"
+
+      - name: Build Quartz site
+        working-directory: ${{ env.FRAMEWORK_DIR }}
+        run: npx quartz build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ env.FRAMEWORK_DIR }}/public
+
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
