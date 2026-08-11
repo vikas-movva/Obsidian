@@ -1,4 +1,17 @@
-.obsidian/workspace.json
-.obsidian/workspace-mobile.json
+# Obsidian app config — NEVER commit (public repo; plugin data.json can hold API keys)
+.obsidian/
 Templates/Book/*
-/.DS_Store
+
+# OS cruft
+.DS_Store
+
+# NEVER publish: private notes (publish-guard layer 1)
+/private/
+
+# Dead publisher config (replaced by Quartz + GitHub Pages)
+netlify.toml
+
+# Framework artifacts that must never be committed into the vault repo
+public/
+node_modules/
+.quartz-cache/

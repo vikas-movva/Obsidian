@@ -1,0 +1,19 @@
+# gitleaks config for the Obsidian notes repo.
+# Purpose: keep the pre-public security gate meaningful. The 74 historical hits are
+# all minified third-party plugin bundles (.obsidian/plugins/*/main.js) — false positives.
+# We allowlist only those bundle paths so real secrets (e.g. in plugin data.json, or in
+# notes) still trigger a leak. If you add a NEW bundle path that holds keys, tighten this.
+
+title = "Obsidian notes repo gitleaks config"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Ignore minified third-party plugin JS bundles (false-positive API-key/JWT hits)"
+paths = [
+  '''(?i).*\.obsidian/plugins/[^/]+/main\.js$''',
+  '''(?i).*\.obsidian/plugins/[^/]+/manifest\.json$''',
+  '''(?i).*/\.obsidian/plugins/[^/]+/main\.js$''',
+  '''(?i).*/\.obsidian/plugins/[^/]+/manifest\.json$''',
+]
