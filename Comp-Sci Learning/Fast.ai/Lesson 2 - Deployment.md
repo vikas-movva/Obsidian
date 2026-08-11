@@ -8,13 +8,6 @@ Video: https://www.youtube.com/watch?v=F4tvM4Vb3A0
 ---
 ## Video Notes
 
-```timestamp-url 
- https://www.youtube.com/watch?v=F4tvM4Vb3A0
- ```
-
-```timestamp 
- 06:45
- ```
 ### Data cleaning
 - It might seem counter intuitive but in order to clean the data you first train a model
 - Then call the `ImageClassifierCleaner` function with the trained model as a parameter
@@ -27,9 +20,6 @@ for idx in cleaner.delete(): cleaner.fns[idx].unlink()
 for idx, cat in cleaner.change(): shutil.move(str(cleaner.fns[idx]), path/cat)
 ```
 
-```timestamp 
- 27:12
- ```
 ### How to put your model into production
 - Create a new space on [huggingface](huggingface.co/new-space)
 - Clone huggingface repo onto your machine

@@ -7,9 +7,7 @@ Web page: https://course.fast.ai/Lessons/lesson3.html
 Video: https://www.youtube.com/watch?v=hBBOjCiFcuo
 ---
 ## Video Notes
-```timestamp-url 
- https://www.youtube.com/watch?v=hBBOjCiFcuo
- ```
+
 
 ```timestamp 
  12:34

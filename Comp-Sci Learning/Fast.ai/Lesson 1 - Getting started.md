@@ -6,23 +6,14 @@ tags:
 Web page: https://course.fast.ai/Lessons/lesson1.html
 Video: " https://www.youtube.com/watch?v=8SF_h3xF3cE"
 ---
-```timestamp-url 
- https://www.youtube.com/watch?v=8SF_h3xF3cE
- ```
-
-```timestamp 
- 22:39
- ```
 ### Why is it possible to create a bird classifier on a generic laptop now vs it being impossible before?
-- in 2012 the approach used at the time was to create a big team of various experts to manually create features and then feed those features into a ML model
-	- this approach requires immense manpower and funding in order to create a single model
-- In the present neural networks learns these features automatically.
+- In 2012, the approach used at the time was to create a big team of various experts to manually create features and then feed those features into an ML model
+	- This approach requires immense manpower and funding in order to create a single model
+- In the present, neural networks learn these features automatically.
 - Deep learning is ==deep== because you can take features and combine them into more advanced features
 - The learning outcome is to discover how neural networks learn these features
 
-```timestamp 
- 28:46
- ```
+
 ### ML Myths
 
 | Myths               | Truth                                                          |
@@ -32,9 +23,7 @@ Video: " https://www.youtube.com/watch?v=8SF_h3xF3cE"
 | Expensive computers | cloud providers decrease this barrier                          |
 >for the majority of deep learning this is true 
 
-```timestamp 
- 43:49
- ```
+
 ### Data blocks, Dataloaders, & Learners
 - datablocks represent your data
 - over many projects what are all the parameters that change from project to project
@@ -48,9 +37,7 @@ Video: " https://www.youtube.com/watch?v=8SF_h3xF3cE"
 	- `.fine_tune`: fine tunes an existing model on your data
 >fast.ai docs can be found [here](https://docs.fast.ai/)
 
-```timestamp 
- 01:11:12
- ```
+
 ### What is happening in a neural network
 - Classic computer program
 ```mermaid
@@ -61,6 +48,7 @@ id3(results)
 
 id1-->id2-->id3
 ```
+
 - Neural network
 ```mermaid
 flowchart LR
@@ -112,7 +100,7 @@ learn.fine_tune(1)
 ```
 ### Homework
 #todo
-- [x] ⏫ Read chapter 1 of the book [here](https://fastai.github.io/fastbook2e/intro.html) ✅ 2023-09-15
-- [x] ⏫ play around with [[Lesson 1 - Getting started]] Kaggle notebooks [here](https://www.kaggle.com/code/jhoward/is-it-a-bird-creating-a-model-from-your-own-data) and [here](https://www.kaggle.com/code/jhoward/jupyter-notebook-101) ✅ 2023-09-15
+- [x]  Read chapter 1 of the book [here](https://fastai.github.io/fastbook2e/intro.html) ✅ 2023-09-15
+- [x]  play around with [[Lesson 1 - Getting started]] Kaggle notebooks [here](https://www.kaggle.com/code/jhoward/is-it-a-bird-creating-a-model-from-your-own-data) and [here](https://www.kaggle.com/code/jhoward/jupyter-notebook-101) ✅ 2023-09-15
 	- [x] make a dog classifier instead ✅ 2023-09-15
  
