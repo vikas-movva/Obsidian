@@ -1,6 +1,6 @@
 ---
 
-kanban-plugin: basic
+kanban-plugin: board
 
 ---
 
@@ -13,7 +13,7 @@ kanban-plugin: basic
 - [ ] Add sidebar links pop animation
 - [ ] add loading animation for cold starts
 - [ ] add mobile view
-- [ ] Find new hosting service for api or figure out self hosting. (huggingface?)
+- [ ] Find new hosting service for api or figure out self hosting.
 
 
 ## In progress
@@ -36,6 +36,6 @@ kanban-plugin: basic
 
 %% kanban:settings
 ```
-{"kanban-plugin":"basic"}
+{"kanban-plugin":"board"}
 ```
 %%
