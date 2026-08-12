@@ -18,7 +18,6 @@ kanban-plugin: board
 
 ## In progress
 
-- [ ] add preview image
 
 
 ## Completed
@@ -30,6 +29,7 @@ kanban-plugin: board
 - [ ] Finish Demo section
 - [ ] **learn styled components pseudo selectors**
 - [ ] [[Projects/ml-demo/Project outline]]
+- [ ] add preview image
 
 
 
