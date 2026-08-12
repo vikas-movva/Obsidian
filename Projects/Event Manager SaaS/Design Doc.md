@@ -21,7 +21,7 @@ Build a single operating system for event/wedding planners that replaces 5-10 fr
 
 In scope for this doc: architecture, data model, event-sourcing engine, AI ingestion pipeline, the four MVP modules, API contract summary, and the phased plan through v2.0.
 
-Out of scope for MVP (explicitly deferred): Vendor Portal (write), Change-Order Engine, P&L dashboard, day-of mobile app, WebRTC push-to-talk, timeline auto-generation, venue constraint DB, template marketplace, referral automation. Sequenced in §9.
+Out of scope for MVP (explicitly deferred): Vendor Portal (write), Change-Order Engine, P&L dashboard, day-of mobile app, WebRTC push-to-talk, timeline auto-generation, venue constraint DB, template marketplace, referral automation. Sequenced in [[Design Doc#9. Phased implementation plan|§9]].
 
 ---
 
@@ -29,7 +29,7 @@ Out of scope for MVP (explicitly deferred): Vendor Portal (write), Change-Order 
 
 An event manager integrated with AI agents that taps into email and centralizes timelines, delivery dates, and files in one place.
 
-**Strategic tension (named explicitly):** the highest-risk assumption — that LLM extraction on *real, messy* vendor email produces something a planner finds valuable — is the core thesis. v1.0 buried it under the Foundation, Event Store, and CRM milestones before AI Ingest even began. §9 introduces a **Phase 0 validation spike** that tests the thesis on real planners with a throwaway CRUD prototype, *before* committing to the heavier infrastructure. Phase 0 is a de-risking step, not a scope cut: the chosen architecture (true ES + OAuth) still ships in the MVP. If Phase 0 fails, the whole plan is re-examined rather than built on a false premise.
+**Strategic tension (named explicitly):** the highest-risk assumption — that LLM extraction on *real, messy* vendor email produces something a planner finds valuable — is the core thesis. v1.0 buried it under the Foundation, Event Store, and CRM milestones before AI Ingest even began. [[Design Doc#9. Phased implementation plan|§9]] introduces a **Phase 0 validation spike** that tests the thesis on real planners with a throwaway CRUD prototype, *before* committing to the heavier infrastructure. Phase 0 is a de-risking step, not a scope cut: the chosen architecture (true ES + OAuth) still ships in the MVP. If Phase 0 fails, the whole plan is re-examined rather than built on a false premise.
 
 ---
 
@@ -37,18 +37,18 @@ An event manager integrated with AI agents that taps into email and centralizes 
 
 ## 3.1 Stack
 
-| Layer                 | Choice                                                                   | Why                                                                      |
-| --------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
-| Database + Auth + RLS | Supabase Postgres                                                        | Planner-level isolation is the #1 requirement; RLS delivers it near-free |
-| Real-time             | Supabase Realtime                                                        | Vendor/assistant check-ins, presence, portal updates later               |
-| File storage          | Supabase Storage                                                         | Vendor docs, contracts, attachments from email                           |
-| App framework         | Next.js (App Router) + TypeScript                                        | One language, AI coding-agent fluent, SSR for portals                    |
-| Payments              | Stripe Billing (planner subscription) + Stripe Connect (client payouts)  | Subscription = primary revenue; Connect = secondary rake                 |
-| E-sign                | Stripe Signature                                                         | Real, enforceable contract signatures in MVP                             |
-| LLM                   | DeepSeek-V4-Flash-0731 / DeepInfra (primary), Gemini / Vertex (fallback) | See §4.4                                                                 |
-| Background jobs       | **Inngest** (native retries + DLQ)                                       | OAuth polling, LLM extraction, Stripe webhooks all need retry/DLQ        |
-| Email OAuth           | Google Gmail API + Microsoft Graph (read-only scopes)                    | Inbox scanning per planner                                               |
-| Hosting               | Vercel (Next) + Supabase cloud                                           | Standard, low-ops                                                        |
+| Layer                 | Choice                                                                   | Why                                                                                                                          |
+| --------------------- | ------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| Database + Auth + RLS | Supabase Postgres                                                        | Planner-level isolation is the #1 requirement; RLS delivers it near-free                                                     |
+| Real-time             | Supabase Realtime                                                        | Vendor/assistant check-ins, presence, portal updates later                                                                   |
+| File storage          | Supabase Storage                                                         | Vendor docs, contracts, attachments from email                                                                               |
+| App framework         | Next.js (App Router) + TypeScript                                        | One language, AI coding-agent fluent, SSR for portals                                                                        |
+| Payments              | Stripe Billing (planner subscription) + Stripe Connect (client payouts)  | Subscription = primary revenue; Connect = secondary rake                                                                     |
+| E-sign                | Stripe Signature                                                         | Real, enforceable contract signatures in MVP                                                                                 |
+| LLM                   | DeepSeek-V4-Flash-0731 / DeepInfra (primary), Gemini / Vertex (fallback) | DeepSeek-V4-Flash-0731 is incredibly cheap on DeepInfra. $0.9/1M input tokens, $0.18/1M output tokens, $0.018/1M cached read |
+| Background jobs       | **Inngest** (native retries + DLQ)                                       | OAuth polling, LLM extraction, Stripe webhooks all need retry/DLQ                                                            |
+| Email OAuth           | Google Gmail API + Microsoft Graph (read-only scopes)                    | Inbox scanning per planner                                                                                                   |
+| Hosting               | Vercel (Next) + Supabase cloud                                           | Standard, low-ops                                                                                                            |
 
 ## 3.2 System diagram
 
@@ -93,13 +93,13 @@ flowchart TB
 
 - Every table carries `planner_id` (tenant root). RLS: a row is visible only if `planner_id = auth.uid()` (or the planner is an invited team member in phase 2).
 - Supabase Auth handles planner signup/session. OAuth connections stored as encrypted tokens in `provider_connections` scoped to `planner_id`.
-- Clients and vendors are **not** auth users in MVP. They access portals via signed, short-lived magic links. To contain risk (see §6.6), the **view link and the pay action use different tokens**: viewing is low-stakes; paying requires a separately minted, single-use, short-TTL pay token (or re-auth via emailed one-time link) so a forwarded timeline link cannot be used to pay.
+- Clients and vendors are **not** auth users in MVP. They access portals via signed, short-lived magic links. To contain risk (see [[Design Doc#6.6 Portal auth split|§6.6]]), the **view link and the pay action use different tokens**: viewing is low-stakes; paying requires a separately minted, single-use, short-TTL pay token (or re-auth via emailed one-time link) so a forwarded timeline link cannot be used to pay.
 
 ## 3.4 Real-time
 
-Supabase Realtime for client portal live timeline updates and, later, vendor check-ins/chat. The event store writes broadcast a change event the UI subscribes to. **Known scaling caveat (§10):** Realtime-under-RLS at high connection counts has historically had rough edges; validate before assuming it holds past beta.
+Supabase Realtime for client portal live timeline updates and, later, vendor check-ins/chat. The event store writes broadcast a change event the UI subscribes to. **Known scaling caveat ([[Design Doc#10. Critical-path risks & de-scope fallback|§10]]):** Realtime-under-RLS at high connection counts has historically had rough edges; validate before assuming it holds past beta.
 
-## 3.5 Background job runtime — Inngest (firm decision)
+## 3.5 Background job runtime
 
 Inngest runs, with native retries and a visible DLQ:
 
@@ -154,7 +154,7 @@ attachments
   id, planner_id, email_id, storage_path, filename, mime, size,
   parsed_text_path text nullable   -- extracted text from PDFs for LLM context
 
-timeline_events            -- THE EVENT STORE — see §5 (corrected types v1.1)
+timeline_events            -- THE EVENT STORE — see footnote 1
   id uuid pk
   planner_id uuid
   event_id uuid
@@ -187,9 +187,11 @@ vendor_portal_access, change_orders, change_order_events, pnl_snapshots,
 venue_constraints, team_members, rbac_roles
 ```
 
+footnote 1: [[Design Doc#5. Event-sourced timeline engine]]
+
 ## 4.2 Notes
 
-- `planners.stripe_subscription_id` + `subscription_status` are the **primary revenue line** (see §7.5). Previously missing; now first-class.
+- `planners.stripe_subscription_id` + `subscription_status` are the **primary revenue line** (see [[Design Doc#7.5 Payments — Stripe Billing (planner subscription = PRIMARY revenue)|§7.5]]). Previously missing; now first-class.
 - `planners.stripe_account_id` is required to create a Payment Intent on a planner's behalf.
 - `emails.body_retained` defaults false; bodies are purged unless the planner opts in (`email_retention_opt_in`). Extraction text from attachments is stored separately only if needed for the review queue and is also subject to purge.
 - `timeline_events.actor_id` is `text` (v1.0's `uuid` type would reject `'agent:<run_id>'`).
@@ -202,7 +204,7 @@ This is the core asset and the reason for choosing true event-sourcing.
 
 ## 5.1 Event store
 
-`timeline_events` schema in §4.1.
+`timeline_events` schema in [[Design Doc#4.1 Core tables|§4.1]].
 
 1. **`seq` is not "SELECT max+1".** It is assigned by a **Postgres SEQUENCE** scoped per `(planner_id, event_id)` aggregate (e.g. one sequence per event, or a single global sequence with the unique constraint on `(planner_id, event_id, seq)`). A sequence eliminates the race between a concurrent agent commit and a manual edit that `max+1` would expose. (A `SELECT ... FOR UPDATE` counter row is the alternative; a sequence is simpler and lock-free.)
 2. **`schema_version` + `actor_id text`** added. Schema versioning is mandatory: when `ITEM_ADDED`'s payload shape changes (it will), old events must still replay. Each applier is keyed by `schema_version`; an upcast function migrates older shapes to the current one at replay time. Never mutate old payloads in place.
@@ -300,7 +302,7 @@ The prompt is versioned; every run records `prompt_version` + `provider` in `age
 
 Extracted entities are **not** auto-committed. They land in a review queue ("3 suggestions from vendor emails"). The planner approves, edits, or discards. On approve, the system appends the corresponding `timeline_events` (actor = `agent:<run_id>`) and creates/updates vendor + attachment rows. This protects against LLM error and against platform liability for timeline mistakes.
 
-## 6.5 Privacy & compliance (updated for OQ#3)
+## 6.5 Privacy & compliance
 
 - Read-only scope; we cannot send mail. Stated plainly in consent.
 - **Email bodies are NOT retained by default.** Per `emails.body_retained = false` and `planners.email_retention_opt_in = false`, bodies (and attachment source files beyond parsed text needed for review) are **purged immediately after extraction**. Only metadata + extracted structured entities persist. Retention only occurs if the planner explicitly opts in (and even then, document the retention window).
@@ -308,7 +310,7 @@ Extracted entities are **not** auto-committed. They land in a review queue ("3 s
 - Data Processing Agreement language in ToS. Right-to-delete wired to `planner_id` cascade.
 - SOC 2 is a phase-3 goal, not MVP; note it as an Enterprise sales blocker.
 
-## 6.6 Portal auth split (v1.1)
+## 6.6 Portal auth split
 
 The Client Portal magic link grants **view-only** access (timeline, docs, messages). The **pay action** is gated behind a separate, single-use, short-TTL pay token (or re-auth via emailed one-time link). A forwarded "here's our timeline!" link therefore cannot be used to view payment status or pay — closing the forwarding risk the review identified.
 
@@ -334,12 +336,12 @@ The Client Portal magic link grants **view-only** access (timeline, docs, messag
 - Magic-link auth (signed JWT, short TTL, scoped to one `event_id`) for **viewing** only.
 - Shows: read-only timeline, document links (Storage), payment status, simple message thread to planner.
 - Live updates via Realtime on timeline changes.
-- **Pay action** uses the separate pay token (§6.6).
+- **Pay action** uses the separate pay token ([[Design Doc#6.6 Portal auth split|§6.6]]).
 
 ## 7.4 Payments — Connect (client payouts)
 
 - Planner is onboarded via the current **Stripe Connect** flow (legacy Express/Standard naming deprecated; do not use it). Their `stripe_account_id` is stored on `planners`.
-- Client pays planner through a Payment Intent created by our app against the planner's Connect account; funds go to planner, platform takes subscription separately (§7.5) and can take a change-order rake later (phase 2).
+- Client pays planner through a Payment Intent created by our app against the planner's Connect account; funds go to planner, platform takes subscription separately ([[Design Doc#7.5 Payments — Stripe Billing (planner subscription = PRIMARY revenue)|§7.5]]) and can take a change-order rake later (phase 2).
 - `payments` records intent id, amount, status. Webhook handler is idempotent on `stripe_payment_intent_id`.
 - Portal shows balance due (via the pay token gated action).
 
@@ -356,7 +358,7 @@ The Client Portal magic link grants **view-only** access (timeline, docs, messag
 
 Primary data access is the Supabase client (auth + RLS enforced server-side). Custom logic:
 
-- **Supabase RPCs** (Postgres functions): the four timeline engine functions (§5.4), `timeline_call_times(...)`, `agent_review_queue(planner_id)`.
+- **Supabase RPCs** (Postgres functions): the four timeline engine functions ([[Design Doc#5.4 Engine API (Supabase RPCs — the ONLY write path)|§5.4]]), `timeline_call_times(...)`, `agent_review_queue(planner_id)`.
 - **Next.js route handlers** (server-side, `service_role` only where RLS must be deliberately bypassed, e.g. agent writes which call the RPCs as the planner):
   - `POST /api/connect/[gmail|outlook]` — OAuth start
   - `POST /api/webhooks/stripe` — Billing + Connect (idempotent)
@@ -365,7 +367,7 @@ Primary data access is the Supabase client (auth + RLS enforced server-side). Cu
   - `POST /api/agent/rereview/:runId/approve` — commit extracted entities
   - `POST /api/contracts/:id/sign` — Stripe Signature initiation
 
-No client-side code writes tenant data without RLS; the agent path impersonates the planner via `planner_id` config so RLS still gates it, and direct timeline DML is revoked (§5.5).
+No client-side code writes tenant data without RLS; the agent path impersonates the planner via `planner_id` config so RLS still gates it, and direct timeline DML is revoked ([[Design Doc#5.5 Database-enforced write restriction (v1.1)|§5.5]]).
 
 ---
 
@@ -414,7 +416,7 @@ M4/M5 overlap deliberately: the timeline engine (M2) must exist before ingestion
 
 The two heaviest MVP commitments are true event-sourcing and OAuth inbox access. If either slips, the MVP build is at risk.
 
-**Risk 1 — Event store replay correctness.** Event-sourcing bugs are subtle (seq races, snapshot drift). Mitigation: SEQUENCE for `seq` (§5.1), exhaustive replay/rollback tests from M2, snapshot verification in CI. Fallback if replay correctness is not solid before the MVP launch gate: keep the append-only `timeline_events` as an audit log but serve current state from a materialized `timeline_current` table maintained by the apply RPC. You keep auditability and rollback-via-rebuild-later without blocking the UI on replay correctness. (This fallback is itself a sane MVP design; named here as a safety net, not the target.)
+**Risk 1 — Event store replay correctness.** Event-sourcing bugs are subtle (seq races, snapshot drift). Mitigation: SEQUENCE for `seq` ([[Design Doc#5.1 Event store|§5.1]]), exhaustive replay/rollback tests from M2, snapshot verification in CI. Fallback if replay correctness is not solid before the MVP launch gate: keep the append-only `timeline_events` as an audit log but serve current state from a materialized `timeline_current` table maintained by the apply RPC. You keep auditability and rollback-via-rebuild-later without blocking the UI on replay correctness. (This fallback is itself a sane MVP design; named here as a safety net, not the target.)
 
 **Risk 2 — Google restricted-scope verification.**
 `gmail.readonly` requires formal verification + security assessment (multi-week, four-figure, annual reassessment). Mitigation: begin verification at project start, run Microsoft Graph concurrently, investigate scope minimization. Fallback if not cleared before the MVP launch: cap connected inboxes to Google's test allowance and ship the dedicated per-planner inbox (`planner@yourapp.com`, planner forwards/CCs vendor mail) as the ingestion path — the agent pipeline (pre-filter, parse, extract, review) is identical; only transport changes. OAuth becomes a post-verification upgrade.
