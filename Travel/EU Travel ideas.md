@@ -51,15 +51,15 @@ Daily limit: $25 (lowball), $40(highball)
 
 ### Accommodations
 Western Europe is more expensive than eastern.
-Western europe Avg: $20 - $40/night
-Eastern Europe Avg: $15 - $25/night
+Western europe Avg: \$20 - \$40/night
+Eastern Europe Avg: \$15 - \$25/night
 
-Total: $1575(lowball), $2925 (highball)
+Total: \$1575(lowball), \$2925 (highball)
 
 ### Activities
 About $30 per day
 Total: $2700
 
 ---
-Total: $12,725 (highball) + $500 (emergency) = $13225
-Safe Amount: $14,000
+Total: \$12,725 (highball) + \$500 (emergency) = \$13225
+Safe Amount: \$14,000

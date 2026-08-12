@@ -4,9 +4,6 @@ tags:
   - cs-learning
   - fast-ai
 ---
-
-# [[Lesson 5]] From scratch model
-
 ## Video Notes
 ### Creating a tabular model from scratch
 
