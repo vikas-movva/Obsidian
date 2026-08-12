@@ -4,6 +4,16 @@ status: v1
 last_updated: 2026-08-12
 ---
 
+> [!summary] Design Doc Summary
+> **What**: A unified SaaS operating system for event/wedding planners that replaces 5-10 fragmented tools by auto-centralizing vendor email (timelines, delivery dates, files) via an AI agent, then monetizing it through CRM, a true event-sourced timeline, portals, and payments.
+>
+> **Wedge**: AI email ingestion is the differentiator and day-one value; the rest is the monetization surface.
+>
+> **Stack**: Supabase (Postgres + Auth + RLS + Realtime) + Next.js + TypeScript; Stripe (Billing for planner subs + Connect for payouts); Inngest for jobs; DeepSeek-V4-Flash-0731 / DeepInfra primary, Gemini / Vertex fallback for extraction.
+>
+> **MVP slice** (milestone-sequenced, no fixed dates): Foundation → Event Store (true event-sourcing, SEQUENCE + schema versioning) → CRM (Stripe Signature e-sign) → AI Ingest (OAuth read-only, human-in-loop) → Timeline UI → Client Portal (read-only, split pay token) → Payments Connect.
+>
+> **Key calls**: timeline writes are DB-enforced (direct DML revoked); emails never retained unless opted in; Google restricted-scope verification is a launch-blocker for server-side OAuth (client-side-only avoids the audit but kills the background agent).
 
 Confirmed Tech Stack:
 
@@ -16,7 +26,7 @@ Confirmed Tech Stack:
 - **E-sign**: **Stripe Signature** for contracts (real e-sign, not click-acknowledge).
 - **Email retention**: **Never retain email bodies** unless the planner explicitly opts in. Default = purge after extraction; metadata + extracted entities persist only as needed.
 - **Stripe**: Current **Stripe Connect** onboarding flow (the legacy Express/Standard naming is deprecated and not used here).
-- **Background jobs**: **Inngest** (native retries + DLQ)
+- **Background jobs**: **Inngest** (native retries + DLQ), not Edge cron.
 
 ---
 
@@ -421,7 +431,7 @@ The two heaviest MVP commitments are true event-sourcing and OAuth inbox access.
 
 **Risk 1 — Event store replay correctness.** Event-sourcing bugs are subtle (seq races, snapshot drift). Mitigation: SEQUENCE for `seq` (§5.1), exhaustive replay/rollback tests from M2, snapshot verification in CI. Fallback if replay correctness is not solid before the MVP launch gate: keep the append-only `timeline_events` as an audit log but serve current state from a materialized `timeline_current` table maintained by the apply RPC. You keep auditability and rollback-via-rebuild-later without blocking the UI on replay correctness. (This fallback is itself a sane MVP design; named here as a safety net, not the target.)
 
-**Risk 2 — Google restricted-scope verification.** 
+**Risk 2 — Google restricted-scope verification.**
 `gmail.readonly` requires formal verification + security assessment (multi-week, four-figure, annual reassessment). Mitigation: begin verification at project start, run Microsoft Graph concurrently, investigate scope minimization. Fallback if not cleared before the MVP launch: cap connected inboxes to Google's test allowance and ship the dedicated per-planner inbox (`planner@yourapp.com`, planner forwards/CCs vendor mail) as the ingestion path — the agent pipeline (pre-filter, parse, extract, review) is identical; only transport changes. OAuth becomes a post-verification upgrade.
 
 **Risk 3 — LLM extraction quality & cost.** Wrong vendors/dates erode trust; variable cost can exceed subscription margin. Mitigation: mandatory human-in-the-loop (never auto-commit); confidence threshold routes low-confidence to review; cheap pre-filter before any LLM call; per-event token budget with alerting. Provider-agnostic layer lets us swap DeepSeek↔Gemini if quality or sovereignty issues arise.
