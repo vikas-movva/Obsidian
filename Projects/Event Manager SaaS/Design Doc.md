@@ -4,7 +4,6 @@ status: v1
 last_updated: 2026-08-12
 ---
 
-# 0. How to read this doc
 
 Confirmed Tech Stack:
 
@@ -17,7 +16,7 @@ Confirmed Tech Stack:
 - **E-sign**: **Stripe Signature** for contracts (real e-sign, not click-acknowledge).
 - **Email retention**: **Never retain email bodies** unless the planner explicitly opts in. Default = purge after extraction; metadata + extracted entities persist only as needed.
 - **Stripe**: Current **Stripe Connect** onboarding flow (the legacy Express/Standard naming is deprecated and not used here).
-- **Background jobs**: **Inngest** (native retries + DLQ), not Edge cron.
+- **Background jobs**: **Inngest** (native retries + DLQ)
 
 ---
 
