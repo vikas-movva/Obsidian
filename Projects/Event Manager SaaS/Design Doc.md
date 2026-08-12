@@ -3,6 +3,7 @@ doc_type: Engineering build spec
 status: v1
 last_updated: 2026-08-12
 ---
+
 > [!summary] Design Doc Summary
 > **What**: A unified SaaS operating system for event/wedding planners that replaces 5-10 fragmented tools by auto-centralizing vendor email (timelines, delivery dates, files) via an AI agent, then monetizing it through CRM, a true event-sourced timeline, portals, and payments.
 >
