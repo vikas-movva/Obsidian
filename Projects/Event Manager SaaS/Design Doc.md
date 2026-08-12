@@ -3,7 +3,6 @@ doc_type: Engineering build spec
 status: v1
 last_updated: 2026-08-12
 ---
-
 > [!summary] Design Doc Summary
 > **What**: A unified SaaS operating system for event/wedding planners that replaces 5-10 fragmented tools by auto-centralizing vendor email (timelines, delivery dates, files) via an AI agent, then monetizing it through CRM, a true event-sourced timeline, portals, and payments.
 >
@@ -14,20 +13,6 @@ last_updated: 2026-08-12
 > **MVP slice** (milestone-sequenced, no fixed dates): Foundation → Event Store (true event-sourcing, SEQUENCE + schema versioning) → CRM (Stripe Signature e-sign) → AI Ingest (OAuth read-only, human-in-loop) → Timeline UI → Client Portal (read-only, split pay token) → Payments Connect.
 >
 > **Key calls**: timeline writes are DB-enforced (direct DML revoked); emails never retained unless opted in; Google restricted-scope verification is a launch-blocker for server-side OAuth (client-side-only avoids the audit but kills the background agent).
-
-Confirmed Tech Stack:
-
-- **Stack**: Supabase (Postgres + Auth + RLS + Realtime + Storage) + Next.js + TypeScript + Stripe.
-- **AI**: First-class. An LLM agent ingests the planner's email via **OAuth read-only** inbox access and centralizes vendors, delivery dates, timelines, and files. AI coding agents also used for build velocity.
-- **Timeline**: **True event-sourcing**. Append-only event store, state rebuilt by replay, rollback by reconstruction.
-- **MVP build order**: milestone-sequenced (Foundation → Event Store → CRM → AI Ingest → Timeline UI → Client Portal → Payments). Rest of the platform phased after. No fixed calendar dates.
-- **MVP slice**: AI email agent + CRM + Timeline (event-sourced) + Client Portal (read-only) + Payments (Stripe).
-- **LLM**: Provider-agnostic extraction layer; **DeepSeek-V4-Flash-0731 / DeepInfra** primary, **Gemini / Vertex** fallback (see §4.4).
-- **E-sign**: **Stripe Signature** for contracts (real e-sign, not click-acknowledge).
-- **Email retention**: **Never retain email bodies** unless the planner explicitly opts in. Default = purge after extraction; metadata + extracted entities persist only as needed.
-- **Stripe**: Current **Stripe Connect** onboarding flow (the legacy Express/Standard naming is deprecated and not used here).
-- **Background jobs**: **Inngest** (native retries + DLQ), not Edge cron.
-
 ---
 
 # 1. Purpose & scope
