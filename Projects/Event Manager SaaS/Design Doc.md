@@ -46,7 +46,7 @@ An event manager integrated with AI agents that taps into email and centralizes 
 | App framework         | Next.js (App Router) + TypeScript                                        | One language, AI coding-agent fluent, SSR for portals                                                                        |
 | Payments              | Stripe Billing (planner subscription) + Stripe Connect (client payouts)  | Subscription = primary revenue; Connect = secondary rake                                                                     |
 | E-sign                | Stripe Signature                                                         | Real, enforceable contract signatures in MVP                                                                                 |
-| LLM                   | DeepSeek-V4-Flash-0731 / DeepInfra (primary), Gemini / Vertex (fallback) | DeepSeek-V4-Flash-0731 is incredibly cheap on DeepInfra. $0.9/1M input tokens, $0.18/1M output tokens, $0.018/1M cached read |
+| LLM                   | DeepSeek-V4-Flash-0731 / DeepInfra (primary), Gemini / Vertex (fallback) | DeepSeek-V4-Flash-0731 is incredibly cheap on DeepInfra. $0.8/1M input tokens, $0.18/1M output tokens, $0.016/1M cached read |
 | Background jobs       | **Inngest** (native retries + DLQ)                                       | OAuth polling, LLM extraction, Stripe webhooks all need retry/DLQ                                                            |
 | Email OAuth           | Google Gmail API + Microsoft Graph (read-only scopes)                    | Inbox scanning per planner                                                                                                   |
 | Hosting               | Vercel (Next) + Supabase cloud                                           | Standard, low-ops                                                                                                            |
@@ -384,17 +384,17 @@ No client-side code writes tenant data without RLS; the agent path impersonates 
 
 ## 9.1 MVP — build sequence
 
-| Milestone | Focus | Exit gate |
-|-----------|-------|-----------|
-| **M1 Foundation** | Supabase project, RLS schema, Auth, Next scaffold, CI; **begin Google restricted-scope verification early** | Planner signup isolated; verification submitted to Google |
-| **M1.5 Subscription** | Stripe Billing: plans, checkout, webhook lifecycle (renew/dunning/cancel/pause) | A planner can subscribe and is billed; failed-renewal path tested |
-| M2 Event Store | `timeline_events` + SEQUENCE + schema_version + snapshots + replay + 4 RPCs + DML revoke | Replay reconstructs state; rollback works in tests; direct INSERT rejected |
-| M3 CRM | Clients, events, contract PDF + **Stripe Signature** e-sign | Create client, generate + signed contract |
-| M4 AI Ingest | OAuth (prod path), poller, pre-filter, attachment parse, LLM extraction, review queue, commit | Connect Gmail, 3 vendor emails become timeline items via review |
-| M5 Timeline UI | Builder UI, vendor assignment, call-time calc | Manual + agent edits both flow through event store |
-| M6 Client Portal | Magic-link view portal, read-only timeline, docs, messages, **separate pay token** | Client views live timeline without login; pay gated |
-| M7 Payments Connect | Stripe Connect onboarding, Payment Intent, webhook | Client pays deposit; recorded idempotently |
-| **MVP Launch** | Beta with 10 planners (subject to Google verification clearing) | 10 planners ingesting real email + collecting payment |
+| Milestone             | Focus                                                                                                       | Exit gate                                                                  |
+| --------------------- | ----------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| **M1 Foundation**     | Supabase project, RLS schema, Auth, Next scaffold, CI; **begin Google restricted-scope verification early** | Planner signup isolated; verification submitted to Google                  |
+| **M1.5 Subscription** | Stripe Billing: plans, checkout, webhook lifecycle (renew/dunning/cancel/pause)                             | A planner can subscribe and is billed; failed-renewal path tested          |
+| M2 Event Store        | `timeline_events` + SEQUENCE + schema_version + snapshots + replay + 4 RPCs + DML revoke                    | Replay reconstructs state; rollback works in tests; direct INSERT rejected |
+| M3 CRM                | Clients, events, contract PDF + **Stripe Signature** e-sign                                                 | Create client, generate + signed contract                                  |
+| M4 AI Ingest          | OAuth (prod path), poller, pre-filter, attachment parse, LLM extraction, review queue, commit               | Connect Gmail, 3 vendor emails become timeline items via review            |
+| M5 Timeline UI        | Builder UI, vendor assignment, call-time calc                                                               | Manual + agent edits both flow through event store                         |
+| M6 Client Portal      | Magic-link view portal, read-only timeline, docs, messages, **separate pay token**                          | Client views live timeline without login; pay gated                        |
+| M7 Payments Connect   | Stripe Connect onboarding, Payment Intent, webhook                                                          | Client pays deposit; recorded idempotently                                 |
+| **MVP Launch**        | Beta with 10 planners (subject to Google verification clearing)                                             | 10 planners ingesting real email + collecting payment                      |
 
 M4/M5 overlap deliberately: the timeline engine (M2) must exist before ingestion can commit, so ingestion starts once M2 lands, not after M3.
 
@@ -408,6 +408,7 @@ M4/M5 overlap deliberately: the timeline engine (M2) must exist before ingestion
 
 - Day-of mobile PWA (offline-first, IndexedDB + background sync).
 - Timeline auto-generation from ceremony time + venue constraint DB.
+- Vendor marketplace
 - Template marketplace + migration service (switching-cost removal).
 - Team/RBAC, referral automation, integrations (QuickBooks/Xero), analytics.
 
