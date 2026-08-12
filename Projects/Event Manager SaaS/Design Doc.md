@@ -25,7 +25,7 @@ Out of scope for MVP (explicitly deferred): Vendor Portal (write), Change-Order 
 
 ---
 
-# 2. Product thesis (the AI wedge)
+# 2. Product thesis
 
 An event manager integrated with AI agents that taps into email and centralizes timelines, delivery dates, and files in one place.
 
