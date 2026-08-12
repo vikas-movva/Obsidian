@@ -7,6 +7,7 @@ kanban-plugin: board
 ## #todo
 
 - [ ] Remove ouline when clicking show more in project cards
+- [ ] In mobile view, the timeline is shown in front of the experience card on the left side.
 
 
 ## Planning
