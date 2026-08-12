@@ -1,4 +1,12 @@
-1. Nagoya - F1 Shizuka Circuit 
+---
+title: Japan Trip Ideas
+tags:
+  - travel
+---
+
+# Japan Trip Ideas
+
+1. Nagoya - F1 Shizuka Circuit
 2. Osaka
 3. Kyoto
 4. Kobe

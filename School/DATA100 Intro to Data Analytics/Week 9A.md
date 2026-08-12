@@ -1,3 +1,12 @@
+---
+title: Week 9A
+tags:
+  - data100-intro-to-data-analytics
+  - school
+---
+
+# Week 9A
+
 ## Introduction
 
 - Date and time questions can be complex due to variations in:
@@ -37,7 +46,7 @@ now()
 
 ```r
 read_csv(col_types = cols(date = col_date("%y/%m/%d")))
-```    
+```
 
 ### From Individual Components
 
@@ -45,7 +54,7 @@ read_csv(col_types = cols(date = col_date("%y/%m/%d")))
 - Example:
 
 ```r
-make_date(year, month, day) 
+make_date(year, month, day)
 make_datetime(year, month, day, hour, minute)
 ```
 
@@ -77,14 +86,14 @@ update(datetime, year = 2010, month = 2, mday = 3)
 
 - Analyzing flight data:
 ```r
-flights_dt <- flights |>   
-filter(!is.na(dep_time), !is.na(arr_time)) |>  
-	mutate(
-		dep_time = make_datetime_100(year, month, day, dep_time),
-		arr_time = make_datetime_100(year, month, day, arr_time),
-		sched_dep_time = make_datetime_100(year, month, day, sched_dep_time),
-		sched_arr_time = make_datetime_100(year, month, day, sched_arr_time)
-		)
+flights_dt <- flights |>
+filter(!is.na(dep_time), !is.na(arr_time)) |>
+  mutate(
+    dep_time = make_datetime_100(year, month, day, dep_time),
+    arr_time = make_datetime_100(year, month, day, arr_time),
+    sched_dep_time = make_datetime_100(year, month, day, sched_dep_time),
+    sched_arr_time = make_datetime_100(year, month, day, sched_arr_time)
+    )
 ```
 - Visualizing patterns:
     - Weekend effect in flights

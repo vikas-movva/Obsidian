@@ -1,3 +1,12 @@
+---
+title: Lab 10
+tags:
+  - cp367
+  - school
+---
+
+# Lab 10
+
 ```bash
 gcc -g -o ctest ctest.c
 ```

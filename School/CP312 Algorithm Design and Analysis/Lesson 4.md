@@ -1,10 +1,12 @@
 ---
-Notes: "[[L4 - Merge Sort.pdf]]"
+title: Lesson 4
 tags:
-  - "#algorithms"
-  - "#merge-sort"
-  - Code
+  - cp312
+  - school
 ---
+
+# Lesson 4
+
 ## Merge sort
 
 ### Algorithm Design
@@ -111,7 +113,7 @@ end function
 ```
 
 ### Math
-We are merging 2 **sorted lists** each of size $n/2$ 
+We are merging 2 **sorted lists** each of size $n/2$
 In every step there is:
 - 1 comparison
 - 1 copy
@@ -121,10 +123,10 @@ In the worst case running-time is $3n \Rightarrow \Theta(n)$
 ```psuedo
 MergeSort(A, p, r):             | T(n)
 if p < r                        |
-	1 = floor((p+r)/2)          | Theta(1)
-	MergeSort(A, p, q)          | T(n/2)
-	MergeSort(A, q + 1, r)      | T(n/2)
-	Merge(A, p, r)              | Theta(n)
+  1 = floor((p+r)/2)          | Theta(1)
+  MergeSort(A, p, q)          | T(n/2)
+  MergeSort(A, q + 1, r)      | T(n/2)
+  Merge(A, p, r)              | Theta(n)
 ```
 $$T(n) = \{ \Theta(1) \text{ if } n=1 \text{ or } 2T(n/2) + \Theta(n) \text{ if } n>1\} $$
 ### Recurrence Tree
@@ -138,4 +140,3 @@ $T(n)= \Theta(nlog(n))$
 - Insertion sort **worst-case** running-time is $\Theta(n^2)$
 - Merge sort **worst-case** running-time is $\Theta(nlog(n))$
 - $\therefore$ we can say that *merge sort* is **asymptotically** faster than *insertion sort*
-

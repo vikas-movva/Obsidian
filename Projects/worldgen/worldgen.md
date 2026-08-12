@@ -1,3 +1,12 @@
+---
+title: worldgen
+tags:
+  - projects
+  - worldgen
+---
+
+# worldgen
+
 > Design doc v0.1. Built from a source-level study of Azgaar's Fantasy Map Generator
 > (FMG v1.139.12) and a `/grill-me` interview with the product owner.
 > Goal: an FMG-style map generator **geared to worldbuilding**, 100% local, smooth at

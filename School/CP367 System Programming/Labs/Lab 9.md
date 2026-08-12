@@ -1,3 +1,12 @@
+---
+title: Lab 9
+tags:
+  - cp367
+  - school
+---
+
+# Lab 9
+
 `funcsort()`:
 ```bash
 funcsort() {

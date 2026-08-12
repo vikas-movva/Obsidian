@@ -1,6 +1,12 @@
 ---
+title: Inferential statistics
 aliases: []
+tags:
+  - cs-learning
+  - statistics
 ---
+
+# Inferential statistics
 
 ### Inferential statistics
 

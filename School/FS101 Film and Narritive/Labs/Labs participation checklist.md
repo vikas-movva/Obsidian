@@ -1,4 +1,13 @@
-- [x]  Week 1
+---
+title: Labs participation checklist
+tags:
+  - fs101
+  - school
+---
+
+# Labs participation checklist
+
+- [x]  [[Week 1]]
 - [ ]  Week 2
 - [x]  Week 3
 - [x]  Week 4

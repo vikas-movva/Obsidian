@@ -1,26 +1,35 @@
+---
+title: Lecture 2
+tags:
+  - school
+  - ux100
+---
+
+# Lecture 2
+
 ### Design Thinking Process
 - Empathize
-	- This is the step where we take time to get to know our user
-	- What is the problem/issues that the users are having 
-	- Qualitative data
+  - This is the step where we take time to get to know our user
+  - What is the problem/issues that the users are having
+  - Qualitative data
 - Define
-	- What is the **Problem** in **concrete** terms
-	- What is the **exact problem** trying to be solved not the **solution**
+  - What is the **Problem** in **concrete** terms
+  - What is the **exact problem** trying to be solved not the **solution**
 - Ideate
-	- Brainstorm some **ideas** that can solve the problem
+  - Brainstorm some **ideas** that can solve the problem
 - Prototype
-	- A **minimal viable solution** to the problem
+  - A **minimal viable solution** to the problem
 - Test
-	- Test the prototype and go back to previous steps as needed
+  - Test the prototype and go back to previous steps as needed
 
 ```mermaid
 graph TB;
-	A((Empathize)) --> B((Define))
-	B --> C((Ideate))
-	C --> D((Prototype))
-	D --> E((Test))
-	E --> D
-	E --> C
+  A((Empathize)) --> B((Define))
+  B --> C((Ideate))
+  C --> D((Prototype))
+  D --> E((Test))
+  E --> D
+  E --> C
 ```
 
 ### Empathy mapping

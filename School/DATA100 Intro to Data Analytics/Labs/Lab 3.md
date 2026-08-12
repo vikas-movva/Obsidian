@@ -1,3 +1,12 @@
+---
+title: Lab 3
+tags:
+  - data100-intro-to-data-analytics
+  - school
+---
+
+# Lab 3
+
 ### arrange()
 
 The `arrange()` function from the `dplyr` package is used to reorder rows of a dataframe based on the values of selected columns. By default, it arranges in ascending order. To arrange in descending order, wrap the variable with `desc()`.

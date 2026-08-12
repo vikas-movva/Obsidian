@@ -1,6 +1,12 @@
 ---
+title: Qualitative
 aliases: [Qualitative data, Catagorical]
+tags:
+  - cs-learning
+  - statistics
 ---
+
+# Qualitative
 
 ### Qualitative data
 

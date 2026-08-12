@@ -1,3 +1,10 @@
+---
+title: Event Vendor AI SaaS
+tags:
+  - event-planning-ai-sas
+  - projects
+---
+
 # Highest-Leverage Technology Intervention Opportunities
 ## Event & Wedding Planner Market Analysis
 
@@ -12,6 +19,9 @@ The event/wedding planning industry suffers from **severe tool fragmentation** (
 **Total Addressable Market (US)**: ~50,000 active wedding/event planners (solo + small firms)
 **Willingness to Pay**: $50-150/mo for solo; $200-500/mo for multi-planner firms
 **Switching Cost Barrier**: High — planners migrate only during off-season (Jan-Mar)
+
+> [!abstract] TL;DR
+> Three things bleed planners: **fragmented tools**, **scope creep** (15-20+ unpaid hours/event), and **day-of fragility**. The wins stack when you ship one unified platform instead of point tools, and the two P0 features that move the needle most are the all-in-one platform and automated change-order management.
 
 ---
 
@@ -31,6 +41,14 @@ The event/wedding planning industry suffers from **severe tool fragmentation** (
 ---
 
 ## P0 Opportunities (Build First)
+
+```mermaid
+flowchart LR
+    A[P0: Unified Platform<br/>CRM + Timeline + Portal + Payments] --> B[P0: Automated Change Order<br/>Scope & pricing engine]
+    B --> C[P1: Vendor Portal<br/>Day-of real-time comms]
+    C --> D[P1: Timeline Auto-Gen<br/>from ceremony time]
+    D --> E[P1: Financial Dashboard<br/>P&L + cash flow]
+```
 
 ### 1. Unified All-in-One Platform
 **The "Operating System" for Event Planners**
@@ -83,7 +101,7 @@ The event/wedding planning industry suffers from **severe tool fragmentation** (
 
 #### The Problem Flow (Current)
 ```
-Client: "Can we add 3 more centerpieces?" 
+Client: "Can we add 3 more centerpieces?"
     ↓
 Planner: "Sure!" (mental note, no documentation)
     ↓
@@ -487,5 +505,5 @@ ASSISTANT MOBILE VIEW (Simplified)
 
 ---
 
-*Document Version: 1.0*  
-*Last Updated: 2026*  
+*Document Version: 1.0*
+*Last Updated: 2026*

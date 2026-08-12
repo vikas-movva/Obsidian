@@ -1,11 +1,12 @@
 ---
+title: Lesson 3 Neural net foundations
 tags:
-  - Code
-  - Fast-ai
-  - ML
-Web page: https://course.fast.ai/Lessons/lesson3.html
-Video: https://www.youtube.com/watch?v=hBBOjCiFcuo
+  - cs-learning
+  - fast-ai
 ---
+
+# [[Lesson 3]] Neural net foundations
+
 ## Video Notes
 ### Make a better pet detector
 The pet detector used in [[Lesson 2 - Deployment]] Fine-tunes the ==ResNet18== model to classify images. You can increase the performance by fine-tuning a different model, such as a ConvNeXt model.
@@ -15,9 +16,9 @@ The `export.pkl` file you get through the `export` function saves a `Learner` ob
 
 The `Learner` object has two main things inside of it.
 1. The list of pre-processing steps done in order to turn your images into the model
-	- `Dataloaders`, `Datablocks`
+  - `Dataloaders`, `Datablocks`
 2. The parameters
-	- The model weights 
+  - The model weights
 
 ### How do we fit a function to data
 Machine learning models are things that ==fit functions to data==. You start with an infinitely flexible function and using data you mold the function to fit the data you are providing.
@@ -58,16 +59,16 @@ for i in range(10):
     print(f'step={i}; loss={loss:.2f}')
 ```
 
->[!important] 
+>[!important]
 At the most basic level deep learning is just a bunch of activation functions stringed together plus gradient descent to optimize the parameters.
 
-## Textbook notes 
+## Textbook notes
 ### Bias
 According to a paper from [MIT](https://arxiv.org/abs/1901.10002) there are six types of biases in machine learning.
 
 - Historical bias
-	- Comes from the fact that people are biased, processes are biased, and society is biased 
-	- It is a fundamental, structural issue with the first step of the data generation process
+  - Comes from the fact that people are biased, processes are biased, and society is biased
+  - It is a fundamental, structural issue with the first step of the data generation process
 - Representation bias
 - Measurement bias
 - Aggregation bias

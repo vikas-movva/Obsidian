@@ -1,14 +1,24 @@
+---
+title: Course Overview
+tags:
+  - cp322
+  - school
+---
+
 Welcome to CP322 Machine Learning! In this exciting and comprehensive journey, we will explore the fascinating world of machine learning and delve into the cutting-edge realm of deep learning. This course is designed to provide you with a solid foundation in both traditional machine learning approaches and the latest advancements in deep learning techniques.
 
 # Course Overview
 
-Machine learning has revolutionized the way we solve complex problems, make predictions, and uncover hidden patterns in vast datasets. In this course, we will cover the four major approaches to machine learning, which are information-based learning, similarity-based learning, probability-based learning, and error-based learning. These fundamental techniques form the basis for various machine learning models and algorithms.
+Welcome to CP322 Machine Learning. The course builds a foundation in both traditional ML and the latest deep learning techniques, and covers four major approaches: information-based, similarity-based, probability-based, and error-based learning.
 
-Additionally, we will dive into the realm of deep learning, which has sparked a paradigm shift in the field of artificial intelligence. Deep learning models, inspired by the structure and functioning of the human brain, have demonstrated extraordinary capabilities in tasks such as image recognition and natural language processing. 
+> [!note] What the course is about
+> Machine learning has revolutionized how we solve complex problems, make predictions, and uncover hidden patterns in vast datasets. These four fundamental techniques form the basis for the models and algorithms we'll study, and we'll also dive into deep learning, which has driven a paradigm shift in AI (image recognition, NLP, and beyond).
+
+Additionally, we will dive into the realm of deep learning, which has sparked a paradigm shift in the field of artificial intelligence. Deep learning models, inspired by the structure and functioning of the human brain, have demonstrated extraordinary capabilities in tasks such as image recognition and natural language processing.
 
 ### Course Format
 
-The course is conducted in a classroom setting. Lectures are scheduled to commence on September 9th, 2024. 
+The course is conducted in a classroom setting. Lectures are scheduled to commence on September 9th, 2024.
 
 
 |        | Time          | Days | Where | Date Range               |
@@ -16,17 +26,17 @@ The course is conducted in a classroom setting. Lectures are scheduled to commen
 | CP322A | 1:00pm-2:20am | M,W  | SB106 | Sep 9, 2024 - Dec 4,2024 |
 
 
-### Prerequisites
-- Prerequisite courses: Successful completion of CP312.
-- Knowledge of basic computer science principles and skills, at a level comfortable with writing a non-trivial computer program. 
-- Good knowledge of Python. We will give programming assignments and course project. You will need to be familiar with Python, and we will not cover programming-specific issues in this course.
-- Familiarity with basic probability theory, basic linear algebra, statistical and algorithmic analysis.
+> [!tip] Prerequisites
+> - **Course**: successful completion of CP312.
+> - Comfortable writing a non-trivial program (core CS principles and skills).
+> - Solid **Python** knowledge; programming assignments and the course project assume it.
+> - Familiarity with basic probability, linear algebra, statistics, and algorithmic analysis.
 
 ### Resources
 You don't need a textbook for this course, but feel free to use the following resources to enhance what you learn from the lesson notes. Suggested readings:
 - John D. Kelleher, Brian Mac Namee and Aoife D'Arcy, Fundamentals of Machine Learning for Predictive Data Analytics-Algorithms, Worked Examples, and Case Studies, 2020.
-	1. Physical Book: https://www.wlubookstore.com/FUNDAMENTALS-OF-MACHINE-LEARNING-FOR-PREDICTIVE-DATA-ANALYTICS-2-EDITION
-	2. Digital Book: https://wlu-store.vitalsource.com/products/fundamentals-of-machine-learning-for-predictive-john-d-kelleher-brian-mac-v9780262361101?term=9780262044691
+  1. Physical Book: https://www.wlubookstore.com/FUNDAMENTALS-OF-MACHINE-LEARNING-FOR-PREDICTIVE-DATA-ANALYTICS-2-EDITION
+  2. Digital Book: https://wlu-store.vitalsource.com/products/fundamentals-of-machine-learning-for-predictive-john-d-kelleher-brian-mac-v9780262361101?term=9780262044691
 - Christopher M. Bishop, [Pattern Recognition and Machine Learning](http://research.microsoft.com/en-us/um/people/cmbishop/PRML/index.htm), 2006.
 - Ian Goodfellow, Yoshua Bengio and Aaron Courville, [Deep Learning](http://www.deeplearningbook.org/), 2016.
 - Kevin P. Murphy, [Machine Learning: A Probabilistic Perspective](http://search.library.utoronto.ca/search?Ntx=mode%20matchallpartial&Ntk=Anywhere&N=0&Ntt=machine%20learning%20murphy&Nr=p_work_normalized:Murphy%20Kevin%20P%201970-%20Machine%20learning&uuid=26f5cd74-4ad9-48af-8409-8c8249bb4a39), 2013.
@@ -53,7 +63,7 @@ _Please note:_
 
 | WK  | Topic                                              | Suggested Reading                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | --- | -------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | Class Outline / Chapter 1: Introduction            | FMLPDA Ch 1, 2, 3, 4.<br><br>[Getting Started with Python](http://www.cse.msu.edu/~ptan/dmbook/tutorials/tutorial0.html)<br><br>[Introduction to Numpy and Pandas](http://www.cse.msu.edu/~ptan/dmbook/tutorials/tutorial2/tutorial2.html)<br><br>[Jupyter Notebook Users Manual](https://jupyter.brynmawr.edu/services/public/dblank/Jupyter%20Notebook%20Users%20Manual.ipynb)<br><br>[Linear Algebra Review and Reference](http://cs229.stanford.edu/section/cs229-linalg.pdf) |
+| 1   | Class Outline / [[Chapter 1]]: Introduction            | FMLPDA Ch 1, 2, 3, 4.<br><br>[Getting Started with Python](http://www.cse.msu.edu/~ptan/dmbook/tutorials/tutorial0.html)<br><br>[Introduction to Numpy and Pandas](http://www.cse.msu.edu/~ptan/dmbook/tutorials/tutorial2/tutorial2.html)<br><br>[Jupyter Notebook Users Manual](https://jupyter.brynmawr.edu/services/public/dblank/Jupyter%20Notebook%20Users%20Manual.ipynb)<br><br>[Linear Algebra Review and Reference](http://cs229.stanford.edu/section/cs229-linalg.pdf) |
 | 2   | Chapter 2: Data Exploration                        | [Data Exploration](http://www.cse.msu.edu/~ptan/dmbook/tutorials/tutorial3/tutorial3.html)<br><br>[Data Preprocessing](http://www.cse.msu.edu/~ptan/dmbook/tutorials/tutorial4/tutorial4.html)                                                                                                                                                                                                                                                                                    |
 | 3   | Chapter 3: Information-based learning              | FMLPDA Ch4; [Decision Tree](https://scikit-learn.org/stable/modules/tree.html)<br><br>[Classification with scikit-learn Package](http://www.cse.msu.edu/~ptan/dmbook/tutorials/tutorial6/tutorial6.html)                                                                                                                                                                                                                                                                          |
 | 4   | Chapter 4: Evaluation                              | FMLPDA Ch 8; [Model Evaluation](https://scikit-learn.org/0.15/modules/model_evaluation.html)                                                                                                                                                                                                                                                                                                                                                                                      |
@@ -80,7 +90,7 @@ The following, but not limited to, are violations of [Laurier’s Academic Code
 
 1. Accessing unauthorized resources (Google, chat rooms, Chegg, Reddit, etc.) for assessments.
 2. Using technological aids beyond what is listed as permitted in an assessment.
-3. Posting test, assignment, lab or exam questions to message boards, social media, or other unauthorized websites (ex. Chegg or CourseHero). While these third parties claim to be tutoring resources, for a fee they take your work and share it with other students; an act that constitutes an action of academic misconduct. 
+3. Posting test, assignment, lab or exam questions to message boards, social media, or other unauthorized websites (ex. Chegg or CourseHero). While these third parties claim to be tutoring resources, for a fee they take your work and share it with other students; an act that constitutes an action of academic misconduct.
 4. Copying the work of others by way of file or image sharing.
 5. Posting test, assignment, lab or exam questions and answers in virtual "course groups" (ex. Facebook, Discord or WhatsApp).
 6. Copying the work that is shared or posted in virtual "course groups" (ex. Facebook, Discord or WhatsApp).
@@ -90,8 +100,8 @@ The following, but not limited to, are violations of [Laurier’s Academic Code
 
 **Generative AI**
 
-**The use of generative AI is permitted in specific components of this course.** Due to the nature of this course, which focuses on machine learning, we will introduce and explore generative AI models and algorithms as part of the curriculum. However, the use of generative AI will be specifically limited to the final chapter on "Deep Learning." In all submissions in which you use generative AI, you must [cite its usage](https://library.wlu.ca/ai). Failing to cite the use of generative AI is academic misconduct. In all other aspects of your work, the use of generative AI will be considered academic misconduct and Senate Policy 12.2 Student Code of Conduct: Academic Misconduct will be applied.  
-  
+**The use of generative AI is permitted in specific components of this course.** Due to the nature of this course, which focuses on machine learning, we will introduce and explore generative AI models and algorithms as part of the curriculum. However, the use of generative AI will be specifically limited to the final chapter on "Deep Learning." In all submissions in which you use generative AI, you must [cite its usage](https://library.wlu.ca/ai). Failing to cite the use of generative AI is academic misconduct. In all other aspects of your work, the use of generative AI will be considered academic misconduct and Senate Policy 12.2 Student Code of Conduct: Academic Misconduct will be applied.
+
 
 ### University and Course Policies
 

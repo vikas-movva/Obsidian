@@ -1,3 +1,12 @@
+---
+title: Deadlocks in MPI Programs
+tags:
+  - cp431
+  - school
+---
+
+# Deadlocks in MPI Programs
+
 ## Basic Deadlock Example
 
 ### Scenario
@@ -68,12 +77,12 @@ sequenceDiagram
 ---
 
 > [!NOTE] Key Concepts
-> 
+>
 **What Causes Deadlocks?**
 > 1. Blocking Order: If all processes call `MPI_Recv` before `MPI_Send`, no data is sent.
 > 2. Mismatched Tags: Tags must match between sender and receiver.
 > 3. Wrong Source/Destination: Incorrect ranks in `MPI_Send` or `MPI_Recv`.
-> 
+>
 Avoiding Deadlocks
 > 1. Reorder Operations: Ensure at least one process sends before receiving.
 >    - Example: Use `MPI_Send` followed by `MPI_Recv` on one process, and vice versa on the other.

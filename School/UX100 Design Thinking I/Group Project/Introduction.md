@@ -1,3 +1,12 @@
+---
+title: Introduction
+tags:
+  - school
+  - ux100
+---
+
+# Introduction
+
 Transitioning to university life is a pivotal and often challenging period for first-year students. As they embark on this new chapter, they encounter a range of difficulties that can impact both their academic performance and overall well-being. The academic rigor of university courses often exceeds that of high school, requiring students to adapt to new study techniques and manage their time more effectively. Additionally, the breadth and depth of new topics can be daunting, requiring students to develop a solid understanding quickly.
 
 Beyond academics, the social aspect of university life presents its own set of challenges. Many first-year students move away from home for the first time, leaving behind familiar support systems and friendships. This relocation can lead to feelings of isolation and homesickness, further compounded by the pressure to form new social connections in an unfamiliar environment. For international students, these challenges are intensified by cultural and language barriers, making the adjustment even more strenuous.

@@ -1,4 +1,13 @@
-Topics: #HTML, #CP202 
+---
+title: Text and Lists
+tags:
+  - cp202
+  - school
+---
+
+# Text and Lists
+
+Topics: #HTML, #CP202
 
 | Tag            | Effect                             | Attributes |
 | -------------- | ---------------------------------- | ---------- |
@@ -29,4 +38,3 @@ Topics: #HTML, #CP202
 | `<dt>`         | Definition title                   |            |
 | `<dd>`         | Definition                         |            |
 |                |                                    |            |
-

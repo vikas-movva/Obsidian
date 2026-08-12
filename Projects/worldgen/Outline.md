@@ -1,7 +1,16 @@
+---
+title: Outline
+tags:
+  - projects
+  - worldgen
+---
+
+# Outline
+
 ### Features
-- Terrain generation 
+- Terrain generation
 - Automatic Climate / biomes
-- Non-destructive editing 
+- Non-destructive editing
 - heightmap editor
 
 Todo:
@@ -18,7 +27,7 @@ Create a graph for cells
 Heightmap Algo:
 1. Choose seed points
 2. Give seed points
-	1. random Vector3 for plate movement
+  1. random Vector3 for plate movement
 3. Add neighbours to queue - BFS
 4. Assign Cell height
 5. Mark visited

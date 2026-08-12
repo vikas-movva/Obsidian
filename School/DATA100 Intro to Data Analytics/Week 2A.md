@@ -1,3 +1,12 @@
+---
+title: Week 2A
+tags:
+  - data100-intro-to-data-analytics
+  - school
+---
+
+# Week 2A
+
 All `.rmd` and `.qmd` should have the following at the beginning of each file
 
 ```r

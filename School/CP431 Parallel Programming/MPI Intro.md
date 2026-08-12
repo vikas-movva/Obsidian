@@ -1,3 +1,10 @@
+---
+title: MPI Intro
+tags:
+  - cp431
+  - school
+---
+
 # Introduction to MPI: Detailed Notes
 
 ## 1. **MPI Basics**
@@ -14,7 +21,7 @@
 1. **Include Header:** `#include "mpi.h"`.
 2. **Initialize MPI:** `MPI_Init(&argc, &argv)` **must** be called before any MPI functions.
 3. **Finalize MPI:** `MPI_Finalize()` cleans up resources after MPI operations.
-4. **Communicators:** 
+4. **Communicators:**
    - `MPI_COMM_WORLD`: Default communicator grouping all processes.
    - `MPI_Comm_rank(comm, &rank)`: Retrieves the process rank.
    - `MPI_Comm_size(comm, &size)`: Retrieves the total number of processes.
@@ -86,7 +93,7 @@ int MPI_Recv(
 - **Wildcards:**
   - `MPI_ANY_SOURCE`: Receive from any sender.
   - `MPI_ANY_TAG`: Receive messages with any tag.
-- **Status Object:** 
+- **Status Object:**
   - `status.MPI_SOURCE`: Rank of the sender.
   - `status.MPI_TAG`: Tag of the received message.
   - Use `MPI_Get_count(&status, type, &count)` to get the actual message size.

@@ -1,3 +1,12 @@
+---
+title: Parellel Merging Algorithm
+tags:
+  - cp431
+  - school
+---
+
+# Parellel Merging Algorithm
+
 ## Overview
 The algorithm merges two sorted arrays `A` and `B` (each of size `n`) into a sorted array `C` of size `2n` using parallel processing. Key steps include partitioning the arrays, finding boundary indices, and merging in parallel.
 
@@ -117,14 +126,14 @@ flowchart TD
 ---
 
 > [!NOTE] Key Concepts
-> 
+>
 > **Boundary Detection**
 > - Use **binary search** to find `j(i)` efficiently (O(log n) per group).
 > - Ensures partitions in `B` align with partitions in `A`.
-> 
+>
 > **Load Balancing**
 > - Each processor merges `O(n/p)` elements, leading to **O(n/p + log n)** time complexity.
-> 
+>
 > **Correctness**
 > - Partitions guarantee no overlap in `C`, as all elements in `A_i` and `B_i` are ≤ elements in `A_{i+1}` and `B_{i+1}`.
 

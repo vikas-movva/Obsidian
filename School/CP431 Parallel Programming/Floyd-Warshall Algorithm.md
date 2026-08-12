@@ -1,3 +1,12 @@
+---
+title: Floyd Warshall Algorithm
+tags:
+  - cp431
+  - school
+---
+
+# Floyd Warshall Algorithm
+
 ## Title Page
 - **Title**: Introduction to the Floyd-Warshall Algorithm.
 

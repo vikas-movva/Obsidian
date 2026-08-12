@@ -1,3 +1,12 @@
+---
+title: Basis
+tags:
+  - cs-learning
+  - linear-algebra
+---
+
+# Basis
+
 ### Basis
 A basis is a set of vectors that generates all elements of the vector space and the vectors in the set are linearly independent.
 
@@ -10,12 +19,9 @@ If $\hat{b}_{1}$ and $\hat{b}_{2}$ are 90$\degree$ from each other you can then 
 $$
 \begin{align*}
 \vec{r} = proj_{\hat{b}_{1}}\vec{r}\cdot\hat{b}_{1} + proj_{\hat{b}_{2}}\vec{r}\cdot\hat{b}_{2}\\\\
-\vec{r} = 2\hat{b}_{1} + \frac{1}{2}\hat{b}_{2} 
+\vec{r} = 2\hat{b}_{1} + \frac{1}{2}\hat{b}_{2}
 \end{align*}
 $$
 or in terms of basis $b$ $\vec{r} = \begin{vmatrix}2\\ \frac{1}{2}\end{vmatrix}$
 
 You can also use linear systems.
-
-
- 

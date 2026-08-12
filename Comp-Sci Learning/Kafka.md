@@ -1,3 +1,11 @@
+---
+title: Kafka
+tags:
+  - cs-learning
+---
+
+# Kafka
+
 ## High level overview
 
 ### What is Kafka?
@@ -7,7 +15,7 @@ The main pain point it solves is removing tight coupling between services so tha
 
 ### How it works
 Services (producers) generate an event record and pass it to Kafka, which then forwards it to other services (consumers).
- 
+
 An event in Kafka contains a key-value pair, a timestamp, and optional metadata.
 
 Internally, Kafka has topics that group similar events and processes them in parallel.

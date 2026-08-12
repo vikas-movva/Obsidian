@@ -1,3 +1,12 @@
+---
+title: Week 3A
+tags:
+  - data100-intro-to-data-analytics
+  - school
+---
+
+# Week 3A
+
 >[!Recall]
 >`Library(tidyverse)` should apear in the beginning of every `.qmd` or `.rmd` file we have from now on
 >
@@ -31,19 +40,19 @@ flights |> filter(day %in% 1:15
 
 #### Rules of logical operations:
 - **DeMorgan's Laws**
-	- $!(x|y) = (!x) \cap (!y)$
-	- $!(x\cap y) = (!x) | (!y)$
+  - $!(x|y) = (!x) \cap (!y)$
+  - $!(x\cap y) = (!x) | (!y)$
 - **Distributivity**
-	- $x \cap (y|z) = (x\cap y)| (x \cap z)$
-	- $x|(y\cap z)= (x|y) \cap (x|z)$
+  - $x \cap (y|z) = (x\cap y)| (x \cap z)$
+  - $x|(y\cap z)= (x|y) \cap (x|z)$
 
-The following commands give the same list of flights 
+The following commands give the same list of flights
 - In filter’s parameter list: and can be represented by , and & in the filtering conditions.
 
 ```r
-flights |> filter(!(arr_delay > 120 | dep_delay > 120)) 
+flights |> filter(!(arr_delay > 120 | dep_delay > 120))
 
-flights |> filter(arr_delay <= 120 & dep_delay <= 120) 
+flights |> filter(arr_delay <= 120 & dep_delay <= 120)
 
 flights |> filter(arr_delay <= 120, dep_delay <= 120)
 ```
@@ -52,5 +61,3 @@ in order to filter out `NA` values use the function `is.na()`
 
 #### Common `filter()` mistakes:
 - using = (assignment operator) instead of == (comparison operator)
-
-

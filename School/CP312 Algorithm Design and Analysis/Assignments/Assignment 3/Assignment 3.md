@@ -1,7 +1,16 @@
+---
+title: Assignment 3
+tags:
+  - cp312
+  - school
+---
+
+# Assignment 3
+
 ## 1
 ### 1.A
 #### Longest duration
-For this counter example assume that we are scheduling tasks 
+For this counter example assume that we are scheduling tasks
 
 | Task ID | Start Time | End Time | Duration |
 | ------- | ---------- | -------- | -------- |
@@ -37,7 +46,7 @@ This choice reduces the problem to a smaller task scheduling problem from `Start
 
 Inductive Hypothesis: Assume that for a problem of size $k$, the greedy strategy yields an optimal solution.
 
-Inductive Step: Prove that the hypothesis holds for the problem of size $k+1$. 
+Inductive Step: Prove that the hypothesis holds for the problem of size $k+1$.
 If the greedy choice is made for the first task, the problem size reduces to $k$. By the inductive hypothesis, the greedy strategy yields an optimal solution for the remaining $k$ tasks. Hence, the greedy strategy yields an optimal solution for the problem of size $k+1$.
 
 ### 1.C
@@ -52,22 +61,22 @@ Suppose we have three activities with their start times, finish times, and costs
 By utilizing the greedy choice of earliest finish time we would get:
 ```mermaid
 gantt
-	dateFormat HH:mm
-	axisFormat %H:%M
-	start: milestone, 01:00, 1m
-	end: milestone, 06:00, 1m
-	Cost 2: 01:00, 2h
-	Cost 2: 04:00, 2h
+  dateFormat HH:mm
+  axisFormat %H:%M
+  start: milestone, 01:00, 1m
+  end: milestone, 06:00, 1m
+  Cost 2: 01:00, 2h
+  Cost 2: 04:00, 2h
 ```
 with a total cost of 4 while the optimal solution would be:
 
 ```mermaid
 gantt
-	dateFormat HH:mm
-	axisFormat %H:%M
-	start: milestone, 01:00, 1m
-	end: milestone, 06:00, 1m
-	Cost 1: 02:00, 3h
+  dateFormat HH:mm
+  axisFormat %H:%M
+  start: milestone, 01:00, 1m
+  end: milestone, 06:00, 1m
+  Cost 1: 02:00, 3h
 ```
 With a total cost of 1
 
@@ -174,7 +183,7 @@ the optimal solution would be 40
 ### 3.B
 For a bag with capacity $8$ a greedy algorithm that uses the **density** as its greedy choice would yield items \[4, 1\] as its choices the knapsack ends up with a value of $31$ and a weight of $5/8$ where as the optimum solution would choose items \[2, 4\] and have a value of $41$ and a weight of $8/8$.
 
-### 3.C 
+### 3.C
 When solving the fractional knapsack problem the greedy algorithm would output:
 
 | items | Total weight | Value | Percentage | total |
@@ -194,7 +203,7 @@ A Naive solution to this problem would be to go through all possible outcomes fo
 
 For a sequence of length $n$ for each pair of contiguous integers, we have 2 choices: we can either insert an addition operation or a multiplication operation. Therefore the time complexity for this problem would be $O(2^n)$
 
-### 4.C 
+### 4.C
 A counter example to a greedy approach would be:
 `[1, 2, 3, 4]`
 
@@ -205,11 +214,11 @@ Where as the optimum solution is:
 (1 x 2) + (3 x 4) = 14
 
 ### 4.D
-$$V[j] = 
-\begin{cases} 
+$$V[j] =
+\begin{cases}
 0 & \text{if } j = 0 \\
 x_{1} & \text{if } j = 1 \\
-max(V[j-1] + V[j], V[j-2] + V[j-1] × V[j]) & \text{if } j \geq 2 
+max(V[j-1] + V[j], V[j-2] + V[j-1] × V[j]) & \text{if } j \geq 2
 \end{cases}
 $$
 

@@ -1,4 +1,11 @@
+---
+title: Create a freestanding Rust binary
+tags:
+  - projects
+  - rust-os
+---
 
+# Create a freestanding Rust binary
 
 ### Introduction
 To write a kernel in pure rust we need to remove any rust feature that relies upon OS features.
@@ -48,13 +55,13 @@ use core::panic::PanicInfo;
 
 #[no_mangle] // dont mangle the name of the function below
 pub extern "C" fn _start() -> !{
-	// entry point of the program
-	loop {} // infinite loop for now as a placeholder
+  // entry point of the program
+  loop {} // infinite loop for now as a placeholder
 }
 
 #[panic_handler] // tell the compiler to call this function on panic
 fn panic(_info: &PanicInfo) -> !{
-	loop{} // infinite loop for now as a placeholder
+  loop{} // infinite loop for now as a placeholder
 }
 ```
 
@@ -91,4 +98,3 @@ cargo build --target thumbv7em-none-eabihf
 now since the target has no OS the linker will not try to link the `C` runtime
 
 ==Note: this is just a minimal implementation extra steps need to be taken in order for any real use of the binary==
-

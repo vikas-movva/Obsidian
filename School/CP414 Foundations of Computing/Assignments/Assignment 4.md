@@ -1,3 +1,10 @@
+---
+title: Assignment 4
+tags:
+  - cp414
+  - school
+---
+
 # Question 1
 
 ### ISO: Find the Size of the Largest Independent Set
@@ -27,7 +34,7 @@ Function ISO(G):
 
 **Initialization**: Set \( low = 0 \) (since ISD(G, 0) is always TRUE) and \( high = |V| \) (since ISD(G, k) is FALSE for \( k > |V| \)).
 **Loop Invariant**: After each iteration, \( low \) is a value where ISD(G, low) is TRUE (there exists an independent set of size at least \( low \)), and \( high \) is such that either \( high = |V| \) or ISD(G, high + 1) is FALSE (no independent set of size \( high + 1 \) or larger exists). Thus, the maximum size lies between \( low \) and \( high \).
-**Binary Search**: 
+**Binary Search**:
   - Compute \( mid = (low + high + 1) // 2 \), which biases toward the upper half due to integer division.
   - If ISD(G, mid) is TRUE, an independent set of size at least \( mid \) exists, so the maximum size is at least \( mid \), and we set \( low = mid \).
   - If ISD(G, mid) is FALSE, no independent set of size \( mid \) or larger exists, so the maximum is less than \( mid \), and we set \( high = mid - 1 \).
@@ -138,10 +145,9 @@ To solve HamPathF, we construct the Hamiltonian path incrementally, using HamPat
    - When \(|P| = |V|\), return \(P\) as the Hamiltonian path. If no such path can be constructed, report that none exists.
 
 
-
 #### Running Time Analysis
 
-- **Calls to HamPathD**: 
+- **Calls to HamPathD**:
   - **Initial vertex**: Check up to \(|V|\) vertices, making \(O(|V|)\) calls to HamPathD.
   - **Subsequent vertices**: For each of the \(|V|-1\) extensions, let \(u\) be the last vertex in \(P\). The number of neighbors of \(u\) not in \(P\) is at most its degree in \(G\), bounded by \(|V|-1\). In the worst case (e.g., a complete graph), we check up to \(|V|-|P|\) neighbors. Total calls across all steps are:
     - Step 1: \(O(|V|)\),
@@ -194,7 +200,7 @@ This establishes that HamPathF is polynomial time Turing reducible to HamPathD.
 
 - **Clarification**: \(G'\)’s disjoint union means HamPathD(\(G'\)) is true if any \(G_e\) has a Hamiltonian path, aligning with the existence of a suitable \(e\).
 
-**Polynomial Time**: 
+**Polynomial Time**:
 - For each \(e \in E\), \(G_e\) has \(|V| + 2\) vertices and \(|E| + 2\) edges. Total vertices in \(G'\) are \(|E| \cdot (|V| + 2)\), edges are \(|E| \cdot (|E| + 2)\). Since \(|E| \leq |V|^2\), size is \(O(|E| \cdot |V|)\), constructible in polynomial time.
 
 Thus, HamCycleD \(\leq_P\) HamPathD.

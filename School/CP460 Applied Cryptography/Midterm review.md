@@ -1,9 +1,18 @@
-**Topics:** 
+---
+title: Midterm review
+tags:
+  - cp460
+  - school
+---
+
+# Midterm review
+
+**Topics:**
 1. Stream cipher
 2. Block cipher
 3. DES
 4. Field and its arithmetic operations
-6. AES 
+6. AES
 7. RSA  algorithm
 
 ### Definitions
@@ -25,7 +34,7 @@ $\therefore$ ABCD -> KDWS
 #### Attacks against Substitution cipher
 **Exhaustive Key Search Attack (Brute-Force)**
 - Try every possible substitution table until an intelligent plaintext appears. (NOTE: For the substitution cipher the substitution table is the key)
-- For a brute-force approach how many keys are there? $26! = 2^{88}$ 
+- For a brute-force approach how many keys are there? $26! = 2^{88}$
 - for modern computers searching through a key-space of $2^{88}$ will take years and therefore not very feasible
 
 **Letter Frequency Analysis Attack (Brute-Force)**
@@ -36,18 +45,18 @@ $\therefore$ ABCD -> KDWS
 ### Shift and Affine Ciphers
 #### Shift Cipher (Caesar)
 - Encryption algorithm is pretty simple for Shift ciphers. Shift each letter in the plaintext by $k$ which is the key to the cipher.
-	- Example: ABCD, $k=2$ -> CDEF
-- Equation for Shift ciphers: 
-	- Encryption: $y = e_{k}(x)\equiv x+k |26|$
-	- Decryption $x = d_{k}(x) \equiv y-k |26|$
+  - Example: ABCD, $k=2$ -> CDEF
+- Equation for Shift ciphers:
+  - Encryption: $y = e_{k}(x)\equiv x+k |26|$
+  - Decryption $x = d_{k}(x) \equiv y-k |26|$
 - Because the keyspace of the shift cipher is only 26 it is **not** safe against brute-force attacks!
 
 #### Affine Cipher
-- This cipher is an extension of the shift cipher the only difference is that you multiply $x$ by a variable $a$ before adding the shift $b$ 
-- Equations: 
-	- Encryption: $y = e_{k}(x)\equiv ax+b |26|$
-	- Decryption: $x = d_{k}(x) \equiv a^{-1}(y-b) |26|$
-	- ==Remember==: $a^{-1}$ is a number such that $a\times a^{-1} \equiv 1 |m|$
+- This cipher is an extension of the shift cipher the only difference is that you multiply $x$ by a variable $a$ before adding the shift $b$
+- Equations:
+  - Encryption: $y = e_{k}(x)\equiv ax+b |26|$
+  - Decryption: $x = d_{k}(x) \equiv a^{-1}(y-b) |26|$
+  - ==Remember==: $a^{-1}$ is a number such that $a\times a^{-1} \equiv 1 |m|$
 
 ### Stream Cipher
 - Encrypts individual bits

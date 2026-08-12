@@ -1,18 +1,24 @@
 ---
-Notes: "[[Understanding_Cryptography_Chptr_1---Intro_to_Crypto + Historical_Ciphers.pdf]]"
+title: Week 1
+tags:
+  - cp460
+  - school
 ---
+
+# Week 1
+
 ## Overview of the cryptology field
 
 ### Classification of the Field of Cryptology
 ```mermaid
-graph TD 
-	A[Cryptology] --> B[Cryptography] 
-	A --> C[Cryptanalysis] 
-	B --> D[Symmetric Ciphers] 
-	B --> E[Asymmetric Ciphers] 
-	B --> F[Protocols] 
-	D --> G[Block Ciphers] 
-	D --> H[Stream Ciphers]
+graph TD
+  A[Cryptology] --> B[Cryptography]
+  A --> C[Cryptanalysis]
+  B --> D[Symmetric Ciphers]
+  B --> E[Asymmetric Ciphers]
+  B --> F[Protocols]
+  D --> G[Block Ciphers]
+  D --> H[Stream Ciphers]
 ```
 
 ### Basic facts about cryptology
@@ -20,22 +26,22 @@ graph TD
 - **Symmetric ciphers**: All encryption schemes from ancient times until 1976 were symmetric ones.
 - **Asymmetric ciphers**: In 1976 public-key (or asymmetric) cryptography was openly proposed by Diffie, Hellman, and Merkle
 - **Hybrid Schemes**: The majority of today's protocols are hybrid schemes (use both)
-	- _symmetric ciphers_ (for encryption and message authentication)
-	- _asymmetric ciphers_ (for key exchange and digital signature)
+  - _symmetric ciphers_ (for encryption and message authentication)
+  - _asymmetric ciphers_ (for key exchange and digital signature)
 ## Basics of Symmetric Cryptography
 
 ### Symmetric Cryptography
 Also called **private-key**, **single-key**, or **secret-key** cryptography
 
 ```mermaid
-graph LR 
-	A["Alice
-	(good)"] -->|x| C{Unsecure channel
-	e.g. Internet} 
-	C -->|x| B["Bob
-	(good)"] 
-	O["Oscar
-	(bad guy)"] -.-> C 
+graph LR
+  A["Alice
+  (good)"] -->|x| C{Unsecure channel
+  e.g. Internet}
+  C -->|x| B["Bob
+  (good)"]
+  O["Oscar
+  (bad guy)"] -.-> C
 ```
 **Problem Statement**:
 1. Alice and Bob would like to communicate via an unsecure channel
@@ -50,7 +56,7 @@ graph TD
     KG["Key Generator"] -->|K| E
     KG -->|K| D
     O["Oscar (bad guy)"] -.->|y| C
-    
+
     subgraph Secure Channel
     KG
     end
@@ -89,12 +95,12 @@ Only use **known** ciphers that have been cryptanalized for several years by goo
 
 ### Cryptanalysis: Attacking Cryptosystems
 ```mermaid
-graph LR 
-	A[Cryptanalisis] --> B[Classical Cryptanalisis] 
-	A --> C[Implementatoin Attacks] 
-	A --> D[Social Engineering] 
-	B --> E[Mathematical Analysis] 
-	B --> F[Brute-Force Attacks] 
+graph LR
+  A[Cryptanalisis] --> B[Classical Cryptanalisis]
+  A --> C[Implementatoin Attacks]
+  A --> D[Social Engineering]
+  B --> E[Mathematical Analysis]
+  B --> F[Brute-Force Attacks]
 ```
 
 **Classical Attacks**
@@ -102,12 +108,12 @@ graph LR
 - Brute-Force Attack
 
 **Implementation Attack**
-- The method of extracting a key through reverse engineering or power measurement 
-	- EX. smart banking card
+- The method of extracting a key through reverse engineering or power measurement
+  - EX. smart banking card
 
 **Social Engineering**
 - The method of extracting the key or other important information through person to person interactions
-	- EX. tricking a user into giving up their password or recovery answers
+  - EX. tricking a user into giving up their password or recovery answers
 
 ### Brute-Force Attack (or Exhaustive Key Search) against Symmetric Ciphers
 This method treats the cipher as a black box. It requires at least 1 plaintext-ciphertext pair $(X_{0}, Y_{0})$ and checks all possible keys until the conditions are fulfilled.

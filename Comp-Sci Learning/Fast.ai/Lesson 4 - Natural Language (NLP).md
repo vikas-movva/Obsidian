@@ -1,11 +1,12 @@
 ---
+title: Lesson 4 Natural Language (NLP)
 tags:
-  - Code
-  - Fast-ai
-  - ML
-Web page: https://course.fast.ai/Lessons/lesson4.html
-Video: https://www.youtube.com/watch?v=toUgBQv1BT8
+  - cs-learning
+  - fast-ai
 ---
+
+# [[Lesson 4]] Natural Language (NLP)
+
 ## Video Notes
 ### Finetuning models
 Fine-tuning means taking the weights of a trained neural network and use it as initialization for a new model being trained on data from the same domain (e.g., images). It is used to speed up the training. Overcome small dataset size.
@@ -38,8 +39,8 @@ Split your train/test sets depending on what kind of data you are using
 - Ex. For time series data, truncate the last x% of the data into the training set in order to simulate real use cases
 
 ### Pearson correlation coefficient
-Is a descriptive statistic that describes the strength and direction of the linear relationship between two quantitative variables. 
+Is a descriptive statistic that describes the strength and direction of the linear relationship between two quantitative variables.
 It is usually represented by the letter $r$
 $$\rho _{X,Y}={\frac {\operatorname {cov} (X,Y)}{\sigma _{X}\sigma _{Y}}}$$
 
-## Textbook notes 
+## Textbook notes

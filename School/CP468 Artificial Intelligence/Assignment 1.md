@@ -1,8 +1,15 @@
-# Part I 
+---
+title: Assignment 1
+tags:
+  - cp468
+  - school
+---
+
+# Part I
 **Group 13**
 Members:
 Vikas Movva, 190957230 | Samiha Mridha, 169060718 | Adam Menzies, 210886410
-## Problem 1 
+## Problem 1
 ### **PEAS Descriptions**
 
 |Activity|Performance Measure|Environment|Actuators|Sensors|
@@ -30,20 +37,20 @@ Vikas Movva, 190957230 | Samiha Mridha, 169060718 | Adam Menzies, 210886410
 |**Bidding at an Auction**|Partially|Multiagent|Stochastic|Sequential|Dynamic|Discrete|Known|
 
 ## Problem 2
-**a) False**  
-An agent with complete state information isn't necessarily perfectly rational. Rationality requires optimal decision-making based on goals and computational constraints. 
+**a) False**
+An agent with complete state information isn't necessarily perfectly rational. Rationality requires optimal decision-making based on goals and computational constraints.
 >_Example_: A chess agent with full board visibility might still lose if its search algorithm is too shallow to evaluate future moves effectively.
 
-**b) True**  
-In environments where the optimal action depends solely on the current state, a reflex agent can act rationally. 
+**b) True**
+In environments where the optimal action depends solely on the current state, a reflex agent can act rationally.
 >_Example_: A thermostat (reflex agent) optimally adjusts heating/cooling based only on the current temperature, achieving its goal perfectly.
 
-**c) True**  
-If a task environment’s performance measure is inherently unachievable or independent of the agent’s actions, no agent can be rational. 
+**c) True**
+If a task environment’s performance measure is inherently unachievable or independent of the agent’s actions, no agent can be rational.
 >_Example_: A casino slot machine with purely random payouts—no agent can influence outcomes, making rationality impossible.
 
-**d) False**  
-The agent function maps _entire percept sequences_ to actions, while the agent program typically receives only the _current percept_. 
+**d) False**
+The agent function maps _entire percept sequences_ to actions, while the agent program typically receives only the _current percept_.
 >_Example_: A reflex agent program uses only the latest percept, but its agent function’s input includes all prior percepts.
 
 ## Problem 3
@@ -84,7 +91,7 @@ graph TD;
 
 **c) GBFS vs. A_ Search**
 
-**Heuristic Function**:  
+**Heuristic Function**:
 $$h(k)=\lceil log⁡_{2}11 \rceil - \lceil log⁡_{2}k \rceil=4-\lceil log⁡_{2}k \rceil$$
 **Key Values**:
 $$h(1)=4, h(2)=3, h(3)=2,$$
@@ -96,7 +103,7 @@ $$h(5)=1, h(11)=0$$
 | **Greedy Best-First Search (GBFS)** | `1, 3, 6, 12, 13, 7, 14, 15, 2, 4, 9, 5, 10, 11` | Prioritizes nodes with the lowest heuristic $h(k)$, leading to exploration of many low-$h(k)$ nodes (e.g., 12, 13, 14, 15) before reaching 11.                         |
 | **A\* Search**                      | `1, 3, 6, 7, 12, 13, 14, 15, 2, 5, 10, 11`       | Balances path cost $g(k)$ and heuristic $h(k)$. Expands nodes with lowest $f(k)=g(k)+h(k)$, finding the goal faster by prioritizing the path through state 2 → 5 → 11. |
 
-**Comparison**: 
+**Comparison**:
 
 - **GBFS** is misled by the heuristic $h(k)$, exploring irrelevant nodes with $h(k)=0$ (e.g., 12, 13) before finding the goal.
 - **A*** efficiently combines path cost and heuristic, focusing on the optimal path 1→2→5→111→2→5→11.
@@ -146,10 +153,10 @@ The tree starts at the root (empty board) and branches as follows:
     - **X in Corner (C)**: Min(O’s choices) = `-2`
     - **X in Edge (E)**: Min(O’s choices) = `-2`
     - **X in Center (M)**: Min(O’s choices) = `0`
-- **Best Starting Move**:  
+- **Best Starting Move**:
     **X in Center (M)** with a backed-up value of **0**, as it maximizes the minimum guaranteed outcome.
 
-> [!NOTE] 
+> [!NOTE]
 > - The evaluation function prioritizes creating two-in-a-row threats (`X₂`) while blocking opponent threats (`O₂`).
 > - The **center** is the optimal first move under minimax, balancing offensive and defensive potential.
 > - Symmetry reduction simplifies the game tree significantly, enabling tractable analysis.
@@ -158,23 +165,22 @@ The tree starts at the root (empty board) and branches as follows:
 
 ## Task I (8 - Puzzle Heuristic Observations):
  1. **$h_{1}$ (Misplaced Tiles):**
-	 - This heuristic only counts the number of misplaced tiles but ignores how far each tile is from its goal. As a result, it expands more nodes and takes the most steps to find the solution compared to the other heuristics. 
+   - This heuristic only counts the number of misplaced tiles but ignores how far each tile is from its goal. As a result, it expands more nodes and takes the most steps to find the solution compared to the other heuristics.
  2. **$h_{2}$ (Manhattan Distance)**:
-	 - Unlike $h_{1}$ , this heuristics takes into account how far each tile has to move, which results in a more informed estimate. This results in it taking less steps and nodes expanded than $h_{1}$.
+   - Unlike $h_{1}$ , this heuristics takes into account how far each tile has to move, which results in a more informed estimate. This results in it taking less steps and nodes expanded than $h_{1}$.
  3. **$h_{3}$**:
-	 - This heuristic is a modified $h_{2}$ by adding a penalty for conflicting tiles that must switch places. This one has a result of the fewest steps to the solution and expands the least number of nodes, making it the most efficient and the best choice. 
- 
+   - This heuristic is a modified $h_{2}$ by adding a penalty for conflicting tiles that must switch places. This one has a result of the fewest steps to the solution and expands the least number of nodes, making it the most efficient and the best choice.
+
  >[!Important] Conclusion
 For the 8-puzzle, $h_{3}$ is the most efficient heuristic as it will consistently solve the puzzle faster and with fewer nodes expansions than $h_{1}$ and $h_{2}$ .
 
 ## Task II (15- Puzzle Heuristic Observations):
  1. **$h_{1}$ (Misplaced Tiles)**:
-	 - H1 performs very poorly for this puzzle. Since the 15-puzzle is a lot bigger, this heuristics lack of accurate distance estimation makes A* expand a lot more nodes and results in the average steps and nodes expanded being much higher than $h_{2}$ and $h_{3}$ . 
- 2. **$h_{2}$ (Manhattan Distance)**: 
-	 - Since the 15-puzzle requires more moves, an accurate estimate of distance using this heuristic helps reduce unnecessary exploration. The number of nodes expanded is cut by more than half compared to $h_{1}$.
+   - H1 performs very poorly for this puzzle. Since the 15-puzzle is a lot bigger, this heuristics lack of accurate distance estimation makes A* expand a lot more nodes and results in the average steps and nodes expanded being much higher than $h_{2}$ and $h_{3}$ .
+ 2. **$h_{2}$ (Manhattan Distance)**:
+   - Since the 15-puzzle requires more moves, an accurate estimate of distance using this heuristic helps reduce unnecessary exploration. The number of nodes expanded is cut by more than half compared to $h_{1}$.
  3. **$h_{3}$**:
-	 - Similar to the 8-puzzle, adding conflict penalties allows A* to avoid unnecessary swaps. It reduces steps to the solution and node expansions, making it the best-performing heuristic.
- 
+   - Similar to the 8-puzzle, adding conflict penalties allows A* to avoid unnecessary swaps. It reduces steps to the solution and node expansions, making it the best-performing heuristic.
+
  >[!Important] Conclusion
 For the 15-puzzle, $h_{1}$ should be avoided as it will result in a long run time. While h3 stays the most efficient heuristic as it will consistently solve the puzzle faster and with fewer node expansions than $h_{1}$ and $h_{2}$ .
-

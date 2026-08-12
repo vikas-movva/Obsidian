@@ -1,3 +1,10 @@
+---
+title: Lab 11
+tags:
+  - cp367
+  - school
+---
+
 ```bash
 # On 'master' branch, make conflicting changes
 echo "Conflict start" > conflict.txt

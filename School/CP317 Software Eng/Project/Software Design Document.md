@@ -1,34 +1,43 @@
+---
+title: Software Design Document
+tags:
+  - cp317
+  - school
+---
+
+# Software Design Document
+
 **Student Data Formatter**
 **Prepared by:** Vikas Movva | movv7230@myalurier.ca, Ryan McKenna | mcke9080@mylaurier.ca, Gurreet Sanghera | Sang8327@mylaurier.ca
 **Date:** November 20, 2024
 
 **Table of Contents**
 1. [[#1. Introduction]]
-	1. [[#1.1 Purpose]]
-	2. [[#1.2 Scope]]
-	3. [[#1.3 Definitions, Acronyms, and Abbreviations]]
+  1. [[#1.1 Purpose]]
+  2. [[#1.2 Scope]]
+  3. [[#1.3 Definitions, Acronyms, and Abbreviations]]
 2. [[#2. System Overview]]
 3. [[#3. Architectural Design]]
-	1. [[#3.1 System Architecture]]
-		1. [[#3.1.1 High-Level Diagram]]
-		2. [[#3.1.2 Description]]
+  1. [[#3.1 System Architecture]]
+    1. [[#3.1.1 High-Level Diagram]]
+    2. [[#3.1.2 Description]]
 4. [[#4. Detailed Design]]
-	1. [[#4.1 Classes and Objects]]
-		1. [[#4.1.1 Class Diagram]]
-		2. [[#4.1.2 Class Descriptions]]
-	2. [[#4.2 Data Structures]]
-	3. [[#4.3 Algorithms]]
-	4. [[#4.4 Error Handling and Reliability]]
+  1. [[#4.1 Classes and Objects]]
+    1. [[#4.1.1 Class Diagram]]
+    2. [[#4.1.2 Class Descriptions]]
+  2. [[#4.2 Data Structures]]
+  3. [[#4.3 Algorithms]]
+  4. [[#4.4 Error Handling and Reliability]]
 5. [[#5. Object-Oriented Features Used]]
-	1. [[#5.1 Inheritance]]
-	2. [[#5.2 Encapsulation]]
+  1. [[#5.1 Inheritance]]
+  2. [[#5.2 Encapsulation]]
 6. [[#6. Sorting Algorithm]]
 7. [[#7. Final Grade Calculation]]
 8. [[#8. Conclusion]]
 9. [[#9. References]]
 10. [[#10. Appendices]]
-	1. [[#Appendix A Input and Output File Formats]]
-	2. [[#Appendix B Java APIs]]
+  1. [[#Appendix A Input and Output File Formats]]
+  2. [[#Appendix B Java APIs]]
 
 # 1. Introduction
 ## 1.1 Purpose
@@ -237,4 +246,3 @@ The Student Data Formatter application effectively reads, formats, and sorts stu
 - **File Writing**: `java.io.BufferedWriter`, `java.io.FileWriter`
 - **Collections**: `java.util.List`, `java.util.ArrayList`, `java.util.Collections`
 - **Exception Handling**: `java.io.IOException`, `java.lang.Exception`
-

@@ -1,9 +1,18 @@
+---
+title: Assignment 3
+tags:
+  - cp363
+  - school
+---
+
+# Assignment 3
+
 ## Question 1
-Consider the following relational schema describing the data for a particular instructor's grade book. 
+Consider the following relational schema describing the data for a particular instructor's grade book.
 `COURSE_CATALOG (Cno, Ctitle) `
 `STUDENT (Sid, Fname, Lname, Minit) `
 `COURSE (Term, Sec_no, Cno, A, B, C, D) `
-`ENROLLS (Sid, Term, Sec_no)` 
+`ENROLLS (Sid, Term, Sec_no)`
 Specify the following queries using relational algebra.
 ### 1.1
 Find a specific student's enrollment details (Term and Sec_no) (You can assume any student ID):
@@ -41,7 +50,7 @@ $\pi\_$ProjectID, ProjectName, Budget ($\sigma\_{}$Budget > ($\pi\_$AVG(Budget) 
 $\pi\_$EmpID, EmpName (($\sigma\_{}$Department='IT' (ASSIGNMENTS $\Join$ PROJECTS)) $\cap$ ($\sigma\_{}$Department='Finance' (ASSIGNMENTS $\Join$ PROJECTS))
 
 >[!Answer]
->This will return the columns `EmpID` and `EmpName` of **only** employees who are assigned to a project in **both** the `IT` and `Finance` departments. 
+>This will return the columns `EmpID` and `EmpName` of **only** employees who are assigned to a project in **both** the `IT` and `Finance` departments.
 ### 2.3
 Department, AVG(HoursWorked) (ASSIGNMENTS $\Join$ PROJECTS) | (Group by Department)
 
@@ -65,7 +74,7 @@ Based on the given data, you have to answer the following questions:
 | S005      | 14 – 8th Avenue, New York, NY 10012, 16 – 14th Avenue, Seattle, WA 98128 | 503-444-123, 219-564-890                 |
 
 ### 3.1
-Determine whether the table is in 1NF or not. You must check whether the table follows the first normal form rules to do this. If it does, it is in 1NF; otherwise, it is not. 
+Determine whether the table is in 1NF or not. You must check whether the table follows the first normal form rules to do this. If it does, it is in 1NF; otherwise, it is not.
 
 >[!Answer]
 >This table is not in the **First Normal Form (1NF)**. This is because in order for a table to be in the 1NF every attribute of a table must be an indivisible(atomic) value however `StudentID`'s `S001, S002, S003, S004, S005` all have multiple values in the `Contactno` field and `S1005` has multiple values in the `StrudentAddress` field.

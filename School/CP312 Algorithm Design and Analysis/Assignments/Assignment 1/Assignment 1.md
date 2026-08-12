@@ -1,24 +1,33 @@
+---
+title: Assignment 1
+tags:
+  - cp312
+  - school
+---
+
+# Assignment 1
+
 ### Question 1
 
 #### 1.A
 ```psuedo
 function CheckUnique(A, n):
-	for i = 1; i < n:
-		for j = i + 1; j< n:
-			if a1 == aj :
-				return False
-	return True
+  for i = 1; i < n:
+    for j = i + 1; j< n:
+      if a1 == aj :
+        return False
+  return True
 ```
 
 ```python
 i = 1                         #assign
 while(i < n):                 #compare
-	j = i + 1                 #arithmetic, assign
-	while(j < n)              #compare
-		if(a1 == a2):         #compare
-			return False      
-		j++                   #arithmetic, assign
-	i++                       #arithmetic, assign
+  j = i + 1                 #arithmetic, assign
+  while(j < n)              #compare
+    if(a1 == a2):         #compare
+      return False
+    j++                   #arithmetic, assign
+  i++                       #arithmetic, assign
 return True
 ```
 ##### 1.A.I
@@ -26,21 +35,21 @@ return True
 **Data structures:** Arrays
 
 ##### 1.A.II
-Worst-case running-time: 
-$T(n) = (\sum_{i=1}^nn)$ 
-	$= ((n - 1)*(\frac{n}{2}))$ 
-	$= O(n^2)$ 
+Worst-case running-time:
+$T(n) = (\sum_{i=1}^nn)$
+  $= ((n - 1)*(\frac{n}{2}))$
+  $= O(n^2)$
 #### 1.B
 ```python
 def matrix_squared(A: list[list[int]], n: int) -> bool:
-	for i in range(1, n): # Compare
-		for j in range(1, n): # Compare
-			for k in range(1, n): # Compare 
-				C[i, j] = C[i, j] + (A[i, k] * A[k, j]) # Access, Arithmatic, Assign
-			# Arithmatic
-		# Arithmatic
-	# Arithmatic
-	return True
+  for i in range(1, n): # Compare
+    for j in range(1, n): # Compare
+      for k in range(1, n): # Compare
+        C[i, j] = C[i, j] + (A[i, k] * A[k, j]) # Access, Arithmatic, Assign
+      # Arithmatic
+    # Arithmatic
+  # Arithmatic
+  return True
 ```
 ##### 1.B.I
 **Primitive operations:** Assign, Sum, Product, Access
@@ -48,7 +57,7 @@ def matrix_squared(A: list[list[int]], n: int) -> bool:
 
 ##### 1.B.II
 `C[i, j] = C[i, j] + (A[i, k] * A[k, j])`
-Constant time operations and their counts: 
+Constant time operations and their counts:
 
 | Operation | Occurrence |
 | ---- | ---- |
@@ -56,11 +65,11 @@ Constant time operations and their counts:
 | Sum | 1 |
 | Access | 3 |
 | Product | 1 |
-as these primitive operations are happening in the `k` loop, the running time for the `k` loop would be $T(n_k) = 8n_k$ $\therefore T(n) = 2n*2n*8n = 32n^3$ 
+as these primitive operations are happening in the `k` loop, the running time for the `k` loop would be $T(n_k) = 8n_k$ $\therefore T(n) = 2n*2n*8n = 32n^3$
 
 ##### 1.B.III
-From [[School/CP312 Algorithm Design and Analysis/Assignments/Assignment 1/Assignment 1#1.B.II|1.B.II]] we got the running time: 
-$T(n) = 32n^3 + 1$ 
+From [[School/CP312 Algorithm Design and Analysis/Assignments/Assignment 1/Assignment 1#1.B.II|1.B.II]] we got the running time:
+$T(n) = 32n^3 + 1$
 
 **Running time using $\Theta$-notation:**
 $c_{1}n^3 \le 32n^3 \le c_{2}n^3$
@@ -72,12 +81,12 @@ $\therefore \Theta(n^3)$ is the **Tight bound** of the running time
 #### 1.C
 ```python
 def factorial(n):
-	i = 1
-	j = 1
-	while(j < n):
-		j = j + 1
-		i = i * j
-	return i
+  i = 1
+  j = 1
+  while(j < n):
+    j = j + 1
+    i = i * j
+  return i
 ```
 
 ##### 1.C.I
@@ -86,10 +95,10 @@ Loop invariant: at the start of iteration $j$, it must be that $i = j!$
 **Initialization:**
 first iteration: $i = 1, j = 1$
 $1 = 1!$
-$1 = 1$ 
+$1 = 1$
 $\therefore$ the loop invariant is true at the start of the first iteration
 
-**Maintenance:** 
+**Maintenance:**
 Assume: $i_{j} = j!$
 
 $i_{j+1} = (j+1)!$
@@ -144,7 +153,7 @@ $3^n = O(2^n)$ - **FALSE**
 By contradiction.
 Assume that $c, n_{0}$ exist:
 $\frac{3^n}{2^n}\leq c\frac{\cancel{ 2^n }}{\cancel{ 2^n }}$
-$\lim_{ n \to \infty} \frac{3}{2}^n = \infty \therefore \cancel{ \exists } c > 0 \text{ such that } 3^n \leq c2^n$ which is a **contradiction** 
+$\lim_{ n \to \infty} \frac{3}{2}^n = \infty \therefore \cancel{ \exists } c > 0 \text{ such that } 3^n \leq c2^n$ which is a **contradiction**
 
 #### 2.F
 $100n^3 = o(n^3\lg n)$ - **TRUE**
@@ -174,7 +183,7 @@ $\therefore \log^2(n) = O(\log(n^2))$
 $3\log_{7}(n) = \Theta(\log_{2}(n))$
 Pick: $c_{1} = 1, c_{2} = 2. n_{0} = 7$
 $c_{1}\lg(n) \leq 3 \log_{7}(n)  \leq c_{2}\lg(n)$
-$(1)\lg(7) \leq 3\cancel{ \log_{7}(7) }(1) \leq (2)\lg(7)$ 
+$(1)\lg(7) \leq 3\cancel{ \log_{7}(7) }(1) \leq (2)\lg(7)$
 $\lg(7) \approx 2.81$
 $lg(7) \leq 3 \leq 2\lg(7)$
 $\therefore 3\log_{7}(n) = \Theta(\log_{2}(n))$
@@ -192,7 +201,7 @@ $\therefore \frac{1}{n^2} = O(1)$
 $f_{1}(n)=O(g_{1}(n))$, $f_{2}(n)=O(g_{2}(n))$
 $f_{1}(n) \le c_{1}g_{1}(n)$, $f_{2}(n) \le c_{2}g_{2}(n)$
 Pick $c = c_{1}+c_{2}, n_{0} = max(n_{01}, n_{02})$
-$f_{1}(n) + f_{2}(n) \leq c_{1}g_{1}(n) + c_{2}g_{2}(n)$ 
+$f_{1}(n) + f_{2}(n) \leq c_{1}g_{1}(n) + c_{2}g_{2}(n)$
 $f_{1}(n) + f_{2}(n) \leq (c_{1}+c_{2})(g_{1}(n) + g_{2}(n))$
 $f_{1}(n) + f_{2}(n) \leq c(g_{1}(n) + g_{2}(n))$
 $\therefore \text{ by definition }f_{1}(n) + f_{2}(n) = O(g_{1}(n) + g_{2}(n))$
@@ -233,7 +242,7 @@ There are $n$ levels in the recursion tree and each level there is a computation
 
 $\therefore$ The Running time of this recurrence using the recursion tree method is $O(n)$
 #### 4.B
-**YES** 
+**YES**
 The recurrence $T(n) = t(n-1)+10$  with the base case $T(1) = \Theta(1)$
 preforms 10 units of constant work every function call and as there are $n$ number of calls the total amount of work done for this algorithm is $10n$. as $\Omega$ notation is used for the **lower bound** of the running time function and the running time for this recurrence is **at least** $10n$ we can say that $T(n) = \Omega(n)$
 #### 4.C
@@ -251,7 +260,7 @@ $\sum_{i=0}^{\infty}x^i = \frac{1}{1-x} \text{ for } |x| < 1$
 $\therefore \text{the sum of the cost at each level is } \frac{1}{1-\frac{5}{8}} = \frac{8}{3}n$
 The upper-bound for this recurrence would be $O(n)$
 
-#### 5.B 
+#### 5.B
 The lower-bound for $T(n)$ can be found by looking at the cost of the first level of the recursion tree ($n$). Since every node in the tree represents some amount of work done, the total cost of the tree must be at least $n$ $\therefore$ the lower-bound for $T(n) = \Omega(n)$
 
 ### Question 6
@@ -295,7 +304,7 @@ $T(n) = 2T\left( \frac{n}{2} \right)+\sqrt{ n }$
 $a=2, b=2, f(n) = n^{\frac{1}{2}}$
 $n^{\log_{b}a} = n^{\log_{2}2} = n$
 $f(n) = \Omega(n^{\frac{1}{2}})$
-Case 1: $f(n) = O\left( n^{1-\frac{1}{2}} \right) \text{ where } \epsilon = \frac{1}{2}$ 
+Case 1: $f(n) = O\left( n^{1-\frac{1}{2}} \right) \text{ where } \epsilon = \frac{1}{2}$
 $\therefore  T(n)= \Theta(n)$
 
 #### 6.F
@@ -306,5 +315,3 @@ $n^{\log_{b}a} = n^{\log_{7}1} = 1$
 $f(n) = \Omega(\lg^3n)$
 Case 2: $f(n) = \Theta(n^0(\lg^kn)) \text{ where }k = 3$
 $\therefore T(n)=\Theta(lg^4n)$
-
-

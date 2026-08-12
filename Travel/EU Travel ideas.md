@@ -1,6 +1,11 @@
 ---
-locations:
+title: EU Travel ideas
+tags:
+  - travel
 ---
+
+# EU Travel ideas
+
 1. [Madrid](geo:40.4167047,-3.7035825)
 2. [Nice](geo:43.7009358,7.2683912)
 4. [Rome](geo:41.8933203,12.4829321)
@@ -15,7 +20,7 @@ locations:
 12. [Vienna](geo:48.2083537,16.3725042)
 13. [Budapest](geo:47.4978789,19.0402383)
 14. [Cluj-Napoca](geo:46.769379,23.5899542)
-15. [Lviv](geo:49.841952,24.0315921) 
+15. [Lviv](geo:49.841952,24.0315921)
 16. [Warsaw](geo:52.2337172,21.071432235636493)
 17. [Vilnius](geo:54.6870458,25.2829111)
 18. [Riga](geo:56.9493977,24.1051846)
@@ -44,7 +49,7 @@ Daily limit: $25 (lowball), $40(highball)
 
 90 days: $2250 (lowball), $3600 (highball)
 
-### Accommodations 
+### Accommodations
 Western Europe is more expensive than eastern.
 Western europe Avg: $20 - $40/night
 Eastern Europe Avg: $15 - $25/night

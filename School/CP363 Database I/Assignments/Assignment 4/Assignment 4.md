@@ -1,3 +1,12 @@
+---
+title: Assignment 4
+tags:
+  - cp363
+  - school
+---
+
+# Assignment 4
+
 ```sql
 CREATE TABLE Students (
     StudentID INT PRIMARY KEY,

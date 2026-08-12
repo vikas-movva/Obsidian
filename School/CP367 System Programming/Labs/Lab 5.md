@@ -1,3 +1,12 @@
+---
+title: Lab 5
+tags:
+  - cp367
+  - school
+---
+
+# Lab 5
+
 1. Create a new script file `p.sed` that wraps `<p>…</p>` tags around every line in a file:
 ```bash
 echo 's/.*/<p>&<\/p>/' > p.sed
@@ -7,7 +16,7 @@ echo 's/.*/<p>&<\/p>/' > p.sed
 echo -e '1i\\\n<html>\n<head><title>sed generated html</title></head>\n<body>' > newwrap.sed
 echo -e '$a\\\n</body>\n</html>' >> newwrap.sed
 ```
-3. 
+3.
 ```bash
 sed -f p.sed your_file | sed -f newwrap.sed > output.html
 ```

@@ -1,3 +1,12 @@
+---
+title: Differential Calculus
+tags:
+  - ma103
+  - school
+---
+
+# Differential Calculus
+
 ### Exponent rule
 if $f(x) = x^2$
 $f^`(x) = 2x$
@@ -56,4 +65,3 @@ Find the equation of the tangent line and the normal line to $y = 2^{\cos(x)}$ w
 >$$y = \ln(2) x - \frac{\pi \ln(2)}{2} + 1$$
 >Normal Line:
 >$$y = -\frac{1}{\ln(2)(} x - \frac{\pi \ln(2)}{2} + 1$$
-

@@ -1,3 +1,12 @@
+---
+title: Lecture 1
+tags:
+  - cp363
+  - school
+---
+
+# Lecture 1
+
 ### Definitions
 
 #defn **Data** - known facts that can be recorded and have an implicit meaning. is usually unstructured
@@ -6,7 +15,7 @@
 
 #defn **Database** - a collection of related data
 - Shared collection of logically related data, designed to meet the information needs of an organization
-- system catalog (metadata) provides a description of data to enable program-data independence 
+- system catalog (metadata) provides a description of data to enable program-data independence
 - logically related data comprises entities, attributes, and relationships of an organization's information
 
 #defn **Metadata** (or catalog) - describes attributes of your data that can be important to know, but may not be immediately relevant to your data’s primary function
@@ -14,10 +23,10 @@
 #defn **DBMS** - **D**ata**B**ase **M**anagement **S**ystem (Postgress, MySQL, SQLite, etc.) Supports Create Retrieve Update Delete operations
 ```mermaid
 erDiagram
-	STUDENT{
-	int Id
-	string Name
-	}
+  STUDENT{
+  int Id
+  string Name
+  }
 ```
 
 ---
@@ -39,7 +48,7 @@ Cons
 ### Typical DBMS functionality
 - **Define** a database in terms of datatypes, structure, and constraints
 - Construct or load contents on a secondary storage medium
-- Manipulate the database using CRUD operations, 
+- Manipulate the database using CRUD operations,
 - generates a catalog(or metadata) in order to work with different database applications
 - Program-Data independence
 - Data Abstraction
@@ -51,16 +60,16 @@ Cons
 Actors on the scene
 - those who use and control database content
 - Database Administrators
-	- authorizes access the the database and coordinates and monitors its use
+  - authorizes access the the database and coordinates and monitors its use
 - Database Designers
-	- define the content, structure, constraints, and functions or transactions on the database
+  - define the content, structure, constraints, and functions or transactions on the database
 - end-users
-	- use the data for queries, reports and a portion of them update the database
-	- can be categorized into 
-		- casual - access DB occasionally when needed
-		- naive - 
-		- sophisticated - use many tools in the form of software packages that work closely with the stored DB
-		- stand-alone - mostly personal DBs using ready-to-use packaged applications
+  - use the data for queries, reports and a portion of them update the database
+  - can be categorized into
+    - casual - access DB occasionally when needed
+    - naive -
+    - sophisticated - use many tools in the form of software packages that work closely with the stored DB
+    - stand-alone - mostly personal DBs using ready-to-use packaged applications
 
 Workers behind the scene
 - those who create and update the DBMS software

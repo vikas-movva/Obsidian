@@ -1,3 +1,12 @@
+---
+title: Week 2 1
+tags:
+  - cp317
+  - school
+---
+
+# Week 2 1
+
 ### Requirements
 **Definition**: A _requirement_ is a singular documented physical or functional need that particular design, product or process aims to satisfy
 
@@ -6,11 +15,11 @@
 
 #### Why are requirements important?
 - In order to understand what we are going to do.
-	- Accountability and responsibility
+  - Accountability and responsibility
 - We build software systems for customers
-	- Reputation and Integrity
+  - Reputation and Integrity
 - Getting accurate requirements is crucial
-	- Ernest and meticulous and no assumption
+  - Ernest and meticulous and no assumption
 
 >[!NOTE]
 >According to [statista](www.statista.com) the leading reason for why software projects fail according to developers is either _Unclear project requirements_ or _Changing or poorly documented requirements_
@@ -26,7 +35,7 @@
 **Complete** -> it can be fully documented
 **Consistent** -> it is not contradictory with other requirements
 **Interoperable** -> dependencies among requirements are known
-**Verifiable/Valid** -> it can be tested 
+**Verifiable/Valid** -> it can be tested
 **Singular** -> it appears once
 **Traceable** -> it can be traced through design, test, and delivery
 **Prioritized** -> relative importance is understood
@@ -41,7 +50,7 @@ Examples:
 
 > [!important]
 > **MOSCOW method**
-> 
+>
 > **MO** -> Must have -> The most _vital_ things you can't live without
 > **S** -> Should have -> Things you consider as _important_ but not _vital_
 > **Co** -> Could have -> The "nice-to-haves"
@@ -62,30 +71,30 @@ It can also help you
 Business Requirements
 - business requirements _lay out the project's high-level goals._ they explain what the customer hopes to achieve with the project
 - Example:
-	- Automated Teller Machine (ATM)
-		- Cash withdraw
-		- Deposit
-		- Transfer money
-		- Balance inquiry
-		- etc.
+  - Automated Teller Machine (ATM)
+    - Cash withdraw
+    - Deposit
+    - Transfer money
+    - Balance inquiry
+    - etc.
 
 User Requirements
 - User requirements describe _how the software product of the project will be used by the end users_.
 - Example:
-	- ATM
-		- Required to insert an ATM card
-		- Enter a personal identification number (PIN)
-		- Amount selection
-		- etc.
+  - ATM
+    - Required to insert an ATM card
+    - Enter a personal identification number (PIN)
+    - Amount selection
+    - etc.
 
 System Requirements
 - System requirements are the _configuration that a system must have_ in order for a hardware or software application to run smoothly and efficiently such that _business and user requirements are achieved_.
 - Example:
-	- ATM
-		- Touch screen or keypad
-		- Computer languages, python, C++, C#,...
-		- Physical measurements (size)
-		- etc.
+  - ATM
+    - Touch screen or keypad
+    - Computer languages, python, C++, C#,...
+    - Physical measurements (size)
+    - etc.
 
 
 | Detail              | Type of Requirement  |                                                                                       |
@@ -96,26 +105,26 @@ System Requirements
 Functional Requirements
 - Functional requirements are detailed _statements of the project's desired capabilities._
 - Examples of functional requirements
-	- Business Rles
-	- Transaction corrections, adjustments and cancellations
-	- Administrative functions
-	- _Authentication_
-	- Authorization levels
-	- Audit tracjing
-	- External interfaces
-	- Certification requirements
+  - Business Rles
+  - Transaction corrections, adjustments and cancellations
+  - Administrative functions
+  - _Authentication_
+  - Authorization levels
+  - Audit tracjing
+  - External interfaces
+  - Certification requirements
 
 Non-Functional Requirements
 - Non-functional requirements are _statements about the quality of the product's behavior or constraints on how it produces a desired result_.
 - Examples - based on IEEE-Std 830 - 1993
-	- Performance requirements
-	- Operational requirements
-	- Resource requirements
-	- Verification requirements
-	- Acceptance requirements
-	- Documentation requirements
-	- Security requirements
-	- Portability requirements
+  - Performance requirements
+  - Operational requirements
+  - Resource requirements
+  - Verification requirements
+  - Acceptance requirements
+  - Documentation requirements
+  - Security requirements
+  - Portability requirements
 
 Functional vs Non-Functional Requirements
 
@@ -130,15 +139,15 @@ Functional vs Non-Functional Requirements
 #### FLURPS
 FLURPS is an acronym for categorizing system requirements.
 
-> [!Important] 
-> 
-> 
+> [!Important]
+>
+>
 >**F**unctionality requirement
 >**U**sability requirement
 >**R**eliability requirement
 >**P**erformance requirement
 >**S**upportability requirement
-> 
+>
 > | Characteristics | Description                                                                                                                                   |
 > | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 > | Functionality   | Include feature sets, capabilities, and security                                                                                              |
@@ -146,4 +155,4 @@ FLURPS is an acronym for categorizing system requirements.
 > | Reliability     | Frequency and severity of failure, recoverability, predictability, accuracy, and mean time between failures (**MTBF**)                        |
 > | Performance     | Processing speed, response time, resource consumption, throughput and efficiency                                                              |
 > | Supportability  | Testability, extensibility, adaptability, maintainability, compatibility, configurability, serviceability, installability, and localizability |
-> 
+>

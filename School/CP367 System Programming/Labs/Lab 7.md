@@ -1,3 +1,12 @@
+---
+title: Lab 7
+tags:
+  - cp367
+  - school
+---
+
+# Lab 7
+
 ## 1.
 ```bash
 #!/bin/bash

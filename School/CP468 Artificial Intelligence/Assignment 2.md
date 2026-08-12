@@ -1,8 +1,15 @@
+---
+title: Assignment 2
+tags:
+  - cp468
+  - school
+---
+
 **Group 13**
 Members:
 Vikas Movva, 190957230 | Samiha Mridha, 169060718 | Adam Menzies, 210886410
 # Question 1
-### 1.A 
+### 1.A
 ![[Pasted image 20250321202726.png]]
 
 ---
@@ -13,31 +20,30 @@ import math
 
 #Euclidian distance
 def euclidean_distance(point1, point2):
-	return math.sqrt((point1[0] - point2[0])**2 + (point1[1] - point2[1])**2)
+  return math.sqrt((point1[0] - point2[0])**2 + (point1[1] - point2[1])**2)
 
-  
 
 #K Nearest Neighbours
 def fnKNN(dataset, new_point, k):
-	distances = []
-	#Find distances
-	
-	for data in dataset:
-		x1, x2, c = data
-		dist = euclidean_distance((x1, x2), new_point)
-		distances.append((dist, c))
-	
-	#Find k nearest
-	distances.sort()
-	neighbors = distances[:k]
-	
-	#Get prediction
-	votes = {0: 0, 1: 0}
-	for neighbor in neighbors:
-		votes[int(neighbor[1])] += 1
-	
-	predicted_label = 1 if votes[1] > votes[0] else 0
-	return predicted_label
+  distances = []
+  #Find distances
+
+  for data in dataset:
+    x1, x2, c = data
+    dist = euclidean_distance((x1, x2), new_point)
+    distances.append((dist, c))
+
+  #Find k nearest
+  distances.sort()
+  neighbors = distances[:k]
+
+  #Get prediction
+  votes = {0: 0, 1: 0}
+  for neighbor in neighbors:
+    votes[int(neighbor[1])] += 1
+
+  predicted_label = 1 if votes[1] > votes[0] else 0
+  return predicted_label
 ```
 
 ---
@@ -48,26 +54,26 @@ import random
 
 #assess the performance
 def assess_knn(data, k, ratio):
-	#Shuffle data
-	random.seed(42)
-	shuffled = data.copy()
-	random.shuffle(shuffled)
-	
-	#Split dataset
-	train_size = int(len(shuffled) * ratio)
-	train_data = shuffled[:train_size]
-	test_data = shuffled[train_size:]
-	
-	#Test accuracy of KNN
-	correct = 0
-	for point in test_data:
-		x1, x2, c = point
-		predicted_c = fnKNN(train_data, (x1, x2), k)
-		if predicted_c == c:
-			correct += 1
-	  
-	accuracy = correct / len(test_data)
-	return accuracy
+  #Shuffle data
+  random.seed(42)
+  shuffled = data.copy()
+  random.shuffle(shuffled)
+
+  #Split dataset
+  train_size = int(len(shuffled) * ratio)
+  train_data = shuffled[:train_size]
+  test_data = shuffled[train_size:]
+
+  #Test accuracy of KNN
+  correct = 0
+  for point in test_data:
+    x1, x2, c = point
+    predicted_c = fnKNN(train_data, (x1, x2), k)
+    if predicted_c == c:
+      correct += 1
+
+  accuracy = correct / len(test_data)
+  return accuracy
 
 data = df[["x1", "x2", "c"]].values.tolist()
 
@@ -81,8 +87,8 @@ print(f"60% train: {acc_60:.2f}")
 print(f"50% train: {acc_50:.2f}")
 ```
 
-**80% train:** 1.00 
-**60% train:** 0.75 
+**80% train:** 1.00
+**60% train:** 0.75
 **50% train:** 0.50
 
 ---
@@ -91,14 +97,14 @@ print(f"50% train: {acc_50:.2f}")
 ```python
 results = []
 for k in range(1, 5):
-	acc_80 = assess_knn(data, k, 0.8)
-	acc_60 = assess_knn(data, k, 0.6)
-	acc_50 = assess_knn(data, k, 0.5)
-	results.append((k, acc_80, acc_60, acc_50))
+  acc_80 = assess_knn(data, k, 0.8)
+  acc_60 = assess_knn(data, k, 0.6)
+  acc_50 = assess_knn(data, k, 0.5)
+  results.append((k, acc_80, acc_60, acc_50))
 
 print("K\t80%\t60%\t50%")
 for result in results:
-	print(f"{result[0]}\t{result[1]:.2f}\t{result[2]:.2f}\t{result[3]:.2f}")
+  print(f"{result[0]}\t{result[1]:.2f}\t{result[2]:.2f}\t{result[3]:.2f}")
 ```
 
 | K   | 80%  | 60%  | 50%  |
@@ -135,38 +141,38 @@ def euclidean_distance(x, y):
 
 #K_Means
 def k_means(data, k, max_iterations):
-	#Initialize centroids
-	centroids = deepcopy(data[:k])
+  #Initialize centroids
+  centroids = deepcopy(data[:k])
 
-	for iteration in range(max_iterations):
-		#Assign clusters
-	    clusters = [[] for _ in range(k)]
-	    for point in data:
-		    distances = [euclidean_distance(point, centroid) for centroid in centroids]
-		    cluster_index = distances.index(min(distances))
-		    clusters[cluster_index].append(point)
+  for iteration in range(max_iterations):
+    #Assign clusters
+      clusters = [[] for _ in range(k)]
+      for point in data:
+        distances = [euclidean_distance(point, centroid) for centroid in centroids]
+        cluster_index = distances.index(min(distances))
+        clusters[cluster_index].append(point)
 
     #New centroids
     new_centroids = []
     for cluster in clusters:
-	    if cluster:
-	        x_vals = [point[0] for point in cluster]
-	        y_vals = [point[1] for point in cluster]
-	        new_centroids.append([sum(x_vals) / len(x_vals), sum(y_vals) / len(y_vals)])
-	    else:
-			new_centroids.append(centroids[clusters.index(cluster)])
+      if cluster:
+          x_vals = [point[0] for point in cluster]
+          y_vals = [point[1] for point in cluster]
+          new_centroids.append([sum(x_vals) / len(x_vals), sum(y_vals) / len(y_vals)])
+      else:
+      new_centroids.append(centroids[clusters.index(cluster)])
     #Check changes
     if all(euclidean_distance(c1, c2) <0.001 for c1, c2 in zip(centroids, new_centroids)):
       break
     centroids = new_centroids
 
-	#Labels
-	labels = []
-	for point in data:
-		distances = [euclidean_distance(point, centroid) for centroid in centroids]
-	    labels.append(distances.index(min(distances)))
+  #Labels
+  labels = []
+  for point in data:
+    distances = [euclidean_distance(point, centroid) for centroid in centroids]
+      labels.append(distances.index(min(distances)))
 
-	return labels, centroids
+  return labels, centroids
 ```
 
 ---
@@ -184,10 +190,10 @@ plt.figure(figsize=(10, 6))
 
 colors = ["blue", "red"]
 for i, point in enumerate(data_points):
-	plt.scatter(point[0], point[1], c=colors[labels[i]])
+  plt.scatter(point[0], point[1], c=colors[labels[i]])
 
 for i, centroid in enumerate(centroids):
-	plt.scatter(centroid[0], centroid[1], c="red", marker="x", s=100)
+  plt.scatter(centroid[0], centroid[1], c="red", marker="x", s=100)
 
 plt.xlabel("Customer’s average monthly spending")
 plt.ylabel("Customer’s total number of purchases")

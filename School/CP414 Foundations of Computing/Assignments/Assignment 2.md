@@ -1,23 +1,32 @@
+---
+title: Assignment 2
+tags:
+  - cp414
+  - school
+---
+
+# Assignment 2
+
 ## Question 1
 **Give regular expressions generating the following languages over the alphabet $\Sigma= \{ 0,1 \}$:**
 1. **L1 = the set of all strings that start with 1 or have odd length**
-	1. $1(0|1)^*|0((0|1)(0|1))^*$
-2. **L2 = the set of all strings that start with 0 and have even length** 
-	2. $1(0|1)^*|0((0|1)(0|1))^*$
-3. **L3 = the set of all strings that end with 1 and have even length** 
-	1. $(0|1)((0|1)(0|1))^*1$
-4. **L1$\cap$L2** 
-	2. $\emptyset$
-5. **L2$\cup$L3** 
-	1. $0(0|1)((0|1)(0|1))^*|(0|1)((0|1)(0|1))^*1$
-6. **L2$\cap$L3** 
-	2. $0((0|1)(0|1))^*1$
-7. **The set of all strings such that every occurrence of 1 is followed by at least two 0s, e.g., 0001000100, 100, 0, 00000000010000000100100 are in this language, but 1011, 1, 101 are not.** 
-	1. $(0|1000^*)^*$
-8. **The set of all strings that does not contain pattern 0110.** 
-	2. $(1+0(0+10)^*(\epsilon+1+11))^*(\epsilon+0(0+10)^*(\epsilon+1+11))$
+  1. $1(0|1)^*|0((0|1)(0|1))^*$
+2. **L2 = the set of all strings that start with 0 and have even length**
+  2. $1(0|1)^*|0((0|1)(0|1))^*$
+3. **L3 = the set of all strings that end with 1 and have even length**
+  1. $(0|1)((0|1)(0|1))^*1$
+4. **L1$\cap$L2**
+  2. $\emptyset$
+5. **L2$\cup$L3**
+  1. $0(0|1)((0|1)(0|1))^*|(0|1)((0|1)(0|1))^*1$
+6. **L2$\cap$L3**
+  2. $0((0|1)(0|1))^*1$
+7. **The set of all strings such that every occurrence of 1 is followed by at least two 0s, e.g., 0001000100, 100, 0, 00000000010000000100100 are in this language, but 1011, 1, 101 are not.**
+  1. $(0|1000^*)^*$
+8. **The set of all strings that does not contain pattern 0110.**
+  2. $(1+0(0+10)^*(\epsilon+1+11))^*(\epsilon+0(0+10)^*(\epsilon+1+11))$
 9. **The set of all strings except 100 and 01.**
-	1. $\epsilon|0|1|00|10|11|000|001|010|011|101|110|111|(0|1)4(0|1)^*$
+  1. $\epsilon|0|1|00|10|11|000|001|010|011|101|110|111|(0|1)4(0|1)^*$
 
 ---
 ## Question 2
@@ -75,7 +84,7 @@ where:
 Since $k = 2$, the regular expression is the label:$$1^* (0|1) (0 1^* (0|1))^*$$
 
 ---
-### Part B 
+### Part B
 **start state $q_{1}$, accepting state $q_{2}$**
 
 |            | 0                    | 1             |$\epsilon$   |
@@ -109,10 +118,10 @@ Since $k = 2$, the regular expression is the label:$$1^* (0|1) (0 1^* (0|1))^*$$
 
 **Remove $q_3$**:
 - New states:$\{ q_s, q_2, q_a \}$.
-- **$q_s \to q_2$**: 
+- **$q_s \to q_2$**:
   -$R_1 = \epsilon$,$R_2 = 0 | \epsilon$,$R_3 = 1$,$R_4 = \emptyset$
   -$(\epsilon)(0 | \epsilon)^* (1) \cup \emptyset = (0 | \epsilon)^* 1 = 0^* 1$
-- **$q_2 \to q_2$**: 
+- **$q_2 \to q_2$**:
   -$R_1 = 0|1$,$R_2 = 0 | \epsilon$,$R_3 = 1$,$R_4 = 0$
   -$(0|1)(0 | \epsilon)^* (1) \cup 0 = (0|1) 0^* 1 \cup 0$
 
@@ -123,7 +132,7 @@ Since $k = 2$, the regular expression is the label:$$1^* (0|1) (0 1^* (0|1))^*$$
 
 **Remove $q_2$**:
 - New states:$\{ q_s, q_a \}$.
-- **$q_s \to q_a$**: 
+- **$q_s \to q_a$**:
   -$R_1 = 0^* 1$,$R_2 = (0|1) 0^* 1 \cup 0$,$R_3 = \epsilon$,$R_4 = \emptyset$
   -$(0^* 1) [ (0|1) 0^* 1 \cup 0 ]^* (\epsilon) \cup \emptyset = 0^* 1 [ (0|1) 0^* 1 \cup 0 ]^*$
 
@@ -223,7 +232,7 @@ Since $|xy| \leq p$, and the second 1 is at position $p + 2 > p$, $y$ cannot inc
 
 ---
 ### Part B
-**Using result of (Part A) prove that language$B = \{ww | w \text{ from } \Sigma^*\}$is not regular. DO NOT USE PUMPING LEMMA! Use closure properties of regular languages instead.** 
+**Using result of (Part A) prove that language$B = \{ww | w \text{ from } \Sigma^*\}$is not regular. DO NOT USE PUMPING LEMMA! Use closure properties of regular languages instead.**
 
 Using the result that $L = \{10^n10^n \mid n > 0\}$ is not regular, we prove that $B = \{ww \mid w \in \Sigma^*\}$ over $\Sigma = \{0,1\}$ is not regular, relying on closure properties of regular languages instead of the Pumping Lemma.
 

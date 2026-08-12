@@ -1,3 +1,11 @@
+---
+title: Arrabbiata Sauce
+tags:
+  - recipes
+---
+
+# Arrabbiata Sauce
+
 ### Ingredients
 #### Sauce
 - 1 (28-oz.) can whole tomatoes

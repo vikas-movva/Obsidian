@@ -1,11 +1,11 @@
 ---
 title: "DATA 100 Quiz 1"
-author: "Vikas Movva"
-date: "2024-05-30"
-output:
-  pdf_document: default
-  html_document: default
+tags:
+  - data100-intro-to-data-analytics
+  - school
 ---
+
+# Quiz 1
 
 ```r
 knitr::opts_chunk$set(echo = TRUE)
@@ -23,7 +23,7 @@ mpg
 
 #### 1. Remove the the cluster of points from the "2seater" class to create a new dataset.
 ```r
-mpg_new <- mpg |> 
+mpg_new <- mpg |>
   filter(class != "2seater")
 mpg_new
 ```

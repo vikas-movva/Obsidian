@@ -1,3 +1,9 @@
+---
+title: Portfolio — Removed Placeholder Projects
+tags:
+  - projects
+---
+
 # Portfolio — Removed Placeholder Projects
 
 These were the placeholder/fake project ideas previously in the portfolio `src/data/projects.ts`. They have been replaced with real GitHub projects. Kept here in case any become real and want to be re-added.

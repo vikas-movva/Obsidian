@@ -1,3 +1,12 @@
+---
+title: Circuit Satisfiability
+tags:
+  - cp431
+  - school
+---
+
+# Circuit Satisfiability
+
 ## Introduction to Circuit Satisfiability
 - **Problem**: Determine if a boolean circuit can output `True` for any input combination.
 - **NP-Hard**: Circuit Satisfiability is NP-Complete (_Cook-Levin Theorem_), meaning no known polynomial-time solution exists.
@@ -73,7 +82,7 @@ graph TD
 
 ### Example Boolean Formula:
 ```c
-(v[0] || v[1]) && (!v[1] || !v[3]) && (v[2] || v[3]) && ... 
+(v[0] || v[1]) && (!v[1] || !v[3]) && (v[2] || v[3]) && ...
 ```
 
 - **Enhancements**:
@@ -85,8 +94,8 @@ graph TD
 
 ---
 
-## Collective Communication and MPI_Reduce
-- **Collective Communication**: Operations involving all processes in a communicator.
+## [[Collective Communication]] and MPI_Reduce
+- **[[Collective Communication]]**: Operations involving all processes in a communicator.
 - **MPI_Reduce**:
   - Parameters:
     - `operand`: Local value (e.g., `count`).

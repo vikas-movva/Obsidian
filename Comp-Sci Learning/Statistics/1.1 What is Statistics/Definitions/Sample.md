@@ -1,6 +1,12 @@
 ---
+title: Sample
 aliases: [Sample, n]
+tags:
+  - cs-learning
+  - statistics
 ---
+
+# Sample
 
 ### Sample
 A Small portion of the [[Population|Population]]

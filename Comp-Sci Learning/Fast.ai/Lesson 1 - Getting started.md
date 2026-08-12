@@ -1,14 +1,15 @@
 ---
+title: Lesson 1 Getting started
 tags:
-  - "#ML"
-  - "#Code"
-  - Fast-ai
-Web page: https://course.fast.ai/Lessons/lesson1.html
-Video: " https://www.youtube.com/watch?v=8SF_h3xF3cE"
+  - cs-learning
+  - fast-ai
 ---
+
+# [[Lesson 1]] Getting started
+
 ### Why is it possible to create a bird classifier on a generic laptop now vs it being impossible before?
 - In 2012, the approach used at the time was to create a big team of various experts to manually create features and then feed those features into an ML model
-	- This approach requires immense manpower and funding in order to create a single model
+  - This approach requires immense manpower and funding in order to create a single model
 - In the present, neural networks learn these features automatically.
 - Deep learning is ==deep== because you can take features and combine them into more advanced features
 - The learning outcome is to discover how neural networks learn these features
@@ -21,20 +22,20 @@ Video: " https://www.youtube.com/watch?v=8SF_h3xF3cE"
 | Advanced Math       | Highschool math is sufficient                                  |
 | Lots of data        | Some record breaking results are found with < 50 items of data |
 | Expensive computers | cloud providers decrease this barrier                          |
->for the majority of deep learning this is true 
+>for the majority of deep learning this is true
 
 
 ### Data blocks, Dataloaders, & Learners
 - datablocks represent your data
 - over many projects what are all the parameters that change from project to project
-	- `blocks`: Input & Output
-	- `get_items`: Items
-	- `splinter`: Validation set
-	- `get_y`: label
-	- `item_tfms`: Item transforms
+  - `blocks`: Input & Output
+  - `get_items`: Items
+  - `splinter`: Validation set
+  - `get_y`: label
+  - `item_tfms`: Item transforms
 - dataloaders feed batches to a NN batch by batch
 - A learner links a model with the data
-	- `.fine_tune`: fine tunes an existing model on your data
+  - `.fine_tune`: fine tunes an existing model on your data
 >fast.ai docs can be found [here](https://docs.fast.ai/)
 
 
@@ -100,7 +101,6 @@ learn.fine_tune(1)
 ```
 ### Homework
 #todo
-- [x]  Read chapter 1 of the book [here](https://fastai.github.io/fastbook2e/intro.html) ✅ 2023-09-15
+- [x]  Read [[Chapter 1]] of the book [here](https://fastai.github.io/fastbook2e/intro.html) ✅ 2023-09-15
 - [x]  play around with [[Lesson 1 - Getting started]] Kaggle notebooks [here](https://www.kaggle.com/code/jhoward/is-it-a-bird-creating-a-model-from-your-own-data) and [here](https://www.kaggle.com/code/jhoward/jupyter-notebook-101) ✅ 2023-09-15
-	- [x] make a dog classifier instead ✅ 2023-09-15
- 
+  - [x] make a dog classifier instead ✅ 2023-09-15

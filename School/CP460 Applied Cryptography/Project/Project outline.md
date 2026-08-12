@@ -1,3 +1,12 @@
+---
+title: Project outline
+tags:
+  - cp460
+  - school
+---
+
+# Project outline
+
 Your task is to write a literature review on the following topic:
 
 We look at various encryption schemes for use in IOT devices and review the feasibility and performance of each technique. So far in our references, we found various techniques some of which are: Feistel Ciphers, Block Ciphers, PRESENT Ciphers, SEED Block Ciphers, etc. We conclude our literature review by presenting what we believe to be the best cryptographic method for IOT devices.

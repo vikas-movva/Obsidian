@@ -1,6 +1,12 @@
 ---
-alias: [Statistics]
+title: Statistics
+tags:
+  - cs-learning
+  - statistics
 ---
+
+# Statistics
+
 ### What is statistics?
 
 It is the study of how to collect organize analyze, and how to interpret numerical information and data

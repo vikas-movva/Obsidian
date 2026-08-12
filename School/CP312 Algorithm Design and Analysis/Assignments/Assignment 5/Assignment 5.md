@@ -1,3 +1,12 @@
+---
+title: Assignment 5
+tags:
+  - cp312
+  - school
+---
+
+# Assignment 5
+
 ## Question 1
 
 ### 1.A
@@ -125,14 +134,14 @@ However using Dijsktra's algorithm `v0 -> v1 -> v5 -> v6 -> v2, cost: -3` was th
 ## Question 2
 ```mermaid
 graph LR
-	s -->|10| v1
-	s -->|10| v3
-	v1 -->|5| v2
-	v2 -->|12| v4
-	v2 -->|3| t
-	v3 -->|10| v2
-	v3 -->|5| v4
-	v4 -->|20| t
+  s -->|10| v1
+  s -->|10| v3
+  v1 -->|5| v2
+  v2 -->|12| v4
+  v2 -->|3| t
+  v3 -->|10| v2
+  v3 -->|5| v4
+  v4 -->|20| t
 ```
 
 ### 2.A
@@ -149,14 +158,14 @@ The updated flows after this iteration:
 
 ```mermaid
 graph LR
-	s -->|7/10| v1
-	s -->|10| v3
-	v1 -->|3/5| v2
-	v2 -->|0/12| v4
-	v2 -->|3/3| t
-	v3 -->|10| v2
-	v3 -->|5| v4
-	v4 -->|20| t
+  s -->|7/10| v1
+  s -->|10| v3
+  v1 -->|3/5| v2
+  v2 -->|0/12| v4
+  v2 -->|3/3| t
+  v3 -->|10| v2
+  v3 -->|5| v4
+  v4 -->|20| t
 ```
 
 **Iteration 2:**
@@ -169,14 +178,14 @@ The updated flows after this iteration:
 
 ```mermaid
 graph LR
-	s -->|5/10| v1
-	s -->|10| v3
-	v1 -->|5/5| v2
-	v2 -->|2/12| v4
-	v2 -->|3/3| t
-	v3 -->|10| v2
-	v3 -->|5| v4
-	v4 -->|2/20| t
+  s -->|5/10| v1
+  s -->|10| v3
+  v1 -->|5/5| v2
+  v2 -->|2/12| v4
+  v2 -->|3/3| t
+  v3 -->|10| v2
+  v3 -->|5| v4
+  v4 -->|2/20| t
 ```
 
 **Iteration 3:**
@@ -189,14 +198,14 @@ The updated flows after this iteration:
 
 ```mermaid
 graph LR
-	s -->|5/10| v1
-	s -->|2/10| v3
-	v1 -->|5/5| v2
-	v2 -->|10/12| v4
-	v2 -->|3/3| t
-	v3 -->|2/10| v2
-	v3 -->|5| v4
-	v4 -->|10/20| t
+  s -->|5/10| v1
+  s -->|2/10| v3
+  v1 -->|5/5| v2
+  v2 -->|10/12| v4
+  v2 -->|3/3| t
+  v3 -->|2/10| v2
+  v3 -->|5| v4
+  v4 -->|10/20| t
 ```
 
 **Iteration 4:**
@@ -209,14 +218,14 @@ The updated flows after this iteration:
 
 ```mermaid
 graph LR
-	s -->|5/10| v1
-	s -->|0/10| v3
-	v1 -->|5/5| v2
-	v2 -->|10/12| v4
-	v2 -->|3/3| t
-	v3 -->|2/10| v2
-	v3 -->|7/5| v4
-	v4 -->|12/20| t
+  s -->|5/10| v1
+  s -->|0/10| v3
+  v1 -->|5/5| v2
+  v2 -->|10/12| v4
+  v2 -->|3/3| t
+  v3 -->|2/10| v2
+  v3 -->|7/5| v4
+  v4 -->|12/20| t
 ```
 
 The maximum flow of the network is the sum of the flows into the sink, which is 3 (from v2) + 12 (from v4) = **15**. So, the maximum flow for this graph is **15**.
@@ -233,4 +242,4 @@ The sum of these flows is `10 + 3 + 2 = 15`, which equals the maximum flow. Ther
 
 ## Question 3
 ### 3.A
-The strongly connected components in the graph are the nodes `A, B, C, D, E, G, I, F` 
+The strongly connected components in the graph are the nodes `A, B, C, D, E, G, I, F`

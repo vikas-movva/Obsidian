@@ -1,6 +1,12 @@
 ---
-Notes: "[[Software Engineering-week1-1-Introduction.pdf]]"
+title: Week 1 1
+tags:
+  - cp317
+  - school
 ---
+
+# [[Week 1]] 1
+
 ## What is Software Engineering?
 
 **Engineering**
@@ -9,9 +15,9 @@ Notes: "[[Software Engineering-week1-1-Introduction.pdf]]"
 
 ### Software Engineering
 - IEEE Definition:
-	- The study of approaches as in the application of a systemic, disciplined, quantifiable approach to the development, operation an maintenance of software; that is, the application of engineering to software
-	- Fritz Bauer, a German computer scientist definition:
-		- “Software engineering is the establishment and use of sound engineering principles in order to obtain economically software that is reliable and work efficiently on real machines.”
+  - The study of approaches as in the application of a systemic, disciplined, quantifiable approach to the development, operation an maintenance of software; that is, the application of engineering to software
+  - Fritz Bauer, a German computer scientist definition:
+    - “Software engineering is the establishment and use of sound engineering principles in order to obtain economically software that is reliable and work efficiently on real machines.”
 
 ### Science vs. Engineering
 
@@ -76,49 +82,49 @@ Basic tasks of SWE
 
 ```mermaid
 graph TD
-	A(Requirement Analysis) --> B(System Design)
-	B --> C(Implementation)
-	C --> E(Testing)
-	E --> F(Deployment)
-	F --> G(Maintenance)
+  A(Requirement Analysis) --> B(System Design)
+  B --> C(Implementation)
+  C --> E(Testing)
+  E --> F(Deployment)
+  F --> G(Maintenance)
 ```
 
 1. Requirements:
-	-  A requirement is a singular documented **physical or functional need** that a particular design, product or process aims to satisfy.
-		- Understanding
-		- Feasibility research
-		- Negotiation
-		- Requirements changes always happen
+  -  A requirement is a singular documented **physical or functional need** that a particular design, product or process aims to satisfy.
+    - Understanding
+    - Feasibility research
+    - Negotiation
+    - Requirements changes always happen
 2. System design
-	- Requirements decomposition
-	- Specification
-	- Tools selection
-3. Software design document
-	- Data flow
-	- Object-oriented design
-	- UML (Unified Modeling Language) Diagrams
+  - Requirements decomposition
+  - Specification
+  - Tools selection
+3. [[Software Design Document]]
+  - Data flow
+  - Object-oriented design
+  - UML (Unified Modeling Language) Diagrams
 4. Implementation
-	- Coding
-	- **Bug fixing**
-		- Fixing one bug often creates new bugs
-			- The bug fix is incorrect
-			- The fix breaks other code that depends on the original buggy behavior
-			- The fix may change system behavior
+  - Coding
+  - **Bug fixing**
+    - Fixing one bug often creates new bugs
+      - The bug fix is incorrect
+      - The fix breaks other code that depends on the original buggy behavior
+      - The fix may change system behavior
 5. Testing
-	- **Foundation is requirements**
-	- Specification
+  - **Foundation is requirements**
+  - Specification
 6. Deployment
-	- **The action of bringing resources into effective action**
-	- It involves the following:
-		- New or new version
-		- User training
-		- On-site support while the users get familiar with the system
-		- Bug-fix
+  - **The action of bringing resources into effective action**
+  - It involves the following:
+    - New or new version
+    - User training
+    - On-site support while the users get familiar with the system
+    - Bug-fix
 7. Maintenance
-	- Software maintenance is the **modification of a software product** after delivery to correct faults, to improve performance, or other attributes.
-	- It involves the following
-		- Customer support
-		- Bug Fixes
+  - Software maintenance is the **modification of a software product** after delivery to correct faults, to improve performance, or other attributes.
+  - It involves the following
+    - Customer support
+    - Bug Fixes
 
 ### SWE vs. Developer / Programmer
 ```mermaid
@@ -141,7 +147,7 @@ _Software Engineer_:
 _Programmer_:
 - Writes code
 - _Understands_ and _utilizes_ various **algorithms**
-- Follows the specifications in the **software design document**
+- Follows the specifications in the **[[Software Design Document]]**
 
 _Developer/Analyst_:
 - Super type programmer

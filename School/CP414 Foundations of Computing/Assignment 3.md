@@ -1,16 +1,23 @@
-# Question 1 
+---
+title: Assignment 3
+tags:
+  - cp414
+  - school
+---
+
+# Question 1
 ### 1.A: $a + b \times a + b$
 #### Leftmost Derivation
-1. $E \to E + T$ 
-2. $E + T \to (E + T) + T$ 
-3. $(E + T) + T \to (T + T) + T$ 
-4. $(T + T) + T \to (F + T) + T$ 
+1. $E \to E + T$
+2. $E + T \to (E + T) + T$
+3. $(E + T) + T \to (T + T) + T$
+4. $(T + T) + T \to (F + T) + T$
 5. $(F + T) + T \to (a + T) + T$ ( $F \to a$)
-6. $(a + T) + T \to (a + (T \times F)) + T$ 
-7. $(a + (T \times F)) + T \to (a + (F \times F)) + T$ 
-8. $(a + (F \times F)) + T \to (a + (b \times F)) + T$ 
-9. $(a + (b \times F)) + T \to (a + (b \times a)) + T$ 
-10. $(a + (b \times a)) + T \to (a + (b \times a)) + F$ 
+6. $(a + T) + T \to (a + (T \times F)) + T$
+7. $(a + (T \times F)) + T \to (a + (F \times F)) + T$
+8. $(a + (F \times F)) + T \to (a + (b \times F)) + T$
+9. $(a + (b \times F)) + T \to (a + (b \times a)) + T$
+10. $(a + (b \times a)) + T \to (a + (b \times a)) + F$
 11. $(a + (b \times a)) + F \to (a + (b \times a)) + b$ ( $F \to b$)
 
 #### Parse Tree
@@ -38,13 +45,13 @@ graph TD
 
 ### 1.B: $a \times a + b$
 #### Leftmost Derivation
-1. $E \to E + T$ 
-2. $E + T \to T + T$ 
-3. $T + T \to (T \times F) + T$ 
-4. $(T \times F) + T \to (F \times F) + T$ 
-5. $(F \times F) + T \to (a \times F) + T$ 
-6. $(a \times F) + T \to (a \times a) + T$ 
-7. $(a \times a) + T \to (a \times a) + F$ 
+1. $E \to E + T$
+2. $E + T \to T + T$
+3. $T + T \to (T \times F) + T$
+4. $(T \times F) + T \to (F \times F) + T$
+5. $(F \times F) + T \to (a \times F) + T$
+6. $(a \times F) + T \to (a \times a) + T$
+7. $(a \times a) + T \to (a \times a) + F$
 8. $(a \times a) + F \to (a \times a) + b$ ( $F \to b$)
 
 #### Parse Tree
@@ -68,9 +75,9 @@ graph TD
 ### 1.C: $(a + b) \times (b + a) + b$
 #### Leftmost Derivation
 1. $E \to E + T$ (for $+ b$)
-2. $E + T \to T + T$ 
-3. $T + T \to (T \times F) + T$ 
-4. $(T \times F) + T \to (F \times F) + T$ 
+2. $E + T \to T + T$
+3. $T + T \to (T \times F) + T$
+4. $(T \times F) + T \to (F \times F) + T$
 5. $(F \times F) + T \to ((E) \times F) + T$ ( $F \to (E)$)
 6. $((E) \times F) + T \to ((E + T) \times F) + T$ ( $E \to E + T$ for $a + b$)
 7. $((E + T) \times F) + T \to ((T + T) \times F) + T$ ( $E \to T$)
@@ -126,9 +133,9 @@ graph TD
 
 ### 1.D: $(((a)))$
 #### Leftmost Derivation
-1. $E \to T$ 
-2. $T \to F$ 
-3. $F \to (E)$ 
+1. $E \to T$
+2. $T \to F$
+3. $F \to (E)$
 4. $(E) \to (T)$ ( $E \to T$)
 5. $(T) \to (F)$ ( $T \to F$)
 6. $(F) \to ((E))$ ( $F \to (E)$)
@@ -167,52 +174,52 @@ graph TD
 stateDiagram
     direction LR
     [*] --> q_prod : ε, ε → E
-    
+
     %% Production application from q_prod
-    q_prod --> q_E_ET1 : ε, E → ε 
-    q_E_ET1 --> q_E_ET2 : ε, ε → T 
-    q_E_ET2 --> q_E_ET3 : ε, ε → + 
-    q_E_ET3 --> q_match1 : ε, ε → E 
-    
-    q_prod --> q_E_T : ε, E → ε 
-    q_E_T --> q_match1 : ε, ε → T 
-    
-    q_prod --> q_T_TF1 : ε, T → ε 
-    q_T_TF1 --> q_T_TF2 : ε, ε → F 
-    q_T_TF2 --> q_match1 : ε, ε → × 
-    q_T_TF2 --> q_match1 : ε, ε → T 
-    
-    q_prod --> q_T_F : ε, T → ε 
-    q_T_F --> q_match1 : ε, ε → F 
-    
-    q_prod --> q_F_a : ε, F → ε 
-    q_F_a --> q_match1 : ε, ε → a 
-    
+    q_prod --> q_E_ET1 : ε, E → ε
+    q_E_ET1 --> q_E_ET2 : ε, ε → T
+    q_E_ET2 --> q_E_ET3 : ε, ε → +
+    q_E_ET3 --> q_match1 : ε, ε → E
+
+    q_prod --> q_E_T : ε, E → ε
+    q_E_T --> q_match1 : ε, ε → T
+
+    q_prod --> q_T_TF1 : ε, T → ε
+    q_T_TF1 --> q_T_TF2 : ε, ε → F
+    q_T_TF2 --> q_match1 : ε, ε → ×
+    q_T_TF2 --> q_match1 : ε, ε → T
+
+    q_prod --> q_T_F : ε, T → ε
+    q_T_F --> q_match1 : ε, ε → F
+
+    q_prod --> q_F_a : ε, F → ε
+    q_F_a --> q_match1 : ε, ε → a
+
     %% Terminal matching between q_match1 and q_match2
-    q_match1 --> q_match2 : a, a → ε 
-    q_match1 --> q_match2 : +, + → ε 
-    q_match1 --> q_match2 : ×, × → ε 
-    
-    q_match2 --> q_match1 : a, a → ε 
-    q_match2 --> q_match1 : +, + → ε 
-    q_match2 --> q_match1 : ×, × → ε 
-    
+    q_match1 --> q_match2 : a, a → ε
+    q_match1 --> q_match2 : +, + → ε
+    q_match1 --> q_match2 : ×, × → ε
+
+    q_match2 --> q_match1 : a, a → ε
+    q_match2 --> q_match1 : +, + → ε
+    q_match2 --> q_match1 : ×, × → ε
+
     %% Non-terminal handling: return to q_prod
-    q_match1 --> q_prod : ε, E → E 
-    q_match1 --> q_prod : ε, T → T 
-    q_match1 --> q_prod : ε, F → F 
-    
-    q_match2 --> q_prod : ε, E → E 
-    q_match2 --> q_prod : ε, T → T 
-    q_match2 --> q_prod : ε, F → F 
+    q_match1 --> q_prod : ε, E → E
+    q_match1 --> q_prod : ε, T → T
+    q_match1 --> q_prod : ε, F → F
+
+    q_match2 --> q_prod : ε, E → E
+    q_match2 --> q_prod : ε, T → T
+    q_match2 --> q_prod : ε, F → F
 ```
-# Question 3 
+# Question 3
 The grammar is ambiguous. The string $00111$ has two different leftmost derivations:
 
-**First Leftmost Derivation:**  
+**First Leftmost Derivation:**
 $$S \to A \to 0S1S \to 0B1S \to 00S1S \to 0011S \to 00111$$
 
-**Second Leftmost Derivation:**  
+**Second Leftmost Derivation:**
 $$S \to B \to 0S \to 0A \to 00S1S \to 0011S \to 00111$$
 
 These derivations correspond to different parse trees, proving the grammar’s ambiguity.
@@ -433,22 +440,22 @@ Choose $w = x^p y^p x^p$ (where $n = p > 0, m = 0 \geq 0$):
 
 Now, divide $w = uvxyz$ with $|vxy| \leq p$ and $|vy| \geq 1$. Since $|vxy| \leq p$, $vxy$ cannot span all three parts ($x^p, y^p, x^p$). We consider possible cases:
 
-- **Case 1: $vxy$ is within the first $x^p$**  
+- **Case 1: $vxy$ is within the first $x^p$**
   - $v$ and $y$ are $x$'s, $u = x^a, v = x^b, x = x^c, y = x^d, z = x^{p-a-b-c-d} y^p x^p$ (where $b + c + d \leq p, b + d \geq 1$).
   - Pump with $k = 2$: $uv^2 x y^2 z = x^{p + b + d} y^p x^p$.
   - This has more $x$'s in the first part than $y$'s or the second $x^p$, so it’s not in $L_2$.
 
-- **Case 2: $vxy$ is within $y^p$**  
+- **Case 2: $vxy$ is within $y^p$**
   - $v$ and $y$ are $y$'s, $u = x^p y^a, v = y^b, x = y^c, y = y^d, z = y^{p-a-b-c-d} x^p$.
   - Pump with $k = 2$: $uv^2 x y^2 z = x^p y^{p + b + d} x^p$.
   - The number of $y$'s exceeds $n$, so it’s not in $L_2$.
 
-- **Case 3: $vxy$ is within the second $x^p$**  
+- **Case 3: $vxy$ is within the second $x^p$**
   - $v$ and $y$ are $x$'s, $u = x^p y^p x^a, v = x^b, x = x^c, y = x^d, z = x^{p-a-b-c-d}$.
   - Pump with $k = 2$: $uv^2 x y^2 z = x^p y^p x^{p + b + d}$.
   - The third part has more $x$'s than the first, so it’s not in $L_2$.
 
-- **Case 4: $vxy$ straddles $x^p y^p$ or $y^p x^p$**  
+- **Case 4: $vxy$ straddles $x^p y^p$ or $y^p x^p$**
   - Similar analysis shows pumping disrupts the $x^n y^n x^n$ equality (e.g., adding $x$'s and $y$'s unevenly).
 
 In all cases, pumping produces a string not in $L_2$, contradicting the assumption. Thus, $L_2$ is not context-free.

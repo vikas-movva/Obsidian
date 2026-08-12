@@ -1,3 +1,12 @@
+---
+title: Introduction to Machine Learning
+tags:
+  - cp322
+  - school
+---
+
+# Introduction to Machine Learning
+
 ## What is Predictive Analytics
 ```mermaid
 %%{init: {"flowchart": {"htmlLabels": false}} }%%
@@ -10,9 +19,9 @@ flowchart LR
 ```
 **Predictive data analytics** is the process of moving from **data** to **insights** to **decisions**.
 **Example Applications:**
-- Price Prediction 
-- Fraud Detection 
-- Diagnosis 
+- Price Prediction
+- Fraud Detection
+- Diagnosis
 - Document Classification
 - etc.
 
@@ -24,26 +33,26 @@ There is two types of Machine learning techniques **Supervised** and **Unsupervi
 ## Roadmap of Machine Learning
 ```mermaid
 flowchart LR
-	A[(Training
-	Dataset)]
-	B(Machine 
-	Learning 
-	Algorithm)
-	C[Prediction
-	Model]
-	A-->B
-	B-->C
+  A[(Training
+  Dataset)]
+  B(Machine
+  Learning
+  Algorithm)
+  C[Prediction
+  Model]
+  A-->B
+  B-->C
 ```
 Using ML to induce a prediction model from a training dataset.
 
 ```mermaid
 flowchart LR
-	A[Query Instance]
-	B[Prediction
-	Model]
-	C[Prediction]
-	A==>B
-	B==>C
+  A[Query Instance]
+  B[Prediction
+  Model]
+  C[Prediction]
+  A==>B
+  B==>C
 ```
 Using the model to make predictions for new query instances
 
@@ -65,9 +74,9 @@ What is the relationship between the **descriptive features** and the **target f
 
 ```python
 if Ratio > 3:
-	Outcome = 'default'
+  Outcome = 'default'
 else:
-	Outcome = 'repay'
+  Outcome = 'repay'
 ```
 This is an extremely basic example of a **prediction model** as well as an example of a **consistent** prediction model.
 

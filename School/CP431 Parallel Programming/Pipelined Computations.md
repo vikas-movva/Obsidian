@@ -1,3 +1,12 @@
+---
+title: Pipelined Computations
+tags:
+  - cp431
+  - school
+---
+
+# Pipelined Computations
+
 ## Introduction to Pipelining
 - **Definition**: Breaking a problem into sequential tasks, each executed by a separate process/processor.
 - **Analogy**: Similar to an assembly line, where each stage performs a specific task and passes the result to the next.
@@ -50,7 +59,7 @@
 
 ### Type 1 Pipeline
 - **Scenario**: Multiple instances of the same problem.
-- **Execution Time**: 
+- **Execution Time**:
   $\text{Time} = m + p - 1 \quad \text{(for  m  instances,  p  stages)}$
 - **Space-Time Diagram**:
   ```mermaid
@@ -91,7 +100,7 @@
 ---
 
 ## Prime Number Generation
-- **Sieve of Eratosthenes**:
+- **[[Sieve of Eratosthenes]]**:
   - **Pipeline Stages**:
     1. $P_0$ keeps 2 (prime) and removes multiples.
     2. $P_1$ keeps 3 (prime) and removes multiples, etc.

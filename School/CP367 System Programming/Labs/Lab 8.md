@@ -1,3 +1,12 @@
+---
+title: Lab 8
+tags:
+  - cp367
+  - school
+---
+
+# Lab 8
+
 1. calculator.sh
 ```bash
 #!/bin/bash

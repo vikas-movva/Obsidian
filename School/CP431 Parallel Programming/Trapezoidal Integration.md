@@ -1,11 +1,18 @@
+---
+title: Trapezoidal Integration
+tags:
+  - cp431
+  - school
+---
+
 # Parallel Trapezoidal Rule using MPI: Detailed Notes
 
 ## 1. Trapezoidal Rule Formula
 The trapezoidal rule approximates the integral of a function \( f(x) \) over \([a, b]\) by dividing the interval into \( n \) trapezoids:
-- **Area of the \( i \)-th trapezoid**:  
+- **Area of the \( i \)-th trapezoid**:
   $\frac{1}{2} h \left( f(x_{i-1}) + f(x_i) \right)$
   where $h = \frac{b-a}{n}$.
-- **Total area (integral approximation)**:  
+- **Total area (integral approximation)**:
   $h \left[ \frac{f(a) + f(b)}{2} + \sum_{i=1}^{n-1} f(x_i) \right]$
 
 ## 2. Serial Implementation (Key Points)
@@ -81,7 +88,7 @@ The trapezoidal rule approximates the integral of a function \( f(x) \) over \([
   ```
 
 ### Communication Patterns
-- **Point-to-Point Communication**:  
+- **Point-to-Point Communication**:
   - `MPI_Send` and `MPI_Recv` with unique tags to avoid message mixing.
   - Example for sending \( a \), \( b \), \( n \):
     ```c
@@ -120,7 +127,7 @@ The trapezoidal rule approximates the integral of a function \( f(x) \) over \([
 ---
 
 ## 8. Further Optimizations
-- **Collective Communication**: Replace `MPI_Send`/`MPI_Recv` with `MPI_Gather` for efficient result aggregation.
+- **[[Collective Communication]]**: Replace `MPI_Send`/`MPI_Recv` with `MPI_Gather` for efficient result aggregation.
 - **Dynamic Load Balancing**: Handle cases where \( n \) is not divisible by \( p \).
 
 ---
@@ -161,7 +168,7 @@ For process \( i \):
   $\text{local\_a} = a + i \cdot \text{local\_n} \cdot h$
   $\text{local\_b} = \text{local\_a} + \text{local\_n} \cdot h$
 - **Example**: If \( a=0 \), \( b=1 \), \( n=1024 \), \( p=4 \):
-  - Process 0: \[0, 0.25\] 
+  - Process 0: \[0, 0.25\]
   - Process 1: \[0.25, 0.5\] , etc.
 
 ### Visualization
@@ -192,7 +199,7 @@ For process \( i \):
 
 ---
 
-## 12. Collective Communication vs. Point-to-Point
+## 12. [[Collective Communication]] vs. Point-to-Point
 ### `MPI_Bcast` vs. `MPI_Send/Recv`
 - **`MPI_Bcast`**:
   - Efficiently broadcasts data from root to all processes.

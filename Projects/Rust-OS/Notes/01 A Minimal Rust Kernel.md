@@ -1,3 +1,12 @@
+---
+title: A Minimal Rust Kernel
+tags:
+  - projects
+  - rust-os
+---
+
+# A Minimal Rust Kernel
+
 ### Summary:
 
 ### The Boot Process
@@ -6,25 +15,19 @@ On startup your computer begins to execute firmware code that is stored in mothe
 The process goes something like this:
 ```mermaid
 graph TD
-	A[Power on] --> B[execute firmware code]
-	B --> C[POST]
-	C --> D[detect available RAM]
-	D --> E[preinitialize CPU and hardware]
-	E --> F[look for bootable drive] 
-	F --> G[boot OS]
+  A[Power on] --> B[execute firmware code]
+  B --> C[POST]
+  C --> D[detect available RAM]
+  D --> E[preinitialize CPU and hardware]
+  E --> F[look for bootable drive]
+  F --> G[boot OS]
 ```
-Power on -> execute firmware code
-                -> POST -> detect available RAM -> pre-initialize CPU and hardware -> look for bootable drive -> boot OS
-
 #### Firmware standards
 On a x86 CPU there are two firmware standards:
-- Basic Input/output System or BIOS
-	- Old and outdated standard
-	- Simple to use and well supported on majority of x86 machines
 
-- Unified Extensible Firmware Interface or UEFI
-	- Modern and feature rich
-	- Complex to setup
+> [!info] BIOS vs UEFI
+> - **BIOS** (Basic Input/Output System): old and outdated, but simple and widely supported on most x86 machines.
+> - **UEFI** (Unified Extensible Firmware Interface): modern and feature-rich, but more complex to set up.
 
 
 #### BIOS Boot
@@ -33,13 +36,13 @@ In order to maintain compatibility most new [[01 A Minimal Rust Kernel#Firmware 
 Updated boot process
 ```mermaid
 graph TD
-	A[Power on] --> B[execute firmware code]
-	B --> C[POST]
-	C --> D[detect available RAM]
-	D --> E[preinitialize CPU and hardware]
-	E --> F[look for bootable drive] 
-	F --> G[run bootloader]
-	G --> H[start OS]
+  A[Power on] --> B[execute firmware code]
+  B --> C[POST]
+  C --> D[detect available RAM]
+  D --> E[preinitialize CPU and hardware]
+  E --> F[look for bootable drive]
+  F --> G[run bootloader]
+  G --> H[start OS]
 ```
 Power on -> execute firmware code
                 -> POST -> detect available RAM -> pre-initialize CPU and hardware -> look for bootable drive -> run bootloader -> ?
@@ -53,14 +56,14 @@ The bootloader has some key roles:
 - Switch the CPU from 16bit real mode to 32bit protected mode then to 64bit long mode where 64-bit registers[^1] and the complete main memory are available
 - Query information (Ex. Memory map[^2]) from the BIOS and pass it to the OS kernel
 
-Writing a bootloader is annoying and and written in assembly 🤮 however the program [bootimage](https://github.com/rust-osdev/bootimage) can automatically prepend a bootloader to a kernel 
+Writing a bootloader is annoying and and written in assembly 🤮 however the program [bootimage](https://github.com/rust-osdev/bootimage) can automatically prepend a bootloader to a kernel
 
 #### Multiboot Standard
 Multiboot is a standard created by the Free Software Foundation in order to avoid having every OS from implementing its own bootloader that is only compatible with itself
 
 The standard defines an interface between the bootloader and the operating system, so that any Multiboot-compliant bootloader can load any Multiboot-compliant OS
-- Reference implementation: [GNU GRUB](https://www.gnu.org/software/grub/) 
-	- Most popular bootloader for Linux systems
+- Reference implementation: [GNU GRUB](https://www.gnu.org/software/grub/)
+  - Most popular bootloader for Linux systems
 
 In order to make the Multiboot-compliant a Multiboot-header needs to be inserted at the beginning of the kernel file.
 
@@ -73,9 +76,9 @@ This does makes it easy to boot an OS from GRUB but there are some problems with
 ### Minimal Kernel
 Preliminary goal: create a disk image that prints "Hello world" when booted.
 
-In order to achieve this [[00 Create a freestanding Rust binary|the freestanding Rust binary]] needs to be extended.
+In order to achieve this [[00 [[Create a freestanding Rust binary]]|the freestanding Rust binary]] needs to be extended.
 
-In [[00 Create a freestanding Rust binary|Rust binary]] cargo was used to build the binary however cargo builds for the host system by default and a kernel that runs on top of Windows/Mac doesn't make sense
+In [[00 [[Create a freestanding Rust binary]]|Rust binary]] cargo was used to build the binary however cargo builds for the host system by default and a kernel that runs on top of Windows/Mac doesn't make sense
 
 #### Rust Nightly
 There are three different channels of Rust: stable, beta, nightly
@@ -160,16 +163,16 @@ static HELLO: &[u8] = b"Hello World!";
 
 #[no_mangle]
 pub extern "C" fn _start() -> ! {
-	let vga_buffer = 0xb800 as *mut u8;
+  let vga_buffer = 0xb800 as *mut u8;
 
-	for (i, &byte) in HELLO.iter().enumerate(){
-		unsafe{
-			*vga_buffer.offset(i as isize *2) = byte;
-			*vga_buffer.offset(i as isize *2 + 1) = 0xb;
-		}
-	}
+  for (i, &byte) in HELLO.iter().enumerate(){
+    unsafe{
+      *vga_buffer.offset(i as isize *2) = byte;
+      *vga_buffer.offset(i as isize *2 + 1) = 0xb;
+    }
+  }
 
-	loop{}
+  loop{}
 
 }
 ```
@@ -206,9 +209,6 @@ What does the bootimage tool really do?
 - compiles kernel to an [ELF](https://en.wikipedia.org/wiki/Executable_and_Linkable_Format) file
 - compiles bootloader dependency as a standalone executable
 - links the bytes of the kernel ELF file to the bootloader
-
-
-
 
 
 [^1]: registers are temporary storage locations in the processor.

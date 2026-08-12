@@ -1,3 +1,12 @@
+---
+title: Lab 1
+tags:
+  - cp367
+  - school
+---
+
+# Lab 1
+
 ctest.c:
 ```C
 /*
@@ -21,4 +30,3 @@ Terminal:
 gcc -g -o ctest ctest.c
 ./ctest
 ```
-

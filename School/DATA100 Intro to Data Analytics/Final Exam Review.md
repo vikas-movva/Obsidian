@@ -1,3 +1,12 @@
+---
+title: Final Exam Review
+tags:
+  - data100-intro-to-data-analytics
+  - school
+---
+
+# Final Exam Review
+
 ## Part 1: R Basics and Data Manipulation
 
 1. Consider the following R code, where switch is used.
@@ -56,7 +65,7 @@ years(1)/days(1)
 ```R
 x <- 6
 if_else(
-	x > 0,
+  x > 0,
     "Perfect",
     "Not good"
 )
@@ -93,45 +102,45 @@ c) `sum(Z %% 2 == 0)`
    b) How would you modify this plot to use different shapes for each `cut` category instead of colors?
 ```r
 plot <- diamonds |> ggplot(mapping=aes(x=carat, y=price, color=cut)) +
-	geom_point()+
-	labs(title="Relationship between Price and Carat for Diamonds", x="Carat", y="Price", color="Cut")
+  geom_point()+
+  labs(title="Relationship between Price and Carat for Diamonds", x="Carat", y="Price", color="Cut")
 ```
 
 ```r
 plot <- diamonds |> ggplot(mapping=aes(x=carat, y=price, shape=cut)) +
-	geom_point()+
-	labs(title="Relationship between Price and Carat for Diamonds",
-	 x="Carat", 
-	 y="Price", 
-	 shape="Cut"
-	 )
+  geom_point()+
+  labs(title="Relationship between Price and Carat for Diamonds",
+   x="Carat",
+   y="Price",
+   shape="Cut"
+   )
 ```
 Change `color` in the `aes` function to `shape`
 
 9. Using the `ggplot2` package, write R code to create a bar plot of the `cut` variable from the `diamonds` dataset. How would you modify this plot to show the proportion of each cut category instead of counts?
 ```r
 plot <- diamonds %>% ggplot(mapping=aes(x=cut)) +
-	geom_bar() +
-	labs(
-		title = "Count of Each Cut Category in the Diamonds Dataset", 
-		x = "Cut", 
-		y = "Count"
-	)
+  geom_bar() +
+  labs(
+    title = "Count of Each Cut Category in the Diamonds Dataset",
+    x = "Cut",
+    y = "Count"
+  )
 ```
 
 ```r
 diamonds2 <- diamonds %>% group_by(cut) %>%
-	summarize(count = n()) %>%
-	mutate(proportion = count / sum(count))
+  summarize(count = n()) %>%
+  mutate(proportion = count / sum(count))
 
 plot <- diamonds2 %>% ggplot(mapping=aes(x=cut, y=proportion)) +
-	geom_bar(stat="identity") +
-	scale_y_continuous(labels = scales::percent) +
-	labs(
-	title="Proportion of Each Cut Category in the Diamonds Dataset",
-	x="Cut",
-	y="Proportion"
-	)
+  geom_bar(stat="identity") +
+  scale_y_continuous(labels = scales::percent) +
+  labs(
+  title="Proportion of Each Cut Category in the Diamonds Dataset",
+  x="Cut",
+  y="Proportion"
+  )
 ```
 In the context of the `geom_bar` function in `ggplot2`, `stat = "identity"` is used to tell `ggplot2` to use the values provided in the data frame for the y-axis. By default, `geom_bar` uses `stat = "count"`, which counts the number of occurrences of each x value. However, when you provide your own y values (like proportions), you need to specify `stat = "identity"` to instruct `ggplot2` to use those values directly.
 
@@ -198,7 +207,7 @@ This syntax uses the pipe operator (`|>`) and `join_by()`, which is part of a ne
 >2. **Traditional `left_join` with a string for the key**:
 >```r
 T2 <- left_join(x, y, by = "key")
->``` 
+>```
 This syntax uses the traditional way of specifying the join key as a string directly in the `by` parameter. This method is simple and works well for straightforward joins where the key is a single column and the join condition is an equality.
 
 11. Write R code to perform an outer join of the tables x and y from the previous question. What would the resulting table look like?
@@ -229,7 +238,7 @@ cov(temperature$RegionA, temperature$RegionB)
 ```
 - Calculate the correlation coefficient between RegionA and RegionB. What does this value indicate about the relationship between these two variables?
 
->[!Answer] 
+>[!Answer]
 >Correlation is given by the formula:
 $$cor(X,Y)= \frac{cov(X,Y)}{\sqrt{ var(X)var(Y) }}$$
 therefore  $cor(X,Y)= \frac{9.93}{\sqrt{ (10.03)(10.12) }}=0.986$. This indicates that `RegionA` and `RegionB` are strongly correlated
@@ -256,7 +265,7 @@ $$y=0.5033+0.3215u+0.2901x+0.1559x^2+0.0502(ux)$$
 b) How confident are you that the estimated non-zero value for the intercept is not by chance? Justify your answer.
 
 >[!Answer]
->From the output of `summary(mod)` we can see that the **p** value is 0.710221. This is significantly greater than the **p**-value threshold of 0.05. Therefore we can determine that the intercept is **not** statistically significant and is most likely 0. 
+>From the output of `summary(mod)` we can see that the **p** value is 0.710221. This is significantly greater than the **p**-value threshold of 0.05. Therefore we can determine that the intercept is **not** statistically significant and is most likely 0.
 
 c) Calculate the predicted y value when u = 2 and x = 3.
 $$y=0.5033+0.3215(2)+0.2901(3)+0.1559(3)^2+0.0502(2)(3) = 3.7209$$
@@ -267,11 +276,11 @@ d) Interpret the coefficient of the interaction term (u:x) in the context of the
 
 15. Write R code to create a simple linear regression model predicting `price` based on `carat` in the `diamonds` dataset. How would you interpret the coefficient for `carat` in this model?
 >[!Answer]
->```r 
->model <- linear_reg() %>% 
->	set_engine("lm") %>% 
->	set_mode("regression") %>% 
->	fit(price ~ carat, data=diamonds)
+>```r
+>model <- linear_reg() %>%
+>  set_engine("lm") %>%
+>  set_mode("regression") %>%
+>  fit(price ~ carat, data=diamonds)
 >```
 >`intercept` - The price if carat is 0. While this doesn't make in reality as 0 carat diamonds don't exist it is important in order to get an accurate prediction.
 >
@@ -280,18 +289,18 @@ d) Interpret the coefficient of the interaction term (u:x) in the context of the
 17. Given a data frame `df` with variables `x1`, `x2`, and `y`, write R code to create a multiple regression model that includes an interaction term between `x1` and `x2`. How would you interpret the coefficient of the interaction term?
 >[!Answer]
 >```r
->model <- linear_reg() %>% 
->	set_engine("lm") %>%
->	set_mode("regression")
+>model <- linear_reg() %>%
+>  set_engine("lm") %>%
+>  set_mode("regression")
 >
 >recipe <- recipe(y~ x1*x2)
 >
 >workflow <- workflow() %>%
->	add_model(model) %>%
->	add_recipe(recipe)
+>  add_model(model) %>%
+>  add_recipe(recipe)
 >
 >fit <- workflow %>%
->	fit(data = df)
+>  fit(data = df)
 >```
 >`intercept` - the y intercept of the model
 >`x1` - how `y` changes as `x1` changes
@@ -303,17 +312,17 @@ d) Interpret the coefficient of the interaction term (u:x) in the context of the
 
 1. Write the explicit mathematical formula corresponding to each of the R formulas:
     1. `y ~ x1 + x2`
-        - $y=b_{0} + b_{1}x_{1} + b_{2}x_{2}$ 
+        - $y=b_{0} + b_{1}x_{1} + b_{2}x_{2}$
     2. `y ~ x1:x2`
-        - $y= b_{0} + b_{1}(x_{1}x_{2})$ 
+        - $y= b_{0} + b_{1}(x_{1}x_{2})$
     3. `y ~ x1 * x2`
-        - $y=b_{0} + b_{1}x_{1}+b_{2}x_{2}+b_{3}(x_{1}x_{2})$ 
+        - $y=b_{0} + b_{1}x_{1}+b_{2}x_{2}+b_{3}(x_{1}x_{2})$
     4. `y ~ x1 * x2 - x1`
-        - $y= b_{0}+b_{2}x_{2}+b_{3}(x_{1}x_{2})$ 
+        - $y= b_{0}+b_{2}x_{2}+b_{3}(x_{1}x_{2})$
     5. `y ~ x1 * x2 - 1`
         - $y=b_{1}x_{1}+b_{2}x_{2}+b_{3}(x_{1}x_{2})$
     6. `y ~ I(x1 * x2 - 1)`
-        - $y=b_{0} + b_{2}(x_{1}x_{2}-1)$ 
+        - $y=b_{0} + b_{2}(x_{1}x_{2}-1)$
 
 18. Translate the following R formula into its explicit mathematical form:
 ```R
@@ -339,7 +348,7 @@ $$y=b_{1}x_{1}+b_{2}x_{2}+b_{3}x_{3}^2 + b_{4}(x_{1}x_{2})$$
 >     )
 >   }
 >   ```
-   
+
 
 22. Using the `tibble` function from the tidyverse package, create a dataframe that contains the sequences from questions 2 and 3. Then, use `mutate()` to add a new column that calculates the difference between the two sequences.
 >[!Answer]
@@ -365,11 +374,11 @@ $$y=b_{1}x_{1}+b_{2}x_{2}+b_{3}x_{3}^2 + b_{4}(x_{1}x_{2})$$
 >[!Answer]
 >```r
 >categorize_number <- function(x) {
-> 	case_when(
-> 		x > 0 ~ "Positive",
->		x < 0 ~ "Negative",
->		TRUE ~ "Zero"
->	  )
+>   case_when(
+>     x > 0 ~ "Positive",
+>    x < 0 ~ "Negative",
+>    TRUE ~ "Zero"
+>    )
 >}
 >
 >input_vector <- c(-2, 0, 3, -1, 5)
@@ -380,12 +389,12 @@ $$y=b_{1}x_{1}+b_{2}x_{2}+b_{3}x_{3}^2 + b_{4}(x_{1}x_{2})$$
 >[!Answer]
 >```r
 >df <- tibble(
->	letter=c("A", "B", "C", "D", "E")
->	count=c(8, 6, 4, 2, 1)
+>  letter=c("A", "B", "C", "D", "E")
+>  count=c(8, 6, 4, 2, 1)
 >)
 >plot <- ggplot(mapping=aes(x=letter, y=count)) +
->	geom_histogram(stat="identity")+
->	labs(xlab="Letter", ylab="Count", title="Histogram of x vs y")
+>  geom_histogram(stat="identity")+
+>  labs(xlab="Letter", ylab="Count", title="Histogram of x vs y")
 >```
 >
 >This histogram has right skew because the mean is less than the median

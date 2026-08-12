@@ -1,3 +1,12 @@
+---
+title: Assignment 4
+tags:
+  - cp312
+  - school
+---
+
+# Assignment 4
+
 ## Question 1
 
 ### 1.A
@@ -65,7 +74,7 @@ MST using Prim's algorithm: A, D, F, G, B, C, E
 ### 3.B
 1. Start edge E-G (weight 1). Add it to the MST. (smallest)
 2. Add edge A-D (weight 5).
-3. Add edge C-F (weight 5). 
-4. Add edge A-B (weight 10). 
-5. Add edge C-E (weight 10). 
- MST using Kruskal’s algorithm: **E-G, A-D, C-F, A-B, C-E.** 
+3. Add edge C-F (weight 5).
+4. Add edge A-B (weight 10).
+5. Add edge C-E (weight 10).
+ MST using Kruskal’s algorithm: **E-G, A-D, C-F, A-B, C-E.**

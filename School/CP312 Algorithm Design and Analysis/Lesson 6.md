@@ -1,13 +1,12 @@
 ---
-Notes: "[[L6 - Divide-and-Conquer.pdf]]"
+title: Lesson 6
 tags:
-  - algorithms
-  - "#math"
-  - "#merge-sort"
-  - "#binary-search"
-  - "#divide-and-conquer"
-  - "#recurrence"
+  - cp312
+  - school
 ---
+
+# Lesson 6
+
 ### Divide-and-Conquer Algorithms
 Steps:
 1. **Divide** the problem (instance) into subproblems
@@ -55,5 +54,4 @@ $n^{log_ba} = n^{log_21} = n^0 = 1$  vs. $f(n) = \Theta(1)$
 We can use [[Lesson 5#The Master Method|Case 2:]] $(k = 0)$ $f(n) = \Theta(n^{log_ba}lg^kn)$
 $= \Theta(1lg^0n)$
 $= \Theta(1)$
-$\therefore, T(n) \Theta(lg\text{ }n))$ 
-
+$\therefore, T(n) \Theta(lg\text{ }n))$

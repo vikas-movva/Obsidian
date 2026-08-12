@@ -1,3 +1,10 @@
+---
+title: Collective Communication
+tags:
+  - cp431
+  - school
+---
+
 # Detailed Notes on Collective Communication in MPI
 
 ## Introduction to Collective Communication
@@ -118,5 +125,5 @@ graph TD
   B --> E[Proc 4]
   C --> F[Proc 5]
   C --> G[Proc 6]
-```  
+```
 *Example of a binary tree distribution for 7 processes.*

@@ -1,11 +1,12 @@
 ---
+title: Lesson 5 From scratch model
 tags:
-  - Code
-  - Fast-ai
-  - ML
-Web page: https://course.fast.ai/Lessons/lesson5.html
-Video: https://www.youtube.com/watch?v=_rXzeWq4C6w
+  - cs-learning
+  - fast-ai
 ---
+
+# [[Lesson 5]] From scratch model
+
 ## Video Notes
 ### Creating a tabular model from scratch
 
@@ -125,9 +126,9 @@ tensor([[-10.1838,   0.1386,   0.0000,  -0.4772,  -0.2632,  -0.0000,   0.0000,  
         [-14.8128,   0.0000,   0.0000,  -0.4905,  -0.2632,  -0.0000,   0.0000,   0.0000,   0.2799,  -0.0000,   0.2103,   0.0000]])
 ```
 
-From the above output, we can see that the first value in every row has a much higher value than the rest of the values. If you look back at the data, you can see that this column is the age column. While this may not be a big problem, it is not ideal and can be fixed by simply dividing all the values in the column by whatever the max value is. 
+From the above output, we can see that the first value in every row has a much higher value than the rest of the values. If you look back at the data, you can see that this column is the age column. While this may not be a big problem, it is not ideal and can be fixed by simply dividing all the values in the column by whatever the max value is.
 ```python
-vals, indices = t_indep.max(dim=0) # dim=0 is specifying which column to get the max of 
+vals, indices = t_indep.max(dim=0) # dim=0 is specifying which column to get the max of
 t_indep = t_indep / vals
 ```
 
@@ -166,16 +167,16 @@ tensor(0.5382)
 
 Now that all the steps have been tested lets refactor and turn them into functions.
 ```python
-def calc_preds(coeffs, indeps): 
-	return (indeps*coeffs).sum(axis=1)
+def calc_preds(coeffs, indeps):
+  return (indeps*coeffs).sum(axis=1)
 
-def calc_loss(coeffs, indeps, deps): 
-	return torch.abs(calc_preds(coeffs, indeps)-deps).mean()
+def calc_loss(coeffs, indeps, deps):
+  return torch.abs(calc_preds(coeffs, indeps)-deps).mean()
 ```
 
 ##### Doing a gradient descent step
 The following is an example of one epoch of gradient descent manually
-Track the gradient. 
+Track the gradient.
 ```python
 coeffs.requires_grad_()
 ```
@@ -205,13 +206,13 @@ tensor([-0.0212,  0.0258, -0.0082, -0.0969,  0.4198, -0.4265, -0.2424, -0.0494, 
 One gradient descent step
 ```python
 with torch.no_grad():
-	coeffs.sub_(coeffs.grad * 0.1) # random learning rate for the example
-	coeffs.grad.zero_()
-	print(calc_loss(coeffs, t_indep, t_dep))
+  coeffs.sub_(coeffs.grad * 0.1) # random learning rate for the example
+  coeffs.grad.zero_()
+  print(calc_loss(coeffs, t_indep, t_dep))
 ```
 ```python
 tensor(0.4945)
-``` 
+```
 
 ##### Training the linear model
 
@@ -240,8 +241,8 @@ def one_epoch(coeffs, lr):
     with torch.no_grad(): update_coeffs(coeffs, lr)
     print(f"{loss:.3f}", end="; ")
 
-def init_coeffs(): 
-	return (torch.rand(n_coeff)-0.5).requires_grad_()
+def init_coeffs():
+  return (torch.rand(n_coeff)-0.5).requires_grad_()
 ```
 
 Using the above functions you can now create a function to train the model
@@ -283,4 +284,4 @@ show_coeffs()
 
 ##### Measuring accuracy
 
-## Textbook notes 
+## Textbook notes

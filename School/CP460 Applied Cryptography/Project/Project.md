@@ -1,3 +1,12 @@
+---
+title: Project
+tags:
+  - cp460
+  - school
+---
+
+# Project
+
 ### **Abstract**
 
 The rapid expansion of the Internet of Things (IoT), projected to encompass over 18 billion devices by 2025, has introduced significant security and privacy challenges due to the inherent resource constraints of IoT devices. Traditional cryptographic algorithms like AES and RSA are unsuitable for these devices because of their high computational and energy demands. Lightweight cryptography (LWC) emerges as a promising solution, aiming to balance security strength with resource efficiency by optimizing parameters such as gate equivalents, key size, block size, and encryption rounds.
@@ -101,44 +110,44 @@ The findings of this literature review highlight the distinctive features, stren
 The feasibility of implementing cryptographic techniques in IoT is fundamentally constrained by the **limited computational power** and **energy availability** typical of IoT devices. All three techniques analyzed in this review—Modified PRESENT, SLIM, and Hybrid Feistel-MD5—address these constraints but differ in their respective approaches.
 
 - The **Modified PRESENT Cipher** offers a feasible solution through a reduction in the number of encryption rounds, which minimizes computational requirements while retaining acceptable security levels. The reduced hardware complexity, requiring only **1884 gate equivalents (GE)**, makes the Modified PRESENT ideal for devices with very tight resource constraints, such as small **sensor nodes** and **RFID tags**​[^1].
-    
+
 - The **SLIM Lightweight Block Cipher**, with its **pipelined architecture**, achieves higher operational frequencies without increasing hardware complexity, making it feasible for applications requiring real-time encryption. The use of **four parallel S-boxes** and **simple XOR operations** ensures that the hardware requirements remain manageable, allowing SLIM to be deployed in a wide variety of IoT devices, from **wearables** to **network edge devices**​[^2].
-    
+
 - The **Hybrid Feistel-MD5 Scheme** also provides a feasible solution, particularly in **local IoT networks** where edge devices need to communicate securely with a centralized sink node. The **Feistel structure**, combined with **MD5 hashing**, ensures data confidentiality and integrity with minimal resource usage, making it suitable for environments where ensuring **data integrity** is a priority without overwhelming limited processing capabilities​[^3].
-    
+
 
 #### **3.2 Efficiency and Performance Evaluation**
 
 The efficiency of a lightweight cryptographic method is measured in terms of **encryption/decryption speed**, **latency**, and **resource optimization**.
 
 - The **Modified PRESENT Cipher** achieved a good balance of efficiency and security through the reduction of encryption rounds from **31 to 25**. This reduction decreased the overall computational load, resulting in faster encryption and reduced latency—important factors for devices needing quick responses in real-time IoT environments. **N-gram analysis** and **Chi-square tests** also indicated that the Modified PRESENT was successful in enhancing diffusion while preserving computational efficiency​[^1].
-    
+
 - **SLIM** outperformed other lightweight ciphers in terms of **operational frequency**, thanks to its **pipelined hardware architecture**. The implementation on **multiple FPGA platforms**, including **Virtex-7** and **Spartan-6**, showed that SLIM is capable of achieving **60.35% higher frequencies** compared to other ciphers like **Hummingbird** and **TEA**. This high-frequency operation is crucial for IoT applications that require **real-time encryption**, such as **industrial automation** and **connected vehicles**, where data needs to be encrypted and transmitted without significant delays​[^2].
-    
+
 - The **Hybrid Feistel-MD5 Scheme** demonstrated good performance for **localized data exchanges** between edge devices and a central sink node. The simple encryption rounds of the Feistel structure, combined with the hashing provided by MD5, ensured that both encryption and verification could be performed with minimal computational overhead. The latency was also found to be low, enabling efficient data communication within local IoT networks that require frequent data exchanges​[^3].
-    
+
 
 #### **3.3 Energy Efficiency**
 
 Energy efficiency is a critical requirement for IoT devices, many of which are **battery-powered** or **solar-powered** and are expected to operate for extended periods without maintenance.
 
 - The **Modified PRESENT Cipher** showed **reduced power consumption** due to the fewer encryption rounds and the simplified key update mechanism. This reduction made it an energy-efficient option for IoT devices that operate in remote environments or where energy sources are limited, such as **agricultural sensors** and **environmental monitoring systems**​[^1].
-    
+
 - The **SLIM cipher** achieved notable energy efficiency through its **pipelined design**, which reduced the processing time per operation. By executing multiple stages concurrently, the overall encryption time was shortened, which translated into lower energy usage. This makes SLIM suitable for devices such as **wearable health monitors**, which require frequent data encryption but have limited battery capacity​[^2].
-    
+
 - The **Hybrid Feistel-MD5 Scheme** also demonstrated **low energy consumption**, particularly due to the **simple round functions** of the Feistel structure and the relatively lightweight hashing operation of MD5. The hashing process adds minimal computational burden, thereby keeping energy consumption within acceptable limits for localized networks, such as **home automation systems** and **smart building sensor networks**, where efficient energy usage is essential​[^3].
-    
+
 
 #### **3.4 Security Capabilities**
 
 The security of lightweight cryptographic methods is assessed based on their ability to withstand attacks such as **differential**, **linear**, and **replay attacks**, as well as ensuring **confidentiality** and **integrity**.
 
 - The **Modified PRESENT Cipher** strengthened its security by introducing a **dynamic key register update mechanism** based on the **TEA delta value**, which makes it more resistant to **differential cryptanalysis**. Additionally, the added layer between the **S-box** and **P-layer** improved the diffusion, enhancing the cipher's resilience against linear attacks without adding significant computational overhead​[^1].
-    
+
 - **SLIM** was found to offer robust security through the use of **non-linear S-boxes** and **P-boxes** that ensure a high level of **confusion and diffusion**. The **Feistel structure**, in combination with **dynamic sub-key generation**, made the SLIM cipher resistant to common attacks targeting lightweight block ciphers. This high level of security, combined with its **high operational frequency**, positions SLIM as a secure solution for applications requiring **real-time data encryption**, such as **connected vehicles** and **industrial IoT** systems​[^2].
-    
+
 - The **Hybrid Feistel-MD5 Scheme** provided an integrated security approach by combining **encryption** and **hashing**. The **Feistel structure** provided adequate data confidentiality, while the **MD5 hash function** ensured data integrity. Although MD5 has limitations in terms of collision resistance, it remains effective for lightweight integrity verification in **local IoT environments**. This makes the hybrid scheme suitable for settings where preventing **data tampering** and ensuring integrity are priorities, such as **home security networks** and **smart city sensor nodes**​[^3].
-    
+
 
 #### **3.5 Summary of Results**
 

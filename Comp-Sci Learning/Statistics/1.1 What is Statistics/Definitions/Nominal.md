@@ -1,6 +1,12 @@
 ---
+title: Nominal
 aliases: [Nominal data]
+tags:
+  - cs-learning
+  - statistics
 ---
+
+# Nominal
 
 ### Nominal data
 

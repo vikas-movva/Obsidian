@@ -1,6 +1,12 @@
 ---
-Notes: "[[Software Engineering-week1-2--project-management.pdf]]"
+title: Week 1 2
+tags:
+  - cp317
+  - school
 ---
+
+# [[Week 1]] 2
+
 ## Documentation
 Documentation is important at every step of the software development cycle and a Source Control Management (SCM) system is one of the first tools utilized when starting a new project (Git).
 
@@ -50,24 +56,24 @@ It ensures that goals are set, tracked, and eventually met. It also keeps team m
 
 ```mermaid
 graph TD
-	subgraph Plan
-	A(Task 1)
-	B(Task 2)
-	end
-	subgraph Code
-	C(Task 3)
-	D(Task 4)
-	end
-	subgraph Test
-	E(Task 5)
-	F(Task 6)
-	end
-	A-->B
-	A-->C
-	B-->F
-	C-->D
-	C-->E
-	D-->F
+  subgraph Plan
+  A(Task 1)
+  B(Task 2)
+  end
+  subgraph Code
+  C(Task 3)
+  D(Task 4)
+  end
+  subgraph Test
+  E(Task 5)
+  F(Task 6)
+  end
+  A-->B
+  A-->C
+  B-->F
+  C-->D
+  C-->E
+  D-->F
 ```
 #### PERT Chart Examples:
 ```mermaid
@@ -111,7 +117,7 @@ gantt
     title Project Activities
     dateFormat W
     axisFormat %W
-    
+
     Planning   : 1, 3w
     Design     : 3, 6w
     Coding     : 6, 9w
@@ -151,4 +157,3 @@ Risk management is a process that allows individual risk events and overall risk
 > 2. Severity/impact
 > 3. Consequence
 > 4. Workaround
-

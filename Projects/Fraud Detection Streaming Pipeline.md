@@ -1,8 +1,15 @@
+---
+title: Fraud Detection Streaming Pipeline
+tags:
+  - projects
+---
+
 # Fraud Detection Streaming Pipeline — Step by Step
 
-> **Project repo:** `~/Documents/Project/fraud-detection-pipeline/`
+> [!info] Project metadata
+> **Repo:** `~/Documents/Project/fraud-detection-pipeline/`
 > **Resume:** [[Vikas Movva Resume Data Engineering]]
-> **Tech:** Kafka, Spark Structured Streaming, Cassandra, PostgreSQL, Prometheus, Grafana, Docker
+> **Stack:** Kafka, Spark Structured Streaming, Cassandra, PostgreSQL, Prometheus, Grafana, Docker
 
 ---
 

@@ -1,11 +1,10 @@
 ---
+title: Lesson 2 Deployment
 tags:
-  - ML
-  - Fast-ai
-  - Code
-Web page: https://course.fast.ai/Lessons/lesson2.html
-Video: https://www.youtube.com/watch?v=F4tvM4Vb3A0
+  - cs-learning
+  - fast-ai
 ---
+
 ## Video Notes
 
 ### Data cleaning
@@ -23,7 +22,7 @@ for idx, cat in cleaner.change(): shutil.move(str(cleaner.fns[idx]), path/cat)
 ### How to put your model into production
 - Create a new space on [huggingface](huggingface.co/new-space)
 - Clone huggingface repo onto your machine
-- Create Gradio script 
+- Create Gradio script
 - Push updates to huggingface
 >after setting up gradio / hf spaces you can use that space as an api
 
@@ -31,83 +30,83 @@ for idx, cat in cleaner.change(): shutil.move(str(cleaner.fns[idx]), path/cat)
 
 ### The Practice of Deep Learning
 - Deep learning can solve a lot of challenges with little code however that doesn't mean that deep learning is magic.
-	- The same [[Lesson 1 - Getting started#Code Example|6 lines of code]] wont work for every problem.
-	- But at the same time it is important to realistically gauge the constraints and capabilities correctly so that you dont under or over estimate deep learning
+  - The same [[Lesson 1 - Getting started#Code Example|6 lines of code]] wont work for every problem.
+  - But at the same time it is important to realistically gauge the constraints and capabilities correctly so that you dont under or over estimate deep learning
 
 ### Starting Your Project
 - When selecting a project to start the most important thing is data availability
 - When trying to find data the the goal is not to find the ==perfect== dataset but one that is good enough to get started
-- It is also recommend to iterate end to end while completing each step in a reasonable amount of time 
-	- By using this approach you will get a better understanding of how much data is really needed for the project
+- It is also recommend to iterate end to end while completing each step in a reasonable amount of time
+  - By using this approach you will get a better understanding of how much data is really needed for the project
 
 ### The State of Deep Learning
 Is deep learning even right for the problem you want to solve?
 The following is a list of use cases that deep learning is effective in:
 #### Computer Vision
 - Object recognition
-	- Recognize what objects are in an Image
-	- This task can be preformed at or beyond the human level by computers
+  - Recognize what objects are in an Image
+  - This task can be preformed at or beyond the human level by computers
 - Object detection
-	- Recognize the ==location== and name of an object in an Image
+  - Recognize the ==location== and name of an object in an Image
 - Segmentation
-	- Categorize each pixel of an image based on what kind of object it is part of
+  - Categorize each pixel of an image based on what kind of object it is part of
 - Limitations
-	- Deep learning algorithms are not very good at images that are significantly different in structure to the training data
-		- black and white images
-		- hand drawn sketches
-		- etc.
-	- Image labelling can be slow and expensive 
-		- A work around is to synthetically generate variations of input images. This is called ==Data Augmentation==
-			- Rotate
-			- Change brightness or contrast
+  - Deep learning algorithms are not very good at images that are significantly different in structure to the training data
+    - black and white images
+    - hand drawn sketches
+    - etc.
+  - Image labelling can be slow and expensive
+    - A work around is to synthetically generate variations of input images. This is called ==Data Augmentation==
+      - Rotate
+      - Change brightness or contrast
 
 #### Natural Language Processing (text / NLP)
-- Classifier 
-	- Classify both short and long documents based on categories
-		- Spam
-		- Author 
-		- Source website
-		- etc.
-		- Sentiment
+- Classifier
+  - Classify both short and long documents based on categories
+    - Spam
+    - Author
+    - Source website
+    - etc.
+    - Sentiment
 - Generation
-	- Generating content-appropriate text
-		- Social media replies
-		- writing style imitation
-		- Compelling content to humans
-		- Translations
-		- Summarizations
+  - Generating content-appropriate text
+    - Social media replies
+    - writing style imitation
+    - Compelling content to humans
+    - Translations
+    - Summarizations
 - Limitations
-	- Deep learning might be good at generating content that is appealing to humans but it is not very good at generating ==correct information==
+  - Deep learning might be good at generating content that is appealing to humans but it is not very good at generating ==correct information==
 
 #### Combining Text and Images
 - Image Captioning
-	- Caption a given image based on the contents of the image or other factors
-		- Medical imaging
-		- Security screening (post, airport)
+  - Caption a given image based on the contents of the image or other factors
+    - Medical imaging
+    - Security screening (post, airport)
 - Limitations
-	- Same as with NLP the output is not guaranteed to be correct thus human screening is still needed at this time
+  - Same as with NLP the output is not guaranteed to be correct thus human screening is still needed at this time
 
 #### Tabular Data / Recommendation Systems
 - Advantages with using deep learning
-	- greatly increases the variety of columns that can be included 
-		- natural language columns
-		- high cardinality categorical columns #look-up 
+  - greatly increases the variety of columns that can be included
+    - natural language columns
+    - high cardinality categorical columns #look-up
 - Limitations
-	- deep learning models take longer to train than the traditional methods
-	- more info in [[Lesson 9]]
+  - deep learning models take longer to train than the traditional methods
+  - more info in [[Lesson 9]]
 
 ### The Drivetrain Approach
 There are many accurate models that are not useful at all, and there are many inaccurate models that are highly useful to people. How can we ensure that a model is useful?
 
 The Drivetrain Approach is a method to think about this issue.
 1. Defined Objective
-	- What is the outcome to be achieved
+  - What is the outcome to be achieved
 2. Levers
-	- What inputs are controllable
+  - What inputs are controllable
 3. Data
-	- What data is collectable
+  - What data is collectable
 4. Models
-	- How do the levers influence the objective
+  - How do the levers influence the objective
 
 ### Gathering Data
 For most projects the data that you need is usually found online. Ex. for a bear classifier all of the image data can gathered by any of the modern search engines (Duck Duck Go, Bing, Google)
@@ -126,12 +125,12 @@ bear_types = 'grizzly', 'black', 'teddy'
 path = Path('bears')
 
 if not path.exists():
-	path.mkdir()
-	for o in bear_types:
-		dest = (path/o)
-		dest.mkdir(exits_ok=True)
-		results = search_images_ddg(f'{o} bear')
-		download_images(dest, urls=results)
+  path.mkdir()
+  for o in bear_types:
+    dest = (path/o)
+    dest.mkdir(exits_ok=True)
+    results = search_images_ddg(f'{o} bear')
+    download_images(dest, urls=results)
 
 ```
 
@@ -140,12 +139,12 @@ Now you verify that the images that are downloaded are valid
 path = Path('bears')
 
 for o in bear_types:
-	dest = (path/o)
-	fns = get_image_files(dest)
-	#get all invalid images
-	failed = verify_images(fns)
-	#delete all invalid images
-	failed.map(Path.unlink)
+  dest = (path/o)
+  fns = get_image_files(dest)
+  #get all invalid images
+  failed = verify_images(fns)
+  #delete all invalid images
+  failed.map(Path.unlink)
 ```
 
 #### Data to Dataloaders
@@ -153,11 +152,11 @@ for o in bear_types:
 
 ```python
 bears = DataBlock(
-	blocks=(ImageBlock, CategoryBlock), 
-	get_items=get_image_files, 
-	splitter=RandomSplitter(valid_pct=0.2, seed=42), 
-	get_y=parent_label, 
-	item_tfms=Resize(128)
+  blocks=(ImageBlock, CategoryBlock),
+  get_items=get_image_files,
+  splitter=RandomSplitter(valid_pct=0.2, seed=42),
+  get_y=parent_label,
+  item_tfms=Resize(128)
 )
 ```
 1. `blocks` - the independent (`ImageBlock`) and dependent (`CategoryBlock` aka the label) variables
@@ -175,8 +174,8 @@ dls = bears.dataloaders(path)
 because there is not a lot of data we can use Data Augmentation to increase the accuracy of the model
 ```python
 bears = bears.new(
-	  item_tfms=RandomResizedCrop(224, min_scale=0.5),
-	  batch_tfms=aug_transforms()
+    item_tfms=RandomResizedCrop(224, min_scale=0.5),
+    batch_tfms=aug_transforms()
 )
 dls = bears.dataloaders.path()
 ```
@@ -224,11 +223,11 @@ After using the tool to either keep, delete, or change labels you can use the fo
 ```python
 #delete images
 for idx in cleaner.delete():
-	cleaner.fns[idx].unlink()
-	
+  cleaner.fns[idx].unlink()
+
 #move images
 for idx, cat in cleaner.change():
-	shutil.move(str(cleaner.fns[idx]), path/cat)
+  shutil.move(str(cleaner.fns[idx]), path/cat)
 ```
 
 ### Turn your Model into a Web App

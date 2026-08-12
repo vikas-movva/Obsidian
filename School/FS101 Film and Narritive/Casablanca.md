@@ -1,32 +1,40 @@
+---
+title: Casablanca
+tags:
+  - fs101
+  - school
+---
+
+# Casablanca
+
 ## CHC
 ### Clarity
 - it didn't show
-	- show dont tell
+  - show dont tell
 - flashbacks
 - Naszi terror
 - glass falles -> jump to present
 
 ### Unity
 - Grounded
-	- believable, not forced
+  - believable, not forced
 - parallels
 - Motif of time
 - Dangling clause
-	- Ilsa
+  - Ilsa
 - Gun
 
 ### Characters
 - Nazis
-	- Arrest Lazlo
+  - Arrest Lazlo
 - Lazlo
-	- Escape
+  - Escape
 - Rick
-	- wants to vibe
-	- Best Ilsa
+  - wants to vibe
+  - Best Ilsa
 
 ### Closure
 - let Ilsa go
 
 ### Unobtrusive
 - love triangle
-

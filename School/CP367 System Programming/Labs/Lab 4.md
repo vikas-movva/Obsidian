@@ -1,3 +1,12 @@
+---
+title: Lab 4
+tags:
+  - cp367
+  - school
+---
+
+# Lab 4
+
 1. Create the files `in1.txt` and `in2.txt` with the given numbers:
 ```bash
 echo -e "1\n2\n3\n4\n4\n5\n6\n6\n6\n7" > in1.txt

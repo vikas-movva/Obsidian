@@ -1,3 +1,10 @@
+---
+title: Week 2B
+tags:
+  - data100-intro-to-data-analytics
+  - school
+---
+
 ### Vectors
 Vectors can have different types:
 - EX. Integer, bool, float, etc.
@@ -21,7 +28,7 @@ plot(ggplot(data = diamonds, mapping = aes(x = cut)) + geom_bar())
 ```
 
 ```r
-by_cut <- diamonds |> group_by(cut) |> count() 
+by_cut <- diamonds |> group_by(cut) |> count()
 by_cut
 ```
 
@@ -57,4 +64,3 @@ NA^0
 ```r
 is.na(NA)
 ```
-

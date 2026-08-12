@@ -1,3 +1,12 @@
+---
+title: Course Outline
+tags:
+  - cp312
+  - school
+---
+
+# Course Outline
+
 1. [[Introduction]]
 2. [[Algorithm Analysis]]
 3. [[Recurrence Relations]]
@@ -10,4 +19,3 @@
 10. [[Advanced Topics]]
 
 Textbook: A. Levitin, Introduction to the Design and Analysis of Algorithms, 3rd edition
-

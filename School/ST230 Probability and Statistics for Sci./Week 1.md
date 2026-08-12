@@ -1,6 +1,12 @@
 ---
-Notes: "[[School/ST230 Probability and Statistics for Sci./Week 1|Week 1]]"
+title: Week 1
+tags:
+  - school
+  - st230
 ---
+
+# Week 1
+
 ## 1.1 Sample spaces and events
 probability allows us to quantify the variability in the outcome of any experiment whose exact outcome cannot be predicted with certainty.
 - An **experiment** is any action or process whose **outcome** is subject to uncertainty
@@ -15,12 +21,12 @@ A _continuous sample space_ is an interval of outcomes.
 $S=\{x|x \in R : 0 \leq x \leq 1\}$
 This is the set of all real numbers between 0 and 1
 
-**Example 1.1.3**: Family Planning. 
+**Example 1.1.3**: Family Planning.
 A couple wants to have three children. Assume that the probabilities of a newborn being male or female are the same and that the sex of one child does not influence the sex of another child. There are eight possible arrangements of males and females.
 -  What is the sample space for having three children (sex of the first, second, and third child)? All eight arrangements are (approximately) equally likely.
-	- $S=$ {mmm, fff, mmf, mfm, fmm, ffm, fmf, mff}
+  - $S=$ {mmm, fff, mmf, mfm, fmm, ffm, fmf, mff}
 - The future parents wonder how many males they might get if they have three children. Give the sample space for the number of males.
-	- $S=\{0,1,2,3\}$
+  - $S=\{0,1,2,3\}$
 
 ### Events: Union, Intersection and Compliment
 If $A$ and $B$ are any two events (sets) in a sample space $S$
@@ -33,17 +39,17 @@ If $A$ and $B$ are any two events (sets) in a sample space $S$
 **Example 1.1.5**
 Suppose that vehicles taking a particular freeway exit can turn right (R), turn left (L), or go straight (S). Consider observing the direction for each of three successive vehicles.
 - List all outcomes in the event 𝐴 that all three vehicles go in the same direction.
-	- $A=\{ RRR, SSS, LLL \}$
+  - $A=\{ RRR, SSS, LLL \}$
 - List all outcomes in the event 𝐵 that all three vehicles take different directions.
-	- $B= \{ RSL, SRL, LRS, LSR, SLR, RLS \}$
+  - $B= \{ RSL, SRL, LRS, LSR, SLR, RLS \}$
 - List all outcomes in the event 𝐶 that exactly two of the three vehicles turn right.
-	- $C= \{ RRS,RRL,SRR, LRR, RSR, RLR \}$
+  - $C= \{ RRS,RRL,SRR, LRR, RSR, RLR \}$
 - List all outcomes in the event 𝐷 that exactly two vehicles go in the same direction.
-	- $D=\{ RRS,RRL,SRR, LRR, RSR, RLR, \dots \}$
+  - $D=\{ RRS,RRL,SRR, LRR, RSR, RLR, \dots \}$
 - List outcomes in 𝐷, 𝐶 ∪ 𝐷, and 𝐶 ∩ 𝐷.
-	- $\overline{D} = A\cup B$
-	- $C \cup D=D$
-	- $C \cap D=C$
+  - $\overline{D} = A\cup B$
+  - $C \cup D=D$
+  - $C \cap D=C$
 
 ## 1.2 Counting
 
@@ -62,7 +68,7 @@ In how many different ways can the phi club (with a membership of 25) choose a v
 When describing sample spaces and events, we are often concerned with the number of different ways that we can choose and order subsets (events) from the sample space.
 
 >[!Theorem]
->The number of **permutations** of $r$ objects selected from a set of $n$ distinct objects is 
+>The number of **permutations** of $r$ objects selected from a set of $n$ distinct objects is
 >$$_{n}P_{r} = \dfrac{n!}{(n - r)!}$$
 >
 >This is the number of different ways that we can choose and order the $r$ objects - the _order matters_!
@@ -95,14 +101,14 @@ The top prize for the weekly Lotto Max (Up to $70 million) is shared between all
 
 Find the probability that a randomly chosen Lotto Max entry wins the Jackpot.
 $$P(win) = \frac{1}{49 \choose 7} = 1.16 \times 10^{-8}$$
-	
+
 A much smaller prize (say $5000) is awarded to all entries with 6 out of 7 matching numbers. What is the probability of this occurring, for a single play (one set of randomly selected Lotto Max numbers)?
 $$P(6of7) = \frac{{7 \choose 6}{42 \choose 1}}{49 \choose 7} = 3.42 \times 10^{-6}$$
 
 ### The Frequency Interpretation of Probability
 The **probability** of an event is the proportion of times the event will occur in a _long run_ of repeated experiments.
 
-**Example 1.3.3**: 
+**Example 1.3.3**:
 Consider tossing a coin 250 times in a row and calculate, for example, the proportion of tosses that gave a head.
 $$\lim_{ n \to \infty } = 50\%$$
 
@@ -227,11 +233,11 @@ $$P(A|B)=P(A)$$
 Ninety percent of flights depart on time. Eighty percent of flights arrive on time. Seventy-five percent of flights depart on time and arrive on time.
 
 1. You are meeting a flight that departed on time. What is the probability that it will arrive on time?
-	- $P(A|D)= \frac{P(A\cap D)}{P(D)} = \frac{0.75}{0.9}$ 
+  - $P(A|D)= \frac{P(A\cap D)}{P(D)} = \frac{0.75}{0.9}$
 2. You have met a flight, and it arrived on time. What is the probability that it departed on time?
-	-  $P(D|A)= \frac{P(D\cap A)}{P(A)}=\frac{0.75}{0.8}$
+  -  $P(D|A)= \frac{P(D\cap A)}{P(A)}=\frac{0.75}{0.8}$
 3. Are the events, departing on time and arriving on time, independent?
-	- No as $P(A\cap D) \neq P(A)*P(D)$ or $P(A|D) \neq P(A)$
+  - No as $P(A\cap D) \neq P(A)*P(D)$ or $P(A|D) \neq P(A)$
 
 >[!Note]
 >**Disjoint vs Independent**
@@ -284,4 +290,3 @@ $B_{1}$ =\[message is spam], and $B_{2}$ = \[message is normal].
 $P(B_{1}|A) = $
 
 $P(B_{1}|A) = 0.8189$
-

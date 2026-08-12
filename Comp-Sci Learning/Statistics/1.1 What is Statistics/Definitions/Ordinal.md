@@ -1,6 +1,12 @@
 ---
+title: Ordinal
 aliases: [Ordinal data]
+tags:
+  - cs-learning
+  - statistics
 ---
+
+# Ordinal
 
 ### Ordinal data
 
