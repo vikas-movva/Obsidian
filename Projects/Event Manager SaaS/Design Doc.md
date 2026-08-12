@@ -37,18 +37,18 @@ An event manager integrated with AI agents that taps into email and centralizes 
 
 ## 3.1 Stack
 
-| Layer | Choice | Why |
-|-------|--------|-----|
-| Database + Auth + RLS | Supabase Postgres | Planner-level isolation is the #1 requirement; RLS delivers it near-free |
-| Real-time | Supabase Realtime | Vendor/assistant check-ins, presence, portal updates later |
-| File storage | Supabase Storage | Vendor docs, contracts, attachments from email |
-| App framework | Next.js (App Router) + TypeScript | One language, AI coding-agent fluent, SSR for portals |
-| Payments | Stripe Billing (planner subscription) + Stripe Connect (client payouts) | Subscription = primary revenue; Connect = secondary rake |
-| E-sign | Stripe Signature | Real, enforceable contract signatures in MVP |
-| LLM | DeepSeek-V4-Flash-0731 / DeepInfra (primary), Gemini / Vertex (fallback) | See §4.4 |
-| Background jobs | **Inngest** (native retries + DLQ) | OAuth polling, LLM extraction, Stripe webhooks all need retry/DLQ |
-| Email OAuth | Google Gmail API + Microsoft Graph (read-only scopes) | Inbox scanning per planner |
-| Hosting | Vercel (Next) + Supabase cloud | Standard, low-ops |
+| Layer                 | Choice                                                                   | Why                                                                      |
+| --------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| Database + Auth + RLS | Supabase Postgres                                                        | Planner-level isolation is the #1 requirement; RLS delivers it near-free |
+| Real-time             | Supabase Realtime                                                        | Vendor/assistant check-ins, presence, portal updates later               |
+| File storage          | Supabase Storage                                                         | Vendor docs, contracts, attachments from email                           |
+| App framework         | Next.js (App Router) + TypeScript                                        | One language, AI coding-agent fluent, SSR for portals                    |
+| Payments              | Stripe Billing (planner subscription) + Stripe Connect (client payouts)  | Subscription = primary revenue; Connect = secondary rake                 |
+| E-sign                | Stripe Signature                                                         | Real, enforceable contract signatures in MVP                             |
+| LLM                   | DeepSeek-V4-Flash-0731 / DeepInfra (primary), Gemini / Vertex (fallback) | See §4.4                                                                 |
+| Background jobs       | **Inngest** (native retries + DLQ)                                       | OAuth polling, LLM extraction, Stripe webhooks all need retry/DLQ        |
+| Email OAuth           | Google Gmail API + Microsoft Graph (read-only scopes)                    | Inbox scanning per planner                                               |
+| Hosting               | Vercel (Next) + Supabase cloud                                           | Standard, low-ops                                                        |
 
 ## 3.2 System diagram
 
