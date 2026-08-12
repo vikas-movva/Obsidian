@@ -9,6 +9,7 @@ kanban-plugin: board
 - [ ] Remove ouline when clicking show more in project cards
 - [ ] In mobile view, the timeline is shown in front of the experience card on the left side.
 - [ ] Add obsidian notes github pages link somewhere
+- [ ] change percentages in skills to stars
 
 
 ## Planning

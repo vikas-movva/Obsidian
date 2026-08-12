@@ -277,7 +277,7 @@ flowchart LR
 
 ## 6.3 LLM extraction contract
 
-For each message the agent returns structured JSON:
+For each message, the agent returns structured JSON:
 
 ```json
 {
