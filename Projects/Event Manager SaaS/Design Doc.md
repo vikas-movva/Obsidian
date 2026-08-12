@@ -187,7 +187,7 @@ vendor_portal_access, change_orders, change_order_events, pnl_snapshots,
 venue_constraints, team_members, rbac_roles
 ```
 
-footnote 1: [[Design Doc#5. Event-sourced timeline engine]]
+footnote 1: [[Design Doc#5. Event-sourced timeline engine|§5]]
 
 ## 4.2 Notes
 
