@@ -6,19 +6,13 @@ kanban-plugin: board
 
 ## Medium Priority Tasks #todo
 
-- [ ] Finish Coursera Course: Supervised Machine Learning: Regression and Classification
-- [ ] Learn python data science/ ml libraries (numpy, pandas, mathplotlib, seaborn, scikitlearn, scipy)
 - [ ] Learn gRPC
 
 
 ## High Priority Tasks #todo
 
-- [ ] Finish Coursera Course: Mathematics for Machine Learning: Linear Algebra
-- [ ] Finish Coursera Course: Mathematics for Machine Learning: Multivariate Calculus
-
-
-## Quizes / Assignments
-
+- [ ] Look through dad's old project management books
+- [ ] Look through old GMAT books
 
 
 ## In Progress
@@ -29,6 +23,10 @@ kanban-plugin: board
 
 - [ ] fast.ai course
 - [ ] Finish Portfolio Website
+- [ ] Finish Coursera Course: Supervised Machine Learning: Regression and Classification
+- [ ] Finish Coursera Course: Mathematics for Machine Learning: Linear Algebra
+- [ ] Finish Coursera Course: Mathematics for Machine Learning: Multivariate Calculus
+- [ ] Learn python data science/ ml libraries (numpy, pandas, mathplotlib, seaborn, scikitlearn, scipy)
 
 
 ***
@@ -71,6 +69,6 @@ kanban-plugin: board
 
 %% kanban:settings
 ```
-{"kanban-plugin":"board"}
+{"kanban-plugin":"board","list-collapse":[]}
 ```
 %%
