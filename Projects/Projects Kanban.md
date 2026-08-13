@@ -6,6 +6,7 @@ kanban-plugin: board
 
 ## Ideas
 
+- [ ] calender app where you can share only a selected slice of time with friends
 - [ ] 2D sekiro
 - [ ] [[Projects/sign2nl/Outline|Sign language to natural language]]
 - [ ] Shopify purchase alerts for streamers
