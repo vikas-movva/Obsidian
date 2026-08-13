@@ -179,7 +179,7 @@ This produces 100 tx/sec across 50 cards with 10% injected fraud. Messages are k
 
 File: `spark/jobs/fraud_detection.py`
 
-The core of the pipeline. A PySpark Structured Streaming job that reads from Kafka, applies fraud detection rules, and writes results to dual sinks.
+A PySpark Structured Streaming job that reads from Kafka, applies fraud detection rules, and writes results to dual sinks.
 
 ```mermaid
 flowchart TD
