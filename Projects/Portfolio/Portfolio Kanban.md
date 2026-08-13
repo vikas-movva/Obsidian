@@ -6,7 +6,6 @@ kanban-plugin: board
 
 ## #todo
 
-- [ ] Highlight 2+ years of experience and top three tech in hero section
 - [ ] put education at the end of the website
 - [ ] timeline should be on the left side and experience should take up the rest of the width of the screen
 - [ ] Remove star rating for skills. just list the skills
@@ -25,6 +24,7 @@ kanban-plugin: board
 
 **Complete**
 - [x] change percentages in skills to stars
+- [x] Highlight 2+ years of experience and top three tech in hero section
 
 
 ***
