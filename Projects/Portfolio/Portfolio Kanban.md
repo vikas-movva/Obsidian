@@ -6,10 +6,6 @@ kanban-plugin: board
 
 ## #todo
 
-- [ ] put education at the end of the website
-- [ ] timeline should be on the left side and experience should take up the rest of the width of the screen
-- [ ] Remove star rating for skills. just list the skills
-- [ ] Change information flow Hero > About > Projects > Skills > Experience > education > Contact
 
 
 ## Planning
@@ -23,6 +19,10 @@ kanban-plugin: board
 ## Completed
 
 **Complete**
+- [x] Remove star rating for skills. just list the skills
+- [x] timeline should be on the left side and experience should take up the rest of the width of the screen
+- [x] put education at the end of the website
+- [x] Change information flow Hero > About > Projects > Skills > Experience > education > Contact
 - [x] change percentages in skills to stars
 - [x] Highlight 2+ years of experience and top three tech in hero section
 
