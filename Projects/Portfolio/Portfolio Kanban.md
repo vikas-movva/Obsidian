@@ -6,6 +6,7 @@ kanban-plugin: board
 
 ## #todo
 
+- [ ] make roles rotate on a wheel
 
 
 ## Planning
