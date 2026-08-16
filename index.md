@@ -1,5 +1,4 @@
 ---
-title: Vikas Movva
 tags:
   - index
 ---
