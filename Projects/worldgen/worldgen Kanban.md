@@ -20,6 +20,7 @@ kanban-plugin: board
 - [ ] Regenerate rivers, lakes, and biomes after heightmap reset
 - [ ] dragging timeline scrubber doesn't morph map
 - [ ] Update entity border outline when year changes
+- [ ] Add adaptive rendering based on zoom for rivers
 
 
 ## Todo
