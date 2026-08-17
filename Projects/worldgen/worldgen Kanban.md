@@ -22,6 +22,8 @@ kanban-plugin: board
 - [ ] fix timeline play
 - [ ] Update entity border outline when year changes
 - [ ] Add adaptive rendering based on zoom for rivers
+- [ ] Fix province gen logic
+- [ ] Fix state gen logic
 
 
 ## Todo
