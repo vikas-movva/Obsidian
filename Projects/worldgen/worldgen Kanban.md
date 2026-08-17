@@ -17,6 +17,7 @@ kanban-plugin: board
 - [ ] Improve UI design
 - [ ] Fix lakes layer rendering
 - [ ] States/province/culture/religion painter(editor)
+- [ ] Regenerate rivers, lakes, and biomes after heightmap reset
 
 
 ## Todo
