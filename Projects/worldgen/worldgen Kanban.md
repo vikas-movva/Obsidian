@@ -19,14 +19,14 @@ kanban-plugin: board
 - [ ] States/province/culture/religion painter(editor)
 - [ ] Regenerate rivers, lakes, and biomes after heightmap reset
 - [ ] dragging timeline scrubber doesn't morph map
+- [ ] fix timeline play
 - [ ] Update entity border outline when year changes
 - [ ] Add adaptive rendering based on zoom for rivers
 
 
 ## Todo
 
-- [ ] Port FMG burg generation logic
-- [ ] Render burgs on map
+- [ ] add burgs to entity inspector
 
 
 ## Working
@@ -39,6 +39,8 @@ kanban-plugin: board
 
 ## Completed
 
+- [ ] Port FMG burg generation logic
+- [ ] Render burgs on map
 
 
 
