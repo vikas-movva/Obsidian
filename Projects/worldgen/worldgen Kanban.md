@@ -11,9 +11,7 @@ kanban-plugin: board
 - [ ] combine cell inspector with entity inspector
 - [ ] Random seed on page load
 - [ ] generate map on page load
-- [ ] fix macro tools (heightmap editor)
 - [ ] cells should only be selected when the select tool is used
-- [ ] pan tool (instead of holding down space)
 - [ ] Improve UI design
 - [ ] Fix lakes layer rendering
 - [ ] States/province/culture/religion painter(editor)
@@ -22,6 +20,7 @@ kanban-plugin: board
 - [ ] Add adaptive rendering based on zoom for rivers
 - [ ] Fix province gen logic
 - [ ] Fix state gen logic
+- [ ] Timelapse after generating new world is borken
 
 
 ## Todo
@@ -33,6 +32,7 @@ kanban-plugin: board
 
 - [ ] dragging timeline scrubber doesn't morph map
 - [ ] fix timeline play
+- [ ] fix macro tools (heightmap editor)
 
 
 ## Blocked
@@ -43,6 +43,7 @@ kanban-plugin: board
 
 - [ ] Port FMG burg generation logic
 - [ ] Render burgs on map
+- [ ] pan tool (instead of holding down space)
 
 
 
