@@ -25,14 +25,12 @@ kanban-plugin: board
 
 ## Todo
 
-- [ ] add burgs to entity inspector
 
 
 ## Working
 
-- [ ] dragging timeline scrubber doesn't morph map
-- [ ] fix timeline play
-- [ ] fix macro tools (heightmap editor)
+- [ ] fix macro tools (heightmap editor) [half done]
+- [ ] add burgs to entity inspector (still some buggy interactions)
 
 
 ## Blocked
@@ -44,6 +42,8 @@ kanban-plugin: board
 - [ ] Port FMG burg generation logic
 - [ ] Render burgs on map
 - [ ] pan tool (instead of holding down space)
+- [ ] dragging timeline scrubber doesn't morph map
+- [ ] fix timeline play
 
 
 
