@@ -18,8 +18,6 @@ kanban-plugin: board
 - [ ] Fix lakes layer rendering
 - [ ] States/province/culture/religion painter(editor)
 - [ ] Regenerate rivers, lakes, and biomes after heightmap reset
-- [ ] dragging timeline scrubber doesn't morph map
-- [ ] fix timeline play
 - [ ] Update entity border outline when year changes
 - [ ] Add adaptive rendering based on zoom for rivers
 - [ ] Fix province gen logic
@@ -33,6 +31,8 @@ kanban-plugin: board
 
 ## Working
 
+- [ ] dragging timeline scrubber doesn't morph map
+- [ ] fix timeline play
 
 
 ## Blocked
