@@ -8,6 +8,7 @@ kanban-plugin: board
 
 - [ ] Change poll wording
 - [ ] Add link to google calender
+- [ ] Poll events are not updated after collaborator adds calendar
 
 
 ## Todo
