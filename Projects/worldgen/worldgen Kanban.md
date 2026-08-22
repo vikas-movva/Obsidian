@@ -21,6 +21,8 @@ kanban-plugin: board
 - [ ] Fix province gen logic
 - [ ] Fix state gen logic
 - [ ] Timelapse after generating new world is borken
+- [ ] Look at state gen algo
+- [ ] Look at province gen algo
 
 
 ## Todo
