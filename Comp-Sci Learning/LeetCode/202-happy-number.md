@@ -56,3 +56,18 @@ class Solution:
 
 ## Notes
 Intuition: create a set to track seen numbers, if a number is seen twice there is a cycle -> false
+
+>[!Note]
+>Time complexity: $O(\log n)$
+>Space complexity: $O(\log n)$
+
+```python
+def isHappy(self, n: int) -> bool:
+	seen = set()
+	while n != 1 and n not in seen:
+		seen.add(n)
+		digits = [int(d) for d in str(n)]
+		n = sum(x**2 for x in digits)
+		
+	return n == 1
+```
