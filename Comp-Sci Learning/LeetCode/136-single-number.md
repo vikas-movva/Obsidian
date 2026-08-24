@@ -4,13 +4,15 @@ lc-slug: single-number
 lc-title: Single Number
 lc-difficulty: Easy
 lc-url: https://leetcode.com/problems/single-number/
-lc-status: untouched
+lc-status: accepted
 lc-language: python3
 aliases:
   - Single Number
   - "136"
 tags:
   - lc/easy
+  - lc/array
+  - lc/bit-manipulation
 ---
 # Single Number
 ## Problem
