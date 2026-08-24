@@ -91,7 +91,33 @@ def invertTree(self, root: TreeNode | None) -> TreeNode | None:
 
 ### Rust
 ```rust
-fn invert
+use std::rc::Rc;
+use std::cell::RefCell;
+use std::mem;
+impl Solution {
+    pub fn invert_tree(root: Option<Rc<RefCell<TreeNode>>>) -> Option<Rc<RefCell<TreeNode>>> {
+        Self::invert(&root);
+        root
+    }
+
+    fn invert(node: &Option<Rc<RefCell<TreeNode>>>) {
+        // Check if the node is None
+        if let Some(node) = node {
+            {
+                // Borrow the node mutably
+                let mut node = node.borrow_mut();
+                mem::swap(&mut node.left, &mut node.right);
+            } // mutable borrow ends here, allowing us to borrow again
+
+            // Borrow the node immutably to access its children
+            let node = node.borrow();
+            // Recursively invert the left and right subtrees
+            Self::invert(&node.left);
+            Self::invert(&node.right);
+            
+        }
+    }
+}
 ```
 
 Intuition: recursively call the invert tree function on child nodes.
