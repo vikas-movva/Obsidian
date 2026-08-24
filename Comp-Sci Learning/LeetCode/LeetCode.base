@@ -1,0 +1,16 @@
+views:
+  - type: table
+    name: Problems
+    filters:
+      and:
+        - '!note["lc-id"].isEmpty()'
+    order:
+      - file.name
+      - lc-id
+      - lc-title
+      - lc-difficulty
+      - lc-status
+      - lc-language
+    sort:
+      - property: lc-id
+        direction: DESC

@@ -1,33 +1,66 @@
 ---
+lc-id: 136
+lc-slug: single-number
+lc-title: Single Number
+lc-difficulty: Easy
+lc-url: https://leetcode.com/problems/single-number/
+lc-status: untouched
+lc-language: python3
+aliases:
+  - Single Number
+  - "136"
 tags:
-  - bit-manipulation
-  - array
-  - leetcode
-link: https://leetcode.com/problems/single-number/
+  - lc/easy
 ---
-Given a non-empty array of integers `nums`, every element appears twice except for one. Find that single one.
+# Single Number
+## Problem
+Given a **non-empty** array of integers `nums`, every element appears _twice_ except for one. Find that single one.
 
-You must implement a solution with a linear runtime complexity and use only constant extra space.
+You must implement a solution with a linear runtime complexity and use only constant extra space.
 
->[!Example]
->Input: nums = [2,2,1]
->Output: 1
+**Example 1:**
 
-> [!Example]
-> Input: nums = [4,1,2,1,2]
-> Output: 4
+```text
+Input: nums = [2,2,1]
+Output: 1
+```
 
-> [!example]
-> Input: nums = [1]
-> Output: 1
+**Example 2:**
 
-> [!Constraints] 
-> $1$ $\leq$ `nums.length` $\leq$ $3(10^4)$
-> $-3(10^4)$ $\leq$ `nums[i]` $\leq$ $3(10^4)$
-> 
-> Each element in the array appears twice except for one element which appears only once.
+```text
+Input: nums = [4,1,2,1,2]
+Output: 4
+```
 
-## Brute force solution
+**Example 3:**
+
+```text
+Input: nums = [1]
+Output: 1
+```
+
+**Constraints:**
+
+-   `1 <= nums.length <= 3 * 10⁴`
+-   `-3 * 10⁴ <= nums[i] <= 3 * 10⁴`
+-   Each element in the array appears twice except for one element which appears only once.
+
+## Code
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        
+```leetcode-solve
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        ans = 0
+        for n in nums:
+            ans ^= n
+        return ans
+        
+```
+
+## Notes
+### Brute force solution
 >[!NOTE]
 >Time complexity: $O(n^2)$
 Space complexity: $O(1)$
@@ -46,7 +79,7 @@ def single_number(nums: List[int]) -> int:
 			return nums[i]
 ```
 
-## Sorted array
+### Sorted array
 >[!NOTE]
 >Time complexity: $O(n\log n + n)$
 Space complexity: $O(1)$
@@ -74,7 +107,7 @@ def single_number(nums: List[int]) -> int:
         return ans
 ```
 
-## Hash set
+### Hash set
 >[!NOTE]
 >Time complexity: $O(n)$
 Space complexity: $O(n)$
@@ -94,7 +127,7 @@ def single_number(nums: List[int]) -> int:
     return next(iter(seen.keys()))
 ```
 
-## Bit manipulation
+### Bit manipulation
 >[!NOTE]
 >Time complexity: $O(n)$
 Space complexity: $O(1)$
@@ -109,11 +142,17 @@ def single_number(nums: List[int]) -> int:
 	return ans
 ```
 
-First Intuition: create a hash set of encountered numbers. 
+Intuition: create a hash set of encountered numbers. 
 Optimal solution: XOR all numbers in the list and return the remaining number.
 
 
-## Rust
+### Rust
 ```rust
-fn single_number()
+pub fn single_number(nums: Vec<i32>) -> i32 {
+	let mut result = 0;
+	for num in nums{
+		result = result ^ num;
+	}
+	result
+}
 ```
