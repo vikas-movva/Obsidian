@@ -13,6 +13,8 @@ tags:
   - lc/easy
   - lc/array
   - lc/bit-manipulation
+lc-pattern:
+  - Bit Manipulation
 ---
 # Single Number
 ## Problem
@@ -158,3 +160,27 @@ pub fn single_number(nums: Vec<i32>) -> i32 {
 	result
 }
 ```
+
+## Techniques
+
+- [[Bit Manipulation]]
+
+## Related Variants
+
+- [[287-find-the-duplicate-number|Find the Duplicate Number]] — Same structure of paired/duplicated values in an array, but solved via Floyd's cycle detection (Two Pointers) instead of XOR cancellation.
+- [[268-missing-number|Missing Number]] — Identical 'exactly one value differs' setup over a fixed range, typically solved with sum formula (Math) rather than XOR folding.
+- [[137-single-number-ii|Single Number II]] — Extends the XOR insight to elements appearing three times, requiring per-bit counting/modular arithmetic.
+- [[260-single-number-iii|Single Number III]] — Requires isolating two single numbers by finding a differing bit and partitioning the array into two XOR groups.
+
+## AI Review
+
+### Approach
+Optimal. The key insight is XOR's algebraic properties: it's commutative and associative, `x ^ x = 0`, and `x ^ 0 = x`. XOR-ing every element therefore cancels each pair regardless of position, leaving only the unique element. No asymptotically better approach exists — any correct algorithm must examine every element (an unread element could be the singleton), so Ω(n) time is a hard lower bound, and this meets it while using a single accumulator.
+
+### Efficiency
+O(n) time, O(1) extra space. Matches the theoretical optimum for both dimensions.
+
+### Code Style
+No issues.
+
+*Reviewed by OpenRouter (stealth/ox-alpha) — 2026-08-24*
