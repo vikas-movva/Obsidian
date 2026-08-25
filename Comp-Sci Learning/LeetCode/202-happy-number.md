@@ -61,8 +61,7 @@ class Solution:
         seen = set()
         while n != 1 and n not in seen:
             seen.add(n)
-            digits = [int(d) for d in str(n)]
-            n = sum(x**2 for x in digits)
+            n = sum(int(d) ** 2 for d in str(n))
     		
         return n == 1
 ```
@@ -79,8 +78,7 @@ def isHappy(self, n: int) -> bool:
 	seen = set()
 	while n != 1 and n not in seen:
 		seen.add(n)
-		digits = [int(d) for d in str(n)]
-		n = sum(x**2 for x in digits)
+		n = sum(int(d) ** 2 for d in str(n))
 		
 	return n == 1
 ```
@@ -120,18 +118,6 @@ This is a space optimization, not a complexity-class win — the submitted appro
 Time **O(log n)**: the first transformation reads Θ(log n) digits; every subsequent value is ≤ 243, so the remainder is a bounded number of O(1) steps. Optimal — any solution must examine all digits of `n`. Space: the set stores one entry per visited value; since everything drops below 243 within two steps, that's at most ~245 entries for 32-bit inputs — effectively constant, and exactly O(1) with Floyd's variant above.
 
 ### Code Style
-
-Collapse the two-step digit extraction into a single expression (two lines → one):
-
-```python
-n = sum(int(d) ** 2 for d in str(n))
-```
-
-instead of:
-
-```python
-digits = [int(d) for d in str(n)]
-n = sum(x**2 for x in digits)
-```
+No issues.
 
 *Reviewed by OpenRouter (stealth/ox-alpha) — 2026-08-24*

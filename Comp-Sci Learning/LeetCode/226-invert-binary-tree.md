@@ -15,6 +15,8 @@ tags:
   - lc/depth-first-search
   - lc/breadth-first-search
   - lc/binary-tree
+lc-pattern:
+  - Trees
 ---
 # Invert Binary Tree
 ## Problem
@@ -61,7 +63,7 @@ Output: []
 #         self.right = right
 class Solution:
     def invertTree(self, root: TreeNode | None) -> TreeNode | None:
-        # check if root is a leaf node
+        # base case: empty subtree
         if not root:
             return
         
@@ -113,3 +115,29 @@ fn invert_tree(root: Option<Rc<RefCell<TreeNode>>>) -> Option<Rc<RefCell<TreeNod
 
 Intuition: recursively call the invert tree function on child nodes.
 Optimal solution: recursively call the invert tree function on child nodes.
+
+## Techniques
+
+- [[Trees]]
+
+## Related Variants
+
+- [[206-reverse-linked-list|Reverse Linked List]] — Both problems reverse a recursive pointer structure by reassigning child/next references, one on trees and one on lists.
+- [[24-swap-nodes-in-pairs|Swap Nodes in Pairs]] — Both rely on local node-reference swaps applied uniformly across a linked structure.
+- [[102-binary-tree-level-order-traversal|Binary Tree Level Order Traversal]] — Next step up in tree traversal mastery, moving from simple recursion to structured level-by-top processing.
+- [[124-binary-tree-maximum-path-sum|Binary Tree Maximum Path Sum]] — Harder tree problem requiring recursive post-order computation with values combined across subtrees.
+
+## AI Review
+
+### Approach
+
+Optimal. Any algorithm must touch every node to invert the tree, so Θ(n) time is a hard lower bound and this solution meets it. The key insight: inversion is purely local — mirroring the whole tree is achieved by independently swapping the two children of every node, so one recursive post-order-style pass suffices. The tuple assignment also evaluates **both** recursive calls before rebinding `root.left`/`root.right`, so no temporary variable is needed and the original subtrees aren't lost mid-swap.
+
+### Efficiency
+
+Time O(n) — each node visited exactly once. Space O(h) for the recursion stack, O(n) worst case on a skewed tree. An iterative BFS/DFS version swaps stack depth for queue/stack width, which is also O(n) worst case, so there's no asymptotic improvement available. This is optimal.
+
+### Code Style
+No issues.
+
+*Reviewed by OpenRouter (stealth/ox-alpha) — 2026-08-24*
