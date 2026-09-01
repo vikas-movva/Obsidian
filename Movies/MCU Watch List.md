@@ -1,6 +1,6 @@
 1. [x] Captain America: The First Avenger (1942)
 2. [x] Captain Marvel (1995) - skipped
-3. [ ] Iron Man (2008)
+3. [x] Iron Man (2008)
 4. [ ] Iron Man 2 (2010)
 5. [ ] The Incredible Hulk (2010)
 6. [ ] Thor (2010)
