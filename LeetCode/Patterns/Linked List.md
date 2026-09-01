@@ -12,5 +12,6 @@ pattern: "Linked List"
 ### Medium
 
 
+- [[143-reorder-list|Reorder List]]
 ### Hard
 

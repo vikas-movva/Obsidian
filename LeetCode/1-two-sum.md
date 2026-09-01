@@ -58,16 +58,14 @@ Output: [0,1]
 ```leetcode-solve
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        numMap = {}
-        n = len(nums)
+        comp = {}
 
-        for i in range(n):
-            complement = target - nums[i]
-            if complement in numMap:
-                return [numMap[complement], i]
-            numMap[nums[i]] = i
+        for i, num in enumerate(nums):
+            c = target - num
+            if c in comp:
+                return [comp[c], i]
+            comp[c] = i
 
-        return []
 ```
 
 ## Notes
