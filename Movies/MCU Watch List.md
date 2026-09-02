@@ -7,7 +7,7 @@
 7. [x] The Avengers (2012)
 8. [x] Thor: The Dark World (2013)
 	1. [x] Iron Man 3 (2013)
-9. [ ] Captain America: The Winter Soldier (2014)
+9. [x] Captain America: The Winter Soldier (2014)
 10. [ ] Guardians of the Galaxy (2014)
 11. [ ] Guardians of the Galaxy Vol. 2 (2014)
 12. [ ] Avengers: Age of Ultron (2015)
