@@ -6,6 +6,7 @@ properties:
   paper:
     displayName: Paper
   status:
+    type: list
     displayName: Status
   authors:
     displayName: Authors
@@ -22,10 +23,19 @@ views:
         - status == "to-read"
     order:
       - paper
-      - file.name
       - authors
       - year
       - topic
+      - tags
+      - status
+    sort:
+      - property: status
+        direction: DESC
+    columnSize:
+      note.paper: 187
+    markers: none
+    indentProperties: true
+    rowHeight: medium
   - type: table
     name: Reading
     filters:

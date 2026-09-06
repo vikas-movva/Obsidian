@@ -5,6 +5,7 @@ tags:
   - networking
 ---
 
+
 # Cabling
 
 When trying to connect devices there are two options: _wired_ and _wireless_.
