@@ -1,0 +1,60 @@
+filters:
+  and:
+    - file.hasTag("paper")
+    - file.ext == "md"
+properties:
+  paper:
+    displayName: Paper
+  status:
+    displayName: Status
+  authors:
+    displayName: Authors
+  year:
+    displayName: Year
+  topic:
+    displayName: Topic
+views:
+  - type: table
+    name: To Read
+    filters:
+      and:
+        - file.hasTag("paper")
+        - status == "to-read"
+    order:
+      - paper
+      - file.name
+      - authors
+      - year
+      - topic
+  - type: table
+    name: Reading
+    filters:
+      and:
+        - file.hasTag("paper")
+        - status == "reading"
+    order:
+      - paper
+      - file.name
+      - authors
+      - topic
+  - type: table
+    name: Done
+    filters:
+      and:
+        - file.hasTag("paper")
+        - status == "done"
+    order:
+      - paper
+      - file.name
+      - authors
+      - topic
+  - type: table
+    name: By Topic
+    filters: file.hasTag("paper")
+    groupBy:
+      property: topic
+      direction: ASC
+    order:
+      - paper
+      - file.name
+      - status

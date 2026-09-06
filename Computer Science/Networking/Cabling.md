@@ -22,7 +22,7 @@ Wired networks are connected through cables of which there are two types:
   - uses light signals
   - unaffected by outside interference
 
-A wired [[LAN]] uses a _[[protocol]]_ called **Ethernet**. Ethernet is made of different parts such as the _physical layer_ and the _data layer_ (Media Access Control).
+A wired [[LAN]] uses a _[[Protocol]]_ called **Ethernet**. Ethernet is made of different parts such as the _physical layer_ and the _data layer_ (Media Access Control).
 The physical layer determines the _type of cabling_ and the _speed_ at which data is sent and the data layer determines how data should be _formatted_ and _sent_.
 
 The reason Ethernet is layered is so that devices with different cables and different speeds can still _communicate_ with each other.
