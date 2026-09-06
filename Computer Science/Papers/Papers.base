@@ -29,6 +29,8 @@ views:
       - tags
       - status
     sort:
+      - property: paper
+        direction: ASC
       - property: status
         direction: DESC
     columnSize:

@@ -1,20 +1,19 @@
-// Templater user script — creates a paper-note from a PDF in the Papers folder.
+// Templater user script — creates a paper-note from a PDF in the Papers/PDFs folder.
 // Call via Templates/New Paper Note.md: <%* await tp.user.new_paper_note(tp) %>
 module.exports = async (tp) => {
   const papersDir = "Computer Science/Papers";
+  const pdfsDir   = `${papersDir}/PDFs`;
   const notesDir  = `${papersDir}/Notes`;
   const { app } = tp;
 
   const pdfs = app.vault.getFiles().filter(f =>
-    f.path.startsWith(papersDir + "/") &&
-    f.path.endsWith(".pdf") &&
-    !f.path.includes("/Notes/") &&
-    !f.path.includes("/.trash/")
+    f.path.startsWith(pdfsDir + "/") &&
+    f.path.endsWith(".pdf")
   );
 
   let chosen;
   if (pdfs.length === 1) chosen = pdfs[0];
-  else if (pdfs.length === 0) { new Notice("No PDFs found in " + papersDir); return; }
+  else if (pdfs.length === 0) { new Notice("No PDFs found in " + pdfsDir); return; }
   else {
     const labels = pdfs.map(f => f.basename);
     const pick = await tp.system.prompt(
